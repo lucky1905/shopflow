@@ -2,15 +2,26 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from database import engine, get_db
-from models import Base
-from schemas import ProductCreate, ProductResponse
+from models import Base, Sale
+
+from schemas import (
+    ProductCreate,
+    ProductResponse,
+    SaleCreate,
+    SaleResponse,
+    SaleItemResponse
+)
 
 from crud import (
     get_products,
     get_product_by_barcode,
     get_product_by_id,
     create_product,
-    update_product
+    update_product,
+    delete_product,
+    create_sale,
+    get_sales,
+    get_sale_by_id
 )
 
 
@@ -18,6 +29,10 @@ app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
+
+# =========================
+# BASIC
+# =========================
 
 @app.get("/")
 def home():
@@ -32,6 +47,10 @@ def test():
         "status": "Backend Working Successfully"
     }
 
+
+# =========================
+# PRODUCT APIs
+# =========================
 
 @app.get("/products")
 def all_products(db: Session = Depends(get_db)):
@@ -123,33 +142,50 @@ def edit_product(
 
     return update_product(db, product_id, product)
 
-from crud import delete_product
-
 
 @app.delete("/products/{product_id}")
-def remove_product(product_id: int, db: Session = Depends(get_db)):
+def remove_product(
+    product_id: int,
+    db: Session = Depends(get_db)
+):
     deleted = delete_product(db, product_id)
+
     if not deleted:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"No product found with id {product_id}."
         )
-    return {"message": f"Product '{deleted.product_name}' (id {product_id}) deleted successfully."}
-from crud import create_sale
-from schemas import SaleCreate, SaleResponse, SaleItemResponse
+
+    return {
+        "message": f"Product '{deleted.product_name}' (id {product_id}) deleted successfully."
+    }
 
 
-@app.post("/sales", response_model=SaleResponse, status_code=status.HTTP_201_CREATED)
-def make_sale(sale: SaleCreate, db: Session = Depends(get_db)):
-    # Step 1: validate every item BEFORE writing anything to the database
+# =========================
+# BILLING - CREATE SALE
+# =========================
+
+@app.post(
+    "/sales",
+    response_model=SaleResponse,
+    status_code=status.HTTP_201_CREATED
+)
+def make_sale(
+    sale: SaleCreate,
+    db: Session = Depends(get_db)
+):
+    # Step 1: Validate every item before writing anything
     validated_items = []
+
     for item in sale.items:
         product = get_product_by_id(db, item.product_id)
+
         if not product:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail=f"Product with id {item.product_id} does not exist."
             )
+
         if product.stock < item.quantity:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -158,27 +194,84 @@ def make_sale(sale: SaleCreate, db: Session = Depends(get_db)):
                     f"Available: {product.stock}, requested: {item.quantity}."
                 )
             )
+
         validated_items.append((product, item.quantity))
 
-    # Step 2: create the sale as one atomic transaction
+    # Step 2: Create sale as one transaction
     try:
-        db_sale = create_sale(db, sale.payment_method, validated_items)
+        db_sale = create_sale(
+            db,
+            sale.payment_method,
+            validated_items
+        )
+
     except Exception:
         db.rollback()
+
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to create sale. Transaction rolled back, no stock was changed."
         )
 
-    # Step 3: build the response explicitly.
-    # (Sale's relationship attribute is named `sale_items`, but SaleResponse's
-    # field is named `items` — mapped manually here instead of relying on
-    # automatic attribute matching.)
+    # Step 3: Build response
     return SaleResponse(
         sale_id=db_sale.sale_id,
         user_id=db_sale.user_id,
         total_amount=db_sale.total_amount,
         payment_method=db_sale.payment_method,
         sale_date=db_sale.sale_date,
-        items=[SaleItemResponse.model_validate(si) for si in db_sale.sale_items]
+        items=[
+            SaleItemResponse.model_validate(si)
+            for si in db_sale.sale_items
+        ]
     )
+
+
+# =========================
+# BILLING - SALES HISTORY
+# =========================
+
+def _to_sale_response(db_sale: Sale) -> SaleResponse:
+    return SaleResponse(
+        sale_id=db_sale.sale_id,
+        user_id=db_sale.user_id,
+        total_amount=db_sale.total_amount,
+        payment_method=db_sale.payment_method,
+        sale_date=db_sale.sale_date,
+        items=[
+            SaleItemResponse.model_validate(si)
+            for si in db_sale.sale_items
+        ]
+    )
+
+
+@app.get(
+    "/sales",
+    response_model=list[SaleResponse]
+)
+def all_sales(db: Session = Depends(get_db)):
+    sales = get_sales(db)
+
+    return [
+        _to_sale_response(s)
+        for s in sales
+    ]
+
+
+@app.get(
+    "/sales/{sale_id}",
+    response_model=SaleResponse
+)
+def get_sale(
+    sale_id: int,
+    db: Session = Depends(get_db)
+):
+    sale = get_sale_by_id(db, sale_id)
+
+    if not sale:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"No sale found with id {sale_id}."
+        )
+
+    return _to_sale_response(sale)  

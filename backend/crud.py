@@ -113,3 +113,10 @@ def create_sale(db: Session, payment_method: str, validated_items: list[tuple[Pr
     db.commit()
     db.refresh(db_sale)
     return db_sale
+
+def get_sales(db: Session):
+    return db.query(Sale).order_by(Sale.sale_date.desc()).all()
+
+
+def get_sale_by_id(db: Session, sale_id: int):
+    return db.query(Sale).filter(Sale.sale_id == sale_id).first()
