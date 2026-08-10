@@ -65,3 +65,51 @@ def delete_product(db: Session, product_id: int):
     db.commit()
 
     return db_product
+
+from datetime import datetime, timezone
+from models import Sale, SaleItem
+
+
+def create_sale(db: Session, payment_method: str, validated_items: list[tuple[Product, int]]):
+    """
+    validated_items is a list of (product, quantity) tuples that have
+    ALREADY been checked for existence and sufficient stock by the caller.
+    Prices are read from `product.selling_price` here — never from client input.
+    """
+    db_sale = Sale(
+        user_id=None,  # no auth yet (Phase 7)
+        total_amount=0,  # placeholder, corrected below once items are totalled
+        payment_method=payment_method,
+        sale_date=datetime.now(timezone.utc)
+    )
+    db.add(db_sale)
+    db.flush()  # assigns db_sale.sale_id without committing yet
+
+    total_amount = 0
+
+    for product, quantity in validated_items:
+        # Defense-in-depth: re-check stock at write time in case it changed
+        # between validation and this point (e.g. a concurrent sale).
+        if product.stock < quantity:
+            raise ValueError(f"Insufficient stock for '{product.product_name}' during transaction.")
+
+        unit_price = product.selling_price
+        subtotal = unit_price * quantity
+        total_amount += subtotal
+
+        db_sale_item = SaleItem(
+            sale_id=db_sale.sale_id,
+            product_id=product.product_id,
+            quantity=quantity,
+            unit_price=unit_price,
+            subtotal=subtotal
+        )
+        db.add(db_sale_item)
+
+        product.stock -= quantity
+
+    db_sale.total_amount = total_amount
+
+    db.commit()
+    db.refresh(db_sale)
+    return db_sale

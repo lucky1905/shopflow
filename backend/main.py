@@ -135,3 +135,50 @@ def remove_product(product_id: int, db: Session = Depends(get_db)):
             detail=f"No product found with id {product_id}."
         )
     return {"message": f"Product '{deleted.product_name}' (id {product_id}) deleted successfully."}
+from crud import create_sale
+from schemas import SaleCreate, SaleResponse, SaleItemResponse
+
+
+@app.post("/sales", response_model=SaleResponse, status_code=status.HTTP_201_CREATED)
+def make_sale(sale: SaleCreate, db: Session = Depends(get_db)):
+    # Step 1: validate every item BEFORE writing anything to the database
+    validated_items = []
+    for item in sale.items:
+        product = get_product_by_id(db, item.product_id)
+        if not product:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Product with id {item.product_id} does not exist."
+            )
+        if product.stock < item.quantity:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=(
+                    f"Insufficient stock for '{product.product_name}'. "
+                    f"Available: {product.stock}, requested: {item.quantity}."
+                )
+            )
+        validated_items.append((product, item.quantity))
+
+    # Step 2: create the sale as one atomic transaction
+    try:
+        db_sale = create_sale(db, sale.payment_method, validated_items)
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to create sale. Transaction rolled back, no stock was changed."
+        )
+
+    # Step 3: build the response explicitly.
+    # (Sale's relationship attribute is named `sale_items`, but SaleResponse's
+    # field is named `items` — mapped manually here instead of relying on
+    # automatic attribute matching.)
+    return SaleResponse(
+        sale_id=db_sale.sale_id,
+        user_id=db_sale.user_id,
+        total_amount=db_sale.total_amount,
+        payment_method=db_sale.payment_method,
+        sale_date=db_sale.sale_date,
+        items=[SaleItemResponse.model_validate(si) for si in db_sale.sale_items]
+    )
