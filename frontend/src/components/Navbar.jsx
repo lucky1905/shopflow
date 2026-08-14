@@ -25,6 +25,7 @@ function Navbar() {
       <Link to="/sales" style={{ color: "white" }}>
         Sales History
       </Link>
+      <Link to="/sales-history">Sales History</Link>
     </nav>
   );
 }
