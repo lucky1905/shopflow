@@ -6,6 +6,7 @@ import "../styles/Dashboard.css";
 function Dashboard() {
   const [products, setProducts] = useState([]);
   const [sales, setSales] = useState([]);
+  const [insights, setInsights] = useState(null);
 
   useEffect(() => {
     fetchDashboardData();
@@ -15,9 +16,11 @@ function Dashboard() {
     try {
       const productRes = await api.get("/products");
       const salesRes = await api.get("/sales");
+      const insightsRes = await api.get("/predict/insights");
 
       setProducts(productRes.data);
       setSales(salesRes.data);
+      setInsights(insightsRes.data);
     } catch (error) {
       console.error(error);
       alert("Failed to load dashboard data");
@@ -57,7 +60,7 @@ function Dashboard() {
 
         <DashboardCard
           title="Revenue"
-          value={`₹${totalRevenue}`}
+          value={`₹${totalRevenue.toFixed(2)}`}
           color="#ea580c"
           icon="💰"
         />
@@ -68,6 +71,60 @@ function Dashboard() {
           color="#dc2626"
           icon="⚠️"
         />
+      </div>
+
+      <div className="section">
+        <h2>🤖 AI Insights</h2>
+
+        {insights ? (
+          <div className="cards">
+
+            <DashboardCard
+              title="Top Selling Product"
+              value={insights.top_product}
+              color="#7c3aed"
+              icon="🔥"
+            />
+
+            <DashboardCard
+              title="Tomorrow Sales"
+              value={`${Number(insights.predicted_sales).toFixed(2)} Units`}
+              color="#0891b2"
+              icon="📈"
+            />
+
+            <DashboardCard
+              title="Current Stock"
+              value={insights.current_stock}
+              color="#16a34a"
+              icon="📦"
+            />
+
+            <DashboardCard
+              title="Recommended Order"
+              value={insights.recommended_order}
+              color="#ea580c"
+              icon="🛒"
+            />
+
+            <DashboardCard
+              title="Model Accuracy"
+              value={`${insights.model_accuracy * 100}%`}
+              color="#2563eb"
+              icon="🎯"
+            />
+
+            <DashboardCard
+              title="AI Status"
+              value="Active"
+              color="#059669"
+              icon="🤖"
+            />
+
+          </div>
+        ) : (
+          <p>Loading AI Insights...</p>
+        )}
       </div>
 
       <div className="section">
@@ -89,14 +146,17 @@ function Dashboard() {
                 <td colSpan="4">No Sales Found</td>
               </tr>
             ) : (
-              sales.slice().reverse().map((sale) => (
-                <tr key={sale.sale_id}>
-                  <td>{sale.sale_id}</td>
-                  <td>{sale.payment_method}</td>
-                  <td>₹{Number(sale.total_amount).toFixed(2)}</td>
-                  <td>{new Date(sale.sale_date).toLocaleString()}</td>
-                </tr>
-              ))
+              sales
+                .slice()
+                .reverse()
+                .map((sale) => (
+                  <tr key={sale.sale_id}>
+                    <td>{sale.sale_id}</td>
+                    <td>{sale.payment_method}</td>
+                    <td>₹{Number(sale.total_amount).toFixed(2)}</td>
+                    <td>{new Date(sale.sale_date).toLocaleString()}</td>
+                  </tr>
+                ))
             )}
           </tbody>
         </table>
@@ -110,7 +170,7 @@ function Dashboard() {
             <tr>
               <th>Product</th>
               <th>Stock</th>
-              <th>Min Stock</th>
+              <th>Minimum Stock</th>
             </tr>
           </thead>
 

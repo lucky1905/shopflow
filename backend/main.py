@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, get_db
 from models import Base, Sale
+from routers.predict import router as predict_router
 
 from schemas import (
     ProductCreate,
@@ -38,7 +39,7 @@ app.add_middleware(
 )
 
 Base.metadata.create_all(bind=engine)
-
+app.include_router(predict_router)
 
 # =========================
 # BASIC

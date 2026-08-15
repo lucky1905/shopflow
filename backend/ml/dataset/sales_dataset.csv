@@ -1,0 +1,3001 @@
+date,day_of_week,month,product_name,category,selling_price,stock_before_sale,payment_method,quantity_sold
+2025-01-13,Monday,1,Shampoo,Personal Care,180,38,UPI,3
+2025-12-13,Saturday,12,Biscuit,Snacks,25,73,UPI,16
+2025-04-22,Tuesday,4,Maggi,Grocery,15,69,Cash,17
+2025-11-29,Saturday,11,Coffee,Beverage,180,79,UPI,22
+2025-03-23,Sunday,3,Cold Drink,Beverage,40,51,UPI,14
+2025-06-22,Sunday,6,Juice,Beverage,55,42,UPI,16
+2025-05-16,Friday,5,Milk,Dairy,60,80,UPI,14
+2025-07-13,Sunday,7,Maggi,Grocery,15,61,Cash,23
+2025-07-05,Saturday,7,Soap,Personal Care,40,75,UPI,10
+2025-05-29,Thursday,5,Toothpaste,Personal Care,95,38,Card,4
+2025-08-21,Thursday,8,Rice,Grocery,70,37,UPI,7
+2025-05-17,Saturday,5,Bread,Bakery,35,80,UPI,20
+2025-03-25,Tuesday,3,Biscuit,Snacks,25,56,UPI,12
+2025-12-19,Friday,12,Juice,Beverage,55,43,Cash,9
+2025-01-29,Wednesday,1,Chips,Snacks,20,31,Cash,9
+2025-02-03,Monday,2,Rice,Grocery,70,62,Card,6
+2025-12-02,Tuesday,12,Milk,Dairy,60,62,Card,17
+2025-03-15,Saturday,3,Toothpaste,Personal Care,95,45,Cash,10
+2025-10-27,Monday,10,Tea,Beverage,120,61,UPI,16
+2025-03-12,Wednesday,3,Butter,Dairy,55,59,UPI,8
+2025-02-26,Wednesday,2,Maggi,Grocery,15,77,UPI,17
+2025-11-02,Sunday,11,Toothpaste,Personal Care,95,73,Card,15
+2025-10-11,Saturday,10,Tea,Beverage,120,84,UPI,16
+2025-02-27,Thursday,2,Toothpaste,Personal Care,95,53,UPI,6
+2025-05-15,Thursday,5,Maggi,Grocery,15,88,UPI,20
+2025-11-17,Monday,11,Juice,Beverage,55,71,UPI,13
+2025-03-24,Monday,3,Rice,Grocery,70,78,Card,9
+2025-11-03,Monday,11,Juice,Beverage,55,33,UPI,12
+2025-06-07,Saturday,6,Milk,Dairy,60,53,Card,18
+2025-02-13,Thursday,2,Juice,Beverage,55,32,Card,8
+2025-03-06,Thursday,3,Tea,Beverage,120,70,UPI,8
+2025-05-16,Friday,5,Tea,Beverage,120,69,UPI,11
+2025-10-04,Saturday,10,Bread,Bakery,35,86,Cash,24
+2025-09-22,Monday,9,Sugar,Grocery,45,36,UPI,9
+2025-01-11,Saturday,1,Maggi,Grocery,15,61,Cash,27
+2025-12-29,Monday,12,Maggi,Grocery,15,50,UPI,16
+2025-06-19,Thursday,6,Maggi,Grocery,15,68,UPI,16
+2025-04-20,Sunday,4,Toothpaste,Personal Care,95,78,Card,12
+2025-08-31,Sunday,8,Coffee,Beverage,180,56,UPI,10
+2025-08-09,Saturday,8,Maggi,Grocery,15,70,UPI,24
+2025-12-11,Thursday,12,Biscuit,Snacks,25,32,UPI,9
+2025-02-25,Tuesday,2,Milk,Dairy,60,47,UPI,15
+2025-08-05,Tuesday,8,Sugar,Grocery,45,44,UPI,7
+2025-02-08,Saturday,2,Cold Drink,Beverage,40,42,UPI,16
+2025-01-08,Wednesday,1,Butter,Dairy,55,72,Cash,4
+2025-09-06,Saturday,9,Bread,Bakery,35,65,Card,20
+2025-01-02,Thursday,1,Bread,Bakery,35,52,Card,16
+2025-05-27,Tuesday,5,Chips,Snacks,20,75,Card,11
+2025-10-12,Sunday,10,Butter,Dairy,55,52,UPI,14
+2025-10-05,Sunday,10,Maggi,Grocery,15,46,Cash,23
+2025-09-29,Monday,9,Tea,Beverage,120,31,Card,8
+2025-04-06,Sunday,4,Maggi,Grocery,15,47,Cash,23
+2025-03-03,Monday,3,Bread,Bakery,35,52,Cash,17
+2025-02-11,Tuesday,2,Maggi,Grocery,15,81,Cash,19
+2025-05-14,Wednesday,5,Tea,Beverage,120,70,Cash,8
+2025-07-22,Tuesday,7,Bread,Bakery,35,76,Cash,14
+2025-02-07,Friday,2,Sugar,Grocery,45,55,Cash,6
+2025-02-21,Friday,2,Coffee,Beverage,180,57,UPI,3
+2025-06-28,Saturday,6,Milk,Dairy,60,61,UPI,18
+2025-10-06,Monday,10,Sugar,Grocery,45,75,UPI,14
+2025-10-11,Saturday,10,Toothpaste,Personal Care,95,48,UPI,12
+2025-10-11,Saturday,10,Maggi,Grocery,15,84,UPI,26
+2025-12-18,Thursday,12,Milk,Dairy,60,68,UPI,16
+2025-01-27,Monday,1,Cold Drink,Beverage,40,66,UPI,6
+2025-01-02,Thursday,1,Milk,Dairy,60,85,UPI,16
+2025-03-24,Monday,3,Butter,Dairy,55,62,Cash,7
+2025-02-27,Thursday,2,Coffee,Beverage,180,67,Card,3
+2025-07-09,Wednesday,7,Tea,Beverage,120,66,UPI,11
+2025-06-07,Saturday,6,Maggi,Grocery,15,63,UPI,21
+2025-02-22,Saturday,2,Bread,Bakery,35,68,Card,22
+2025-05-02,Friday,5,Biscuit,Snacks,25,41,Card,10
+2025-06-20,Friday,6,Maggi,Grocery,15,81,Card,19
+2025-05-17,Saturday,5,Chips,Snacks,20,56,Card,12
+2025-04-24,Thursday,4,Cold Drink,Beverage,40,57,UPI,15
+2025-04-27,Sunday,4,Chips,Snacks,20,74,UPI,12
+2025-02-05,Wednesday,2,Milk,Dairy,60,58,Cash,16
+2025-10-02,Thursday,10,Rice,Grocery,70,36,Card,9
+2025-10-25,Saturday,10,Milk,Dairy,60,79,UPI,21
+2025-06-10,Tuesday,6,Biscuit,Snacks,25,70,Card,12
+2025-10-23,Thursday,10,Maggi,Grocery,15,43,Cash,21
+2025-10-03,Friday,10,Maggi,Grocery,15,68,UPI,21
+2025-06-19,Thursday,6,Toothpaste,Personal Care,95,48,Cash,8
+2025-06-03,Tuesday,6,Maggi,Grocery,15,59,Cash,20
+2025-12-23,Tuesday,12,Milk,Dairy,60,71,UPI,16
+2025-07-14,Monday,7,Rice,Grocery,70,65,Cash,6
+2025-01-01,Wednesday,1,Rice,Grocery,70,45,UPI,7
+2025-11-07,Friday,11,Chips,Snacks,20,63,UPI,15
+2025-08-31,Sunday,8,Bread,Bakery,35,55,UPI,17
+2025-06-21,Saturday,6,Shampoo,Personal Care,180,68,UPI,5
+2025-03-17,Monday,3,Chips,Snacks,20,30,UPI,8
+2025-02-07,Friday,2,Sugar,Grocery,45,55,Card,9
+2025-12-23,Tuesday,12,Coffee,Beverage,180,57,UPI,12
+2025-01-03,Friday,1,Toothpaste,Personal Care,95,73,UPI,4
+2025-12-23,Tuesday,12,Bread,Bakery,35,66,UPI,17
+2025-03-04,Tuesday,3,Bread,Bakery,35,44,Cash,16
+2025-10-14,Tuesday,10,Toothpaste,Personal Care,95,70,Cash,11
+2025-08-07,Thursday,8,Cold Drink,Beverage,40,58,Card,10
+2025-09-01,Monday,9,Biscuit,Snacks,25,48,Cash,12
+2025-05-22,Thursday,5,Chips,Snacks,20,63,Cash,12
+2025-02-09,Sunday,2,Milk,Dairy,60,57,UPI,20
+2025-02-11,Tuesday,2,Cold Drink,Beverage,40,36,UPI,7
+2025-12-28,Sunday,12,Biscuit,Snacks,25,59,UPI,13
+2025-08-01,Friday,8,Tea,Beverage,120,40,Cash,7
+2025-10-27,Monday,10,Rice,Grocery,70,55,UPI,11
+2025-06-02,Monday,6,Juice,Beverage,55,70,Cash,16
+2025-11-05,Wednesday,11,Tea,Beverage,120,54,UPI,17
+2025-06-22,Sunday,6,Maggi,Grocery,15,72,Card,23
+2025-10-01,Wednesday,10,Butter,Dairy,55,66,Cash,9
+2025-11-26,Wednesday,11,Maggi,Grocery,15,71,UPI,22
+2025-06-17,Tuesday,6,Milk,Dairy,60,64,UPI,15
+2025-07-14,Monday,7,Biscuit,Snacks,25,79,Card,11
+2025-02-11,Tuesday,2,Rice,Grocery,70,29,Cash,8
+2025-06-29,Sunday,6,Maggi,Grocery,15,89,Card,20
+2025-01-16,Thursday,1,Maggi,Grocery,15,49,Cash,17
+2025-05-03,Saturday,5,Soap,Personal Care,40,71,UPI,9
+2025-08-27,Wednesday,8,Juice,Beverage,55,76,UPI,7
+2025-02-28,Friday,2,Soap,Personal Care,40,42,UPI,3
+2025-06-09,Monday,6,Maggi,Grocery,15,83,Card,20
+2025-04-12,Saturday,4,Rice,Grocery,70,76,Cash,12
+2025-12-23,Tuesday,12,Bread,Bakery,35,78,Cash,15
+2025-10-17,Friday,10,Maggi,Grocery,15,74,UPI,20
+2025-09-17,Wednesday,9,Rice,Grocery,70,27,Cash,7
+2025-02-24,Monday,2,Chips,Snacks,20,54,Cash,11
+2025-12-29,Monday,12,Chips,Snacks,20,56,UPI,9
+2025-11-30,Sunday,11,Tea,Beverage,120,74,Cash,27
+2025-06-15,Sunday,6,Soap,Personal Care,40,43,Card,6
+2025-08-26,Tuesday,8,Bread,Bakery,35,76,Cash,17
+2025-09-11,Thursday,9,Milk,Dairy,60,47,UPI,16
+2025-05-13,Tuesday,5,Milk,Dairy,60,53,Card,16
+2025-05-22,Thursday,5,Biscuit,Snacks,25,33,UPI,13
+2025-05-04,Sunday,5,Bread,Bakery,35,77,Cash,22
+2025-11-27,Thursday,11,Biscuit,Snacks,25,87,UPI,17
+2025-07-27,Sunday,7,Milk,Dairy,60,82,Cash,20
+2025-09-29,Monday,9,Sugar,Grocery,45,55,Card,8
+2025-06-30,Monday,6,Tea,Beverage,120,47,UPI,10
+2025-04-09,Wednesday,4,Bread,Bakery,35,42,Cash,15
+2025-12-20,Saturday,12,Juice,Beverage,55,43,Cash,10
+2025-10-29,Wednesday,10,Milk,Dairy,60,50,UPI,18
+2025-06-04,Wednesday,6,Milk,Dairy,60,79,UPI,14
+2025-01-28,Tuesday,1,Milk,Dairy,60,56,Cash,18
+2025-09-09,Tuesday,9,Maggi,Grocery,15,36,Cash,16
+2025-08-14,Thursday,8,Sugar,Grocery,45,39,Card,8
+2025-09-02,Tuesday,9,Milk,Dairy,60,38,UPI,14
+2025-11-19,Wednesday,11,Maggi,Grocery,15,48,Cash,19
+2025-02-13,Thursday,2,Juice,Beverage,55,33,Cash,6
+2025-11-02,Sunday,11,Rice,Grocery,70,63,UPI,19
+2025-10-29,Wednesday,10,Sugar,Grocery,45,69,Cash,13
+2025-02-20,Thursday,2,Soap,Personal Care,40,63,UPI,3
+2025-03-22,Saturday,3,Toothpaste,Personal Care,95,64,UPI,9
+2025-08-19,Tuesday,8,Maggi,Grocery,15,70,UPI,20
+2025-12-28,Sunday,12,Bread,Bakery,35,45,Cash,21
+2025-11-17,Monday,11,Juice,Beverage,55,38,UPI,11
+2025-05-17,Saturday,5,Toothpaste,Personal Care,95,31,UPI,8
+2025-10-19,Sunday,10,Milk,Dairy,60,73,Cash,24
+2025-05-20,Tuesday,5,Biscuit,Snacks,25,67,UPI,13
+2025-01-21,Tuesday,1,Maggi,Grocery,15,86,UPI,19
+2025-02-16,Sunday,2,Bread,Bakery,35,78,Card,21
+2025-12-11,Thursday,12,Butter,Dairy,55,62,UPI,6
+2025-08-29,Friday,8,Biscuit,Snacks,25,74,UPI,13
+2025-10-27,Monday,10,Milk,Dairy,60,47,UPI,22
+2025-06-14,Saturday,6,Rice,Grocery,70,50,UPI,9
+2025-12-06,Saturday,12,Tea,Beverage,120,69,UPI,20
+2025-03-01,Saturday,3,Bread,Bakery,35,43,Cash,23
+2025-07-31,Thursday,7,Tea,Beverage,120,39,UPI,7
+2025-09-13,Saturday,9,Shampoo,Personal Care,180,40,UPI,7
+2025-05-28,Wednesday,5,Maggi,Grocery,15,83,UPI,19
+2025-11-19,Wednesday,11,Maggi,Grocery,15,59,Cash,20
+2025-02-17,Monday,2,Tea,Beverage,120,35,UPI,8
+2025-03-20,Thursday,3,Maggi,Grocery,15,84,UPI,19
+2025-08-01,Friday,8,Biscuit,Snacks,25,62,UPI,12
+2025-07-16,Wednesday,7,Tea,Beverage,120,66,UPI,8
+2025-02-05,Wednesday,2,Cold Drink,Beverage,40,77,Cash,8
+2025-09-17,Wednesday,9,Rice,Grocery,70,27,UPI,7
+2025-10-28,Tuesday,10,Milk,Dairy,60,68,UPI,20
+2025-10-10,Friday,10,Milk,Dairy,60,62,Card,22
+2025-05-03,Saturday,5,Butter,Dairy,55,48,Card,14
+2025-06-12,Thursday,6,Rice,Grocery,70,73,Card,8
+2025-12-06,Saturday,12,Rice,Grocery,70,34,UPI,12
+2025-06-19,Thursday,6,Butter,Dairy,55,52,UPI,4
+2025-01-08,Wednesday,1,Cold Drink,Beverage,40,53,Card,7
+2025-02-08,Saturday,2,Butter,Dairy,55,53,Cash,12
+2025-02-11,Tuesday,2,Rice,Grocery,70,70,Card,7
+2025-06-12,Thursday,6,Rice,Grocery,70,62,UPI,8
+2025-11-20,Thursday,11,Maggi,Grocery,15,88,UPI,21
+2025-11-21,Friday,11,Butter,Dairy,55,39,Cash,9
+2025-01-24,Friday,1,Cold Drink,Beverage,40,78,UPI,8
+2025-08-09,Saturday,8,Milk,Dairy,60,72,UPI,19
+2025-04-03,Thursday,4,Toothpaste,Personal Care,95,36,UPI,5
+2025-11-14,Friday,11,Cold Drink,Beverage,40,69,UPI,12
+2025-05-11,Sunday,5,Sugar,Grocery,45,76,UPI,14
+2025-05-28,Wednesday,5,Chips,Snacks,20,42,UPI,12
+2025-10-28,Tuesday,10,Juice,Beverage,55,76,UPI,12
+2025-04-12,Saturday,4,Chips,Snacks,20,43,UPI,17
+2025-10-22,Wednesday,10,Coffee,Beverage,180,30,Card,9
+2025-05-21,Wednesday,5,Toothpaste,Personal Care,95,60,Card,4
+2025-01-26,Sunday,1,Chips,Snacks,20,56,Cash,18
+2025-06-30,Monday,6,Bread,Bakery,35,74,UPI,14
+2025-12-04,Thursday,12,Bread,Bakery,35,74,UPI,14
+2025-01-21,Tuesday,1,Shampoo,Personal Care,180,73,UPI,3
+2025-03-09,Sunday,3,Coffee,Beverage,180,48,Cash,8
+2025-03-09,Sunday,3,Bread,Bakery,35,75,UPI,22
+2025-03-26,Wednesday,3,Milk,Dairy,60,66,Card,16
+2025-06-23,Monday,6,Milk,Dairy,60,63,Card,14
+2025-04-26,Saturday,4,Bread,Bakery,35,66,UPI,23
+2025-05-16,Friday,5,Rice,Grocery,70,36,UPI,9
+2025-12-11,Thursday,12,Toothpaste,Personal Care,95,63,UPI,6
+2025-07-10,Thursday,7,Shampoo,Personal Care,180,64,UPI,1
+2025-10-15,Wednesday,10,Maggi,Grocery,15,58,Cash,24
+2025-08-26,Tuesday,8,Shampoo,Personal Care,180,64,UPI,3
+2025-01-20,Monday,1,Bread,Bakery,35,66,UPI,15
+2025-10-03,Friday,10,Bread,Bakery,35,68,UPI,19
+2025-12-23,Tuesday,12,Juice,Beverage,55,55,Cash,9
+2025-08-01,Friday,8,Biscuit,Snacks,25,60,Cash,9
+2025-05-24,Saturday,5,Juice,Beverage,55,53,UPI,20
+2025-07-05,Saturday,7,Juice,Beverage,55,64,Card,10
+2025-02-01,Saturday,2,Toothpaste,Personal Care,95,44,Card,12
+2025-08-21,Thursday,8,Juice,Beverage,55,67,UPI,5
+2025-01-11,Saturday,1,Shampoo,Personal Care,180,41,Card,6
+2025-04-16,Wednesday,4,Chips,Snacks,20,76,Cash,8
+2025-04-30,Wednesday,4,Coffee,Beverage,180,74,UPI,5
+2025-01-02,Thursday,1,Cold Drink,Beverage,40,37,Card,8
+2025-03-31,Monday,3,Tea,Beverage,120,69,Card,7
+2025-07-03,Thursday,7,Maggi,Grocery,15,74,UPI,17
+2025-01-27,Monday,1,Bread,Bakery,35,81,UPI,14
+2025-02-02,Sunday,2,Maggi,Grocery,15,94,UPI,25
+2025-08-20,Wednesday,8,Soap,Personal Care,40,40,Card,6
+2025-12-04,Thursday,12,Maggi,Grocery,15,59,UPI,20
+2025-02-01,Saturday,2,Butter,Dairy,55,60,Cash,13
+2025-08-16,Saturday,8,Tea,Beverage,120,50,Cash,10
+2025-05-21,Wednesday,5,Maggi,Grocery,15,80,Cash,20
+2025-07-15,Tuesday,7,Biscuit,Snacks,25,66,UPI,13
+2025-08-09,Saturday,8,Tea,Beverage,120,71,Cash,10
+2025-04-21,Monday,4,Biscuit,Snacks,25,60,Card,12
+2025-08-21,Thursday,8,Rice,Grocery,70,54,Cash,8
+2025-06-10,Tuesday,6,Milk,Dairy,60,59,Card,16
+2025-08-31,Sunday,8,Toothpaste,Personal Care,95,32,UPI,7
+2025-07-10,Thursday,7,Maggi,Grocery,15,72,UPI,17
+2025-10-15,Wednesday,10,Juice,Beverage,55,55,UPI,9
+2025-08-05,Tuesday,8,Toothpaste,Personal Care,95,42,Cash,4
+2025-10-23,Thursday,10,Milk,Dairy,60,80,UPI,18
+2025-06-29,Sunday,6,Chips,Snacks,20,44,Cash,17
+2025-08-08,Friday,8,Coffee,Beverage,180,76,Cash,7
+2025-11-26,Wednesday,11,Soap,Personal Care,40,70,Cash,8
+2025-04-03,Thursday,4,Milk,Dairy,60,80,Cash,16
+2025-06-29,Sunday,6,Juice,Beverage,55,71,Cash,15
+2025-11-21,Friday,11,Maggi,Grocery,15,85,UPI,18
+2025-08-21,Thursday,8,Rice,Grocery,70,37,UPI,7
+2025-10-18,Saturday,10,Biscuit,Snacks,25,47,UPI,18
+2025-12-12,Friday,12,Soap,Personal Care,40,39,UPI,2
+2025-11-07,Friday,11,Rice,Grocery,70,50,UPI,13
+2025-06-26,Thursday,6,Tea,Beverage,120,37,UPI,10
+2025-09-07,Sunday,9,Toothpaste,Personal Care,95,35,UPI,13
+2025-01-29,Wednesday,1,Butter,Dairy,55,37,UPI,4
+2025-03-12,Wednesday,3,Bread,Bakery,35,53,UPI,15
+2025-08-09,Saturday,8,Maggi,Grocery,15,65,UPI,21
+2025-10-14,Tuesday,10,Bread,Bakery,35,62,Card,17
+2025-01-10,Friday,1,Maggi,Grocery,15,43,Card,19
+2025-10-21,Tuesday,10,Coffee,Beverage,180,49,UPI,11
+2025-06-16,Monday,6,Maggi,Grocery,15,76,UPI,17
+2025-07-05,Saturday,7,Biscuit,Snacks,25,41,UPI,15
+2025-09-26,Friday,9,Coffee,Beverage,180,48,Card,3
+2025-04-24,Thursday,4,Biscuit,Snacks,25,80,UPI,11
+2025-02-28,Friday,2,Tea,Beverage,120,63,UPI,11
+2025-06-29,Sunday,6,Biscuit,Snacks,25,40,UPI,14
+2025-11-05,Wednesday,11,Bread,Bakery,35,47,Card,16
+2025-08-26,Tuesday,8,Shampoo,Personal Care,180,73,Cash,5
+2025-10-17,Friday,10,Toothpaste,Personal Care,95,39,UPI,10
+2025-11-20,Thursday,11,Sugar,Grocery,45,69,UPI,12
+2025-06-08,Sunday,6,Tea,Beverage,120,38,UPI,16
+2025-02-09,Sunday,2,Chips,Snacks,20,73,UPI,15
+2025-10-11,Saturday,10,Sugar,Grocery,45,79,UPI,18
+2025-09-14,Sunday,9,Soap,Personal Care,40,54,UPI,6
+2025-06-25,Wednesday,6,Cold Drink,Beverage,40,68,Cash,16
+2025-12-29,Monday,12,Maggi,Grocery,15,67,UPI,19
+2025-07-06,Sunday,7,Soap,Personal Care,40,53,UPI,9
+2025-11-03,Monday,11,Milk,Dairy,60,42,UPI,18
+2025-07-17,Thursday,7,Coffee,Beverage,180,41,Cash,5
+2025-11-05,Wednesday,11,Toothpaste,Personal Care,95,34,Cash,9
+2025-06-29,Sunday,6,Bread,Bakery,35,49,Cash,21
+2025-06-08,Sunday,6,Juice,Beverage,55,50,Cash,22
+2025-12-17,Wednesday,12,Chips,Snacks,20,37,Cash,12
+2025-07-05,Saturday,7,Rice,Grocery,70,49,UPI,10
+2025-09-06,Saturday,9,Bread,Bakery,35,46,UPI,18
+2025-02-21,Friday,2,Milk,Dairy,60,87,UPI,18
+2025-09-27,Saturday,9,Biscuit,Snacks,25,83,Cash,14
+2025-03-20,Thursday,3,Soap,Personal Care,40,34,Cash,3
+2025-03-26,Wednesday,3,Biscuit,Snacks,25,34,UPI,12
+2025-05-02,Friday,5,Toothpaste,Personal Care,95,66,UPI,7
+2025-08-18,Monday,8,Biscuit,Snacks,25,64,UPI,10
+2025-08-29,Friday,8,Butter,Dairy,55,48,Cash,5
+2025-08-14,Thursday,8,Coffee,Beverage,180,75,UPI,6
+2025-09-28,Sunday,9,Rice,Grocery,70,44,Cash,12
+2025-05-09,Friday,5,Bread,Bakery,35,74,UPI,13
+2025-02-22,Saturday,2,Rice,Grocery,70,50,UPI,12
+2025-08-19,Tuesday,8,Bread,Bakery,35,46,Cash,17
+2025-04-24,Thursday,4,Maggi,Grocery,15,61,Card,19
+2025-07-22,Tuesday,7,Rice,Grocery,70,52,UPI,9
+2025-07-11,Friday,7,Butter,Dairy,55,26,UPI,5
+2025-11-29,Saturday,11,Maggi,Grocery,15,47,UPI,25
+2025-12-23,Tuesday,12,Chips,Snacks,20,77,Cash,9
+2025-01-03,Friday,1,Sugar,Grocery,45,27,UPI,6
+2025-10-08,Wednesday,10,Chips,Snacks,20,82,UPI,13
+2025-01-25,Saturday,1,Milk,Dairy,60,81,Cash,21
+2025-02-26,Wednesday,2,Sugar,Grocery,45,67,UPI,9
+2025-10-22,Wednesday,10,Shampoo,Personal Care,180,43,UPI,5
+2025-05-04,Sunday,5,Soap,Personal Care,40,43,Cash,12
+2025-07-04,Friday,7,Maggi,Grocery,15,69,UPI,16
+2025-09-17,Wednesday,9,Chips,Snacks,20,33,UPI,12
+2025-11-22,Saturday,11,Sugar,Grocery,45,85,UPI,18
+2025-06-26,Thursday,6,Chips,Snacks,20,75,Cash,9
+2025-10-25,Saturday,10,Maggi,Grocery,15,66,UPI,24
+2025-03-31,Monday,3,Chips,Snacks,20,75,UPI,11
+2025-03-11,Tuesday,3,Bread,Bakery,35,78,Cash,13
+2025-05-31,Saturday,5,Sugar,Grocery,45,80,UPI,10
+2025-06-08,Sunday,6,Maggi,Grocery,15,80,UPI,26
+2025-11-28,Friday,11,Maggi,Grocery,15,63,Card,21
+2025-12-02,Tuesday,12,Maggi,Grocery,15,55,UPI,18
+2025-07-24,Thursday,7,Milk,Dairy,60,61,UPI,17
+2025-12-21,Sunday,12,Bread,Bakery,35,74,UPI,21
+2025-08-06,Wednesday,8,Maggi,Grocery,15,63,Cash,16
+2025-10-07,Tuesday,10,Chips,Snacks,20,40,UPI,14
+2025-06-06,Friday,6,Toothpaste,Personal Care,95,65,Cash,7
+2025-08-16,Saturday,8,Bread,Bakery,35,43,Cash,21
+2025-11-11,Tuesday,11,Cold Drink,Beverage,40,73,Card,13
+2025-02-08,Saturday,2,Juice,Beverage,55,65,Cash,13
+2025-01-16,Thursday,1,Toothpaste,Personal Care,95,63,Cash,5
+2025-03-06,Thursday,3,Sugar,Grocery,45,41,Cash,6
+2025-07-16,Wednesday,7,Milk,Dairy,60,40,Cash,18
+2025-07-09,Wednesday,7,Toothpaste,Personal Care,95,54,Cash,6
+2025-09-29,Monday,9,Coffee,Beverage,180,50,UPI,5
+2025-02-28,Friday,2,Milk,Dairy,60,81,UPI,14
+2025-10-15,Wednesday,10,Tea,Beverage,120,80,UPI,11
+2025-11-10,Monday,11,Sugar,Grocery,45,45,UPI,13
+2025-08-20,Wednesday,8,Chips,Snacks,20,74,UPI,9
+2025-12-16,Tuesday,12,Maggi,Grocery,15,80,UPI,18
+2025-10-05,Sunday,10,Maggi,Grocery,15,91,Cash,26
+2025-03-31,Monday,3,Biscuit,Snacks,25,63,UPI,11
+2025-03-13,Thursday,3,Butter,Dairy,55,75,UPI,5
+2025-10-21,Tuesday,10,Milk,Dairy,60,76,UPI,21
+2025-02-03,Monday,2,Cold Drink,Beverage,40,53,Card,8
+2025-09-27,Saturday,9,Biscuit,Snacks,25,74,UPI,18
+2025-11-25,Tuesday,11,Butter,Dairy,55,58,Cash,9
+2025-10-10,Friday,10,Milk,Dairy,60,65,UPI,18
+2025-03-05,Wednesday,3,Cold Drink,Beverage,40,39,UPI,10
+2025-12-30,Tuesday,12,Bread,Bakery,35,56,Card,14
+2025-05-26,Monday,5,Tea,Beverage,120,43,UPI,7
+2025-05-21,Wednesday,5,Juice,Beverage,55,72,UPI,13
+2025-03-28,Friday,3,Tea,Beverage,120,68,UPI,11
+2025-11-06,Thursday,11,Toothpaste,Personal Care,95,34,Cash,12
+2025-01-24,Friday,1,Maggi,Grocery,15,56,Cash,20
+2025-08-02,Saturday,8,Biscuit,Snacks,25,67,Card,16
+2025-11-25,Tuesday,11,Tea,Beverage,120,81,UPI,18
+2025-12-19,Friday,12,Sugar,Grocery,45,36,UPI,6
+2025-04-15,Tuesday,4,Sugar,Grocery,45,66,UPI,8
+2025-06-13,Friday,6,Cold Drink,Beverage,40,63,UPI,18
+2025-10-15,Wednesday,10,Rice,Grocery,70,44,UPI,9
+2025-05-07,Wednesday,5,Milk,Dairy,60,41,UPI,15
+2025-11-12,Wednesday,11,Juice,Beverage,55,41,Cash,11
+2025-06-10,Tuesday,6,Juice,Beverage,55,63,Card,12
+2025-06-07,Saturday,6,Sugar,Grocery,45,37,Card,12
+2025-05-04,Sunday,5,Tea,Beverage,120,57,UPI,15
+2025-11-02,Sunday,11,Milk,Dairy,60,48,Cash,28
+2025-05-16,Friday,5,Sugar,Grocery,45,76,UPI,8
+2025-01-27,Monday,1,Maggi,Grocery,15,75,UPI,20
+2025-02-07,Friday,2,Tea,Beverage,120,62,UPI,10
+2025-11-16,Sunday,11,Tea,Beverage,120,65,UPI,20
+2025-10-13,Monday,10,Butter,Dairy,55,41,Cash,9
+2025-01-21,Tuesday,1,Rice,Grocery,70,27,UPI,5
+2025-08-31,Sunday,8,Milk,Dairy,60,53,Cash,24
+2025-06-17,Tuesday,6,Tea,Beverage,120,51,UPI,11
+2025-06-03,Tuesday,6,Butter,Dairy,55,49,UPI,8
+2025-09-08,Monday,9,Tea,Beverage,120,50,UPI,11
+2025-06-19,Thursday,6,Maggi,Grocery,15,62,Cash,16
+2025-12-19,Friday,12,Chips,Snacks,20,66,UPI,8
+2025-10-24,Friday,10,Butter,Dairy,55,64,UPI,7
+2025-11-14,Friday,11,Tea,Beverage,120,39,Cash,17
+2025-04-08,Tuesday,4,Biscuit,Snacks,25,57,UPI,9
+2025-12-20,Saturday,12,Bread,Bakery,35,72,Cash,20
+2025-02-01,Saturday,2,Juice,Beverage,55,46,Cash,13
+2025-09-02,Tuesday,9,Butter,Dairy,55,52,UPI,8
+2025-09-30,Tuesday,9,Bread,Bakery,35,69,UPI,15
+2025-12-15,Monday,12,Biscuit,Snacks,25,70,UPI,11
+2025-05-23,Friday,5,Juice,Beverage,55,50,Card,16
+2025-05-28,Wednesday,5,Butter,Dairy,55,69,Cash,5
+2025-06-28,Saturday,6,Milk,Dairy,60,61,UPI,23
+2025-07-14,Monday,7,Toothpaste,Personal Care,95,49,Card,7
+2025-05-29,Thursday,5,Chips,Snacks,20,46,Card,8
+2025-08-15,Friday,8,Maggi,Grocery,15,85,UPI,18
+2025-10-03,Friday,10,Bread,Bakery,35,85,UPI,21
+2025-10-28,Tuesday,10,Maggi,Grocery,15,43,Cash,20
+2025-11-23,Sunday,11,Tea,Beverage,120,60,Cash,19
+2025-03-12,Wednesday,3,Maggi,Grocery,15,71,Card,16
+2025-12-01,Monday,12,Bread,Bakery,35,66,Cash,16
+2025-05-28,Wednesday,5,Biscuit,Snacks,25,49,Cash,11
+2025-02-15,Saturday,2,Cold Drink,Beverage,40,68,Cash,14
+2025-01-20,Monday,1,Chips,Snacks,20,55,Card,9
+2025-01-19,Sunday,1,Bread,Bakery,35,53,Card,22
+2025-05-29,Thursday,5,Butter,Dairy,55,24,UPI,4
+2025-06-21,Saturday,6,Soap,Personal Care,40,71,UPI,10
+2025-03-10,Monday,3,Tea,Beverage,120,60,UPI,11
+2025-06-19,Thursday,6,Chips,Snacks,20,75,UPI,9
+2025-04-06,Sunday,4,Milk,Dairy,60,89,UPI,19
+2025-04-09,Wednesday,4,Toothpaste,Personal Care,95,64,Card,5
+2025-08-07,Thursday,8,Cold Drink,Beverage,40,50,UPI,10
+2025-04-05,Saturday,4,Toothpaste,Personal Care,95,51,Card,11
+2025-07-16,Wednesday,7,Maggi,Grocery,15,65,Cash,17
+2025-06-04,Wednesday,6,Juice,Beverage,55,38,UPI,18
+2025-05-01,Thursday,5,Milk,Dairy,60,76,UPI,14
+2025-07-27,Sunday,7,Milk,Dairy,60,87,UPI,23
+2025-06-01,Sunday,6,Juice,Beverage,55,54,Card,20
+2025-08-21,Thursday,8,Sugar,Grocery,45,53,UPI,10
+2025-08-30,Saturday,8,Tea,Beverage,120,83,UPI,15
+2025-02-11,Tuesday,2,Biscuit,Snacks,25,61,UPI,13
+2025-10-16,Thursday,10,Milk,Dairy,60,71,Card,16
+2025-10-02,Thursday,10,Bread,Bakery,35,57,Card,17
+2025-12-15,Monday,12,Sugar,Grocery,45,72,Cash,7
+2025-09-19,Friday,9,Maggi,Grocery,15,42,UPI,19
+2025-08-22,Friday,8,Tea,Beverage,120,34,Cash,11
+2025-06-07,Saturday,6,Toothpaste,Personal Care,95,46,Cash,10
+2025-10-24,Friday,10,Biscuit,Snacks,25,58,UPI,11
+2025-01-31,Friday,1,Maggi,Grocery,15,66,UPI,16
+2025-03-11,Tuesday,3,Rice,Grocery,70,51,Card,8
+2025-07-13,Sunday,7,Rice,Grocery,70,74,Card,11
+2025-03-10,Monday,3,Cold Drink,Beverage,40,35,UPI,8
+2025-09-28,Sunday,9,Tea,Beverage,120,32,Cash,12
+2025-08-26,Tuesday,8,Butter,Dairy,55,55,UPI,8
+2025-05-07,Wednesday,5,Chips,Snacks,20,53,UPI,11
+2025-02-27,Thursday,2,Bread,Bakery,35,75,UPI,13
+2025-01-09,Thursday,1,Biscuit,Snacks,25,43,UPI,10
+2025-08-17,Sunday,8,Soap,Personal Care,40,44,Cash,9
+2025-04-30,Wednesday,4,Rice,Grocery,70,42,Cash,9
+2025-03-13,Thursday,3,Biscuit,Snacks,25,51,UPI,13
+2025-10-22,Wednesday,10,Juice,Beverage,55,71,Cash,13
+2025-05-02,Friday,5,Chips,Snacks,20,39,Card,10
+2025-07-31,Thursday,7,Tea,Beverage,120,46,UPI,9
+2025-03-31,Monday,3,Juice,Beverage,55,63,UPI,8
+2025-11-26,Wednesday,11,Butter,Dairy,55,53,Cash,13
+2025-06-03,Tuesday,6,Rice,Grocery,70,39,Cash,8
+2025-04-26,Saturday,4,Sugar,Grocery,45,61,Card,12
+2025-08-02,Saturday,8,Coffee,Beverage,180,42,UPI,14
+2025-06-19,Thursday,6,Milk,Dairy,60,62,Cash,14
+2025-04-08,Tuesday,4,Maggi,Grocery,15,53,UPI,16
+2025-01-21,Tuesday,1,Soap,Personal Care,40,34,Cash,2
+2025-12-10,Wednesday,12,Coffee,Beverage,180,61,UPI,11
+2025-06-05,Thursday,6,Cold Drink,Beverage,40,44,Card,12
+2025-09-03,Wednesday,9,Maggi,Grocery,15,81,Cash,17
+2025-05-03,Saturday,5,Bread,Bakery,35,91,UPI,22
+2025-11-29,Saturday,11,Sugar,Grocery,45,60,UPI,17
+2025-02-20,Thursday,2,Tea,Beverage,120,78,Cash,10
+2025-07-09,Wednesday,7,Juice,Beverage,55,53,UPI,7
+2025-03-16,Sunday,3,Cold Drink,Beverage,40,66,Card,11
+2025-08-02,Saturday,8,Coffee,Beverage,180,41,UPI,9
+2025-05-06,Tuesday,5,Rice,Grocery,70,63,Cash,8
+2025-05-12,Monday,5,Toothpaste,Personal Care,95,73,Cash,7
+2025-03-28,Friday,3,Tea,Beverage,120,39,UPI,9
+2025-04-05,Saturday,4,Tea,Beverage,120,67,UPI,14
+2025-12-09,Tuesday,12,Chips,Snacks,20,76,UPI,8
+2025-11-19,Wednesday,11,Bread,Bakery,35,81,UPI,16
+2025-08-22,Friday,8,Bread,Bakery,35,38,Cash,15
+2025-11-12,Wednesday,11,Toothpaste,Personal Care,95,33,UPI,12
+2025-01-07,Tuesday,1,Tea,Beverage,120,80,UPI,14
+2025-01-09,Thursday,1,Butter,Dairy,55,72,Cash,8
+2025-04-02,Wednesday,4,Chips,Snacks,20,34,UPI,8
+2025-11-14,Friday,11,Bread,Bakery,35,56,Cash,19
+2025-07-27,Sunday,7,Maggi,Grocery,15,61,Card,26
+2025-12-17,Wednesday,12,Bread,Bakery,35,74,Card,13
+2025-01-17,Friday,1,Toothpaste,Personal Care,95,49,UPI,4
+2025-01-29,Wednesday,1,Tea,Beverage,120,36,UPI,11
+2025-06-19,Thursday,6,Sugar,Grocery,45,36,Card,10
+2025-04-28,Monday,4,Juice,Beverage,55,65,UPI,15
+2025-12-17,Wednesday,12,Juice,Beverage,55,61,Cash,7
+2025-06-11,Wednesday,6,Maggi,Grocery,15,49,Cash,16
+2025-12-31,Wednesday,12,Biscuit,Snacks,25,36,UPI,12
+2025-10-18,Saturday,10,Coffee,Beverage,180,84,Cash,16
+2025-12-19,Friday,12,Chips,Snacks,20,60,Cash,8
+2025-02-20,Thursday,2,Milk,Dairy,60,51,Cash,17
+2025-11-11,Tuesday,11,Milk,Dairy,60,42,Cash,21
+2025-08-19,Tuesday,8,Chips,Snacks,20,45,UPI,11
+2025-08-10,Sunday,8,Juice,Beverage,55,75,UPI,13
+2025-06-01,Sunday,6,Biscuit,Snacks,25,38,UPI,13
+2025-11-21,Friday,11,Rice,Grocery,70,51,UPI,11
+2025-06-07,Saturday,6,Maggi,Grocery,15,92,UPI,24
+2025-04-06,Sunday,4,Maggi,Grocery,15,80,Cash,25
+2025-01-14,Tuesday,1,Rice,Grocery,70,47,Cash,5
+2025-06-16,Monday,6,Soap,Personal Care,40,25,UPI,5
+2025-02-13,Thursday,2,Rice,Grocery,70,44,Cash,9
+2025-07-14,Monday,7,Bread,Bakery,35,42,UPI,14
+2025-03-16,Sunday,3,Milk,Dairy,60,65,UPI,18
+2025-02-09,Sunday,2,Milk,Dairy,60,56,Cash,21
+2025-11-12,Wednesday,11,Tea,Beverage,120,44,UPI,16
+2025-06-20,Friday,6,Juice,Beverage,55,58,UPI,17
+2025-11-30,Sunday,11,Sugar,Grocery,45,58,Cash,18
+2025-09-03,Wednesday,9,Biscuit,Snacks,25,42,Card,11
+2025-05-30,Friday,5,Butter,Dairy,55,63,Cash,7
+2025-05-24,Saturday,5,Milk,Dairy,60,49,Card,22
+2025-10-07,Tuesday,10,Bread,Bakery,35,41,Card,20
+2025-12-29,Monday,12,Sugar,Grocery,45,55,Cash,7
+2025-02-05,Wednesday,2,Chips,Snacks,20,74,UPI,11
+2025-05-04,Sunday,5,Shampoo,Personal Care,180,72,UPI,7
+2025-08-18,Monday,8,Rice,Grocery,70,59,Cash,9
+2025-12-21,Sunday,12,Tea,Beverage,120,90,Card,20
+2025-10-02,Thursday,10,Biscuit,Snacks,25,80,UPI,11
+2025-03-27,Thursday,3,Toothpaste,Personal Care,95,30,Cash,8
+2025-11-28,Friday,11,Toothpaste,Personal Care,95,81,UPI,11
+2025-05-13,Tuesday,5,Maggi,Grocery,15,69,Cash,17
+2025-12-19,Friday,12,Coffee,Beverage,180,59,UPI,11
+2025-12-14,Sunday,12,Sugar,Grocery,45,46,UPI,17
+2025-02-23,Sunday,2,Maggi,Grocery,15,49,UPI,24
+2025-03-14,Friday,3,Juice,Beverage,55,46,UPI,7
+2025-09-24,Wednesday,9,Chips,Snacks,20,53,UPI,11
+2025-12-23,Tuesday,12,Sugar,Grocery,45,49,UPI,9
+2025-12-30,Tuesday,12,Maggi,Grocery,15,37,Cash,16
+2025-12-13,Saturday,12,Toothpaste,Personal Care,95,62,UPI,9
+2025-10-14,Tuesday,10,Bread,Bakery,35,55,Cash,21
+2025-04-06,Sunday,4,Shampoo,Personal Care,180,31,Cash,10
+2025-08-19,Tuesday,8,Cold Drink,Beverage,40,57,UPI,10
+2025-04-16,Wednesday,4,Biscuit,Snacks,25,79,Cash,11
+2025-10-23,Thursday,10,Chips,Snacks,20,45,UPI,14
+2025-02-28,Friday,2,Bread,Bakery,35,77,Card,15
+2025-11-24,Monday,11,Tea,Beverage,120,66,Cash,21
+2025-08-23,Saturday,8,Milk,Dairy,60,85,Cash,22
+2025-11-11,Tuesday,11,Milk,Dairy,60,57,UPI,17
+2025-04-04,Friday,4,Milk,Dairy,60,80,UPI,16
+2025-11-02,Sunday,11,Rice,Grocery,70,48,UPI,17
+2025-11-27,Thursday,11,Tea,Beverage,120,55,UPI,17
+2025-08-19,Tuesday,8,Milk,Dairy,60,41,Card,18
+2025-09-06,Saturday,9,Juice,Beverage,55,54,Card,10
+2025-09-11,Thursday,9,Tea,Beverage,120,73,UPI,10
+2025-08-16,Saturday,8,Biscuit,Snacks,25,41,Cash,16
+2025-04-23,Wednesday,4,Chips,Snacks,20,32,UPI,10
+2025-03-28,Friday,3,Tea,Beverage,120,66,Cash,10
+2025-10-09,Thursday,10,Biscuit,Snacks,25,42,UPI,15
+2025-07-07,Monday,7,Tea,Beverage,120,79,UPI,11
+2025-10-07,Tuesday,10,Biscuit,Snacks,25,41,Cash,15
+2025-05-07,Wednesday,5,Toothpaste,Personal Care,95,28,UPI,6
+2025-02-14,Friday,2,Milk,Dairy,60,44,Cash,17
+2025-10-29,Wednesday,10,Bread,Bakery,35,81,UPI,21
+2025-04-16,Wednesday,4,Soap,Personal Care,40,26,Cash,3
+2025-11-02,Sunday,11,Tea,Beverage,120,62,Cash,24
+2025-09-21,Sunday,9,Juice,Beverage,55,77,Cash,9
+2025-05-22,Thursday,5,Juice,Beverage,55,80,Card,16
+2025-12-31,Wednesday,12,Bread,Bakery,35,50,Cash,15
+2025-09-08,Monday,9,Toothpaste,Personal Care,95,61,Cash,5
+2025-07-12,Saturday,7,Shampoo,Personal Care,180,67,Cash,7
+2025-07-26,Saturday,7,Biscuit,Snacks,25,82,Card,18
+2025-09-07,Sunday,9,Rice,Grocery,70,34,Card,14
+2025-02-17,Monday,2,Chips,Snacks,20,71,Cash,11
+2025-02-02,Sunday,2,Milk,Dairy,60,57,Card,24
+2025-09-11,Thursday,9,Chips,Snacks,20,50,Cash,10
+2025-10-23,Thursday,10,Milk,Dairy,60,72,Cash,21
+2025-01-25,Saturday,1,Cold Drink,Beverage,40,69,Cash,9
+2025-03-05,Wednesday,3,Sugar,Grocery,45,55,UPI,7
+2025-08-08,Friday,8,Butter,Dairy,55,69,Card,5
+2025-06-04,Wednesday,6,Cold Drink,Beverage,40,39,Cash,14
+2025-07-10,Thursday,7,Bread,Bakery,35,37,UPI,14
+2025-12-25,Thursday,12,Milk,Dairy,60,62,Cash,15
+2025-01-01,Wednesday,1,Biscuit,Snacks,25,60,UPI,10
+2025-09-23,Tuesday,9,Soap,Personal Care,40,25,UPI,5
+2025-03-03,Monday,3,Milk,Dairy,60,81,UPI,17
+2025-07-16,Wednesday,7,Maggi,Grocery,15,82,Cash,16
+2025-07-08,Tuesday,7,Maggi,Grocery,15,46,UPI,18
+2025-03-10,Monday,3,Chips,Snacks,20,33,UPI,9
+2025-11-29,Saturday,11,Maggi,Grocery,15,93,UPI,27
+2025-07-30,Wednesday,7,Biscuit,Snacks,25,76,UPI,13
+2025-02-21,Friday,2,Bread,Bakery,35,82,UPI,14
+2025-06-29,Sunday,6,Biscuit,Snacks,25,87,UPI,17
+2025-02-13,Thursday,2,Milk,Dairy,60,70,Cash,15
+2025-05-26,Monday,5,Biscuit,Snacks,25,71,Card,9
+2025-11-07,Friday,11,Bread,Bakery,35,57,Cash,19
+2025-05-03,Saturday,5,Chips,Snacks,20,44,UPI,17
+2025-02-06,Thursday,2,Shampoo,Personal Care,180,25,Card,5
+2025-03-09,Sunday,3,Juice,Beverage,55,61,UPI,15
+2025-08-30,Saturday,8,Toothpaste,Personal Care,95,64,UPI,7
+2025-01-21,Tuesday,1,Milk,Dairy,60,84,UPI,14
+2025-12-31,Wednesday,12,Milk,Dairy,60,87,UPI,18
+2025-02-12,Wednesday,2,Biscuit,Snacks,25,67,Cash,13
+2025-06-08,Sunday,6,Milk,Dairy,60,54,Card,21
+2025-06-17,Tuesday,6,Bread,Bakery,35,73,Cash,16
+2025-12-15,Monday,12,Chips,Snacks,20,47,Cash,8
+2025-05-03,Saturday,5,Biscuit,Snacks,25,38,Card,13
+2025-11-10,Monday,11,Maggi,Grocery,15,82,Cash,20
+2025-03-03,Monday,3,Biscuit,Snacks,25,74,UPI,9
+2025-09-12,Friday,9,Maggi,Grocery,15,71,UPI,18
+2025-05-13,Tuesday,5,Chips,Snacks,20,52,UPI,9
+2025-05-18,Sunday,5,Chips,Snacks,20,52,Cash,11
+2025-02-02,Sunday,2,Milk,Dairy,60,83,UPI,23
+2025-07-04,Friday,7,Sugar,Grocery,45,57,Card,6
+2025-03-22,Saturday,3,Bread,Bakery,35,74,Cash,18
+2025-09-18,Thursday,9,Maggi,Grocery,15,38,Card,16
+2025-01-24,Friday,1,Maggi,Grocery,15,62,UPI,19
+2025-01-19,Sunday,1,Bread,Bakery,35,57,UPI,23
+2025-06-13,Friday,6,Rice,Grocery,70,31,Cash,7
+2025-12-11,Thursday,12,Maggi,Grocery,15,47,UPI,16
+2025-01-24,Friday,1,Tea,Beverage,120,62,Card,13
+2025-06-09,Monday,6,Biscuit,Snacks,25,36,Cash,11
+2025-04-13,Sunday,4,Maggi,Grocery,15,95,UPI,25
+2025-08-26,Tuesday,8,Shampoo,Personal Care,180,60,Card,3
+2025-04-11,Friday,4,Butter,Dairy,55,76,Cash,8
+2025-07-29,Tuesday,7,Bread,Bakery,35,47,UPI,13
+2025-12-22,Monday,12,Shampoo,Personal Care,180,42,UPI,1
+2025-06-07,Saturday,6,Toothpaste,Personal Care,95,61,Card,8
+2025-01-31,Friday,1,Rice,Grocery,70,71,UPI,6
+2025-04-29,Tuesday,4,Maggi,Grocery,15,66,Cash,20
+2025-02-13,Thursday,2,Rice,Grocery,70,35,UPI,9
+2025-07-21,Monday,7,Shampoo,Personal Care,180,58,Cash,1
+2025-03-08,Saturday,3,Sugar,Grocery,45,48,Card,12
+2025-07-21,Monday,7,Juice,Beverage,55,47,UPI,7
+2025-04-14,Monday,4,Bread,Bakery,35,83,Cash,14
+2025-02-24,Monday,2,Maggi,Grocery,15,65,UPI,17
+2025-10-02,Thursday,10,Rice,Grocery,70,58,UPI,10
+2025-03-03,Monday,3,Milk,Dairy,60,44,Cash,14
+2025-12-27,Saturday,12,Milk,Dairy,60,54,Cash,21
+2025-02-16,Sunday,2,Milk,Dairy,60,65,UPI,20
+2025-05-14,Wednesday,5,Toothpaste,Personal Care,95,26,Card,5
+2025-10-12,Sunday,10,Cold Drink,Beverage,40,65,UPI,16
+2025-03-04,Tuesday,3,Chips,Snacks,20,31,Cash,8
+2025-03-08,Saturday,3,Butter,Dairy,55,54,Cash,11
+2025-02-13,Thursday,2,Juice,Beverage,55,66,UPI,9
+2025-01-12,Sunday,1,Chips,Snacks,20,73,UPI,12
+2025-06-19,Thursday,6,Maggi,Grocery,15,38,Card,16
+2025-10-21,Tuesday,10,Maggi,Grocery,15,75,UPI,24
+2025-03-30,Sunday,3,Toothpaste,Personal Care,95,41,UPI,10
+2025-03-18,Tuesday,3,Sugar,Grocery,45,65,Cash,6
+2025-06-01,Sunday,6,Bread,Bakery,35,77,UPI,22
+2025-07-16,Wednesday,7,Maggi,Grocery,15,63,UPI,17
+2025-09-27,Saturday,9,Cold Drink,Beverage,40,84,UPI,14
+2025-07-03,Thursday,7,Rice,Grocery,70,62,Cash,8
+2025-10-17,Friday,10,Milk,Dairy,60,58,UPI,21
+2025-04-23,Wednesday,4,Milk,Dairy,60,83,UPI,14
+2025-08-30,Saturday,8,Chips,Snacks,20,86,Cash,17
+2025-03-23,Sunday,3,Bread,Bakery,35,79,UPI,17
+2025-01-29,Wednesday,1,Tea,Beverage,120,59,UPI,15
+2025-03-30,Sunday,3,Chips,Snacks,20,70,UPI,13
+2025-07-03,Thursday,7,Biscuit,Snacks,25,34,Cash,13
+2025-10-18,Saturday,10,Milk,Dairy,60,60,Cash,28
+2025-09-10,Wednesday,9,Chips,Snacks,20,51,UPI,12
+2025-01-29,Wednesday,1,Maggi,Grocery,15,75,UPI,17
+2025-01-01,Wednesday,1,Tea,Beverage,120,48,Cash,16
+2025-04-01,Tuesday,4,Milk,Dairy,60,39,UPI,16
+2025-03-14,Friday,3,Coffee,Beverage,180,56,Card,3
+2025-07-11,Friday,7,Juice,Beverage,55,65,UPI,8
+2025-03-11,Tuesday,3,Milk,Dairy,60,81,Card,15
+2025-09-07,Sunday,9,Chips,Snacks,20,79,Card,14
+2025-11-11,Tuesday,11,Biscuit,Snacks,25,76,Cash,14
+2025-06-07,Saturday,6,Bread,Bakery,35,50,Cash,19
+2025-10-21,Tuesday,10,Juice,Beverage,55,36,UPI,14
+2025-11-10,Monday,11,Milk,Dairy,60,47,Card,21
+2025-02-09,Sunday,2,Bread,Bakery,35,59,UPI,19
+2025-02-15,Saturday,2,Cold Drink,Beverage,40,34,UPI,14
+2025-02-04,Tuesday,2,Bread,Bakery,35,51,Cash,15
+2025-01-25,Saturday,1,Biscuit,Snacks,25,84,UPI,18
+2025-07-31,Thursday,7,Bread,Bakery,35,60,UPI,16
+2025-09-03,Wednesday,9,Rice,Grocery,70,70,Cash,9
+2025-08-20,Wednesday,8,Bread,Bakery,35,35,UPI,13
+2025-02-23,Sunday,2,Milk,Dairy,60,49,Card,19
+2025-02-08,Saturday,2,Bread,Bakery,35,61,Cash,20
+2025-09-05,Friday,9,Soap,Personal Care,40,49,Card,2
+2025-08-11,Monday,8,Bread,Bakery,35,37,UPI,14
+2025-04-08,Tuesday,4,Bread,Bakery,35,80,Cash,16
+2025-10-04,Saturday,10,Juice,Beverage,55,51,UPI,16
+2025-10-09,Thursday,10,Rice,Grocery,70,34,UPI,11
+2025-05-31,Saturday,5,Sugar,Grocery,45,48,UPI,16
+2025-11-23,Sunday,11,Bread,Bakery,35,50,UPI,23
+2025-09-08,Monday,9,Rice,Grocery,70,32,Cash,7
+2025-07-09,Wednesday,7,Rice,Grocery,70,51,UPI,8
+2025-08-14,Thursday,8,Maggi,Grocery,15,55,UPI,19
+2025-02-01,Saturday,2,Milk,Dairy,60,43,Cash,18
+2025-07-31,Thursday,7,Chips,Snacks,20,46,Cash,12
+2025-09-25,Thursday,9,Chips,Snacks,20,65,Cash,11
+2025-10-21,Tuesday,10,Juice,Beverage,55,50,UPI,11
+2025-01-18,Saturday,1,Cold Drink,Beverage,40,70,Cash,17
+2025-11-14,Friday,11,Toothpaste,Personal Care,95,75,UPI,7
+2025-03-27,Thursday,3,Juice,Beverage,55,38,UPI,6
+2025-12-16,Tuesday,12,Rice,Grocery,70,40,Card,8
+2025-11-01,Saturday,11,Shampoo,Personal Care,180,35,UPI,10
+2025-06-16,Monday,6,Rice,Grocery,70,60,UPI,7
+2025-12-25,Thursday,12,Cold Drink,Beverage,40,67,UPI,10
+2025-08-01,Friday,8,Rice,Grocery,70,35,Cash,6
+2025-02-21,Friday,2,Coffee,Beverage,180,59,Cash,3
+2025-10-02,Thursday,10,Chips,Snacks,20,51,UPI,15
+2025-11-08,Saturday,11,Tea,Beverage,120,66,UPI,21
+2025-12-22,Monday,12,Soap,Personal Care,40,27,UPI,5
+2025-12-20,Saturday,12,Cold Drink,Beverage,40,77,UPI,10
+2025-07-10,Thursday,7,Milk,Dairy,60,55,Cash,14
+2025-05-24,Saturday,5,Milk,Dairy,60,54,UPI,20
+2025-08-15,Friday,8,Butter,Dairy,55,43,Cash,6
+2025-02-15,Saturday,2,Soap,Personal Care,40,42,Card,9
+2025-09-06,Saturday,9,Rice,Grocery,70,37,UPI,14
+2025-06-09,Monday,6,Bread,Bakery,35,62,UPI,17
+2025-10-19,Sunday,10,Chips,Snacks,20,47,Cash,15
+2025-08-22,Friday,8,Bread,Bakery,35,56,Cash,13
+2025-08-26,Tuesday,8,Milk,Dairy,60,63,Cash,18
+2025-01-16,Thursday,1,Maggi,Grocery,15,60,UPI,17
+2025-08-31,Sunday,8,Sugar,Grocery,45,59,UPI,17
+2025-05-13,Tuesday,5,Chips,Snacks,20,46,UPI,8
+2025-10-20,Monday,10,Maggi,Grocery,15,81,UPI,20
+2025-11-30,Sunday,11,Bread,Bakery,35,71,Card,21
+2025-11-04,Tuesday,11,Toothpaste,Personal Care,95,43,Cash,7
+2025-12-31,Wednesday,12,Juice,Beverage,55,54,Card,7
+2025-08-24,Sunday,8,Chips,Snacks,20,63,UPI,14
+2025-11-16,Sunday,11,Tea,Beverage,120,74,Card,22
+2025-07-11,Friday,7,Butter,Dairy,55,69,Cash,8
+2025-12-17,Wednesday,12,Milk,Dairy,60,64,UPI,14
+2025-11-24,Monday,11,Butter,Dairy,55,46,Cash,10
+2025-11-30,Sunday,11,Juice,Beverage,55,67,Cash,14
+2025-11-04,Tuesday,11,Cold Drink,Beverage,40,76,UPI,13
+2025-09-12,Friday,9,Maggi,Grocery,15,54,Card,18
+2025-01-19,Sunday,1,Rice,Grocery,70,48,UPI,16
+2025-12-18,Thursday,12,Biscuit,Snacks,25,73,Cash,13
+2025-12-10,Wednesday,12,Cold Drink,Beverage,40,60,UPI,8
+2025-12-03,Wednesday,12,Bread,Bakery,35,48,UPI,17
+2025-05-13,Tuesday,5,Sugar,Grocery,45,78,Card,10
+2025-06-21,Saturday,6,Juice,Beverage,55,50,Cash,16
+2025-06-19,Thursday,6,Milk,Dairy,60,52,Cash,16
+2025-03-02,Sunday,3,Sugar,Grocery,45,72,Cash,12
+2025-02-06,Thursday,2,Juice,Beverage,55,40,UPI,8
+2025-07-15,Tuesday,7,Cold Drink,Beverage,40,49,UPI,10
+2025-03-19,Wednesday,3,Cold Drink,Beverage,40,39,UPI,7
+2025-08-23,Saturday,8,Butter,Dairy,55,75,UPI,10
+2025-06-20,Friday,6,Maggi,Grocery,15,57,Cash,17
+2025-05-21,Wednesday,5,Maggi,Grocery,15,85,Cash,17
+2025-03-23,Sunday,3,Coffee,Beverage,180,37,Cash,9
+2025-07-26,Saturday,7,Shampoo,Personal Care,180,54,UPI,10
+2025-07-11,Friday,7,Tea,Beverage,120,47,Cash,7
+2025-01-10,Friday,1,Tea,Beverage,120,45,Cash,11
+2025-03-08,Saturday,3,Milk,Dairy,60,72,Cash,20
+2025-01-24,Friday,1,Bread,Bakery,35,53,UPI,15
+2025-09-26,Friday,9,Tea,Beverage,120,56,Card,9
+2025-06-25,Wednesday,6,Butter,Dairy,55,49,Cash,7
+2025-07-26,Saturday,7,Bread,Bakery,35,51,Cash,17
+2025-01-12,Sunday,1,Maggi,Grocery,15,57,UPI,27
+2025-01-20,Monday,1,Biscuit,Snacks,25,72,UPI,12
+2025-01-25,Saturday,1,Tea,Beverage,120,78,Cash,17
+2025-03-01,Saturday,3,Maggi,Grocery,15,69,UPI,25
+2025-12-26,Friday,12,Milk,Dairy,60,48,Cash,15
+2025-06-04,Wednesday,6,Shampoo,Personal Care,180,66,UPI,4
+2025-11-15,Saturday,11,Tea,Beverage,120,75,Cash,23
+2025-02-28,Friday,2,Maggi,Grocery,15,67,UPI,16
+2025-05-15,Thursday,5,Bread,Bakery,35,49,UPI,17
+2025-03-24,Monday,3,Rice,Grocery,70,60,UPI,5
+2025-09-04,Thursday,9,Bread,Bakery,35,50,UPI,15
+2025-02-26,Wednesday,2,Toothpaste,Personal Care,95,70,UPI,8
+2025-09-19,Friday,9,Juice,Beverage,55,71,Cash,5
+2025-11-26,Wednesday,11,Cold Drink,Beverage,40,50,UPI,12
+2025-03-31,Monday,3,Maggi,Grocery,15,54,UPI,16
+2025-08-07,Thursday,8,Toothpaste,Personal Care,95,30,Card,4
+2025-01-05,Sunday,1,Cold Drink,Beverage,40,52,UPI,11
+2025-11-15,Saturday,11,Sugar,Grocery,45,56,UPI,15
+2025-08-22,Friday,8,Rice,Grocery,70,51,Cash,7
+2025-08-04,Monday,8,Sugar,Grocery,45,34,UPI,7
+2025-03-23,Sunday,3,Biscuit,Snacks,25,72,UPI,15
+2025-08-13,Wednesday,8,Coffee,Beverage,180,63,UPI,4
+2025-01-15,Wednesday,1,Milk,Dairy,60,65,Card,15
+2025-07-30,Wednesday,7,Maggi,Grocery,15,41,UPI,19
+2025-01-07,Tuesday,1,Toothpaste,Personal Care,95,77,Cash,8
+2025-04-25,Friday,4,Biscuit,Snacks,25,64,UPI,11
+2025-02-18,Tuesday,2,Biscuit,Snacks,25,74,Cash,12
+2025-12-06,Saturday,12,Sugar,Grocery,45,68,Card,13
+2025-01-06,Monday,1,Soap,Personal Care,40,55,Cash,3
+2025-03-26,Wednesday,3,Chips,Snacks,20,76,UPI,8
+2025-05-23,Friday,5,Bread,Bakery,35,65,UPI,13
+2025-07-26,Saturday,7,Toothpaste,Personal Care,95,57,UPI,8
+2025-02-15,Saturday,2,Coffee,Beverage,180,52,UPI,12
+2025-12-01,Monday,12,Tea,Beverage,120,55,UPI,10
+2025-01-01,Wednesday,1,Coffee,Beverage,180,69,Cash,10
+2025-10-15,Wednesday,10,Cold Drink,Beverage,40,53,UPI,12
+2025-04-25,Friday,4,Maggi,Grocery,15,60,Cash,19
+2025-08-31,Sunday,8,Soap,Personal Care,40,37,UPI,10
+2025-01-02,Thursday,1,Toothpaste,Personal Care,95,48,Cash,6
+2025-05-30,Friday,5,Butter,Dairy,55,61,UPI,8
+2025-03-26,Wednesday,3,Maggi,Grocery,15,47,Cash,19
+2025-07-29,Tuesday,7,Biscuit,Snacks,25,45,Cash,9
+2025-07-21,Monday,7,Bread,Bakery,35,63,Cash,14
+2025-06-23,Monday,6,Bread,Bakery,35,81,UPI,13
+2025-12-11,Thursday,12,Juice,Beverage,55,36,Cash,9
+2025-12-04,Thursday,12,Sugar,Grocery,45,62,UPI,10
+2025-09-29,Monday,9,Tea,Beverage,120,62,Card,7
+2025-09-05,Friday,9,Chips,Snacks,20,81,Card,12
+2025-10-24,Friday,10,Bread,Bakery,35,43,UPI,17
+2025-06-14,Saturday,6,Soap,Personal Care,40,58,Card,12
+2025-05-08,Thursday,5,Juice,Beverage,55,56,Card,15
+2025-03-10,Monday,3,Sugar,Grocery,45,53,Cash,7
+2025-09-20,Saturday,9,Cold Drink,Beverage,40,55,Cash,15
+2025-11-20,Thursday,11,Juice,Beverage,55,42,Cash,9
+2025-06-26,Thursday,6,Milk,Dairy,60,80,Cash,15
+2025-09-15,Monday,9,Juice,Beverage,55,73,Cash,9
+2025-06-30,Monday,6,Biscuit,Snacks,25,63,Cash,13
+2025-12-30,Tuesday,12,Juice,Beverage,55,71,Cash,8
+2025-05-27,Tuesday,5,Chips,Snacks,20,31,UPI,11
+2025-03-16,Sunday,3,Maggi,Grocery,15,51,UPI,19
+2025-05-27,Tuesday,5,Chips,Snacks,20,39,Cash,10
+2025-06-01,Sunday,6,Biscuit,Snacks,25,39,UPI,17
+2025-11-12,Wednesday,11,Sugar,Grocery,45,57,UPI,13
+2025-12-23,Tuesday,12,Chips,Snacks,20,74,Cash,10
+2025-07-18,Friday,7,Juice,Beverage,55,78,Card,8
+2025-10-10,Friday,10,Milk,Dairy,60,83,UPI,16
+2025-08-15,Friday,8,Soap,Personal Care,40,63,Cash,3
+2025-10-29,Wednesday,10,Toothpaste,Personal Care,95,46,UPI,8
+2025-02-08,Saturday,2,Butter,Dairy,55,76,UPI,9
+2025-08-08,Friday,8,Rice,Grocery,70,62,UPI,7
+2025-05-11,Sunday,5,Bread,Bakery,35,67,Cash,18
+2025-03-20,Thursday,3,Bread,Bakery,35,73,UPI,15
+2025-11-12,Wednesday,11,Juice,Beverage,55,82,Cash,12
+2025-12-29,Monday,12,Milk,Dairy,60,69,UPI,16
+2025-02-04,Tuesday,2,Bread,Bakery,35,47,UPI,17
+2025-02-17,Monday,2,Tea,Beverage,120,43,Card,9
+2025-06-19,Thursday,6,Toothpaste,Personal Care,95,44,UPI,6
+2025-09-29,Monday,9,Biscuit,Snacks,25,67,Cash,12
+2025-01-05,Sunday,1,Butter,Dairy,55,57,UPI,9
+2025-11-15,Saturday,11,Toothpaste,Personal Care,95,56,Card,12
+2025-07-17,Thursday,7,Juice,Beverage,55,61,Cash,7
+2025-09-22,Monday,9,Maggi,Grocery,15,70,Cash,18
+2025-01-23,Thursday,1,Sugar,Grocery,45,69,UPI,8
+2025-02-19,Wednesday,2,Tea,Beverage,120,77,UPI,8
+2025-02-03,Monday,2,Maggi,Grocery,15,79,Cash,17
+2025-12-17,Wednesday,12,Bread,Bakery,35,42,UPI,16
+2025-08-11,Monday,8,Chips,Snacks,20,75,Cash,8
+2025-06-19,Thursday,6,Maggi,Grocery,15,41,UPI,16
+2025-05-09,Friday,5,Bread,Bakery,35,41,Cash,17
+2025-05-13,Tuesday,5,Bread,Bakery,35,60,UPI,16
+2025-06-11,Wednesday,6,Rice,Grocery,70,49,Cash,5
+2025-11-25,Tuesday,11,Tea,Beverage,120,42,Cash,20
+2025-09-15,Monday,9,Maggi,Grocery,15,54,Cash,16
+2025-02-14,Friday,2,Milk,Dairy,60,84,Card,16
+2025-12-05,Friday,12,Rice,Grocery,70,55,UPI,5
+2025-07-20,Sunday,7,Bread,Bakery,35,82,UPI,22
+2025-11-28,Friday,11,Toothpaste,Personal Care,95,63,Card,8
+2025-01-22,Wednesday,1,Bread,Bakery,35,69,Cash,13
+2025-02-13,Thursday,2,Tea,Beverage,120,42,Cash,9
+2025-06-26,Thursday,6,Cold Drink,Beverage,40,76,Card,15
+2025-04-05,Saturday,4,Bread,Bakery,35,57,UPI,21
+2025-10-18,Saturday,10,Bread,Bakery,35,49,UPI,25
+2025-02-20,Thursday,2,Maggi,Grocery,15,83,Cash,17
+2025-07-02,Wednesday,7,Juice,Beverage,55,68,Cash,6
+2025-11-14,Friday,11,Maggi,Grocery,15,59,UPI,19
+2025-12-04,Thursday,12,Milk,Dairy,60,80,Cash,16
+2025-07-06,Sunday,7,Coffee,Beverage,180,41,UPI,11
+2025-04-24,Thursday,4,Bread,Bakery,35,53,Cash,16
+2025-06-19,Thursday,6,Maggi,Grocery,15,68,UPI,19
+2025-09-07,Sunday,9,Biscuit,Snacks,25,47,Cash,16
+2025-05-24,Saturday,5,Maggi,Grocery,15,56,UPI,24
+2025-02-09,Sunday,2,Cold Drink,Beverage,40,61,Cash,9
+2025-10-24,Friday,10,Chips,Snacks,20,50,Card,17
+2025-10-06,Monday,10,Tea,Beverage,120,56,UPI,13
+2025-10-29,Wednesday,10,Cold Drink,Beverage,40,60,UPI,11
+2025-07-06,Sunday,7,Maggi,Grocery,15,85,UPI,23
+2025-11-11,Tuesday,11,Butter,Dairy,55,39,UPI,11
+2025-10-17,Friday,10,Bread,Bakery,35,61,UPI,19
+2025-04-29,Tuesday,4,Biscuit,Snacks,25,45,UPI,9
+2025-04-16,Wednesday,4,Maggi,Grocery,15,90,UPI,20
+2025-08-21,Thursday,8,Sugar,Grocery,45,28,Card,6
+2025-12-27,Saturday,12,Milk,Dairy,60,90,UPI,23
+2025-03-31,Monday,3,Tea,Beverage,120,71,UPI,10
+2025-02-09,Sunday,2,Coffee,Beverage,180,56,Card,12
+2025-07-27,Sunday,7,Bread,Bakery,35,71,Cash,20
+2025-01-04,Saturday,1,Cold Drink,Beverage,40,62,UPI,14
+2025-11-26,Wednesday,11,Maggi,Grocery,15,50,UPI,21
+2025-03-02,Sunday,3,Milk,Dairy,60,62,Cash,21
+2025-09-03,Wednesday,9,Sugar,Grocery,45,42,Cash,9
+2025-07-30,Wednesday,7,Toothpaste,Personal Care,95,39,UPI,4
+2025-03-24,Monday,3,Coffee,Beverage,180,64,UPI,4
+2025-03-17,Monday,3,Cold Drink,Beverage,40,36,UPI,6
+2025-07-27,Sunday,7,Bread,Bakery,35,84,UPI,24
+2025-12-05,Friday,12,Biscuit,Snacks,25,36,UPI,11
+2025-08-30,Saturday,8,Soap,Personal Care,40,43,Cash,9
+2025-10-26,Sunday,10,Soap,Personal Care,40,77,Cash,11
+2025-11-02,Sunday,11,Juice,Beverage,55,59,UPI,15
+2025-04-14,Monday,4,Maggi,Grocery,15,72,Cash,20
+2025-11-07,Friday,11,Chips,Snacks,20,61,Card,11
+2025-09-30,Tuesday,9,Soap,Personal Care,40,74,UPI,6
+2025-03-08,Saturday,3,Sugar,Grocery,45,37,Card,17
+2025-11-29,Saturday,11,Biscuit,Snacks,25,44,Cash,22
+2025-09-04,Thursday,9,Sugar,Grocery,45,51,Cash,9
+2025-12-23,Tuesday,12,Biscuit,Snacks,25,39,UPI,13
+2025-04-30,Wednesday,4,Milk,Dairy,60,52,Cash,14
+2025-05-12,Monday,5,Tea,Beverage,120,28,Cash,8
+2025-10-23,Thursday,10,Chips,Snacks,20,34,UPI,14
+2025-06-11,Wednesday,6,Bread,Bakery,35,59,UPI,16
+2025-10-27,Monday,10,Rice,Grocery,70,65,UPI,11
+2025-05-22,Thursday,5,Milk,Dairy,60,85,UPI,17
+2025-10-13,Monday,10,Tea,Beverage,120,56,Cash,13
+2025-06-07,Saturday,6,Sugar,Grocery,45,84,Cash,15
+2025-12-04,Thursday,12,Biscuit,Snacks,25,76,UPI,9
+2025-03-24,Monday,3,Chips,Snacks,20,41,UPI,8
+2025-10-09,Thursday,10,Chips,Snacks,20,55,Card,11
+2025-02-16,Sunday,2,Maggi,Grocery,15,81,UPI,23
+2025-04-24,Thursday,4,Maggi,Grocery,15,43,Cash,18
+2025-07-25,Friday,7,Biscuit,Snacks,25,74,UPI,13
+2025-11-02,Sunday,11,Biscuit,Snacks,25,66,UPI,18
+2025-09-23,Tuesday,9,Chips,Snacks,20,42,UPI,10
+2025-09-22,Monday,9,Soap,Personal Care,40,62,UPI,3
+2025-05-03,Saturday,5,Maggi,Grocery,15,45,Card,20
+2025-06-30,Monday,6,Chips,Snacks,20,56,Cash,11
+2025-12-27,Saturday,12,Tea,Beverage,120,55,Cash,17
+2025-10-26,Sunday,10,Coffee,Beverage,180,48,Cash,14
+2025-07-26,Saturday,7,Bread,Bakery,35,56,UPI,20
+2025-10-14,Tuesday,10,Tea,Beverage,120,51,UPI,13
+2025-09-20,Saturday,9,Maggi,Grocery,15,95,Cash,25
+2025-07-13,Sunday,7,Biscuit,Snacks,25,88,UPI,19
+2025-08-23,Saturday,8,Milk,Dairy,60,45,UPI,24
+2025-07-15,Tuesday,7,Milk,Dairy,60,78,Cash,15
+2025-07-31,Thursday,7,Chips,Snacks,20,63,UPI,10
+2025-05-15,Thursday,5,Biscuit,Snacks,25,48,UPI,10
+2025-06-25,Wednesday,6,Toothpaste,Personal Care,95,59,Card,4
+2025-07-01,Tuesday,7,Sugar,Grocery,45,63,UPI,7
+2025-12-16,Tuesday,12,Juice,Beverage,55,57,Cash,6
+2025-05-04,Sunday,5,Bread,Bakery,35,53,UPI,19
+2025-11-13,Thursday,11,Bread,Bakery,35,87,UPI,18
+2025-12-13,Saturday,12,Juice,Beverage,55,35,Cash,15
+2025-01-22,Wednesday,1,Tea,Beverage,120,74,UPI,15
+2025-10-22,Wednesday,10,Cold Drink,Beverage,40,44,Card,13
+2025-05-24,Saturday,5,Juice,Beverage,55,49,UPI,21
+2025-09-02,Tuesday,9,Chips,Snacks,20,34,UPI,12
+2025-12-18,Thursday,12,Rice,Grocery,70,55,Card,6
+2025-08-24,Sunday,8,Biscuit,Snacks,25,34,Cash,14
+2025-02-21,Friday,2,Rice,Grocery,70,50,Cash,7
+2025-10-08,Wednesday,10,Milk,Dairy,60,56,UPI,19
+2025-07-07,Monday,7,Soap,Personal Care,40,54,UPI,3
+2025-07-10,Thursday,7,Rice,Grocery,70,52,UPI,7
+2025-03-09,Sunday,3,Bread,Bakery,35,47,Cash,21
+2025-10-12,Sunday,10,Chips,Snacks,20,49,Cash,20
+2025-08-31,Sunday,8,Biscuit,Snacks,25,59,UPI,13
+2025-11-19,Wednesday,11,Butter,Dairy,55,50,UPI,11
+2025-01-25,Saturday,1,Cold Drink,Beverage,40,76,UPI,12
+2025-05-11,Sunday,5,Bread,Bakery,35,67,Cash,19
+2025-07-04,Friday,7,Milk,Dairy,60,73,Card,18
+2025-01-11,Saturday,1,Milk,Dairy,60,62,Card,20
+2025-04-12,Saturday,4,Butter,Dairy,55,76,Cash,15
+2025-05-26,Monday,5,Bread,Bakery,35,55,Cash,15
+2025-08-17,Sunday,8,Tea,Beverage,120,72,UPI,13
+2025-03-16,Sunday,3,Shampoo,Personal Care,180,53,Cash,7
+2025-02-06,Thursday,2,Coffee,Beverage,180,33,UPI,3
+2025-12-01,Monday,12,Milk,Dairy,60,81,UPI,16
+2025-05-19,Monday,5,Toothpaste,Personal Care,95,76,Card,7
+2025-10-28,Tuesday,10,Milk,Dairy,60,52,UPI,22
+2025-05-01,Thursday,5,Maggi,Grocery,15,85,Cash,18
+2025-03-27,Thursday,3,Maggi,Grocery,15,45,UPI,19
+2025-08-31,Sunday,8,Juice,Beverage,55,33,Cash,12
+2025-02-12,Wednesday,2,Tea,Beverage,120,43,Cash,7
+2025-07-19,Saturday,7,Maggi,Grocery,15,57,Cash,22
+2025-03-06,Thursday,3,Sugar,Grocery,45,60,Cash,7
+2025-12-06,Saturday,12,Maggi,Grocery,15,73,UPI,23
+2025-05-20,Tuesday,5,Cold Drink,Beverage,40,46,Card,18
+2025-04-01,Tuesday,4,Biscuit,Snacks,25,71,UPI,13
+2025-10-16,Thursday,10,Biscuit,Snacks,25,78,Cash,18
+2025-06-27,Friday,6,Milk,Dairy,60,71,UPI,17
+2025-06-07,Saturday,6,Maggi,Grocery,15,60,UPI,24
+2025-09-25,Thursday,9,Maggi,Grocery,15,59,UPI,17
+2025-12-19,Friday,12,Tea,Beverage,120,55,UPI,16
+2025-05-30,Friday,5,Sugar,Grocery,45,44,Cash,10
+2025-04-07,Monday,4,Tea,Beverage,120,65,UPI,10
+2025-11-27,Thursday,11,Bread,Bakery,35,55,UPI,21
+2025-05-03,Saturday,5,Rice,Grocery,70,80,Cash,16
+2025-09-30,Tuesday,9,Milk,Dairy,60,62,UPI,16
+2025-03-11,Tuesday,3,Maggi,Grocery,15,45,Cash,18
+2025-05-20,Tuesday,5,Soap,Personal Care,40,57,UPI,6
+2025-01-26,Sunday,1,Maggi,Grocery,15,54,Card,23
+2025-03-06,Thursday,3,Milk,Dairy,60,83,UPI,17
+2025-01-08,Wednesday,1,Maggi,Grocery,15,52,UPI,19
+2025-09-13,Saturday,9,Milk,Dairy,60,86,Cash,22
+2025-03-16,Sunday,3,Milk,Dairy,60,88,UPI,19
+2025-04-03,Thursday,4,Tea,Beverage,120,44,Cash,8
+2025-03-04,Tuesday,3,Chips,Snacks,20,53,Cash,9
+2025-01-18,Saturday,1,Sugar,Grocery,45,80,Cash,13
+2025-04-17,Thursday,4,Tea,Beverage,120,54,Cash,10
+2025-06-15,Sunday,6,Milk,Dairy,60,85,Card,18
+2025-05-10,Saturday,5,Tea,Beverage,120,47,UPI,15
+2025-12-08,Monday,12,Maggi,Grocery,15,44,UPI,17
+2025-01-08,Wednesday,1,Sugar,Grocery,45,77,UPI,7
+2025-05-05,Monday,5,Maggi,Grocery,15,38,Cash,16
+2025-12-19,Friday,12,Biscuit,Snacks,25,42,UPI,13
+2025-03-22,Saturday,3,Maggi,Grocery,15,85,Cash,22
+2025-11-17,Monday,11,Juice,Beverage,55,49,Cash,7
+2025-02-24,Monday,2,Biscuit,Snacks,25,61,UPI,10
+2025-11-27,Thursday,11,Butter,Dairy,55,77,UPI,11
+2025-07-03,Thursday,7,Toothpaste,Personal Care,95,41,Card,5
+2025-08-13,Wednesday,8,Sugar,Grocery,45,48,UPI,10
+2025-10-18,Saturday,10,Tea,Beverage,120,83,UPI,17
+2025-11-03,Monday,11,Cold Drink,Beverage,40,62,UPI,9
+2025-05-15,Thursday,5,Milk,Dairy,60,61,UPI,18
+2025-09-17,Wednesday,9,Biscuit,Snacks,25,78,UPI,12
+2025-07-06,Sunday,7,Maggi,Grocery,15,64,Cash,24
+2025-10-03,Friday,10,Toothpaste,Personal Care,95,63,Cash,10
+2025-03-20,Thursday,3,Biscuit,Snacks,25,51,UPI,13
+2025-02-26,Wednesday,2,Toothpaste,Personal Care,95,57,Cash,4
+2025-03-08,Saturday,3,Maggi,Grocery,15,52,UPI,20
+2025-01-17,Friday,1,Bread,Bakery,35,78,Cash,17
+2025-09-27,Saturday,9,Toothpaste,Personal Care,95,51,UPI,15
+2025-02-06,Thursday,2,Bread,Bakery,35,46,Cash,13
+2025-02-10,Monday,2,Juice,Beverage,55,68,UPI,8
+2025-08-01,Friday,8,Coffee,Beverage,180,75,Cash,5
+2025-05-17,Saturday,5,Chips,Snacks,20,81,UPI,15
+2025-04-21,Monday,4,Milk,Dairy,60,44,UPI,18
+2025-07-17,Thursday,7,Bread,Bakery,35,46,UPI,14
+2025-11-17,Monday,11,Bread,Bakery,35,87,Cash,20
+2025-11-23,Sunday,11,Biscuit,Snacks,25,87,Cash,23
+2025-03-27,Thursday,3,Cold Drink,Beverage,40,62,UPI,7
+2025-03-22,Saturday,3,Milk,Dairy,60,73,Card,25
+2025-10-09,Thursday,10,Cold Drink,Beverage,40,58,Cash,12
+2025-06-15,Sunday,6,Sugar,Grocery,45,70,UPI,14
+2025-10-09,Thursday,10,Rice,Grocery,70,59,UPI,11
+2025-01-18,Saturday,1,Rice,Grocery,70,35,UPI,14
+2025-06-04,Wednesday,6,Butter,Dairy,55,43,Card,4
+2025-06-11,Wednesday,6,Bread,Bakery,35,82,Cash,13
+2025-05-22,Thursday,5,Biscuit,Snacks,25,65,Cash,13
+2025-03-21,Friday,3,Juice,Beverage,55,27,UPI,5
+2025-05-16,Friday,5,Bread,Bakery,35,72,UPI,15
+2025-06-03,Tuesday,6,Milk,Dairy,60,70,UPI,14
+2025-02-09,Sunday,2,Juice,Beverage,55,44,UPI,13
+2025-12-26,Friday,12,Cold Drink,Beverage,40,36,Cash,10
+2025-10-23,Thursday,10,Milk,Dairy,60,88,UPI,19
+2025-06-28,Saturday,6,Biscuit,Snacks,25,45,Card,18
+2025-12-01,Monday,12,Bread,Bakery,35,37,Cash,17
+2025-01-28,Tuesday,1,Shampoo,Personal Care,180,56,UPI,3
+2025-03-18,Tuesday,3,Tea,Beverage,120,61,Cash,9
+2025-12-11,Thursday,12,Bread,Bakery,35,64,Cash,16
+2025-02-16,Sunday,2,Coffee,Beverage,180,48,Cash,10
+2025-06-22,Sunday,6,Bread,Bakery,35,75,Cash,19
+2025-05-15,Thursday,5,Tea,Beverage,120,52,UPI,7
+2025-03-08,Saturday,3,Biscuit,Snacks,25,71,UPI,16
+2025-10-20,Monday,10,Rice,Grocery,70,71,Card,12
+2025-05-05,Monday,5,Tea,Beverage,120,44,Cash,7
+2025-10-22,Wednesday,10,Milk,Dairy,60,78,UPI,16
+2025-04-08,Tuesday,4,Milk,Dairy,60,58,Cash,16
+2025-06-06,Friday,6,Maggi,Grocery,15,59,Cash,17
+2025-08-15,Friday,8,Butter,Dairy,55,37,UPI,8
+2025-04-30,Wednesday,4,Juice,Beverage,55,42,Cash,13
+2025-02-27,Thursday,2,Chips,Snacks,20,43,Card,8
+2025-05-28,Wednesday,5,Juice,Beverage,55,76,Cash,12
+2025-08-30,Saturday,8,Milk,Dairy,60,52,Cash,19
+2025-10-07,Tuesday,10,Bread,Bakery,35,71,Cash,21
+2025-12-22,Monday,12,Butter,Dairy,55,48,Cash,4
+2025-01-23,Thursday,1,Toothpaste,Personal Care,95,36,UPI,6
+2025-12-23,Tuesday,12,Bread,Bakery,35,54,UPI,17
+2025-01-05,Sunday,1,Toothpaste,Personal Care,95,72,UPI,10
+2025-12-04,Thursday,12,Chips,Snacks,20,36,UPI,10
+2025-11-29,Saturday,11,Cold Drink,Beverage,40,70,Card,18
+2025-06-11,Wednesday,6,Maggi,Grocery,15,77,UPI,19
+2025-09-14,Sunday,9,Bread,Bakery,35,88,UPI,23
+2025-09-29,Monday,9,Bread,Bakery,35,56,UPI,15
+2025-01-10,Friday,1,Biscuit,Snacks,25,74,UPI,11
+2025-05-01,Thursday,5,Shampoo,Personal Care,180,42,Cash,5
+2025-07-18,Friday,7,Shampoo,Personal Care,180,56,Card,1
+2025-06-24,Tuesday,6,Bread,Bakery,35,78,UPI,16
+2025-09-24,Wednesday,9,Biscuit,Snacks,25,73,Cash,13
+2025-10-21,Tuesday,10,Rice,Grocery,70,50,Card,11
+2025-10-05,Sunday,10,Milk,Dairy,60,79,UPI,22
+2025-03-12,Wednesday,3,Chips,Snacks,20,74,Cash,10
+2025-03-11,Tuesday,3,Tea,Beverage,120,79,UPI,10
+2025-03-22,Saturday,3,Juice,Beverage,55,65,UPI,10
+2025-04-05,Saturday,4,Biscuit,Snacks,25,81,UPI,15
+2025-07-31,Thursday,7,Milk,Dairy,60,56,UPI,17
+2025-11-23,Sunday,11,Juice,Beverage,55,40,UPI,14
+2025-11-10,Monday,11,Maggi,Grocery,15,80,Cash,24
+2025-04-29,Tuesday,4,Soap,Personal Care,40,44,UPI,2
+2025-03-10,Monday,3,Chips,Snacks,20,70,UPI,12
+2025-04-05,Saturday,4,Toothpaste,Personal Care,95,63,UPI,13
+2025-01-17,Friday,1,Bread,Bakery,35,84,Card,16
+2025-07-31,Thursday,7,Juice,Beverage,55,73,Cash,6
+2025-04-15,Tuesday,4,Bread,Bakery,35,44,Card,13
+2025-11-12,Wednesday,11,Butter,Dairy,55,60,Card,11
+2025-01-22,Wednesday,1,Sugar,Grocery,45,77,Cash,10
+2025-07-21,Monday,7,Biscuit,Snacks,25,80,Cash,13
+2025-11-25,Tuesday,11,Tea,Beverage,120,64,Cash,15
+2025-05-06,Tuesday,5,Maggi,Grocery,15,74,UPI,20
+2025-10-13,Monday,10,Biscuit,Snacks,25,86,Cash,18
+2025-05-30,Friday,5,Maggi,Grocery,15,64,Card,19
+2025-05-27,Tuesday,5,Biscuit,Snacks,25,42,UPI,12
+2025-01-28,Tuesday,1,Soap,Personal Care,40,35,UPI,6
+2025-02-16,Sunday,2,Toothpaste,Personal Care,95,42,Cash,11
+2025-12-23,Tuesday,12,Juice,Beverage,55,37,UPI,9
+2025-01-13,Monday,1,Milk,Dairy,60,64,Cash,15
+2025-04-14,Monday,4,Biscuit,Snacks,25,37,UPI,12
+2025-12-31,Wednesday,12,Biscuit,Snacks,25,75,Cash,10
+2025-12-28,Sunday,12,Maggi,Grocery,15,49,UPI,24
+2025-09-19,Friday,9,Rice,Grocery,70,39,UPI,9
+2025-03-29,Saturday,3,Rice,Grocery,70,76,Card,14
+2025-03-16,Sunday,3,Bread,Bakery,35,63,UPI,17
+2025-08-17,Sunday,8,Biscuit,Snacks,25,42,Card,15
+2025-01-02,Thursday,1,Juice,Beverage,55,77,UPI,9
+2025-09-13,Saturday,9,Sugar,Grocery,45,71,Card,13
+2025-10-29,Wednesday,10,Bread,Bakery,35,67,UPI,21
+2025-01-04,Saturday,1,Soap,Personal Care,40,47,Cash,10
+2025-04-17,Thursday,4,Coffee,Beverage,180,34,UPI,3
+2025-01-19,Sunday,1,Toothpaste,Personal Care,95,70,Cash,8
+2025-06-19,Thursday,6,Soap,Personal Care,40,25,UPI,2
+2025-03-24,Monday,3,Butter,Dairy,55,65,Cash,6
+2025-10-21,Tuesday,10,Biscuit,Snacks,25,82,Cash,15
+2025-02-17,Monday,2,Juice,Beverage,55,47,UPI,7
+2025-02-04,Tuesday,2,Rice,Grocery,70,63,UPI,8
+2025-03-04,Tuesday,3,Sugar,Grocery,45,49,UPI,8
+2025-12-23,Tuesday,12,Tea,Beverage,120,38,UPI,15
+2025-11-19,Wednesday,11,Biscuit,Snacks,25,80,Cash,14
+2025-12-28,Sunday,12,Juice,Beverage,55,71,Cash,13
+2025-10-22,Wednesday,10,Milk,Dairy,60,78,Cash,19
+2025-11-20,Thursday,11,Tea,Beverage,120,78,UPI,19
+2025-04-10,Thursday,4,Milk,Dairy,60,41,UPI,14
+2025-03-02,Sunday,3,Shampoo,Personal Care,180,55,UPI,9
+2025-10-14,Tuesday,10,Milk,Dairy,60,77,UPI,17
+2025-02-04,Tuesday,2,Milk,Dairy,60,55,UPI,16
+2025-01-04,Saturday,1,Milk,Dairy,60,60,UPI,19
+2025-01-15,Wednesday,1,Coffee,Beverage,180,49,Cash,8
+2025-09-03,Wednesday,9,Juice,Beverage,55,30,Cash,8
+2025-11-18,Tuesday,11,Sugar,Grocery,45,56,UPI,15
+2025-01-29,Wednesday,1,Chips,Snacks,20,51,Cash,12
+2025-10-12,Sunday,10,Toothpaste,Personal Care,95,70,Cash,14
+2025-07-01,Tuesday,7,Chips,Snacks,20,37,UPI,8
+2025-07-12,Saturday,7,Maggi,Grocery,15,80,Cash,24
+2025-03-01,Saturday,3,Bread,Bakery,35,85,UPI,20
+2025-09-12,Friday,9,Rice,Grocery,70,49,UPI,6
+2025-04-21,Monday,4,Juice,Beverage,55,47,UPI,16
+2025-04-14,Monday,4,Chips,Snacks,20,56,UPI,8
+2025-09-14,Sunday,9,Chips,Snacks,20,54,Card,13
+2025-09-26,Friday,9,Biscuit,Snacks,25,80,UPI,11
+2025-02-20,Thursday,2,Biscuit,Snacks,25,76,Card,13
+2025-01-19,Sunday,1,Bread,Bakery,35,87,Card,22
+2025-06-09,Monday,6,Maggi,Grocery,15,79,Cash,16
+2025-06-20,Friday,6,Cold Drink,Beverage,40,40,UPI,14
+2025-06-09,Monday,6,Toothpaste,Personal Care,95,60,Cash,4
+2025-04-18,Friday,4,Shampoo,Personal Care,180,35,UPI,3
+2025-06-13,Friday,6,Milk,Dairy,60,79,UPI,17
+2025-05-21,Wednesday,5,Bread,Bakery,35,33,Card,13
+2025-02-22,Saturday,2,Coffee,Beverage,180,53,UPI,11
+2025-12-27,Saturday,12,Milk,Dairy,60,58,UPI,23
+2025-06-23,Monday,6,Milk,Dairy,60,66,UPI,18
+2025-12-12,Friday,12,Maggi,Grocery,15,42,UPI,16
+2025-07-20,Sunday,7,Maggi,Grocery,15,81,Cash,24
+2025-08-17,Sunday,8,Biscuit,Snacks,25,57,UPI,18
+2025-12-10,Wednesday,12,Bread,Bakery,35,42,Card,17
+2025-08-27,Wednesday,8,Biscuit,Snacks,25,41,UPI,13
+2025-12-24,Wednesday,12,Chips,Snacks,20,37,UPI,11
+2025-12-30,Tuesday,12,Toothpaste,Personal Care,95,57,UPI,7
+2025-11-12,Wednesday,11,Bread,Bakery,35,64,UPI,19
+2025-06-19,Thursday,6,Juice,Beverage,55,66,UPI,15
+2025-06-29,Sunday,6,Sugar,Grocery,45,45,UPI,15
+2025-10-22,Wednesday,10,Milk,Dairy,60,47,UPI,21
+2025-02-24,Monday,2,Biscuit,Snacks,25,66,Cash,11
+2025-09-30,Tuesday,9,Chips,Snacks,20,56,Cash,11
+2025-05-05,Monday,5,Bread,Bakery,35,47,Card,17
+2025-06-24,Tuesday,6,Rice,Grocery,70,70,Cash,6
+2025-08-11,Monday,8,Chips,Snacks,20,82,UPI,12
+2025-03-30,Sunday,3,Biscuit,Snacks,25,67,UPI,16
+2025-06-16,Monday,6,Soap,Personal Care,40,32,Cash,6
+2025-07-27,Sunday,7,Bread,Bakery,35,46,Cash,20
+2025-07-14,Monday,7,Soap,Personal Care,40,55,Cash,4
+2025-04-22,Tuesday,4,Maggi,Grocery,15,74,Card,17
+2025-01-01,Wednesday,1,Shampoo,Personal Care,180,64,UPI,2
+2025-07-19,Saturday,7,Tea,Beverage,120,66,UPI,18
+2025-06-12,Thursday,6,Toothpaste,Personal Care,95,62,Cash,6
+2025-08-11,Monday,8,Toothpaste,Personal Care,95,31,Cash,6
+2025-09-19,Friday,9,Soap,Personal Care,40,33,Card,5
+2025-10-09,Thursday,10,Maggi,Grocery,15,83,Cash,18
+2025-02-26,Wednesday,2,Butter,Dairy,55,27,UPI,6
+2025-07-21,Monday,7,Biscuit,Snacks,25,76,UPI,11
+2025-10-07,Tuesday,10,Rice,Grocery,70,59,UPI,9
+2025-07-04,Friday,7,Coffee,Beverage,180,35,UPI,6
+2025-03-06,Thursday,3,Cold Drink,Beverage,40,27,UPI,7
+2025-09-07,Sunday,9,Maggi,Grocery,15,48,UPI,23
+2025-08-22,Friday,8,Chips,Snacks,20,59,Cash,12
+2025-08-06,Wednesday,8,Sugar,Grocery,45,58,UPI,10
+2025-08-06,Wednesday,8,Bread,Bakery,35,37,Cash,17
+2025-05-02,Friday,5,Chips,Snacks,20,49,UPI,12
+2025-07-07,Monday,7,Tea,Beverage,120,29,Cash,7
+2025-02-27,Thursday,2,Biscuit,Snacks,25,63,Card,13
+2025-09-27,Saturday,9,Maggi,Grocery,15,77,UPI,24
+2025-02-15,Saturday,2,Cold Drink,Beverage,40,73,Cash,13
+2025-02-09,Sunday,2,Juice,Beverage,55,55,Cash,16
+2025-10-01,Wednesday,10,Cold Drink,Beverage,40,60,UPI,11
+2025-06-19,Thursday,6,Sugar,Grocery,45,51,Card,9
+2025-05-29,Thursday,5,Chips,Snacks,20,31,Cash,9
+2025-06-05,Thursday,6,Soap,Personal Care,40,42,UPI,6
+2025-03-28,Friday,3,Sugar,Grocery,45,33,Cash,10
+2025-11-16,Sunday,11,Milk,Dairy,60,49,UPI,24
+2025-05-23,Friday,5,Maggi,Grocery,15,46,Cash,18
+2025-05-12,Monday,5,Milk,Dairy,60,81,UPI,14
+2025-10-30,Thursday,10,Bread,Bakery,35,62,Cash,19
+2025-12-25,Thursday,12,Milk,Dairy,60,66,UPI,15
+2025-01-17,Friday,1,Tea,Beverage,120,41,Cash,12
+2025-09-11,Thursday,9,Chips,Snacks,20,80,UPI,11
+2025-11-23,Sunday,11,Toothpaste,Personal Care,95,81,Cash,15
+2025-05-16,Friday,5,Maggi,Grocery,15,39,UPI,16
+2025-06-04,Wednesday,6,Rice,Grocery,70,75,Card,8
+2025-04-30,Wednesday,4,Juice,Beverage,55,66,UPI,16
+2025-08-11,Monday,8,Tea,Beverage,120,45,Card,7
+2025-12-14,Sunday,12,Sugar,Grocery,45,78,Card,15
+2025-09-30,Tuesday,9,Maggi,Grocery,15,65,Cash,18
+2025-05-20,Tuesday,5,Toothpaste,Personal Care,95,43,UPI,6
+2025-12-02,Tuesday,12,Maggi,Grocery,15,65,UPI,20
+2025-05-04,Sunday,5,Toothpaste,Personal Care,95,65,UPI,12
+2025-04-03,Thursday,4,Biscuit,Snacks,25,66,UPI,11
+2025-02-04,Tuesday,2,Maggi,Grocery,15,62,UPI,16
+2025-08-17,Sunday,8,Maggi,Grocery,15,88,UPI,22
+2025-01-13,Monday,1,Bread,Bakery,35,42,UPI,17
+2025-04-22,Tuesday,4,Soap,Personal Care,40,66,UPI,6
+2025-02-14,Friday,2,Juice,Beverage,55,37,UPI,9
+2025-11-28,Friday,11,Biscuit,Snacks,25,76,UPI,12
+2025-12-05,Friday,12,Milk,Dairy,60,74,UPI,14
+2025-08-07,Thursday,8,Butter,Dairy,55,42,UPI,6
+2025-02-01,Saturday,2,Maggi,Grocery,15,66,Card,25
+2025-05-16,Friday,5,Milk,Dairy,60,63,UPI,15
+2025-04-13,Sunday,4,Butter,Dairy,55,45,Cash,14
+2025-10-04,Saturday,10,Maggi,Grocery,15,90,UPI,29
+2025-05-13,Tuesday,5,Sugar,Grocery,45,28,UPI,6
+2025-05-09,Friday,5,Coffee,Beverage,180,27,Card,6
+2025-11-24,Monday,11,Bread,Bakery,35,77,UPI,15
+2025-06-18,Wednesday,6,Bread,Bakery,35,72,UPI,16
+2025-09-09,Tuesday,9,Biscuit,Snacks,25,59,UPI,12
+2025-02-05,Wednesday,2,Biscuit,Snacks,25,47,UPI,13
+2025-09-04,Thursday,9,Juice,Beverage,55,61,UPI,5
+2025-06-20,Friday,6,Butter,Dairy,55,51,UPI,6
+2025-11-28,Friday,11,Butter,Dairy,55,62,Card,8
+2025-08-24,Sunday,8,Milk,Dairy,60,51,Cash,20
+2025-12-05,Friday,12,Butter,Dairy,55,44,Cash,5
+2025-11-19,Wednesday,11,Cold Drink,Beverage,40,38,Card,13
+2025-04-08,Tuesday,4,Sugar,Grocery,45,29,UPI,7
+2025-10-31,Friday,10,Biscuit,Snacks,25,59,UPI,15
+2025-06-07,Saturday,6,Tea,Beverage,120,65,Card,17
+2025-06-23,Monday,6,Maggi,Grocery,15,57,Cash,16
+2025-03-02,Sunday,3,Maggi,Grocery,15,73,Card,24
+2025-10-02,Thursday,10,Cold Drink,Beverage,40,47,Card,13
+2025-03-14,Friday,3,Maggi,Grocery,15,80,UPI,19
+2025-11-13,Thursday,11,Cold Drink,Beverage,40,73,Cash,9
+2025-11-20,Thursday,11,Maggi,Grocery,15,90,UPI,20
+2025-10-30,Thursday,10,Soap,Personal Care,40,31,UPI,4
+2025-04-23,Wednesday,4,Chips,Snacks,20,40,UPI,8
+2025-12-14,Sunday,12,Chips,Snacks,20,43,Card,16
+2025-03-12,Wednesday,3,Coffee,Beverage,180,75,UPI,5
+2025-03-30,Sunday,3,Maggi,Grocery,15,48,UPI,21
+2025-03-28,Friday,3,Biscuit,Snacks,25,66,UPI,11
+2025-10-25,Saturday,10,Bread,Bakery,35,89,Cash,19
+2025-03-22,Saturday,3,Soap,Personal Care,40,33,UPI,8
+2025-02-15,Saturday,2,Bread,Bakery,35,68,Cash,22
+2025-09-01,Monday,9,Chips,Snacks,20,42,UPI,9
+2025-08-19,Tuesday,8,Milk,Dairy,60,52,Card,17
+2025-01-20,Monday,1,Soap,Personal Care,40,37,Cash,6
+2025-02-15,Saturday,2,Soap,Personal Care,40,55,UPI,9
+2025-03-02,Sunday,3,Bread,Bakery,35,79,UPI,20
+2025-10-04,Saturday,10,Biscuit,Snacks,25,91,Cash,22
+2025-01-28,Tuesday,1,Bread,Bakery,35,41,Cash,14
+2025-08-31,Sunday,8,Toothpaste,Personal Care,95,41,Cash,11
+2025-11-27,Thursday,11,Maggi,Grocery,15,55,UPI,22
+2025-08-21,Thursday,8,Milk,Dairy,60,40,Cash,14
+2025-04-01,Tuesday,4,Juice,Beverage,55,62,UPI,11
+2025-05-01,Thursday,5,Maggi,Grocery,15,76,Cash,19
+2025-12-13,Saturday,12,Rice,Grocery,70,80,UPI,11
+2025-05-02,Friday,5,Bread,Bakery,35,48,UPI,16
+2025-08-30,Saturday,8,Bread,Bakery,35,46,Card,23
+2025-11-09,Sunday,11,Bread,Bakery,35,68,UPI,25
+2025-11-20,Thursday,11,Biscuit,Snacks,25,47,UPI,15
+2025-10-19,Sunday,10,Maggi,Grocery,15,51,Card,24
+2025-03-29,Saturday,3,Sugar,Grocery,45,50,Cash,12
+2025-11-23,Sunday,11,Chips,Snacks,20,77,Card,22
+2025-09-25,Thursday,9,Maggi,Grocery,15,52,Cash,19
+2025-05-23,Friday,5,Chips,Snacks,20,74,UPI,8
+2025-05-07,Wednesday,5,Cold Drink,Beverage,40,73,UPI,16
+2025-03-18,Tuesday,3,Juice,Beverage,55,29,UPI,9
+2025-08-29,Friday,8,Maggi,Grocery,15,42,UPI,20
+2025-12-23,Tuesday,12,Rice,Grocery,70,53,UPI,5
+2025-01-07,Tuesday,1,Maggi,Grocery,15,52,UPI,19
+2025-11-28,Friday,11,Milk,Dairy,60,66,Cash,16
+2025-08-24,Sunday,8,Bread,Bakery,35,45,Card,24
+2025-03-12,Wednesday,3,Sugar,Grocery,45,40,Cash,9
+2025-08-26,Tuesday,8,Rice,Grocery,70,65,UPI,5
+2025-06-20,Friday,6,Cold Drink,Beverage,40,53,UPI,15
+2025-11-10,Monday,11,Milk,Dairy,60,76,Card,17
+2025-01-29,Wednesday,1,Biscuit,Snacks,25,76,UPI,13
+2025-07-16,Wednesday,7,Maggi,Grocery,15,67,Cash,18
+2025-03-31,Monday,3,Milk,Dairy,60,83,UPI,18
+2025-04-15,Tuesday,4,Biscuit,Snacks,25,51,UPI,10
+2025-09-02,Tuesday,9,Maggi,Grocery,15,84,UPI,20
+2025-04-26,Saturday,4,Biscuit,Snacks,25,53,UPI,16
+2025-01-28,Tuesday,1,Rice,Grocery,70,48,UPI,5
+2025-09-27,Saturday,9,Tea,Beverage,120,78,UPI,13
+2025-05-30,Friday,5,Chips,Snacks,20,70,UPI,11
+2025-12-21,Sunday,12,Toothpaste,Personal Care,95,57,UPI,8
+2025-04-02,Wednesday,4,Rice,Grocery,70,31,UPI,7
+2025-12-23,Tuesday,12,Milk,Dairy,60,66,UPI,15
+2025-11-18,Tuesday,11,Bread,Bakery,35,63,Card,17
+2025-03-09,Sunday,3,Tea,Beverage,120,61,UPI,15
+2025-05-30,Friday,5,Toothpaste,Personal Care,95,29,UPI,5
+2025-09-24,Wednesday,9,Chips,Snacks,20,56,Cash,10
+2025-06-17,Tuesday,6,Toothpaste,Personal Care,95,64,Cash,7
+2025-10-08,Wednesday,10,Tea,Beverage,120,54,Cash,15
+2025-06-06,Friday,6,Cold Drink,Beverage,40,48,UPI,14
+2025-01-25,Saturday,1,Butter,Dairy,55,48,UPI,10
+2025-03-24,Monday,3,Bread,Bakery,35,55,UPI,17
+2025-12-29,Monday,12,Bread,Bakery,35,44,UPI,14
+2025-06-12,Thursday,6,Maggi,Grocery,15,48,UPI,20
+2025-04-16,Wednesday,4,Rice,Grocery,70,74,UPI,9
+2025-06-26,Thursday,6,Milk,Dairy,60,58,UPI,15
+2025-10-01,Wednesday,10,Butter,Dairy,55,29,UPI,8
+2025-03-16,Sunday,3,Tea,Beverage,120,44,UPI,15
+2025-09-17,Wednesday,9,Biscuit,Snacks,25,72,Cash,11
+2025-05-29,Thursday,5,Sugar,Grocery,45,72,UPI,10
+2025-08-15,Friday,8,Coffee,Beverage,180,69,UPI,5
+2025-01-21,Tuesday,1,Sugar,Grocery,45,70,Cash,7
+2025-07-25,Friday,7,Milk,Dairy,60,52,UPI,18
+2025-01-29,Wednesday,1,Maggi,Grocery,15,81,UPI,20
+2025-05-23,Friday,5,Tea,Beverage,120,29,UPI,8
+2025-12-13,Saturday,12,Chips,Snacks,20,60,UPI,15
+2025-11-06,Thursday,11,Milk,Dairy,60,63,UPI,18
+2025-07-09,Wednesday,7,Chips,Snacks,20,54,UPI,11
+2025-06-07,Saturday,6,Milk,Dairy,60,49,UPI,24
+2025-08-01,Friday,8,Cold Drink,Beverage,40,47,UPI,9
+2025-08-06,Wednesday,8,Biscuit,Snacks,25,40,Cash,12
+2025-03-15,Saturday,3,Soap,Personal Care,40,58,Card,8
+2025-06-21,Saturday,6,Tea,Beverage,120,82,UPI,14
+2025-11-24,Monday,11,Maggi,Grocery,15,54,Cash,23
+2025-03-12,Wednesday,3,Biscuit,Snacks,25,41,Cash,10
+2025-09-09,Tuesday,9,Milk,Dairy,60,53,Cash,14
+2025-10-14,Tuesday,10,Milk,Dairy,60,41,Cash,20
+2025-06-03,Tuesday,6,Bread,Bakery,35,43,Cash,16
+2025-08-02,Saturday,8,Cold Drink,Beverage,40,77,Cash,13
+2025-05-22,Thursday,5,Maggi,Grocery,15,43,Cash,19
+2025-09-04,Thursday,9,Milk,Dairy,60,65,Card,18
+2025-09-01,Monday,9,Shampoo,Personal Care,180,44,UPI,1
+2025-05-13,Tuesday,5,Coffee,Beverage,180,61,UPI,4
+2025-12-21,Sunday,12,Milk,Dairy,60,50,UPI,20
+2025-11-22,Saturday,11,Milk,Dairy,60,61,UPI,23
+2025-09-21,Sunday,9,Juice,Beverage,55,78,UPI,10
+2025-10-06,Monday,10,Biscuit,Snacks,25,78,Cash,15
+2025-12-24,Wednesday,12,Milk,Dairy,60,42,UPI,16
+2025-03-15,Saturday,3,Milk,Dairy,60,71,UPI,18
+2025-07-30,Wednesday,7,Chips,Snacks,20,40,UPI,10
+2025-04-24,Thursday,4,Bread,Bakery,35,84,Card,14
+2025-09-27,Saturday,9,Soap,Personal Care,40,77,Cash,13
+2025-08-24,Sunday,8,Maggi,Grocery,15,47,Card,19
+2025-06-09,Monday,6,Sugar,Grocery,45,36,Cash,8
+2025-11-02,Sunday,11,Cold Drink,Beverage,40,83,UPI,18
+2025-03-02,Sunday,3,Biscuit,Snacks,25,78,UPI,14
+2025-03-06,Thursday,3,Bread,Bakery,35,42,Card,14
+2025-02-27,Thursday,2,Rice,Grocery,70,26,Cash,5
+2025-01-22,Wednesday,1,Biscuit,Snacks,25,36,UPI,10
+2025-10-31,Friday,10,Toothpaste,Personal Care,95,36,Card,9
+2025-06-04,Wednesday,6,Maggi,Grocery,15,84,UPI,16
+2025-11-05,Wednesday,11,Maggi,Grocery,15,55,UPI,23
+2025-02-16,Sunday,2,Milk,Dairy,60,77,UPI,20
+2025-09-14,Sunday,9,Bread,Bakery,35,73,Cash,21
+2025-10-24,Friday,10,Maggi,Grocery,15,55,Cash,22
+2025-03-29,Saturday,3,Butter,Dairy,55,77,UPI,11
+2025-09-16,Tuesday,9,Bread,Bakery,35,59,Cash,16
+2025-12-11,Thursday,12,Bread,Bakery,35,44,Cash,13
+2025-08-06,Wednesday,8,Butter,Dairy,55,57,UPI,5
+2025-06-10,Tuesday,6,Maggi,Grocery,15,65,UPI,16
+2025-07-04,Friday,7,Maggi,Grocery,15,73,Cash,18
+2025-09-10,Wednesday,9,Maggi,Grocery,15,60,UPI,16
+2025-06-09,Monday,6,Soap,Personal Care,40,39,Cash,5
+2025-08-08,Friday,8,Milk,Dairy,60,39,Card,15
+2025-12-14,Sunday,12,Chips,Snacks,20,34,Card,14
+2025-02-23,Sunday,2,Tea,Beverage,120,69,Cash,16
+2025-03-15,Saturday,3,Maggi,Grocery,15,89,Cash,25
+2025-03-28,Friday,3,Maggi,Grocery,15,59,Card,16
+2025-11-01,Saturday,11,Milk,Dairy,60,70,Cash,23
+2025-10-25,Saturday,10,Milk,Dairy,60,70,UPI,28
+2025-07-27,Sunday,7,Soap,Personal Care,40,49,UPI,12
+2025-03-04,Tuesday,3,Sugar,Grocery,45,59,UPI,8
+2025-03-10,Monday,3,Shampoo,Personal Care,180,27,Cash,1
+2025-09-13,Saturday,9,Chips,Snacks,20,56,Cash,12
+2025-06-05,Thursday,6,Milk,Dairy,60,77,UPI,18
+2025-09-24,Wednesday,9,Maggi,Grocery,15,89,UPI,19
+2025-09-12,Friday,9,Milk,Dairy,60,69,UPI,17
+2025-10-04,Saturday,10,Milk,Dairy,60,70,Card,23
+2025-08-19,Tuesday,8,Maggi,Grocery,15,62,UPI,18
+2025-04-01,Tuesday,4,Maggi,Grocery,15,82,Card,20
+2025-12-28,Sunday,12,Milk,Dairy,60,68,UPI,21
+2025-09-07,Sunday,9,Biscuit,Snacks,25,79,UPI,16
+2025-10-04,Saturday,10,Coffee,Beverage,180,73,Card,18
+2025-07-20,Sunday,7,Tea,Beverage,120,72,Card,15
+2025-06-30,Monday,6,Soap,Personal Care,40,44,UPI,4
+2025-03-07,Friday,3,Coffee,Beverage,180,47,Cash,5
+2025-11-17,Monday,11,Coffee,Beverage,180,60,UPI,13
+2025-06-29,Sunday,6,Milk,Dairy,60,53,UPI,18
+2025-02-13,Thursday,2,Milk,Dairy,60,53,UPI,14
+2025-10-03,Friday,10,Bread,Bakery,35,66,Cash,17
+2025-09-21,Sunday,9,Rice,Grocery,70,34,Cash,13
+2025-06-12,Thursday,6,Coffee,Beverage,180,62,UPI,6
+2025-09-08,Monday,9,Coffee,Beverage,180,67,Cash,3
+2025-09-15,Monday,9,Milk,Dairy,60,46,Cash,16
+2025-08-12,Tuesday,8,Milk,Dairy,60,66,Cash,15
+2025-02-08,Saturday,2,Butter,Dairy,55,50,UPI,12
+2025-10-21,Tuesday,10,Milk,Dairy,60,79,Cash,20
+2025-10-24,Friday,10,Maggi,Grocery,15,63,UPI,22
+2025-09-29,Monday,9,Coffee,Beverage,180,53,UPI,6
+2025-11-30,Sunday,11,Chips,Snacks,20,82,UPI,20
+2025-07-25,Friday,7,Bread,Bakery,35,74,UPI,15
+2025-10-08,Wednesday,10,Toothpaste,Personal Care,95,67,Cash,7
+2025-10-23,Thursday,10,Cold Drink,Beverage,40,74,Card,12
+2025-08-28,Thursday,8,Biscuit,Snacks,25,71,UPI,11
+2025-08-11,Monday,8,Soap,Personal Care,40,72,Cash,6
+2025-07-06,Sunday,7,Tea,Beverage,120,49,UPI,14
+2025-06-03,Tuesday,6,Toothpaste,Personal Care,95,53,UPI,7
+2025-02-02,Sunday,2,Chips,Snacks,20,52,Cash,15
+2025-05-12,Monday,5,Toothpaste,Personal Care,95,43,UPI,8
+2025-04-09,Wednesday,4,Maggi,Grocery,15,51,Cash,16
+2025-09-06,Saturday,9,Milk,Dairy,60,71,Cash,24
+2025-03-23,Sunday,3,Maggi,Grocery,15,43,UPI,22
+2025-12-04,Thursday,12,Chips,Snacks,20,43,Cash,12
+2025-09-06,Saturday,9,Maggi,Grocery,15,44,UPI,19
+2025-02-02,Sunday,2,Milk,Dairy,60,84,Cash,22
+2025-03-13,Thursday,3,Maggi,Grocery,15,44,Cash,17
+2025-03-03,Monday,3,Tea,Beverage,120,73,Cash,11
+2025-09-26,Friday,9,Juice,Beverage,55,58,Card,7
+2025-03-04,Tuesday,3,Bread,Bakery,35,56,Cash,15
+2025-05-01,Thursday,5,Biscuit,Snacks,25,45,UPI,12
+2025-05-21,Wednesday,5,Bread,Bakery,35,62,UPI,16
+2025-09-09,Tuesday,9,Coffee,Beverage,180,50,Cash,7
+2025-10-07,Tuesday,10,Maggi,Grocery,15,87,UPI,24
+2025-03-16,Sunday,3,Milk,Dairy,60,87,UPI,22
+2025-11-27,Thursday,11,Milk,Dairy,60,80,Card,16
+2025-05-10,Saturday,5,Toothpaste,Personal Care,95,53,Cash,14
+2025-12-17,Wednesday,12,Biscuit,Snacks,25,63,Card,9
+2025-07-18,Friday,7,Cold Drink,Beverage,40,51,Card,6
+2025-06-04,Wednesday,6,Juice,Beverage,55,50,UPI,11
+2025-08-13,Wednesday,8,Cold Drink,Beverage,40,77,Cash,8
+2025-05-21,Wednesday,5,Chips,Snacks,20,77,Card,8
+2025-07-31,Thursday,7,Sugar,Grocery,45,73,UPI,8
+2025-02-21,Friday,2,Juice,Beverage,55,70,UPI,6
+2025-08-04,Monday,8,Maggi,Grocery,15,86,Cash,20
+2025-08-21,Thursday,8,Biscuit,Snacks,25,77,UPI,9
+2025-11-19,Wednesday,11,Toothpaste,Personal Care,95,30,UPI,10
+2025-06-10,Tuesday,6,Shampoo,Personal Care,180,30,UPI,5
+2025-11-29,Saturday,11,Bread,Bakery,35,72,UPI,24
+2025-05-14,Wednesday,5,Biscuit,Snacks,25,73,Cash,10
+2025-05-25,Sunday,5,Milk,Dairy,60,64,UPI,18
+2025-07-13,Sunday,7,Rice,Grocery,70,34,Card,13
+2025-11-28,Friday,11,Juice,Beverage,55,57,UPI,8
+2025-03-28,Friday,3,Biscuit,Snacks,25,54,Cash,9
+2025-03-18,Tuesday,3,Soap,Personal Care,40,45,UPI,2
+2025-01-08,Wednesday,1,Coffee,Beverage,180,82,Card,13
+2025-12-11,Thursday,12,Sugar,Grocery,45,36,UPI,9
+2025-05-17,Saturday,5,Bread,Bakery,35,65,UPI,21
+2025-11-04,Tuesday,11,Cold Drink,Beverage,40,77,Cash,11
+2025-07-29,Tuesday,7,Rice,Grocery,70,27,UPI,6
+2025-11-13,Thursday,11,Milk,Dairy,60,63,Cash,20
+2025-02-13,Thursday,2,Toothpaste,Personal Care,95,54,UPI,4
+2025-12-21,Sunday,12,Milk,Dairy,60,86,UPI,21
+2025-11-02,Sunday,11,Rice,Grocery,70,67,UPI,12
+2025-05-01,Thursday,5,Milk,Dairy,60,59,Card,17
+2025-11-03,Monday,11,Juice,Beverage,55,43,UPI,7
+2025-07-22,Tuesday,7,Rice,Grocery,70,35,Card,7
+2025-10-25,Saturday,10,Coffee,Beverage,180,64,UPI,12
+2025-08-28,Thursday,8,Milk,Dairy,60,40,UPI,15
+2025-03-14,Friday,3,Tea,Beverage,120,36,UPI,9
+2025-09-13,Saturday,9,Butter,Dairy,55,58,UPI,11
+2025-11-10,Monday,11,Cold Drink,Beverage,40,54,UPI,14
+2025-09-09,Tuesday,9,Bread,Bakery,35,69,Card,14
+2025-08-14,Thursday,8,Toothpaste,Personal Care,95,36,UPI,4
+2025-01-19,Sunday,1,Bread,Bakery,35,51,Cash,21
+2025-09-11,Thursday,9,Sugar,Grocery,45,54,UPI,6
+2025-09-06,Saturday,9,Biscuit,Snacks,25,45,Cash,18
+2025-03-05,Wednesday,3,Cold Drink,Beverage,40,33,UPI,8
+2025-03-28,Friday,3,Milk,Dairy,60,55,Cash,18
+2025-04-19,Saturday,4,Toothpaste,Personal Care,95,64,Cash,11
+2025-02-09,Sunday,2,Bread,Bakery,35,83,UPI,20
+2025-05-26,Monday,5,Milk,Dairy,60,59,UPI,14
+2025-02-24,Monday,2,Juice,Beverage,55,36,UPI,7
+2025-12-29,Monday,12,Sugar,Grocery,45,58,Cash,9
+2025-12-03,Wednesday,12,Milk,Dairy,60,55,Card,14
+2025-08-20,Wednesday,8,Toothpaste,Personal Care,95,72,Card,6
+2025-10-19,Sunday,10,Cold Drink,Beverage,40,74,UPI,13
+2025-02-06,Thursday,2,Chips,Snacks,20,70,UPI,12
+2025-04-02,Wednesday,4,Rice,Grocery,70,75,Card,6
+2025-04-17,Thursday,4,Maggi,Grocery,15,61,Cash,17
+2025-12-01,Monday,12,Milk,Dairy,60,42,UPI,15
+2025-06-08,Sunday,6,Chips,Snacks,20,58,Cash,16
+2025-09-20,Saturday,9,Chips,Snacks,20,63,Card,15
+2025-10-16,Thursday,10,Sugar,Grocery,45,79,UPI,11
+2025-04-06,Sunday,4,Milk,Dairy,60,48,UPI,23
+2025-08-26,Tuesday,8,Milk,Dairy,60,76,Cash,15
+2025-09-11,Thursday,9,Bread,Bakery,35,77,Cash,17
+2025-08-28,Thursday,8,Maggi,Grocery,15,44,Card,19
+2025-03-18,Tuesday,3,Sugar,Grocery,45,70,Card,7
+2025-09-25,Thursday,9,Chips,Snacks,20,49,Cash,11
+2025-01-24,Friday,1,Tea,Beverage,120,66,UPI,14
+2025-12-05,Friday,12,Maggi,Grocery,15,56,UPI,20
+2025-09-15,Monday,9,Coffee,Beverage,180,30,Cash,3
+2025-04-04,Friday,4,Sugar,Grocery,45,31,UPI,9
+2025-06-02,Monday,6,Cold Drink,Beverage,40,83,UPI,17
+2025-11-16,Sunday,11,Toothpaste,Personal Care,95,47,UPI,14
+2025-11-06,Thursday,11,Biscuit,Snacks,25,60,UPI,13
+2025-03-01,Saturday,3,Maggi,Grocery,15,81,UPI,20
+2025-12-03,Wednesday,12,Biscuit,Snacks,25,79,UPI,13
+2025-11-12,Wednesday,11,Soap,Personal Care,40,48,UPI,9
+2025-04-08,Tuesday,4,Maggi,Grocery,15,37,Cash,16
+2025-01-14,Tuesday,1,Bread,Bakery,35,64,Cash,14
+2025-08-12,Tuesday,8,Toothpaste,Personal Care,95,40,UPI,8
+2025-03-17,Monday,3,Biscuit,Snacks,25,59,UPI,12
+2025-03-20,Thursday,3,Bread,Bakery,35,67,UPI,16
+2025-10-27,Monday,10,Cold Drink,Beverage,40,48,Cash,10
+2025-01-27,Monday,1,Chips,Snacks,20,30,UPI,10
+2025-08-10,Sunday,8,Chips,Snacks,20,84,Cash,17
+2025-05-29,Thursday,5,Biscuit,Snacks,25,60,UPI,9
+2025-11-10,Monday,11,Tea,Beverage,120,69,UPI,16
+2025-10-11,Saturday,10,Coffee,Beverage,180,63,UPI,13
+2025-11-27,Thursday,11,Shampoo,Personal Care,180,72,UPI,8
+2025-04-09,Wednesday,4,Bread,Bakery,35,58,UPI,16
+2025-10-28,Tuesday,10,Tea,Beverage,120,80,Cash,15
+2025-05-31,Saturday,5,Maggi,Grocery,15,88,Cash,25
+2025-08-30,Saturday,8,Milk,Dairy,60,55,UPI,22
+2025-12-08,Monday,12,Biscuit,Snacks,25,40,UPI,12
+2025-09-09,Tuesday,9,Bread,Bakery,35,83,UPI,13
+2025-06-05,Thursday,6,Butter,Dairy,55,38,Cash,5
+2025-07-03,Thursday,7,Butter,Dairy,55,48,Cash,6
+2025-09-15,Monday,9,Bread,Bakery,35,37,UPI,13
+2025-04-27,Sunday,4,Maggi,Grocery,15,57,UPI,23
+2025-07-01,Tuesday,7,Butter,Dairy,55,73,Card,4
+2025-03-19,Wednesday,3,Milk,Dairy,60,76,Cash,18
+2025-08-13,Wednesday,8,Biscuit,Snacks,25,80,UPI,12
+2025-11-09,Sunday,11,Maggi,Grocery,15,51,UPI,29
+2025-03-02,Sunday,3,Bread,Bakery,35,49,Cash,19
+2025-09-17,Wednesday,9,Biscuit,Snacks,25,78,Card,12
+2025-07-06,Sunday,7,Bread,Bakery,35,46,Cash,19
+2025-08-01,Friday,8,Sugar,Grocery,45,41,Cash,6
+2025-05-27,Tuesday,5,Sugar,Grocery,45,40,UPI,10
+2025-08-01,Friday,8,Rice,Grocery,70,67,Cash,7
+2025-09-29,Monday,9,Bread,Bakery,35,86,UPI,16
+2025-07-31,Thursday,7,Chips,Snacks,20,60,Card,11
+2025-12-16,Tuesday,12,Tea,Beverage,120,60,UPI,12
+2025-09-22,Monday,9,Maggi,Grocery,15,41,UPI,16
+2025-03-26,Wednesday,3,Rice,Grocery,70,31,UPI,8
+2025-11-25,Tuesday,11,Maggi,Grocery,15,46,Card,23
+2025-12-05,Friday,12,Butter,Dairy,55,46,UPI,8
+2025-12-25,Thursday,12,Cold Drink,Beverage,40,49,Cash,10
+2025-06-26,Thursday,6,Milk,Dairy,60,51,Card,14
+2025-03-17,Monday,3,Soap,Personal Care,40,53,Cash,5
+2025-11-16,Sunday,11,Cold Drink,Beverage,40,90,Cash,20
+2025-06-04,Wednesday,6,Biscuit,Snacks,25,31,UPI,9
+2025-03-06,Thursday,3,Rice,Grocery,70,63,UPI,9
+2025-10-10,Friday,10,Maggi,Grocery,15,65,Cash,24
+2025-01-15,Wednesday,1,Bread,Bakery,35,74,UPI,17
+2025-06-05,Thursday,6,Chips,Snacks,20,63,UPI,11
+2025-07-10,Thursday,7,Maggi,Grocery,15,78,UPI,18
+2025-11-30,Sunday,11,Maggi,Grocery,15,82,Cash,26
+2025-05-01,Thursday,5,Sugar,Grocery,45,66,Cash,10
+2025-12-07,Sunday,12,Juice,Beverage,55,50,UPI,16
+2025-10-21,Tuesday,10,Milk,Dairy,60,73,Cash,20
+2025-09-22,Monday,9,Maggi,Grocery,15,52,Cash,20
+2025-02-20,Thursday,2,Milk,Dairy,60,80,UPI,15
+2025-02-17,Monday,2,Rice,Grocery,70,52,Card,5
+2025-08-17,Sunday,8,Sugar,Grocery,45,74,UPI,11
+2025-09-23,Tuesday,9,Coffee,Beverage,180,42,Cash,6
+2025-08-14,Thursday,8,Shampoo,Personal Care,180,70,Card,4
+2025-03-15,Saturday,3,Chips,Snacks,20,67,Cash,16
+2025-12-27,Saturday,12,Maggi,Grocery,15,54,Cash,27
+2025-01-17,Friday,1,Sugar,Grocery,45,62,UPI,7
+2025-11-05,Wednesday,11,Juice,Beverage,55,37,UPI,10
+2025-09-25,Thursday,9,Milk,Dairy,60,42,UPI,15
+2025-06-05,Thursday,6,Butter,Dairy,55,57,UPI,6
+2025-10-29,Wednesday,10,Bread,Bakery,35,57,Card,18
+2025-09-08,Monday,9,Bread,Bakery,35,40,UPI,13
+2025-01-23,Thursday,1,Maggi,Grocery,15,69,Cash,19
+2025-06-22,Sunday,6,Coffee,Beverage,180,78,Cash,12
+2025-03-12,Wednesday,3,Maggi,Grocery,15,80,UPI,20
+2025-08-18,Monday,8,Sugar,Grocery,45,73,UPI,7
+2025-12-07,Sunday,12,Chips,Snacks,20,62,UPI,18
+2025-10-04,Saturday,10,Rice,Grocery,70,76,UPI,15
+2025-01-13,Monday,1,Bread,Bakery,35,77,Cash,17
+2025-10-15,Wednesday,10,Biscuit,Snacks,25,40,UPI,15
+2025-10-23,Thursday,10,Soap,Personal Care,40,61,UPI,8
+2025-01-10,Friday,1,Sugar,Grocery,45,68,Card,6
+2025-01-10,Friday,1,Bread,Bakery,35,85,UPI,15
+2025-10-24,Friday,10,Chips,Snacks,20,67,Cash,13
+2025-01-24,Friday,1,Rice,Grocery,70,29,UPI,8
+2025-01-13,Monday,1,Bread,Bakery,35,57,UPI,17
+2025-02-20,Thursday,2,Maggi,Grocery,15,50,UPI,20
+2025-02-15,Saturday,2,Bread,Bakery,35,65,Cash,19
+2025-06-16,Monday,6,Maggi,Grocery,15,38,Cash,17
+2025-02-20,Thursday,2,Milk,Dairy,60,45,UPI,16
+2025-07-12,Saturday,7,Milk,Dairy,60,49,UPI,17
+2025-05-02,Friday,5,Soap,Personal Care,40,57,Cash,5
+2025-02-28,Friday,2,Rice,Grocery,70,30,UPI,7
+2025-02-03,Monday,2,Tea,Beverage,120,31,UPI,10
+2025-01-10,Friday,1,Bread,Bakery,35,70,Card,15
+2025-05-07,Wednesday,5,Toothpaste,Personal Care,95,69,Cash,8
+2025-07-28,Monday,7,Milk,Dairy,60,42,Cash,17
+2025-03-14,Friday,3,Tea,Beverage,120,63,Card,9
+2025-10-03,Friday,10,Chips,Snacks,20,65,UPI,17
+2025-11-14,Friday,11,Chips,Snacks,20,33,UPI,13
+2025-05-20,Tuesday,5,Juice,Beverage,55,79,UPI,16
+2025-11-20,Thursday,11,Milk,Dairy,60,73,UPI,21
+2025-10-01,Wednesday,10,Bread,Bakery,35,42,UPI,17
+2025-03-13,Thursday,3,Maggi,Grocery,15,57,Card,20
+2025-09-16,Tuesday,9,Bread,Bakery,35,78,Card,15
+2025-12-29,Monday,12,Shampoo,Personal Care,180,41,UPI,4
+2025-06-24,Tuesday,6,Butter,Dairy,55,54,Card,5
+2025-12-21,Sunday,12,Milk,Dairy,60,76,UPI,18
+2025-12-11,Thursday,12,Cold Drink,Beverage,40,53,Cash,7
+2025-09-08,Monday,9,Biscuit,Snacks,25,66,UPI,12
+2025-11-30,Sunday,11,Cold Drink,Beverage,40,77,UPI,14
+2025-07-12,Saturday,7,Butter,Dairy,55,57,UPI,13
+2025-12-23,Tuesday,12,Biscuit,Snacks,25,36,UPI,9
+2025-08-16,Saturday,8,Juice,Beverage,55,76,UPI,9
+2025-12-30,Tuesday,12,Milk,Dairy,60,48,UPI,16
+2025-06-05,Thursday,6,Soap,Personal Care,40,37,Card,3
+2025-01-19,Sunday,1,Butter,Dairy,55,77,Cash,12
+2025-04-11,Friday,4,Bread,Bakery,35,43,Card,16
+2025-09-10,Wednesday,9,Coffee,Beverage,180,59,UPI,4
+2025-12-11,Thursday,12,Biscuit,Snacks,25,69,UPI,13
+2025-02-03,Monday,2,Coffee,Beverage,180,40,Card,4
+2025-09-25,Thursday,9,Cold Drink,Beverage,40,40,Cash,8
+2025-12-21,Sunday,12,Maggi,Grocery,15,63,Cash,27
+2025-01-02,Thursday,1,Cold Drink,Beverage,40,70,Cash,9
+2025-06-15,Sunday,6,Toothpaste,Personal Care,95,50,UPI,13
+2025-09-11,Thursday,9,Tea,Beverage,120,62,Cash,9
+2025-04-25,Friday,4,Cold Drink,Beverage,40,59,UPI,13
+2025-07-20,Sunday,7,Milk,Dairy,60,45,Card,20
+2025-04-26,Saturday,4,Chips,Snacks,20,49,UPI,14
+2025-02-02,Sunday,2,Milk,Dairy,60,67,UPI,17
+2025-11-17,Monday,11,Maggi,Grocery,15,57,UPI,22
+2025-06-24,Tuesday,6,Bread,Bakery,35,54,UPI,13
+2025-02-07,Friday,2,Bread,Bakery,35,76,UPI,17
+2025-08-17,Sunday,8,Maggi,Grocery,15,48,Card,23
+2025-07-13,Sunday,7,Juice,Beverage,55,80,UPI,10
+2025-08-15,Friday,8,Juice,Beverage,55,44,Cash,5
+2025-02-22,Saturday,2,Sugar,Grocery,45,36,UPI,13
+2025-02-19,Wednesday,2,Rice,Grocery,70,77,UPI,9
+2025-12-04,Thursday,12,Cold Drink,Beverage,40,30,UPI,10
+2025-08-08,Friday,8,Sugar,Grocery,45,69,UPI,10
+2025-12-12,Friday,12,Toothpaste,Personal Care,95,53,UPI,4
+2025-02-25,Tuesday,2,Coffee,Beverage,180,23,Cash,3
+2025-04-10,Thursday,4,Maggi,Grocery,15,48,Cash,20
+2025-08-04,Monday,8,Milk,Dairy,60,83,Cash,17
+2025-03-12,Wednesday,3,Bread,Bakery,35,36,UPI,13
+2025-09-20,Saturday,9,Coffee,Beverage,180,67,Card,10
+2025-03-17,Monday,3,Biscuit,Snacks,25,51,Cash,12
+2025-01-05,Sunday,1,Milk,Dairy,60,87,Cash,25
+2025-09-17,Wednesday,9,Maggi,Grocery,15,43,UPI,20
+2025-04-13,Sunday,4,Bread,Bakery,35,58,UPI,17
+2025-12-21,Sunday,12,Sugar,Grocery,45,80,UPI,16
+2025-06-21,Saturday,6,Coffee,Beverage,180,58,UPI,12
+2025-01-22,Wednesday,1,Maggi,Grocery,15,53,Card,19
+2025-12-21,Sunday,12,Shampoo,Personal Care,180,67,UPI,8
+2025-06-19,Thursday,6,Sugar,Grocery,45,42,UPI,9
+2025-01-04,Saturday,1,Chips,Snacks,20,37,UPI,13
+2025-03-14,Friday,3,Coffee,Beverage,180,53,UPI,5
+2025-07-04,Friday,7,Coffee,Beverage,180,24,UPI,3
+2025-04-23,Wednesday,4,Milk,Dairy,60,82,UPI,16
+2025-05-06,Tuesday,5,Chips,Snacks,20,41,UPI,9
+2025-02-21,Friday,2,Chips,Snacks,20,71,UPI,8
+2025-02-26,Wednesday,2,Toothpaste,Personal Care,95,39,UPI,6
+2025-07-10,Thursday,7,Bread,Bakery,35,67,Card,14
+2025-08-11,Monday,8,Butter,Dairy,55,31,UPI,4
+2025-04-08,Tuesday,4,Juice,Beverage,55,59,Cash,15
+2025-08-08,Friday,8,Milk,Dairy,60,37,Cash,15
+2025-10-02,Thursday,10,Coffee,Beverage,180,48,UPI,8
+2025-05-24,Saturday,5,Shampoo,Personal Care,180,66,Card,9
+2025-02-11,Tuesday,2,Bread,Bakery,35,86,Cash,16
+2025-09-18,Thursday,9,Maggi,Grocery,15,87,Card,19
+2025-07-11,Friday,7,Biscuit,Snacks,25,65,UPI,12
+2025-07-11,Friday,7,Milk,Dairy,60,82,UPI,18
+2025-08-31,Sunday,8,Juice,Beverage,55,59,Cash,14
+2025-11-29,Saturday,11,Chips,Snacks,20,47,UPI,15
+2025-04-22,Tuesday,4,Bread,Bakery,35,62,Card,15
+2025-07-11,Friday,7,Coffee,Beverage,180,60,UPI,5
+2025-06-01,Sunday,6,Biscuit,Snacks,25,61,UPI,19
+2025-09-20,Saturday,9,Maggi,Grocery,15,72,UPI,25
+2025-07-08,Tuesday,7,Sugar,Grocery,45,49,UPI,9
+2025-08-15,Friday,8,Maggi,Grocery,15,53,Cash,17
+2025-02-12,Wednesday,2,Milk,Dairy,60,68,UPI,16
+2025-05-22,Thursday,5,Toothpaste,Personal Care,95,31,UPI,5
+2025-10-07,Tuesday,10,Milk,Dairy,60,51,Cash,19
+2025-12-16,Tuesday,12,Bread,Bakery,35,47,Cash,15
+2025-10-06,Monday,10,Butter,Dairy,55,77,UPI,8
+2025-07-26,Saturday,7,Chips,Snacks,20,86,Cash,18
+2025-09-20,Saturday,9,Sugar,Grocery,45,47,UPI,13
+2025-08-31,Sunday,8,Biscuit,Snacks,25,74,Cash,17
+2025-08-25,Monday,8,Biscuit,Snacks,25,81,UPI,11
+2025-08-08,Friday,8,Chips,Snacks,20,44,UPI,11
+2025-01-16,Thursday,1,Chips,Snacks,20,38,Cash,10
+2025-01-05,Sunday,1,Maggi,Grocery,15,65,UPI,24
+2025-07-26,Saturday,7,Rice,Grocery,70,54,Cash,14
+2025-01-17,Friday,1,Coffee,Beverage,180,49,Cash,8
+2025-11-08,Saturday,11,Chips,Snacks,20,56,Card,23
+2025-07-17,Thursday,7,Maggi,Grocery,15,67,UPI,17
+2025-08-20,Wednesday,8,Coffee,Beverage,180,30,UPI,5
+2025-04-01,Tuesday,4,Toothpaste,Personal Care,95,68,Cash,4
+2025-04-12,Saturday,4,Maggi,Grocery,15,60,UPI,22
+2025-09-26,Friday,9,Milk,Dairy,60,63,UPI,14
+2025-03-29,Saturday,3,Tea,Beverage,120,60,UPI,15
+2025-10-02,Thursday,10,Maggi,Grocery,15,91,UPI,24
+2025-04-16,Wednesday,4,Juice,Beverage,55,51,UPI,12
+2025-09-01,Monday,9,Biscuit,Snacks,25,68,Cash,10
+2025-04-14,Monday,4,Milk,Dairy,60,83,Cash,18
+2025-01-04,Saturday,1,Milk,Dairy,60,45,Cash,21
+2025-05-07,Wednesday,5,Soap,Personal Care,40,47,Card,6
+2025-08-24,Sunday,8,Cold Drink,Beverage,40,38,Cash,16
+2025-08-22,Friday,8,Milk,Dairy,60,80,Cash,16
+2025-07-20,Sunday,7,Chips,Snacks,20,62,UPI,16
+2025-08-10,Sunday,8,Cold Drink,Beverage,40,77,UPI,15
+2025-07-21,Monday,7,Coffee,Beverage,180,38,Card,3
+2025-11-18,Tuesday,11,Bread,Bakery,35,81,Cash,17
+2025-09-10,Wednesday,9,Cold Drink,Beverage,40,77,Cash,9
+2025-02-09,Sunday,2,Butter,Dairy,55,80,Cash,11
+2025-03-26,Wednesday,3,Rice,Grocery,70,40,UPI,7
+2025-02-07,Friday,2,Sugar,Grocery,45,53,UPI,9
+2025-04-10,Thursday,4,Rice,Grocery,70,30,UPI,8
+2025-03-11,Tuesday,3,Maggi,Grocery,15,80,Cash,18
+2025-02-04,Tuesday,2,Sugar,Grocery,45,61,Cash,6
+2025-08-13,Wednesday,8,Biscuit,Snacks,25,60,Cash,10
+2025-03-29,Saturday,3,Chips,Snacks,20,41,UPI,15
+2025-07-20,Sunday,7,Maggi,Grocery,15,82,Cash,20
+2025-03-20,Thursday,3,Toothpaste,Personal Care,95,49,UPI,7
+2025-12-12,Friday,12,Biscuit,Snacks,25,46,UPI,13
+2025-11-22,Saturday,11,Maggi,Grocery,15,92,UPI,28
+2025-01-03,Friday,1,Maggi,Grocery,15,85,UPI,16
+2025-05-08,Thursday,5,Bread,Bakery,35,50,UPI,15
+2025-01-15,Wednesday,1,Maggi,Grocery,15,57,Cash,16
+2025-02-02,Sunday,2,Toothpaste,Personal Care,95,70,UPI,8
+2025-08-01,Friday,8,Bread,Bakery,35,43,Cash,17
+2025-11-17,Monday,11,Milk,Dairy,60,54,Card,21
+2025-08-08,Friday,8,Rice,Grocery,70,39,UPI,5
+2025-03-30,Sunday,3,Milk,Dairy,60,81,UPI,20
+2025-08-23,Saturday,8,Rice,Grocery,70,71,Cash,9
+2025-07-08,Tuesday,7,Toothpaste,Personal Care,95,28,Card,4
+2025-11-03,Monday,11,Rice,Grocery,70,75,UPI,10
+2025-10-19,Sunday,10,Butter,Dairy,55,70,UPI,12
+2025-07-18,Friday,7,Shampoo,Personal Care,180,43,UPI,2
+2025-12-19,Friday,12,Biscuit,Snacks,25,73,UPI,11
+2025-11-08,Saturday,11,Milk,Dairy,60,81,Cash,29
+2025-10-28,Tuesday,10,Bread,Bakery,35,37,Cash,16
+2025-06-08,Sunday,6,Cold Drink,Beverage,40,91,UPI,23
+2025-03-12,Wednesday,3,Maggi,Grocery,15,69,UPI,18
+2025-04-15,Tuesday,4,Bread,Bakery,35,48,Card,13
+2025-08-16,Saturday,8,Soap,Personal Care,40,45,UPI,8
+2025-01-21,Tuesday,1,Chips,Snacks,20,82,Card,12
+2025-05-28,Wednesday,5,Toothpaste,Personal Care,95,38,Cash,4
+2025-05-05,Monday,5,Milk,Dairy,60,69,UPI,15
+2025-05-08,Thursday,5,Juice,Beverage,55,74,Card,16
+2025-04-04,Friday,4,Tea,Beverage,120,70,UPI,10
+2025-02-05,Wednesday,2,Cold Drink,Beverage,40,30,Cash,7
+2025-04-15,Tuesday,4,Bread,Bakery,35,39,UPI,14
+2025-04-15,Tuesday,4,Tea,Beverage,120,60,UPI,8
+2025-06-09,Monday,6,Biscuit,Snacks,25,76,UPI,10
+2025-11-07,Friday,11,Rice,Grocery,70,48,Cash,10
+2025-04-14,Monday,4,Butter,Dairy,55,76,UPI,6
+2025-07-04,Friday,7,Juice,Beverage,55,52,UPI,8
+2025-09-16,Tuesday,9,Sugar,Grocery,45,77,UPI,10
+2025-09-04,Thursday,9,Bread,Bakery,35,81,UPI,13
+2025-06-03,Tuesday,6,Chips,Snacks,20,66,UPI,12
+2025-05-12,Monday,5,Biscuit,Snacks,25,61,UPI,12
+2025-10-15,Wednesday,10,Milk,Dairy,60,60,UPI,19
+2025-03-21,Friday,3,Sugar,Grocery,45,27,UPI,7
+2025-07-11,Friday,7,Tea,Beverage,120,55,Card,10
+2025-07-11,Friday,7,Juice,Beverage,55,59,UPI,8
+2025-02-06,Thursday,2,Butter,Dairy,55,29,Card,7
+2025-10-17,Friday,10,Maggi,Grocery,15,88,UPI,20
+2025-06-28,Saturday,6,Milk,Dairy,60,84,Cash,24
+2025-11-30,Sunday,11,Biscuit,Snacks,25,56,UPI,21
+2025-07-05,Saturday,7,Juice,Beverage,55,45,Cash,9
+2025-03-17,Monday,3,Juice,Beverage,55,42,Cash,7
+2025-03-24,Monday,3,Juice,Beverage,55,32,Cash,5
+2025-07-16,Wednesday,7,Toothpaste,Personal Care,95,72,Cash,7
+2025-09-23,Tuesday,9,Cold Drink,Beverage,40,54,UPI,7
+2025-12-21,Sunday,12,Rice,Grocery,70,68,Cash,14
+2025-06-07,Saturday,6,Rice,Grocery,70,37,Cash,11
+2025-06-26,Thursday,6,Biscuit,Snacks,25,47,Cash,10
+2025-07-23,Wednesday,7,Juice,Beverage,55,27,Card,7
+2025-01-01,Wednesday,1,Chips,Snacks,20,32,Cash,8
+2025-08-02,Saturday,8,Rice,Grocery,70,43,UPI,13
+2025-03-10,Monday,3,Bread,Bakery,35,65,UPI,14
+2025-08-19,Tuesday,8,Juice,Beverage,55,42,UPI,9
+2025-04-04,Friday,4,Maggi,Grocery,15,53,Card,17
+2025-08-14,Thursday,8,Cold Drink,Beverage,40,36,Card,10
+2025-05-31,Saturday,5,Bread,Bakery,35,46,UPI,19
+2025-10-27,Monday,10,Milk,Dairy,60,71,Cash,20
+2025-02-01,Saturday,2,Maggi,Grocery,15,83,Cash,21
+2025-02-19,Wednesday,2,Butter,Dairy,55,58,Cash,5
+2025-09-24,Wednesday,9,Rice,Grocery,70,58,UPI,7
+2025-08-08,Friday,8,Milk,Dairy,60,59,Cash,16
+2025-06-11,Wednesday,6,Milk,Dairy,60,58,Cash,15
+2025-01-30,Thursday,1,Rice,Grocery,70,48,Cash,7
+2025-12-24,Wednesday,12,Maggi,Grocery,15,85,Cash,19
+2025-01-14,Tuesday,1,Juice,Beverage,55,36,Card,9
+2025-12-25,Thursday,12,Milk,Dairy,60,58,UPI,15
+2025-09-01,Monday,9,Toothpaste,Personal Care,95,54,Cash,8
+2025-11-23,Sunday,11,Maggi,Grocery,15,47,Card,25
+2025-12-14,Sunday,12,Biscuit,Snacks,25,74,UPI,16
+2025-02-11,Tuesday,2,Biscuit,Snacks,25,58,Card,11
+2025-09-01,Monday,9,Juice,Beverage,55,71,UPI,5
+2025-12-31,Wednesday,12,Soap,Personal Care,40,56,Card,3
+2025-09-16,Tuesday,9,Chips,Snacks,20,36,UPI,8
+2025-12-11,Thursday,12,Maggi,Grocery,15,69,UPI,20
+2025-03-01,Saturday,3,Sugar,Grocery,45,51,UPI,16
+2025-12-04,Thursday,12,Bread,Bakery,35,39,UPI,13
+2025-03-24,Monday,3,Biscuit,Snacks,25,55,Cash,11
+2025-05-12,Monday,5,Bread,Bakery,35,78,UPI,16
+2025-10-01,Wednesday,10,Maggi,Grocery,15,91,Cash,21
+2025-10-22,Wednesday,10,Cold Drink,Beverage,40,54,Card,10
+2025-07-15,Tuesday,7,Biscuit,Snacks,25,60,Cash,13
+2025-03-01,Saturday,3,Bread,Bakery,35,45,UPI,18
+2025-04-07,Monday,4,Biscuit,Snacks,25,65,UPI,9
+2025-07-14,Monday,7,Chips,Snacks,20,79,UPI,12
+2025-10-02,Thursday,10,Maggi,Grocery,15,69,UPI,22
+2025-12-14,Sunday,12,Milk,Dairy,60,84,Cash,22
+2025-07-22,Tuesday,7,Bread,Bakery,35,67,Card,13
+2025-06-01,Sunday,6,Milk,Dairy,60,84,UPI,21
+2025-03-16,Sunday,3,Soap,Personal Care,40,49,UPI,9
+2025-03-05,Wednesday,3,Butter,Dairy,55,71,Cash,6
+2025-04-21,Monday,4,Shampoo,Personal Care,180,42,Cash,4
+2025-06-20,Friday,6,Rice,Grocery,70,71,UPI,6
+2025-04-26,Saturday,4,Biscuit,Snacks,25,64,Cash,13
+2025-12-04,Thursday,12,Milk,Dairy,60,36,UPI,15
+2025-12-14,Sunday,12,Milk,Dairy,60,90,UPI,22
+2025-05-25,Sunday,5,Maggi,Grocery,15,86,Card,22
+2025-03-09,Sunday,3,Rice,Grocery,70,37,Cash,14
+2025-08-23,Saturday,8,Biscuit,Snacks,25,45,UPI,17
+2025-03-16,Sunday,3,Sugar,Grocery,45,78,UPI,11
+2025-07-05,Saturday,7,Toothpaste,Personal Care,95,74,Cash,11
+2025-07-12,Saturday,7,Cold Drink,Beverage,40,36,UPI,13
+2025-04-02,Wednesday,4,Butter,Dairy,55,31,Card,4
+2025-10-31,Friday,10,Toothpaste,Personal Care,95,70,Cash,10
+2025-03-02,Sunday,3,Bread,Bakery,35,71,UPI,20
+2025-03-30,Sunday,3,Soap,Personal Care,40,77,UPI,8
+2025-07-15,Tuesday,7,Chips,Snacks,20,70,Cash,10
+2025-03-03,Monday,3,Milk,Dairy,60,39,UPI,14
+2025-09-18,Thursday,9,Toothpaste,Personal Care,95,26,Cash,5
+2025-09-03,Wednesday,9,Butter,Dairy,55,70,Cash,6
+2025-04-03,Thursday,4,Chips,Snacks,20,61,Card,11
+2025-06-02,Monday,6,Biscuit,Snacks,25,41,UPI,13
+2025-10-03,Friday,10,Maggi,Grocery,15,86,UPI,22
+2025-10-02,Thursday,10,Coffee,Beverage,180,61,Cash,8
+2025-11-30,Sunday,11,Tea,Beverage,120,75,Cash,17
+2025-08-17,Sunday,8,Maggi,Grocery,15,43,UPI,21
+2025-03-24,Monday,3,Bread,Bakery,35,68,UPI,13
+2025-02-13,Thursday,2,Biscuit,Snacks,25,61,UPI,9
+2025-03-29,Saturday,3,Butter,Dairy,55,45,UPI,10
+2025-09-23,Tuesday,9,Juice,Beverage,55,69,UPI,7
+2025-09-09,Tuesday,9,Bread,Bakery,35,68,Card,15
+2025-11-07,Friday,11,Butter,Dairy,55,69,Cash,7
+2025-04-07,Monday,4,Bread,Bakery,35,53,Card,14
+2025-03-10,Monday,3,Bread,Bakery,35,72,UPI,17
+2025-03-07,Friday,3,Milk,Dairy,60,65,UPI,18
+2025-07-15,Tuesday,7,Milk,Dairy,60,60,UPI,15
+2025-12-13,Saturday,12,Juice,Beverage,55,66,UPI,12
+2025-05-18,Sunday,5,Shampoo,Personal Care,180,63,Cash,7
+2025-11-06,Thursday,11,Chips,Snacks,20,43,UPI,14
+2025-07-14,Monday,7,Chips,Snacks,20,66,UPI,8
+2025-09-30,Tuesday,9,Milk,Dairy,60,77,UPI,14
+2025-11-24,Monday,11,Maggi,Grocery,15,61,Cash,20
+2025-04-26,Saturday,4,Bread,Bakery,35,44,UPI,18
+2025-07-13,Sunday,7,Butter,Dairy,55,38,UPI,7
+2025-10-29,Wednesday,10,Cold Drink,Beverage,40,64,UPI,11
+2025-05-25,Sunday,5,Coffee,Beverage,180,70,UPI,12
+2025-06-12,Thursday,6,Maggi,Grocery,15,50,UPI,19
+2025-09-30,Tuesday,9,Biscuit,Snacks,25,71,Card,13
+2025-10-31,Friday,10,Rice,Grocery,70,30,Cash,10
+2025-12-03,Wednesday,12,Biscuit,Snacks,25,39,UPI,10
+2025-01-28,Tuesday,1,Biscuit,Snacks,25,76,Cash,11
+2025-08-03,Sunday,8,Toothpaste,Personal Care,95,59,Card,11
+2025-09-15,Monday,9,Chips,Snacks,20,47,Card,10
+2025-04-28,Monday,4,Tea,Beverage,120,69,Card,9
+2025-07-28,Monday,7,Juice,Beverage,55,32,Cash,7
+2025-05-03,Saturday,5,Maggi,Grocery,15,76,UPI,20
+2025-10-11,Saturday,10,Biscuit,Snacks,25,83,UPI,20
+2025-09-03,Wednesday,9,Biscuit,Snacks,25,64,Cash,12
+2025-09-30,Tuesday,9,Toothpaste,Personal Care,95,49,UPI,4
+2025-01-04,Saturday,1,Bread,Bakery,35,90,UPI,23
+2025-12-05,Friday,12,Butter,Dairy,55,71,Cash,8
+2025-03-28,Friday,3,Soap,Personal Care,40,40,UPI,6
+2025-03-10,Monday,3,Milk,Dairy,60,60,Card,18
+2025-07-14,Monday,7,Rice,Grocery,70,49,Card,6
+2025-12-14,Sunday,12,Milk,Dairy,60,91,Card,22
+2025-09-05,Friday,9,Milk,Dairy,60,52,UPI,16
+2025-10-19,Sunday,10,Biscuit,Snacks,25,81,UPI,20
+2025-08-26,Tuesday,8,Cold Drink,Beverage,40,61,UPI,10
+2025-08-24,Sunday,8,Maggi,Grocery,15,65,UPI,23
+2025-04-06,Sunday,4,Milk,Dairy,60,42,UPI,22
+2025-02-13,Thursday,2,Tea,Beverage,120,63,Card,11
+2025-09-07,Sunday,9,Rice,Grocery,70,78,Cash,9
+2025-07-22,Tuesday,7,Bread,Bakery,35,54,UPI,15
+2025-10-02,Thursday,10,Cold Drink,Beverage,40,58,Cash,10
+2025-03-13,Thursday,3,Sugar,Grocery,45,75,UPI,8
+2025-12-30,Tuesday,12,Milk,Dairy,60,42,UPI,15
+2025-07-22,Tuesday,7,Maggi,Grocery,15,86,UPI,19
+2025-12-08,Monday,12,Maggi,Grocery,15,67,Card,17
+2025-03-02,Sunday,3,Butter,Dairy,55,68,UPI,13
+2025-03-07,Friday,3,Toothpaste,Personal Care,95,74,Cash,6
+2025-09-14,Sunday,9,Cold Drink,Beverage,40,40,Card,13
+2025-03-06,Thursday,3,Chips,Snacks,20,51,UPI,9
+2025-05-02,Friday,5,Biscuit,Snacks,25,72,Cash,9
+2025-11-02,Sunday,11,Sugar,Grocery,45,55,UPI,17
+2025-08-08,Friday,8,Maggi,Grocery,15,76,UPI,17
+2025-05-08,Thursday,5,Tea,Beverage,120,78,UPI,9
+2025-12-25,Thursday,12,Milk,Dairy,60,77,Cash,15
+2025-12-28,Sunday,12,Bread,Bakery,35,79,UPI,20
+2025-10-30,Thursday,10,Butter,Dairy,55,35,UPI,8
+2025-04-09,Wednesday,4,Maggi,Grocery,15,64,UPI,17
+2025-01-27,Monday,1,Bread,Bakery,35,62,UPI,16
+2025-04-29,Tuesday,4,Biscuit,Snacks,25,51,UPI,10
+2025-08-07,Thursday,8,Maggi,Grocery,15,55,UPI,16
+2025-06-29,Sunday,6,Milk,Dairy,60,61,Card,21
+2025-01-01,Wednesday,1,Bread,Bakery,35,75,Cash,13
+2025-08-30,Saturday,8,Bread,Bakery,35,48,UPI,22
+2025-09-09,Tuesday,9,Bread,Bakery,35,56,UPI,15
+2025-01-07,Tuesday,1,Maggi,Grocery,15,89,Card,20
+2025-07-05,Saturday,7,Milk,Dairy,60,83,UPI,25
+2025-04-18,Friday,4,Toothpaste,Personal Care,95,52,UPI,8
+2025-11-19,Wednesday,11,Maggi,Grocery,15,75,Card,18
+2025-04-08,Tuesday,4,Cold Drink,Beverage,40,41,UPI,15
+2025-06-25,Wednesday,6,Tea,Beverage,120,75,UPI,9
+2025-10-01,Wednesday,10,Biscuit,Snacks,25,40,UPI,12
+2025-05-10,Saturday,5,Tea,Beverage,120,59,UPI,16
+2025-08-12,Tuesday,8,Biscuit,Snacks,25,59,UPI,9
+2025-09-15,Monday,9,Juice,Beverage,55,35,Cash,5
+2025-03-08,Saturday,3,Biscuit,Snacks,25,70,UPI,14
+2025-04-08,Tuesday,4,Butter,Dairy,55,58,Cash,7
+2025-02-08,Saturday,2,Cold Drink,Beverage,40,81,UPI,13
+2025-07-19,Saturday,7,Coffee,Beverage,180,50,UPI,13
+2025-10-20,Monday,10,Maggi,Grocery,15,87,UPI,23
+2025-09-20,Saturday,9,Juice,Beverage,55,80,Cash,15
+2025-04-23,Wednesday,4,Milk,Dairy,60,81,UPI,16
+2025-04-25,Friday,4,Maggi,Grocery,15,70,UPI,16
+2025-03-17,Monday,3,Maggi,Grocery,15,46,UPI,18
+2025-11-25,Tuesday,11,Chips,Snacks,20,66,UPI,12
+2025-11-20,Thursday,11,Toothpaste,Personal Care,95,35,Card,10
+2025-05-16,Friday,5,Cold Drink,Beverage,40,63,Card,17
+2025-01-30,Thursday,1,Milk,Dairy,60,56,UPI,14
+2025-04-01,Tuesday,4,Butter,Dairy,55,27,UPI,6
+2025-10-26,Sunday,10,Butter,Dairy,55,74,Cash,14
+2025-08-15,Friday,8,Tea,Beverage,120,48,UPI,8
+2025-07-22,Tuesday,7,Coffee,Beverage,180,52,UPI,4
+2025-07-08,Tuesday,7,Biscuit,Snacks,25,60,UPI,10
+2025-04-05,Saturday,4,Bread,Bakery,35,74,UPI,18
+2025-11-28,Friday,11,Biscuit,Snacks,25,52,UPI,13
+2025-07-21,Monday,7,Bread,Bakery,35,49,UPI,17
+2025-05-06,Tuesday,5,Maggi,Grocery,15,80,Card,19
+2025-09-27,Saturday,9,Maggi,Grocery,15,78,UPI,20
+2025-02-26,Wednesday,2,Rice,Grocery,70,73,Cash,5
+2025-03-09,Sunday,3,Juice,Beverage,55,46,UPI,9
+2025-01-07,Tuesday,1,Shampoo,Personal Care,180,71,UPI,1
+2025-06-23,Monday,6,Biscuit,Snacks,25,41,UPI,9
+2025-08-16,Saturday,8,Biscuit,Snacks,25,56,UPI,15
+2025-10-06,Monday,10,Bread,Bakery,35,48,UPI,21
+2025-10-06,Monday,10,Maggi,Grocery,15,72,Card,20
+2025-01-01,Wednesday,1,Rice,Grocery,70,27,UPI,6
+2025-06-30,Monday,6,Rice,Grocery,70,41,Card,7
+2025-12-18,Thursday,12,Toothpaste,Personal Care,95,55,UPI,4
+2025-02-22,Saturday,2,Maggi,Grocery,15,47,Cash,23
+2025-02-13,Thursday,2,Maggi,Grocery,15,74,UPI,16
+2025-06-21,Saturday,6,Sugar,Grocery,45,77,UPI,14
+2025-12-18,Thursday,12,Cold Drink,Beverage,40,67,Cash,8
+2025-02-23,Sunday,2,Milk,Dairy,60,84,UPI,22
+2025-12-31,Wednesday,12,Milk,Dairy,60,84,UPI,14
+2025-03-18,Tuesday,3,Juice,Beverage,55,46,UPI,6
+2025-09-02,Tuesday,9,Sugar,Grocery,45,33,Cash,6
+2025-05-23,Friday,5,Juice,Beverage,55,51,Card,11
+2025-07-17,Thursday,7,Bread,Bakery,35,55,UPI,15
+2025-07-31,Thursday,7,Sugar,Grocery,45,80,Cash,10
+2025-12-01,Monday,12,Bread,Bakery,35,58,UPI,14
+2025-10-01,Wednesday,10,Tea,Beverage,120,70,Cash,16
+2025-10-25,Saturday,10,Rice,Grocery,70,49,UPI,14
+2025-01-09,Thursday,1,Bread,Bakery,35,70,UPI,15
+2025-02-26,Wednesday,2,Maggi,Grocery,15,58,UPI,16
+2025-03-13,Thursday,3,Chips,Snacks,20,59,UPI,10
+2025-08-04,Monday,8,Chips,Snacks,20,42,Cash,9
+2025-03-12,Wednesday,3,Maggi,Grocery,15,80,Cash,16
+2025-01-14,Tuesday,1,Rice,Grocery,70,51,UPI,8
+2025-10-25,Saturday,10,Maggi,Grocery,15,58,UPI,28
+2025-02-10,Monday,2,Milk,Dairy,60,39,UPI,15
+2025-08-02,Saturday,8,Chips,Snacks,20,63,Cash,13
+2025-12-24,Wednesday,12,Biscuit,Snacks,25,61,UPI,11
+2025-11-27,Thursday,11,Milk,Dairy,60,45,UPI,18
+2025-01-17,Friday,1,Cold Drink,Beverage,40,78,UPI,10
+2025-07-22,Tuesday,7,Bread,Bakery,35,79,Card,16
+2025-12-31,Wednesday,12,Sugar,Grocery,45,64,UPI,8
+2025-08-05,Tuesday,8,Biscuit,Snacks,25,47,Card,10
+2025-03-06,Thursday,3,Tea,Beverage,120,53,Cash,8
+2025-04-05,Saturday,4,Bread,Bakery,35,48,Cash,24
+2025-06-10,Tuesday,6,Sugar,Grocery,45,53,UPI,9
+2025-11-28,Friday,11,Chips,Snacks,20,51,UPI,14
+2025-11-05,Wednesday,11,Maggi,Grocery,15,55,UPI,20
+2025-02-03,Monday,2,Tea,Beverage,120,66,UPI,8
+2025-04-07,Monday,4,Cold Drink,Beverage,40,76,Card,16
+2025-02-13,Thursday,2,Bread,Bakery,35,73,UPI,17
+2025-09-05,Friday,9,Butter,Dairy,55,27,UPI,4
+2025-01-05,Sunday,1,Juice,Beverage,55,57,UPI,12
+2025-07-20,Sunday,7,Milk,Dairy,60,84,Cash,20
+2025-09-15,Monday,9,Milk,Dairy,60,66,Cash,14
+2025-10-28,Tuesday,10,Bread,Bakery,35,78,Card,21
+2025-03-24,Monday,3,Maggi,Grocery,15,80,UPI,17
+2025-02-17,Monday,2,Cold Drink,Beverage,40,40,Cash,7
+2025-03-24,Monday,3,Toothpaste,Personal Care,95,61,Card,8
+2025-09-25,Thursday,9,Soap,Personal Care,40,52,Cash,4
+2025-07-04,Friday,7,Milk,Dairy,60,65,UPI,18
+2025-12-16,Tuesday,12,Biscuit,Snacks,25,47,UPI,12
+2025-02-08,Saturday,2,Soap,Personal Care,40,70,Card,10
+2025-01-08,Wednesday,1,Maggi,Grocery,15,86,Card,17
+2025-02-14,Friday,2,Tea,Beverage,120,36,UPI,10
+2025-06-01,Sunday,6,Bread,Bakery,35,54,Cash,17
+2025-02-06,Thursday,2,Milk,Dairy,60,80,Cash,15
+2025-08-31,Sunday,8,Milk,Dairy,60,83,Card,22
+2025-10-19,Sunday,10,Juice,Beverage,55,53,UPI,15
+2025-12-15,Monday,12,Cold Drink,Beverage,40,55,UPI,7
+2025-06-10,Tuesday,6,Chips,Snacks,20,35,Cash,10
+2025-05-15,Thursday,5,Tea,Beverage,120,66,Card,7
+2025-05-06,Tuesday,5,Maggi,Grocery,15,40,UPI,20
+2025-07-12,Saturday,7,Maggi,Grocery,15,69,Card,24
+2025-08-25,Monday,8,Bread,Bakery,35,55,UPI,13
+2025-08-27,Wednesday,8,Toothpaste,Personal Care,95,29,UPI,4
+2025-07-23,Wednesday,7,Maggi,Grocery,15,51,UPI,19
+2025-06-25,Wednesday,6,Maggi,Grocery,15,71,UPI,20
+2025-02-28,Friday,2,Biscuit,Snacks,25,60,UPI,11
+2025-08-29,Friday,8,Bread,Bakery,35,74,UPI,14
+2025-11-04,Tuesday,11,Coffee,Beverage,180,83,UPI,13
+2025-01-28,Tuesday,1,Sugar,Grocery,45,28,Card,7
+2025-05-19,Monday,5,Toothpaste,Personal Care,95,66,UPI,6
+2025-05-21,Wednesday,5,Bread,Bakery,35,41,UPI,16
+2025-08-03,Sunday,8,Biscuit,Snacks,25,79,Card,17
+2025-01-28,Tuesday,1,Bread,Bakery,35,60,UPI,13
+2025-03-26,Wednesday,3,Biscuit,Snacks,25,52,Card,10
+2025-10-02,Thursday,10,Sugar,Grocery,45,54,Card,12
+2025-01-06,Monday,1,Coffee,Beverage,180,46,UPI,14
+2025-11-12,Wednesday,11,Toothpaste,Personal Care,95,71,Card,9
+2025-06-12,Thursday,6,Juice,Beverage,55,60,Card,11
+2025-06-12,Thursday,6,Tea,Beverage,120,77,Card,7
+2025-09-24,Wednesday,9,Rice,Grocery,70,53,Card,5
+2025-11-21,Friday,11,Cold Drink,Beverage,40,41,UPI,15
+2025-04-07,Monday,4,Biscuit,Snacks,25,76,UPI,12
+2025-07-13,Sunday,7,Bread,Bakery,35,52,Card,19
+2025-10-23,Thursday,10,Butter,Dairy,55,51,UPI,8
+2025-09-15,Monday,9,Cold Drink,Beverage,40,70,UPI,6
+2025-07-31,Thursday,7,Butter,Dairy,55,49,UPI,7
+2025-09-25,Thursday,9,Tea,Beverage,120,36,Card,9
+2025-07-11,Friday,7,Sugar,Grocery,45,62,Cash,7
+2025-07-15,Tuesday,7,Tea,Beverage,120,71,Cash,9
+2025-05-26,Monday,5,Sugar,Grocery,45,36,Card,10
+2025-02-23,Sunday,2,Chips,Snacks,20,70,Card,11
+2025-11-16,Sunday,11,Maggi,Grocery,15,80,Cash,28
+2025-05-29,Thursday,5,Maggi,Grocery,15,52,UPI,19
+2025-07-15,Tuesday,7,Sugar,Grocery,45,38,Card,6
+2025-06-29,Sunday,6,Juice,Beverage,55,42,Card,22
+2025-09-17,Wednesday,9,Chips,Snacks,20,47,Card,10
+2025-08-01,Friday,8,Milk,Dairy,60,35,Card,15
+2025-01-08,Wednesday,1,Rice,Grocery,70,34,Cash,5
+2025-09-23,Tuesday,9,Chips,Snacks,20,52,UPI,12
+2025-08-09,Saturday,8,Juice,Beverage,55,58,UPI,13
+2025-01-27,Monday,1,Toothpaste,Personal Care,95,55,UPI,8
+2025-03-30,Sunday,3,Shampoo,Personal Care,180,62,UPI,9
+2025-12-30,Tuesday,12,Bread,Bakery,35,66,UPI,14
+2025-07-20,Sunday,7,Coffee,Beverage,180,42,Card,12
+2025-02-17,Monday,2,Bread,Bakery,35,60,UPI,13
+2025-03-20,Thursday,3,Biscuit,Snacks,25,68,Cash,9
+2025-02-10,Monday,2,Juice,Beverage,55,53,UPI,9
+2025-08-21,Thursday,8,Biscuit,Snacks,25,42,UPI,11
+2025-06-02,Monday,6,Cold Drink,Beverage,40,51,Cash,16
+2025-07-13,Sunday,7,Chips,Snacks,20,50,UPI,13
+2025-01-12,Sunday,1,Bread,Bakery,35,47,UPI,20
+2025-02-24,Monday,2,Soap,Personal Care,40,41,UPI,3
+2025-02-09,Sunday,2,Bread,Bakery,35,54,UPI,21
+2025-01-12,Sunday,1,Tea,Beverage,120,79,UPI,19
+2025-07-12,Saturday,7,Toothpaste,Personal Care,95,42,UPI,12
+2025-04-02,Wednesday,4,Maggi,Grocery,15,80,Cash,20
+2025-06-25,Wednesday,6,Maggi,Grocery,15,68,Card,18
+2025-01-03,Friday,1,Soap,Personal Care,40,56,Cash,3
+2025-04-09,Wednesday,4,Juice,Beverage,55,68,UPI,14
+2025-03-20,Thursday,3,Tea,Beverage,120,51,UPI,8
+2025-06-17,Tuesday,6,Bread,Bakery,35,48,UPI,14
+2025-03-06,Thursday,3,Biscuit,Snacks,25,48,UPI,11
+2025-06-28,Saturday,6,Juice,Beverage,55,73,Cash,24
+2025-09-20,Saturday,9,Tea,Beverage,120,50,UPI,14
+2025-05-24,Saturday,5,Toothpaste,Personal Care,95,67,Cash,10
+2025-03-26,Wednesday,3,Coffee,Beverage,180,70,UPI,4
+2025-08-05,Tuesday,8,Cold Drink,Beverage,40,77,UPI,10
+2025-02-25,Tuesday,2,Milk,Dairy,60,62,UPI,18
+2025-07-11,Friday,7,Coffee,Beverage,180,51,UPI,3
+2025-09-19,Friday,9,Maggi,Grocery,15,75,UPI,18
+2025-11-27,Thursday,11,Soap,Personal Care,40,30,UPI,9
+2025-08-08,Friday,8,Chips,Snacks,20,51,UPI,9
+2025-07-10,Thursday,7,Bread,Bakery,35,44,Cash,15
+2025-06-13,Friday,6,Maggi,Grocery,15,81,UPI,16
+2025-06-14,Saturday,6,Sugar,Grocery,45,38,UPI,14
+2025-09-27,Saturday,9,Soap,Personal Care,40,61,UPI,6
+2025-12-10,Wednesday,12,Soap,Personal Care,40,58,Card,2
+2025-08-11,Monday,8,Rice,Grocery,70,47,UPI,7
+2025-09-10,Wednesday,9,Maggi,Grocery,15,41,Card,19
+2025-03-05,Wednesday,3,Rice,Grocery,70,38,Cash,8
+2025-05-02,Friday,5,Coffee,Beverage,180,28,UPI,7
+2025-10-22,Wednesday,10,Toothpaste,Personal Care,95,47,UPI,9
+2025-01-19,Sunday,1,Butter,Dairy,55,37,UPI,15
+2025-08-29,Friday,8,Maggi,Grocery,15,62,Cash,16
+2025-06-27,Friday,6,Milk,Dairy,60,42,Cash,17
+2025-11-10,Monday,11,Milk,Dairy,60,58,Cash,19
+2025-11-25,Tuesday,11,Sugar,Grocery,45,69,UPI,10
+2025-01-06,Monday,1,Bread,Bakery,35,40,Card,14
+2025-08-12,Tuesday,8,Cold Drink,Beverage,40,37,UPI,7
+2025-07-08,Tuesday,7,Biscuit,Snacks,25,33,Card,13
+2025-05-13,Tuesday,5,Cold Drink,Beverage,40,34,Card,11
+2025-06-18,Wednesday,6,Maggi,Grocery,15,90,Cash,20
+2025-03-29,Saturday,3,Milk,Dairy,60,71,UPI,22
+2025-03-17,Monday,3,Milk,Dairy,60,64,Cash,18
+2025-09-25,Thursday,9,Toothpaste,Personal Care,95,43,Cash,8
+2025-05-24,Saturday,5,Toothpaste,Personal Care,95,46,UPI,12
+2025-12-31,Wednesday,12,Biscuit,Snacks,25,51,Cash,9
+2025-12-04,Thursday,12,Cold Drink,Beverage,40,71,UPI,7
+2025-01-31,Friday,1,Butter,Dairy,55,25,Cash,5
+2025-07-17,Thursday,7,Sugar,Grocery,45,58,UPI,7
+2025-10-30,Thursday,10,Bread,Bakery,35,84,UPI,19
+2025-09-16,Tuesday,9,Bread,Bakery,35,41,UPI,13
+2025-08-20,Wednesday,8,Milk,Dairy,60,70,UPI,18
+2025-02-05,Wednesday,2,Rice,Grocery,70,54,UPI,7
+2025-10-23,Thursday,10,Milk,Dairy,60,66,Card,17
+2025-05-04,Sunday,5,Biscuit,Snacks,25,46,UPI,15
+2025-09-29,Monday,9,Sugar,Grocery,45,51,UPI,9
+2025-02-13,Thursday,2,Juice,Beverage,55,54,UPI,7
+2025-08-09,Saturday,8,Rice,Grocery,70,37,UPI,14
+2025-01-26,Sunday,1,Rice,Grocery,70,46,UPI,14
+2025-11-01,Saturday,11,Rice,Grocery,70,66,UPI,19
+2025-05-08,Thursday,5,Maggi,Grocery,15,50,UPI,16
+2025-10-22,Wednesday,10,Cold Drink,Beverage,40,35,UPI,11
+2025-11-14,Friday,11,Milk,Dairy,60,67,UPI,22
+2025-12-21,Sunday,12,Biscuit,Snacks,25,50,UPI,17
+2025-11-23,Sunday,11,Bread,Bakery,35,48,UPI,22
+2025-11-15,Saturday,11,Cold Drink,Beverage,40,47,UPI,17
+2025-04-06,Sunday,4,Maggi,Grocery,15,53,Card,24
+2025-08-08,Friday,8,Toothpaste,Personal Care,95,27,UPI,6
+2025-02-09,Sunday,2,Milk,Dairy,60,76,UPI,18
+2025-01-01,Wednesday,1,Sugar,Grocery,45,44,UPI,9
+2025-01-09,Thursday,1,Maggi,Grocery,15,83,Card,20
+2025-09-26,Friday,9,Chips,Snacks,20,42,Cash,12
+2025-02-21,Friday,2,Biscuit,Snacks,25,78,UPI,11
+2025-06-29,Sunday,6,Tea,Beverage,120,78,UPI,16
+2025-01-07,Tuesday,1,Milk,Dairy,60,55,Cash,16
+2025-12-06,Saturday,12,Cold Drink,Beverage,40,43,UPI,16
+2025-11-24,Monday,11,Tea,Beverage,120,50,Cash,16
+2025-09-12,Friday,9,Bread,Bakery,35,48,Cash,13
+2025-08-09,Saturday,8,Biscuit,Snacks,25,82,UPI,15
+2025-07-13,Sunday,7,Juice,Beverage,55,70,Cash,10
+2025-08-19,Tuesday,8,Cold Drink,Beverage,40,41,UPI,10
+2025-06-19,Thursday,6,Toothpaste,Personal Care,95,64,UPI,7
+2025-06-08,Sunday,6,Butter,Dairy,55,65,UPI,8
+2025-11-10,Monday,11,Milk,Dairy,60,89,UPI,19
+2025-06-27,Friday,6,Butter,Dairy,55,33,Card,6
+2025-12-17,Wednesday,12,Tea,Beverage,120,77,UPI,14
+2025-11-16,Sunday,11,Butter,Dairy,55,67,UPI,16
+2025-01-08,Wednesday,1,Chips,Snacks,20,33,UPI,11
+2025-03-05,Wednesday,3,Chips,Snacks,20,59,UPI,8
+2025-12-05,Friday,12,Sugar,Grocery,45,29,UPI,6
+2025-05-26,Monday,5,Milk,Dairy,60,80,Card,18
+2025-02-14,Friday,2,Coffee,Beverage,180,34,Card,5
+2025-10-27,Monday,10,Bread,Bakery,35,51,UPI,17
+2025-05-08,Thursday,5,Juice,Beverage,55,65,UPI,18
+2025-05-14,Wednesday,5,Cold Drink,Beverage,40,56,UPI,17
+2025-06-15,Sunday,6,Sugar,Grocery,45,77,Cash,14
+2025-08-02,Saturday,8,Bread,Bakery,35,60,UPI,21
+2025-11-18,Tuesday,11,Milk,Dairy,60,54,UPI,23
+2025-08-12,Tuesday,8,Cold Drink,Beverage,40,34,UPI,6
+2025-09-15,Monday,9,Biscuit,Snacks,25,60,UPI,11
+2025-07-30,Wednesday,7,Sugar,Grocery,45,30,Card,9
+2025-08-04,Monday,8,Maggi,Grocery,15,84,UPI,16
+2025-05-05,Monday,5,Cold Drink,Beverage,40,62,UPI,19
+2025-10-17,Friday,10,Tea,Beverage,120,79,Cash,11
+2025-12-10,Wednesday,12,Maggi,Grocery,15,65,Cash,16
+2025-08-24,Sunday,8,Cold Drink,Beverage,40,32,UPI,9
+2025-02-24,Monday,2,Butter,Dairy,55,64,UPI,6
+2025-09-04,Thursday,9,Milk,Dairy,60,39,UPI,16
+2025-09-19,Friday,9,Coffee,Beverage,180,67,UPI,3
+2025-09-11,Thursday,9,Bread,Bakery,35,48,Card,14
+2025-03-21,Friday,3,Shampoo,Personal Care,180,63,UPI,3
+2025-01-04,Saturday,1,Butter,Dairy,55,78,UPI,14
+2025-03-20,Thursday,3,Maggi,Grocery,15,47,UPI,20
+2025-02-23,Sunday,2,Bread,Bakery,35,71,UPI,19
+2025-03-04,Tuesday,3,Maggi,Grocery,15,63,UPI,18
+2025-05-01,Thursday,5,Bread,Bakery,35,53,Cash,17
+2025-12-03,Wednesday,12,Toothpaste,Personal Care,95,35,UPI,8
+2025-04-05,Saturday,4,Shampoo,Personal Care,180,36,UPI,6
+2025-04-13,Sunday,4,Biscuit,Snacks,25,56,UPI,18
+2025-10-29,Wednesday,10,Maggi,Grocery,15,85,UPI,23
+2025-02-24,Monday,2,Rice,Grocery,70,54,Cash,8
+2025-05-26,Monday,5,Bread,Bakery,35,43,Cash,16
+2025-06-05,Thursday,6,Maggi,Grocery,15,77,Cash,16
+2025-08-16,Saturday,8,Toothpaste,Personal Care,95,37,UPI,9
+2025-05-22,Thursday,5,Biscuit,Snacks,25,39,UPI,9
+2025-09-15,Monday,9,Cold Drink,Beverage,40,49,Card,7
+2025-09-20,Saturday,9,Tea,Beverage,120,72,UPI,11
+2025-10-16,Thursday,10,Toothpaste,Personal Care,95,76,Card,11
+2025-12-04,Thursday,12,Bread,Bakery,35,60,UPI,15
+2025-09-05,Friday,9,Chips,Snacks,20,61,Cash,11
+2025-12-29,Monday,12,Bread,Bakery,35,86,Cash,17
+2025-12-24,Wednesday,12,Milk,Dairy,60,73,Card,16
+2025-11-13,Thursday,11,Milk,Dairy,60,41,UPI,19
+2025-04-29,Tuesday,4,Biscuit,Snacks,25,71,UPI,9
+2025-09-01,Monday,9,Juice,Beverage,55,75,UPI,7
+2025-05-02,Friday,5,Biscuit,Snacks,25,40,Cash,9
+2025-08-04,Monday,8,Rice,Grocery,70,28,Cash,5
+2025-02-07,Friday,2,Maggi,Grocery,15,87,UPI,19
+2025-01-16,Thursday,1,Shampoo,Personal Care,180,42,UPI,2
+2025-03-10,Monday,3,Sugar,Grocery,45,65,UPI,10
+2025-08-13,Wednesday,8,Milk,Dairy,60,50,UPI,16
+2025-09-28,Sunday,9,Bread,Bakery,35,74,UPI,17
+2025-02-19,Wednesday,2,Juice,Beverage,55,28,Cash,6
+2025-07-04,Friday,7,Cold Drink,Beverage,40,65,UPI,9
+2025-04-05,Saturday,4,Maggi,Grocery,15,58,Cash,26
+2025-08-31,Sunday,8,Coffee,Beverage,180,54,Cash,12
+2025-03-12,Wednesday,3,Coffee,Beverage,180,51,UPI,3
+2025-02-06,Thursday,2,Rice,Grocery,70,34,UPI,9
+2025-02-21,Friday,2,Tea,Beverage,120,58,UPI,7
+2025-06-19,Thursday,6,Soap,Personal Care,40,36,Cash,2
+2025-05-09,Friday,5,Milk,Dairy,60,82,UPI,17
+2025-03-22,Saturday,3,Cold Drink,Beverage,40,65,Cash,11
+2025-11-09,Sunday,11,Chips,Snacks,20,81,UPI,22
+2025-02-26,Wednesday,2,Biscuit,Snacks,25,63,Card,13
+2025-12-01,Monday,12,Butter,Dairy,55,26,UPI,4
+2025-06-21,Saturday,6,Milk,Dairy,60,51,UPI,18
+2025-12-06,Saturday,12,Biscuit,Snacks,25,64,UPI,13
+2025-11-09,Sunday,11,Juice,Beverage,55,58,Cash,12
+2025-02-11,Tuesday,2,Soap,Personal Care,40,56,Card,6
+2025-01-22,Wednesday,1,Milk,Dairy,60,36,UPI,14
+2025-06-29,Sunday,6,Bread,Bakery,35,61,Cash,22
+2025-04-27,Sunday,4,Cold Drink,Beverage,40,83,Cash,14
+2025-11-08,Saturday,11,Bread,Bakery,35,75,UPI,25
+2025-12-23,Tuesday,12,Biscuit,Snacks,25,57,Cash,10
+2025-03-01,Saturday,3,Tea,Beverage,120,72,Card,13
+2025-04-10,Thursday,4,Milk,Dairy,60,63,Card,16
+2025-02-17,Monday,2,Bread,Bakery,35,37,UPI,17
+2025-10-02,Thursday,10,Biscuit,Snacks,25,77,UPI,11
+2025-01-30,Thursday,1,Maggi,Grocery,15,65,UPI,17
+2025-06-29,Sunday,6,Maggi,Grocery,15,62,UPI,24
+2025-12-03,Wednesday,12,Rice,Grocery,70,67,UPI,5
+2025-10-06,Monday,10,Bread,Bakery,35,84,Cash,19
+2025-04-23,Wednesday,4,Milk,Dairy,60,82,UPI,17
+2025-10-10,Friday,10,Milk,Dairy,60,72,Card,19
+2025-10-05,Sunday,10,Milk,Dairy,60,65,Card,23
+2025-11-15,Saturday,11,Biscuit,Snacks,25,52,Card,19
+2025-09-24,Wednesday,9,Chips,Snacks,20,48,Cash,9
+2025-07-10,Thursday,7,Bread,Bakery,35,36,Card,14
+2025-11-29,Saturday,11,Biscuit,Snacks,25,68,Cash,17
+2025-10-29,Wednesday,10,Milk,Dairy,60,46,UPI,21
+2025-07-16,Wednesday,7,Cold Drink,Beverage,40,30,Card,9
+2025-01-23,Thursday,1,Rice,Grocery,70,39,UPI,6
+2025-09-30,Tuesday,9,Toothpaste,Personal Care,95,66,UPI,4
+2025-06-28,Saturday,6,Tea,Beverage,120,82,Card,14
+2025-05-15,Thursday,5,Juice,Beverage,55,83,UPI,15
+2025-11-15,Saturday,11,Biscuit,Snacks,25,46,Cash,20
+2025-12-14,Sunday,12,Juice,Beverage,55,63,UPI,14
+2025-09-23,Tuesday,9,Biscuit,Snacks,25,41,Card,11
+2025-05-02,Friday,5,Sugar,Grocery,45,27,UPI,7
+2025-05-21,Wednesday,5,Toothpaste,Personal Care,95,39,Cash,4
+2025-10-20,Monday,10,Milk,Dairy,60,78,UPI,19
+2025-05-09,Friday,5,Milk,Dairy,60,38,UPI,18
+2025-06-14,Saturday,6,Coffee,Beverage,180,57,UPI,9
+2025-08-27,Wednesday,8,Sugar,Grocery,45,48,UPI,6
+2025-04-22,Tuesday,4,Chips,Snacks,20,34,Cash,11
+2025-11-09,Sunday,11,Maggi,Grocery,15,75,UPI,27
+2025-05-22,Thursday,5,Biscuit,Snacks,25,62,UPI,11
+2025-03-17,Monday,3,Shampoo,Personal Care,180,66,UPI,5
+2025-01-20,Monday,1,Maggi,Grocery,15,80,UPI,17
+2025-06-12,Thursday,6,Sugar,Grocery,45,61,Cash,6
+2025-05-13,Tuesday,5,Maggi,Grocery,15,39,Cash,18
+2025-06-30,Monday,6,Cold Drink,Beverage,40,73,UPI,15
+2025-09-17,Wednesday,9,Maggi,Grocery,15,46,UPI,19
+2025-06-16,Monday,6,Bread,Bakery,35,60,Cash,17
+2025-02-06,Thursday,2,Toothpaste,Personal Care,95,45,UPI,7
+2025-07-04,Friday,7,Milk,Dairy,60,62,Card,16
+2025-05-31,Saturday,5,Rice,Grocery,70,42,UPI,12
+2025-03-18,Tuesday,3,Milk,Dairy,60,39,UPI,18
+2025-06-10,Tuesday,6,Bread,Bakery,35,82,Cash,17
+2025-10-25,Saturday,10,Tea,Beverage,120,75,UPI,18
+2025-07-15,Tuesday,7,Biscuit,Snacks,25,33,Card,9
+2025-10-17,Friday,10,Butter,Dairy,55,79,UPI,13
+2025-01-27,Monday,1,Cold Drink,Beverage,40,60,Cash,10
+2025-06-12,Thursday,6,Tea,Beverage,120,41,Cash,9
+2025-05-05,Monday,5,Milk,Dairy,60,51,Cash,16
+2025-04-29,Tuesday,4,Butter,Dairy,55,47,Cash,7
+2025-05-04,Sunday,5,Maggi,Grocery,15,68,UPI,25
+2025-02-09,Sunday,2,Coffee,Beverage,180,69,UPI,11
+2025-04-28,Monday,4,Chips,Snacks,20,40,Card,12
+2025-07-28,Monday,7,Bread,Bakery,35,79,UPI,17
+2025-05-27,Tuesday,5,Milk,Dairy,60,56,UPI,16
+2025-09-16,Tuesday,9,Rice,Grocery,70,62,UPI,6
+2025-04-12,Saturday,4,Cold Drink,Beverage,40,48,UPI,18
+2025-10-11,Saturday,10,Milk,Dairy,60,45,Cash,23
+2025-03-27,Thursday,3,Maggi,Grocery,15,44,UPI,16
+2025-07-18,Friday,7,Tea,Beverage,120,52,UPI,10
+2025-05-04,Sunday,5,Biscuit,Snacks,25,55,Card,14
+2025-10-30,Thursday,10,Cold Drink,Beverage,40,32,Cash,8
+2025-08-18,Monday,8,Milk,Dairy,60,77,UPI,17
+2025-05-29,Thursday,5,Chips,Snacks,20,75,UPI,11
+2025-10-29,Wednesday,10,Bread,Bakery,35,36,Cash,16
+2025-11-29,Saturday,11,Rice,Grocery,70,66,UPI,18
+2025-05-24,Saturday,5,Biscuit,Snacks,25,52,UPI,13
+2025-09-23,Tuesday,9,Maggi,Grocery,15,77,UPI,20
+2025-05-27,Tuesday,5,Juice,Beverage,55,55,Cash,15
+2025-01-22,Wednesday,1,Juice,Beverage,55,53,UPI,6
+2025-11-12,Wednesday,11,Coffee,Beverage,180,50,UPI,12
+2025-09-07,Sunday,9,Milk,Dairy,60,51,UPI,21
+2025-11-07,Friday,11,Juice,Beverage,55,70,UPI,8
+2025-10-10,Friday,10,Maggi,Grocery,15,77,Card,19
+2025-10-04,Saturday,10,Juice,Beverage,55,66,Cash,15
+2025-04-15,Tuesday,4,Maggi,Grocery,15,74,UPI,18
+2025-03-06,Thursday,3,Sugar,Grocery,45,47,Card,9
+2025-03-03,Monday,3,Biscuit,Snacks,25,59,UPI,12
+2025-03-12,Wednesday,3,Maggi,Grocery,15,84,Cash,18
+2025-02-10,Monday,2,Butter,Dairy,55,71,UPI,5
+2025-06-21,Saturday,6,Bread,Bakery,35,81,Cash,21
+2025-02-07,Friday,2,Toothpaste,Personal Care,95,28,UPI,6
+2025-09-24,Wednesday,9,Juice,Beverage,55,39,Cash,7
+2025-11-17,Monday,11,Toothpaste,Personal Care,95,41,UPI,6
+2025-04-23,Wednesday,4,Rice,Grocery,70,42,UPI,6
+2025-04-06,Sunday,4,Sugar,Grocery,45,42,UPI,14
+2025-09-22,Monday,9,Cold Drink,Beverage,40,27,UPI,7
+2025-11-09,Sunday,11,Tea,Beverage,120,84,UPI,20
+2025-10-26,Sunday,10,Rice,Grocery,70,69,Cash,16
+2025-06-03,Tuesday,6,Bread,Bakery,35,52,Cash,14
+2025-11-19,Wednesday,11,Tea,Beverage,120,71,UPI,21
+2025-05-28,Wednesday,5,Bread,Bakery,35,64,UPI,16
+2025-03-01,Saturday,3,Toothpaste,Personal Care,95,51,Cash,11
+2025-07-23,Wednesday,7,Milk,Dairy,60,84,Card,15
+2025-09-08,Monday,9,Chips,Snacks,20,58,Cash,12
+2025-05-18,Sunday,5,Maggi,Grocery,15,94,UPI,24
+2025-06-15,Sunday,6,Coffee,Beverage,180,56,UPI,10
+2025-07-24,Thursday,7,Sugar,Grocery,45,31,UPI,8
+2025-06-23,Monday,6,Biscuit,Snacks,25,48,UPI,9
+2025-03-27,Thursday,3,Bread,Bakery,35,50,Cash,17
+2025-11-11,Tuesday,11,Maggi,Grocery,15,79,UPI,21
+2025-01-11,Saturday,1,Juice,Beverage,55,80,Cash,11
+2025-10-11,Saturday,10,Cold Drink,Beverage,40,48,UPI,15
+2025-03-22,Saturday,3,Bread,Bakery,35,88,UPI,23
+2025-07-11,Friday,7,Chips,Snacks,20,56,UPI,10
+2025-01-07,Tuesday,1,Biscuit,Snacks,25,30,Cash,9
+2025-09-14,Sunday,9,Tea,Beverage,120,38,UPI,16
+2025-04-28,Monday,4,Milk,Dairy,60,37,UPI,15
+2025-07-13,Sunday,7,Maggi,Grocery,15,90,Card,23
+2025-02-09,Sunday,2,Cold Drink,Beverage,40,79,Cash,13
+2025-01-11,Saturday,1,Biscuit,Snacks,25,74,Card,16
+2025-10-29,Wednesday,10,Maggi,Grocery,15,80,Card,22
+2025-08-06,Wednesday,8,Chips,Snacks,20,79,UPI,12
+2025-04-14,Monday,4,Milk,Dairy,60,50,Card,14
+2025-07-12,Saturday,7,Coffee,Beverage,180,36,UPI,11
+2025-05-23,Friday,5,Rice,Grocery,70,46,Card,8
+2025-05-06,Tuesday,5,Tea,Beverage,120,31,Card,10
+2025-07-10,Thursday,7,Biscuit,Snacks,25,78,UPI,13
+2025-01-13,Monday,1,Bread,Bakery,35,85,UPI,16
+2025-10-16,Thursday,10,Rice,Grocery,70,50,UPI,9
+2025-02-12,Wednesday,2,Shampoo,Personal Care,180,56,UPI,1
+2025-09-08,Monday,9,Cold Drink,Beverage,40,45,UPI,10
+2025-08-31,Sunday,8,Rice,Grocery,70,84,UPI,16
+2025-05-10,Saturday,5,Biscuit,Snacks,25,84,UPI,17
+2025-06-14,Saturday,6,Bread,Bakery,35,70,Card,24
+2025-04-18,Friday,4,Milk,Dairy,60,88,UPI,18
+2025-11-30,Sunday,11,Tea,Beverage,120,76,Cash,24
+2025-02-11,Tuesday,2,Biscuit,Snacks,25,56,Cash,9
+2025-01-07,Tuesday,1,Rice,Grocery,70,59,Cash,6
+2025-08-13,Wednesday,8,Bread,Bakery,35,35,Card,13
+2025-11-17,Monday,11,Tea,Beverage,120,87,Card,20
+2025-01-05,Sunday,1,Rice,Grocery,70,57,Card,10
+2025-12-13,Saturday,12,Biscuit,Snacks,25,58,Cash,18
+2025-11-29,Saturday,11,Rice,Grocery,70,67,Cash,14
+2025-07-10,Thursday,7,Chips,Snacks,20,70,UPI,12
+2025-06-19,Thursday,6,Sugar,Grocery,45,37,UPI,7
+2025-01-06,Monday,1,Chips,Snacks,20,56,UPI,10
+2025-01-03,Friday,1,Sugar,Grocery,45,72,UPI,8
+2025-10-03,Friday,10,Biscuit,Snacks,25,42,UPI,16
+2025-03-22,Saturday,3,Sugar,Grocery,45,71,Cash,11
+2025-11-18,Tuesday,11,Bread,Bakery,35,53,UPI,16
+2025-08-07,Thursday,8,Cold Drink,Beverage,40,76,UPI,10
+2025-07-26,Saturday,7,Shampoo,Personal Care,180,64,Cash,10
+2025-10-31,Friday,10,Bread,Bakery,35,82,UPI,16
+2025-10-16,Thursday,10,Bread,Bakery,35,69,Cash,16
+2025-06-19,Thursday,6,Biscuit,Snacks,25,82,Card,13
+2025-11-12,Wednesday,11,Soap,Personal Care,40,38,UPI,8
+2025-04-21,Monday,4,Bread,Bakery,35,72,UPI,13
+2025-01-01,Wednesday,1,Bread,Bakery,35,39,Card,15
+2025-09-19,Friday,9,Maggi,Grocery,15,66,Cash,19
+2025-09-14,Sunday,9,Milk,Dairy,60,73,UPI,18
+2025-12-28,Sunday,12,Biscuit,Snacks,25,56,Cash,17
+2025-02-10,Monday,2,Milk,Dairy,60,51,Card,18
+2025-05-23,Friday,5,Juice,Beverage,55,63,Cash,16
+2025-05-09,Friday,5,Tea,Beverage,120,62,Card,7
+2025-04-02,Wednesday,4,Toothpaste,Personal Care,95,47,Card,4
+2025-06-27,Friday,6,Biscuit,Snacks,25,45,Cash,12
+2025-04-08,Tuesday,4,Cold Drink,Beverage,40,47,Card,16
+2025-04-11,Friday,4,Butter,Dairy,55,50,UPI,7
+2025-06-08,Sunday,6,Maggi,Grocery,15,64,Card,21
+2025-01-07,Tuesday,1,Tea,Beverage,120,38,Cash,16
+2025-07-23,Wednesday,7,Toothpaste,Personal Care,95,68,Cash,4
+2025-01-30,Thursday,1,Milk,Dairy,60,39,Card,18
+2025-11-08,Saturday,11,Juice,Beverage,55,67,Cash,17
+2025-10-07,Tuesday,10,Toothpaste,Personal Care,95,49,UPI,6
+2025-03-20,Thursday,3,Cold Drink,Beverage,40,35,UPI,7
+2025-03-03,Monday,3,Chips,Snacks,20,56,Cash,8
+2025-02-19,Wednesday,2,Maggi,Grocery,15,57,Card,20
+2025-11-11,Tuesday,11,Bread,Bakery,35,80,Cash,17
+2025-12-30,Tuesday,12,Milk,Dairy,60,72,Cash,15
+2025-01-08,Wednesday,1,Milk,Dairy,60,63,Cash,17
+2025-02-03,Monday,2,Toothpaste,Personal Care,95,73,UPI,5
+2025-02-12,Wednesday,2,Biscuit,Snacks,25,58,UPI,10
+2025-12-19,Friday,12,Soap,Personal Care,40,52,UPI,6
+2025-01-02,Thursday,1,Biscuit,Snacks,25,48,Cash,11
+2025-08-27,Wednesday,8,Maggi,Grocery,15,84,UPI,20
+2025-02-15,Saturday,2,Juice,Beverage,55,39,Cash,8
+2025-10-30,Thursday,10,Bread,Bakery,35,86,UPI,16
+2025-08-24,Sunday,8,Shampoo,Personal Care,180,44,Cash,5
+2025-04-08,Tuesday,4,Toothpaste,Personal Care,95,44,UPI,5
+2025-04-02,Wednesday,4,Biscuit,Snacks,25,39,Cash,11
+2025-04-07,Monday,4,Rice,Grocery,70,39,UPI,7
+2025-12-24,Wednesday,12,Milk,Dairy,60,53,UPI,17
+2025-07-06,Sunday,7,Milk,Dairy,60,71,Cash,23
+2025-03-29,Saturday,3,Toothpaste,Personal Care,95,55,UPI,11
+2025-12-26,Friday,12,Coffee,Beverage,180,72,Cash,11
+2025-04-17,Thursday,4,Chips,Snacks,20,74,Card,10
+2025-05-18,Sunday,5,Tea,Beverage,120,83,UPI,14
+2025-05-14,Wednesday,5,Bread,Bakery,35,40,UPI,13
+2025-09-01,Monday,9,Shampoo,Personal Care,180,51,Cash,2
+2025-07-13,Sunday,7,Rice,Grocery,70,52,Cash,12
+2025-01-05,Sunday,1,Shampoo,Personal Care,180,58,UPI,8
+2025-02-21,Friday,2,Toothpaste,Personal Care,95,47,UPI,5
+2025-04-06,Sunday,4,Sugar,Grocery,45,71,UPI,12
+2025-08-11,Monday,8,Coffee,Beverage,180,56,Cash,6
+2025-07-11,Friday,7,Milk,Dairy,60,59,UPI,18
+2025-01-21,Tuesday,1,Rice,Grocery,70,74,Card,6
+2025-02-25,Tuesday,2,Juice,Beverage,55,55,Cash,8
+2025-07-25,Friday,7,Juice,Beverage,55,30,UPI,9
+2025-06-03,Tuesday,6,Bread,Bakery,35,81,Card,17
+2025-10-18,Saturday,10,Bread,Bakery,35,92,Card,22
+2025-06-08,Sunday,6,Butter,Dairy,55,59,UPI,10
+2025-12-04,Thursday,12,Sugar,Grocery,45,39,Card,7
+2025-02-11,Tuesday,2,Milk,Dairy,60,50,Card,15
+2025-05-06,Tuesday,5,Sugar,Grocery,45,70,Cash,7
+2025-01-03,Friday,1,Biscuit,Snacks,25,42,UPI,12
+2025-12-18,Thursday,12,Sugar,Grocery,45,73,UPI,9
+2025-07-12,Saturday,7,Sugar,Grocery,45,81,Card,13
+2025-06-12,Thursday,6,Rice,Grocery,70,51,Cash,6
+2025-12-12,Friday,12,Cold Drink,Beverage,40,67,UPI,9
+2025-09-08,Monday,9,Maggi,Grocery,15,41,UPI,20
+2025-05-01,Thursday,5,Soap,Personal Care,40,47,UPI,4
+2025-11-09,Sunday,11,Chips,Snacks,20,81,UPI,20
+2025-01-23,Thursday,1,Tea,Beverage,120,60,UPI,13
+2025-04-03,Thursday,4,Rice,Grocery,70,37,UPI,8
+2025-09-04,Thursday,9,Rice,Grocery,70,41,Card,5
+2025-03-25,Tuesday,3,Rice,Grocery,70,71,UPI,8
+2025-02-12,Wednesday,2,Maggi,Grocery,15,81,Cash,18
+2025-07-27,Sunday,7,Toothpaste,Personal Care,95,48,UPI,8
+2025-12-18,Thursday,12,Tea,Beverage,120,64,Cash,13
+2025-08-05,Tuesday,8,Toothpaste,Personal Care,95,43,UPI,4
+2025-03-01,Saturday,3,Biscuit,Snacks,25,71,UPI,19
+2025-06-21,Saturday,6,Sugar,Grocery,45,42,Cash,15
+2025-09-30,Tuesday,9,Butter,Dairy,55,70,UPI,7
+2025-12-29,Monday,12,Maggi,Grocery,15,56,UPI,20
+2025-08-21,Thursday,8,Chips,Snacks,20,34,UPI,11
+2025-09-08,Monday,9,Maggi,Grocery,15,62,UPI,19
+2025-07-09,Wednesday,7,Soap,Personal Care,40,51,UPI,4
+2025-01-13,Monday,1,Milk,Dairy,60,55,UPI,18
+2025-01-09,Thursday,1,Milk,Dairy,60,57,UPI,17
+2025-02-27,Thursday,2,Maggi,Grocery,15,84,UPI,18
+2025-05-08,Thursday,5,Biscuit,Snacks,25,35,UPI,10
+2025-03-16,Sunday,3,Maggi,Grocery,15,62,UPI,25
+2025-11-13,Thursday,11,Sugar,Grocery,45,69,UPI,13
+2025-07-10,Thursday,7,Maggi,Grocery,15,45,Cash,16
+2025-02-21,Friday,2,Biscuit,Snacks,25,64,Card,12
+2025-11-23,Sunday,11,Maggi,Grocery,15,50,UPI,29
+2025-12-01,Monday,12,Biscuit,Snacks,25,56,Card,9
+2025-10-20,Monday,10,Chips,Snacks,20,73,UPI,14
+2025-05-05,Monday,5,Chips,Snacks,20,51,Cash,8
+2025-08-12,Tuesday,8,Bread,Bakery,35,82,Cash,15
+2025-09-14,Sunday,9,Bread,Bakery,35,65,Card,20
+2025-05-20,Tuesday,5,Toothpaste,Personal Care,95,50,UPI,4
+2025-12-03,Wednesday,12,Chips,Snacks,20,46,UPI,9
+2025-11-22,Saturday,11,Soap,Personal Care,40,44,UPI,10
+2025-02-02,Sunday,2,Milk,Dairy,60,89,Cash,23
+2025-10-29,Wednesday,10,Chips,Snacks,20,58,UPI,17
+2025-10-13,Monday,10,Sugar,Grocery,45,51,UPI,10
+2025-03-19,Wednesday,3,Chips,Snacks,20,78,UPI,11
+2025-03-29,Saturday,3,Tea,Beverage,120,60,UPI,15
+2025-02-10,Monday,2,Chips,Snacks,20,66,Card,11
+2025-09-29,Monday,9,Maggi,Grocery,15,57,UPI,18
+2025-12-12,Friday,12,Milk,Dairy,60,38,UPI,17
+2025-11-16,Sunday,11,Coffee,Beverage,180,91,UPI,23
+2025-10-12,Sunday,10,Butter,Dairy,55,70,UPI,16
+2025-03-05,Wednesday,3,Soap,Personal Care,40,47,UPI,2
+2025-10-20,Monday,10,Butter,Dairy,55,39,Cash,9
+2025-07-25,Friday,7,Butter,Dairy,55,54,UPI,8
+2025-11-03,Monday,11,Bread,Bakery,35,88,UPI,19
+2025-12-18,Thursday,12,Maggi,Grocery,15,70,UPI,18
+2025-07-26,Saturday,7,Rice,Grocery,70,52,Cash,14
+2025-04-01,Tuesday,4,Sugar,Grocery,45,47,UPI,9
+2025-08-26,Tuesday,8,Chips,Snacks,20,72,Card,9
+2025-12-01,Monday,12,Rice,Grocery,70,54,UPI,8
+2025-11-13,Thursday,11,Shampoo,Personal Care,180,64,Cash,5
+2025-11-03,Monday,11,Butter,Dairy,55,49,Cash,9
+2025-11-17,Monday,11,Bread,Bakery,35,61,UPI,18
+2025-12-01,Monday,12,Soap,Personal Care,40,60,UPI,5
+2025-03-24,Monday,3,Bread,Bakery,35,59,Cash,16
+2025-08-30,Saturday,8,Bread,Bakery,35,47,UPI,19
+2025-04-16,Wednesday,4,Cold Drink,Beverage,40,67,UPI,18
+2025-05-04,Sunday,5,Soap,Personal Care,40,61,Cash,9
+2025-06-19,Thursday,6,Chips,Snacks,20,44,UPI,9
+2025-01-04,Saturday,1,Butter,Dairy,55,63,Card,10
+2025-02-06,Thursday,2,Cold Drink,Beverage,40,45,Card,9
+2025-11-07,Friday,11,Tea,Beverage,120,69,Cash,19
+2025-07-23,Wednesday,7,Maggi,Grocery,15,59,UPI,16
+2025-11-19,Wednesday,11,Juice,Beverage,55,83,UPI,13
+2025-05-15,Thursday,5,Bread,Bakery,35,85,Cash,17
+2025-07-07,Monday,7,Biscuit,Snacks,25,74,UPI,12
+2025-09-05,Friday,9,Juice,Beverage,55,42,UPI,6
+2025-02-07,Friday,2,Toothpaste,Personal Care,95,72,UPI,7
+2025-05-14,Wednesday,5,Bread,Bakery,35,53,Cash,15
+2025-08-19,Tuesday,8,Milk,Dairy,60,72,UPI,16
+2025-03-13,Thursday,3,Maggi,Grocery,15,70,UPI,17
+2025-07-09,Wednesday,7,Bread,Bakery,35,60,Cash,17
+2025-03-23,Sunday,3,Milk,Dairy,60,73,Cash,23
+2025-03-21,Friday,3,Toothpaste,Personal Care,95,34,Cash,5
+2025-05-12,Monday,5,Cold Drink,Beverage,40,38,Card,17
+2025-03-17,Monday,3,Coffee,Beverage,180,27,UPI,7
+2025-09-22,Monday,9,Biscuit,Snacks,25,62,Cash,12
+2025-06-26,Thursday,6,Bread,Bakery,35,71,Card,14
+2025-07-11,Friday,7,Milk,Dairy,60,68,Cash,17
+2025-09-04,Thursday,9,Cold Drink,Beverage,40,57,Card,7
+2025-02-03,Monday,2,Maggi,Grocery,15,52,UPI,18
+2025-05-23,Friday,5,Bread,Bakery,35,86,Cash,17
+2025-04-11,Friday,4,Maggi,Grocery,15,69,UPI,18
+2025-01-07,Tuesday,1,Juice,Beverage,55,43,Cash,9
+2025-01-17,Friday,1,Milk,Dairy,60,77,UPI,17
+2025-02-04,Tuesday,2,Milk,Dairy,60,71,Card,16
+2025-10-03,Friday,10,Chips,Snacks,20,58,Cash,10
+2025-05-12,Monday,5,Bread,Bakery,35,78,Card,14
+2025-04-27,Sunday,4,Cold Drink,Beverage,40,76,UPI,18
+2025-04-08,Tuesday,4,Milk,Dairy,60,42,UPI,14
+2025-04-27,Sunday,4,Maggi,Grocery,15,92,Cash,24
+2025-10-02,Thursday,10,Sugar,Grocery,45,80,Cash,10
+2025-03-01,Saturday,3,Bread,Bakery,35,69,UPI,19
+2025-04-21,Monday,4,Tea,Beverage,120,62,UPI,11
+2025-08-09,Saturday,8,Maggi,Grocery,15,91,Cash,22
+2025-11-22,Saturday,11,Coffee,Beverage,180,88,UPI,20
+2025-11-20,Thursday,11,Milk,Dairy,60,71,UPI,19
+2025-11-27,Thursday,11,Milk,Dairy,60,74,UPI,20
+2025-10-15,Wednesday,10,Milk,Dairy,60,48,Card,21
+2025-09-07,Sunday,9,Juice,Beverage,55,62,UPI,10
+2025-02-03,Monday,2,Bread,Bakery,35,79,UPI,16
+2025-08-15,Friday,8,Juice,Beverage,55,67,Cash,7
+2025-04-10,Thursday,4,Chips,Snacks,20,76,UPI,8
+2025-06-06,Friday,6,Milk,Dairy,60,85,UPI,16
+2025-06-03,Tuesday,6,Maggi,Grocery,15,53,Cash,20
+2025-03-22,Saturday,3,Bread,Bakery,35,90,UPI,20
+2025-12-06,Saturday,12,Bread,Bakery,35,72,Card,19
+2025-08-02,Saturday,8,Toothpaste,Personal Care,95,46,UPI,10
+2025-06-05,Thursday,6,Cold Drink,Beverage,40,53,UPI,14
+2025-06-11,Wednesday,6,Milk,Dairy,60,56,UPI,17
+2025-08-02,Saturday,8,Rice,Grocery,70,34,Card,11
+2025-03-13,Thursday,3,Milk,Dairy,60,86,UPI,17
+2025-04-14,Monday,4,Chips,Snacks,20,71,Cash,9
+2025-07-11,Friday,7,Milk,Dairy,60,54,UPI,14
+2025-10-13,Monday,10,Rice,Grocery,70,68,UPI,9
+2025-02-24,Monday,2,Cold Drink,Beverage,40,41,UPI,6
+2025-10-31,Friday,10,Biscuit,Snacks,25,83,Cash,14
+2025-12-28,Sunday,12,Toothpaste,Personal Care,95,48,Card,11
+2025-01-31,Friday,1,Coffee,Beverage,180,66,UPI,6
+2025-08-13,Wednesday,8,Tea,Beverage,120,36,UPI,9
+2025-02-07,Friday,2,Cold Drink,Beverage,40,77,Cash,8
+2025-03-19,Wednesday,3,Chips,Snacks,20,51,Cash,12
+2025-08-13,Wednesday,8,Coffee,Beverage,180,44,Cash,4
+2025-05-14,Wednesday,5,Biscuit,Snacks,25,66,Cash,13
+2025-03-13,Thursday,3,Biscuit,Snacks,25,79,Cash,9
+2025-07-04,Friday,7,Biscuit,Snacks,25,79,Card,12
+2025-08-28,Thursday,8,Bread,Bakery,35,63,UPI,14
+2025-12-27,Saturday,12,Bread,Bakery,35,78,Cash,20
+2025-03-03,Monday,3,Maggi,Grocery,15,66,UPI,19
+2025-01-25,Saturday,1,Tea,Beverage,120,64,UPI,21
+2025-01-17,Friday,1,Sugar,Grocery,45,50,Cash,10
+2025-10-22,Wednesday,10,Tea,Beverage,120,78,UPI,11
+2025-10-13,Monday,10,Maggi,Grocery,15,52,Cash,22
+2025-02-14,Friday,2,Chips,Snacks,20,61,Cash,12
+2025-02-07,Friday,2,Butter,Dairy,55,44,UPI,7
+2025-03-19,Wednesday,3,Cold Drink,Beverage,40,32,UPI,8
+2025-08-21,Thursday,8,Coffee,Beverage,180,76,Cash,7
+2025-08-10,Sunday,8,Chips,Snacks,20,70,UPI,14
+2025-07-19,Saturday,7,Shampoo,Personal Care,180,38,UPI,4
+2025-04-25,Friday,4,Bread,Bakery,35,80,Cash,17
+2025-12-01,Monday,12,Tea,Beverage,120,57,Card,15
+2025-10-23,Thursday,10,Biscuit,Snacks,25,82,UPI,13
+2025-02-21,Friday,2,Milk,Dairy,60,68,Cash,14
+2025-03-07,Friday,3,Chips,Snacks,20,54,Card,12
+2025-06-11,Wednesday,6,Milk,Dairy,60,77,UPI,15
+2025-08-06,Wednesday,8,Milk,Dairy,60,50,Card,16
+2025-07-01,Tuesday,7,Bread,Bakery,35,41,Card,13
+2025-03-05,Wednesday,3,Juice,Beverage,55,29,UPI,8
+2025-04-17,Thursday,4,Biscuit,Snacks,25,35,UPI,12
+2025-04-16,Wednesday,4,Rice,Grocery,70,65,Cash,8
+2025-03-31,Monday,3,Maggi,Grocery,15,77,Cash,20
+2025-04-18,Friday,4,Maggi,Grocery,15,67,Cash,16
+2025-06-12,Thursday,6,Milk,Dairy,60,49,UPI,17
+2025-09-17,Wednesday,9,Maggi,Grocery,15,68,UPI,18
+2025-08-22,Friday,8,Maggi,Grocery,15,36,UPI,16
+2025-02-21,Friday,2,Rice,Grocery,70,50,Card,7
+2025-08-11,Monday,8,Chips,Snacks,20,44,Card,10
+2025-11-26,Wednesday,11,Maggi,Grocery,15,45,Card,24
+2025-11-28,Friday,11,Milk,Dairy,60,47,Cash,18
+2025-01-05,Sunday,1,Bread,Bakery,35,50,UPI,21
+2025-01-20,Monday,1,Sugar,Grocery,45,64,Cash,6
+2025-12-05,Friday,12,Cold Drink,Beverage,40,51,Cash,8
+2025-08-03,Sunday,8,Chips,Snacks,20,66,Card,13
+2025-12-09,Tuesday,12,Biscuit,Snacks,25,53,Card,10
+2025-03-25,Tuesday,3,Maggi,Grocery,15,67,UPI,16
+2025-07-11,Friday,7,Rice,Grocery,70,66,UPI,7
+2025-06-19,Thursday,6,Chips,Snacks,20,58,UPI,8
+2025-07-28,Monday,7,Cold Drink,Beverage,40,60,UPI,6
+2025-09-26,Friday,9,Soap,Personal Care,40,33,UPI,3
+2025-04-25,Friday,4,Milk,Dairy,60,60,Card,14
+2025-09-01,Monday,9,Maggi,Grocery,15,65,Card,19
+2025-03-10,Monday,3,Tea,Beverage,120,71,UPI,11
+2025-05-12,Monday,5,Sugar,Grocery,45,47,Cash,7
+2025-11-11,Tuesday,11,Milk,Dairy,60,70,Cash,19
+2025-04-11,Friday,4,Chips,Snacks,20,43,UPI,9
+2025-03-15,Saturday,3,Chips,Snacks,20,79,UPI,12
+2025-11-11,Tuesday,11,Rice,Grocery,70,42,UPI,8
+2025-06-04,Wednesday,6,Biscuit,Snacks,25,76,Card,11
+2025-09-24,Wednesday,9,Toothpaste,Personal Care,95,64,Card,8
+2025-03-09,Sunday,3,Milk,Dairy,60,65,Cash,22
+2025-01-18,Saturday,1,Coffee,Beverage,180,44,UPI,13
+2025-05-02,Friday,5,Shampoo,Personal Care,180,47,UPI,2
+2025-09-05,Friday,9,Coffee,Beverage,180,37,Cash,5
+2025-10-23,Thursday,10,Chips,Snacks,20,49,UPI,16
+2025-08-14,Thursday,8,Milk,Dairy,60,81,UPI,14
+2025-06-22,Sunday,6,Biscuit,Snacks,25,51,UPI,15
+2025-10-09,Thursday,10,Cold Drink,Beverage,40,73,Card,11
+2025-05-15,Thursday,5,Biscuit,Snacks,25,79,UPI,9
+2025-10-06,Monday,10,Toothpaste,Personal Care,95,41,Card,7
+2025-03-03,Monday,3,Chips,Snacks,20,77,UPI,12
+2025-06-07,Saturday,6,Cold Drink,Beverage,40,49,Card,24
+2025-04-04,Friday,4,Butter,Dairy,55,59,UPI,7
+2025-04-24,Thursday,4,Chips,Snacks,20,40,Cash,8
+2025-11-04,Tuesday,11,Milk,Dairy,60,74,UPI,21
+2025-07-05,Saturday,7,Chips,Snacks,20,80,Card,16
+2025-07-11,Friday,7,Tea,Beverage,120,34,Cash,8
+2025-11-13,Thursday,11,Shampoo,Personal Care,180,59,Card,5
+2025-04-14,Monday,4,Soap,Personal Care,40,27,Card,4
+2025-06-01,Sunday,6,Juice,Beverage,55,73,UPI,23
+2025-06-03,Tuesday,6,Bread,Bakery,35,37,UPI,13
+2025-06-09,Monday,6,Coffee,Beverage,180,70,Cash,4
+2025-01-31,Friday,1,Juice,Beverage,55,36,UPI,8
+2025-05-05,Monday,5,Chips,Snacks,20,81,UPI,11
+2025-10-30,Thursday,10,Rice,Grocery,70,51,UPI,9
+2025-05-22,Thursday,5,Butter,Dairy,55,50,UPI,5
+2025-12-11,Thursday,12,Biscuit,Snacks,25,43,UPI,10
+2025-06-17,Tuesday,6,Toothpaste,Personal Care,95,64,UPI,4
+2025-02-22,Saturday,2,Milk,Dairy,60,58,Cash,24
+2025-03-05,Wednesday,3,Milk,Dairy,60,85,Cash,18
+2025-06-24,Tuesday,6,Bread,Bakery,35,37,UPI,15
+2025-02-27,Thursday,2,Cold Drink,Beverage,40,56,Cash,9
+2025-12-21,Sunday,12,Cold Drink,Beverage,40,48,UPI,14
+2025-11-05,Wednesday,11,Maggi,Grocery,15,83,UPI,21
+2025-08-10,Sunday,8,Biscuit,Snacks,25,75,UPI,15
+2025-05-22,Thursday,5,Biscuit,Snacks,25,71,UPI,11
+2025-05-09,Friday,5,Rice,Grocery,70,32,UPI,7
+2025-09-06,Saturday,9,Biscuit,Snacks,25,68,UPI,17
+2025-05-17,Saturday,5,Sugar,Grocery,45,67,Cash,12
+2025-11-07,Friday,11,Coffee,Beverage,180,73,UPI,15
+2025-11-26,Wednesday,11,Chips,Snacks,20,40,UPI,14
+2025-07-04,Friday,7,Biscuit,Snacks,25,76,Cash,13
+2025-07-21,Monday,7,Soap,Personal Care,40,44,Cash,2
+2025-08-24,Sunday,8,Sugar,Grocery,45,39,Card,17
+2025-11-18,Tuesday,11,Chips,Snacks,20,46,Cash,13
+2025-06-18,Wednesday,6,Maggi,Grocery,15,54,Card,16
+2025-08-22,Friday,8,Chips,Snacks,20,52,Cash,10
+2025-05-08,Thursday,5,Milk,Dairy,60,64,Cash,16
+2025-12-24,Wednesday,12,Milk,Dairy,60,85,Cash,16
+2025-10-08,Wednesday,10,Bread,Bakery,35,88,UPI,20
+2025-09-13,Saturday,9,Chips,Snacks,20,55,Cash,13
+2025-04-27,Sunday,4,Biscuit,Snacks,25,42,Card,16
+2025-07-27,Sunday,7,Maggi,Grocery,15,76,Cash,25
+2025-04-14,Monday,4,Biscuit,Snacks,25,76,UPI,11
+2025-08-13,Wednesday,8,Milk,Dairy,60,84,UPI,16
+2025-01-09,Thursday,1,Bread,Bakery,35,45,Cash,13
+2025-12-25,Thursday,12,Cold Drink,Beverage,40,48,Cash,10
+2025-07-23,Wednesday,7,Tea,Beverage,120,75,UPI,11
+2025-12-31,Wednesday,12,Maggi,Grocery,15,82,UPI,20
+2025-06-24,Tuesday,6,Milk,Dairy,60,60,UPI,18
+2025-02-23,Sunday,2,Juice,Beverage,55,70,Card,14
+2025-04-26,Saturday,4,Milk,Dairy,60,55,UPI,20
+2025-05-21,Wednesday,5,Toothpaste,Personal Care,95,55,UPI,4
+2025-04-23,Wednesday,4,Biscuit,Snacks,25,44,UPI,10
+2025-03-16,Sunday,3,Chips,Snacks,20,48,Card,13
+2025-09-05,Friday,9,Cold Drink,Beverage,40,55,Cash,9
+2025-04-09,Wednesday,4,Butter,Dairy,55,38,Cash,7
+2025-11-18,Tuesday,11,Coffee,Beverage,180,82,Cash,17
+2025-05-15,Thursday,5,Milk,Dairy,60,60,UPI,17
+2025-05-01,Thursday,5,Juice,Beverage,55,58,UPI,16
+2025-06-14,Saturday,6,Biscuit,Snacks,25,74,UPI,17
+2025-09-17,Wednesday,9,Butter,Dairy,55,61,UPI,7
+2025-11-06,Thursday,11,Chips,Snacks,20,78,Cash,13
+2025-04-25,Friday,4,Butter,Dairy,55,44,Cash,7
+2025-11-13,Thursday,11,Maggi,Grocery,15,81,UPI,24
+2025-03-29,Saturday,3,Juice,Beverage,55,60,Cash,12
+2025-06-27,Friday,6,Maggi,Grocery,15,84,UPI,19
+2025-02-03,Monday,2,Toothpaste,Personal Care,95,62,UPI,6
+2025-01-15,Wednesday,1,Cold Drink,Beverage,40,61,UPI,10
+2025-03-10,Monday,3,Biscuit,Snacks,25,45,Cash,12
+2025-12-23,Tuesday,12,Milk,Dairy,60,57,UPI,16
+2025-09-18,Thursday,9,Chips,Snacks,20,40,Cash,11
+2025-10-28,Tuesday,10,Butter,Dairy,55,67,UPI,8
+2025-10-28,Tuesday,10,Biscuit,Snacks,25,70,UPI,11
+2025-03-24,Monday,3,Rice,Grocery,70,41,Card,6
+2025-04-02,Wednesday,4,Biscuit,Snacks,25,31,Cash,10
+2025-03-03,Monday,3,Tea,Beverage,120,34,UPI,9
+2025-12-25,Thursday,12,Rice,Grocery,70,54,UPI,8
+2025-06-25,Wednesday,6,Sugar,Grocery,45,33,UPI,7
+2025-08-09,Saturday,8,Bread,Bakery,35,46,UPI,21
+2025-04-27,Sunday,4,Rice,Grocery,70,51,UPI,10
+2025-05-12,Monday,5,Maggi,Grocery,15,74,UPI,16
+2025-12-16,Tuesday,12,Coffee,Beverage,180,38,UPI,8
+2025-01-07,Tuesday,1,Butter,Dairy,55,44,UPI,4
+2025-10-18,Saturday,10,Maggi,Grocery,15,58,UPI,27
+2025-04-04,Friday,4,Soap,Personal Care,40,39,Card,6
+2025-12-16,Tuesday,12,Maggi,Grocery,15,75,UPI,17
+2025-08-14,Thursday,8,Bread,Bakery,35,66,UPI,14
+2025-01-16,Thursday,1,Chips,Snacks,20,34,Card,12
+2025-03-03,Monday,3,Cold Drink,Beverage,40,46,UPI,8
+2025-10-30,Thursday,10,Toothpaste,Personal Care,95,58,UPI,7
+2025-11-10,Monday,11,Bread,Bakery,35,82,UPI,20
+2025-08-18,Monday,8,Rice,Grocery,70,67,Cash,5
+2025-07-07,Monday,7,Milk,Dairy,60,50,Card,15
+2025-07-26,Saturday,7,Tea,Beverage,120,35,Card,12
+2025-12-04,Thursday,12,Juice,Beverage,55,35,Cash,9
+2025-12-02,Tuesday,12,Maggi,Grocery,15,71,Cash,18
+2025-09-25,Thursday,9,Biscuit,Snacks,25,80,UPI,12
+2025-06-14,Saturday,6,Bread,Bakery,35,88,UPI,20
+2025-08-07,Thursday,8,Juice,Beverage,55,55,UPI,8
+2025-09-09,Tuesday,9,Tea,Beverage,120,47,Cash,7
+2025-06-06,Friday,6,Soap,Personal Care,40,75,Cash,5
+2025-12-24,Wednesday,12,Biscuit,Snacks,25,62,Cash,9
+2025-02-15,Saturday,2,Bread,Bakery,35,89,Card,22
+2025-11-25,Tuesday,11,Tea,Beverage,120,39,UPI,18
+2025-04-07,Monday,4,Milk,Dairy,60,70,UPI,16
+2025-08-11,Monday,8,Chips,Snacks,20,65,Cash,12
+2025-12-15,Monday,12,Tea,Beverage,120,37,UPI,11
+2025-04-24,Thursday,4,Bread,Bakery,35,39,Cash,15
+2025-10-20,Monday,10,Tea,Beverage,120,53,UPI,9
+2025-05-29,Thursday,5,Biscuit,Snacks,25,44,Cash,9
+2025-06-19,Thursday,6,Juice,Beverage,55,48,UPI,14
+2025-01-23,Thursday,1,Chips,Snacks,20,38,Cash,9
+2025-05-13,Tuesday,5,Shampoo,Personal Care,180,67,Cash,4
+2025-11-17,Monday,11,Cold Drink,Beverage,40,72,Cash,11
+2025-12-20,Saturday,12,Milk,Dairy,60,66,UPI,20
+2025-04-08,Tuesday,4,Chips,Snacks,20,47,Cash,11
+2025-07-22,Tuesday,7,Shampoo,Personal Care,180,65,Cash,1
+2025-12-20,Saturday,12,Maggi,Grocery,15,80,UPI,20
+2025-09-08,Monday,9,Bread,Bakery,35,44,UPI,13
+2025-05-12,Monday,5,Bread,Bakery,35,54,UPI,16
+2025-10-19,Sunday,10,Milk,Dairy,60,66,Cash,21
+2025-02-14,Friday,2,Cold Drink,Beverage,40,61,UPI,10
+2025-01-19,Sunday,1,Tea,Beverage,120,46,UPI,19
+2025-04-05,Saturday,4,Chips,Snacks,20,46,UPI,11
+2025-03-15,Saturday,3,Rice,Grocery,70,84,UPI,15
+2025-04-07,Monday,4,Juice,Beverage,55,35,Cash,13
+2025-06-24,Tuesday,6,Juice,Beverage,55,55,UPI,13
+2025-01-29,Wednesday,1,Cold Drink,Beverage,40,53,UPI,9
+2025-02-02,Sunday,2,Milk,Dairy,60,79,UPI,19
+2025-08-13,Wednesday,8,Toothpaste,Personal Care,95,52,UPI,4
+2025-09-28,Sunday,9,Bread,Bakery,35,52,UPI,22
+2025-01-30,Thursday,1,Butter,Dairy,55,67,UPI,4
+2025-01-09,Thursday,1,Tea,Beverage,120,81,Card,15
+2025-03-15,Saturday,3,Rice,Grocery,70,29,UPI,9
+2025-07-18,Friday,7,Coffee,Beverage,180,34,Card,7
+2025-01-19,Sunday,1,Biscuit,Snacks,25,44,UPI,20
+2025-09-01,Monday,9,Chips,Snacks,20,73,UPI,12
+2025-07-18,Friday,7,Toothpaste,Personal Care,95,74,UPI,7
+2025-05-09,Friday,5,Tea,Beverage,120,69,UPI,9
+2025-03-20,Thursday,3,Juice,Beverage,55,62,Card,8
+2025-05-27,Tuesday,5,Bread,Bakery,35,58,Card,14
+2025-07-08,Tuesday,7,Cold Drink,Beverage,40,53,Cash,6
+2025-08-24,Sunday,8,Bread,Bakery,35,57,Card,23
+2025-11-17,Monday,11,Maggi,Grocery,15,66,UPI,21
+2025-08-20,Wednesday,8,Rice,Grocery,70,52,UPI,8
+2025-12-07,Sunday,12,Milk,Dairy,60,87,UPI,21
+2025-12-31,Wednesday,12,Bread,Bakery,35,70,UPI,14
+2025-12-04,Thursday,12,Cold Drink,Beverage,40,53,Card,10
+2025-07-29,Tuesday,7,Tea,Beverage,120,70,UPI,9
+2025-08-29,Friday,8,Rice,Grocery,70,59,Cash,5
+2025-11-16,Sunday,11,Milk,Dairy,60,56,UPI,23
+2025-12-04,Thursday,12,Cold Drink,Beverage,40,62,UPI,9
+2025-01-13,Monday,1,Juice,Beverage,55,50,Cash,6
+2025-12-15,Monday,12,Bread,Bakery,35,86,UPI,17
+2025-04-12,Saturday,4,Rice,Grocery,70,52,UPI,12
+2025-03-08,Saturday,3,Cold Drink,Beverage,40,73,Card,14
+2025-11-18,Tuesday,11,Soap,Personal Care,40,74,UPI,4
+2025-01-28,Tuesday,1,Maggi,Grocery,15,43,UPI,18
+2025-04-14,Monday,4,Cold Drink,Beverage,40,50,UPI,17
+2025-11-16,Sunday,11,Maggi,Grocery,15,70,Cash,29
+2025-02-21,Friday,2,Milk,Dairy,60,48,Card,18
+2025-08-01,Friday,8,Bread,Bakery,35,67,Card,13
+2025-10-15,Wednesday,10,Rice,Grocery,70,76,Cash,12
+2025-02-28,Friday,2,Bread,Bakery,35,62,UPI,14
+2025-07-15,Tuesday,7,Maggi,Grocery,15,63,UPI,19
+2025-10-28,Tuesday,10,Biscuit,Snacks,25,73,Cash,16
+2025-01-11,Saturday,1,Sugar,Grocery,45,58,Card,16
+2025-07-09,Wednesday,7,Butter,Dairy,55,35,UPI,4
+2025-07-21,Monday,7,Milk,Dairy,60,42,Card,15
+2025-12-09,Tuesday,12,Chips,Snacks,20,69,UPI,9
+2025-02-12,Wednesday,2,Biscuit,Snacks,25,69,Card,11
+2025-11-15,Saturday,11,Tea,Beverage,120,61,UPI,25
+2025-09-24,Wednesday,9,Milk,Dairy,60,65,UPI,14
+2025-11-29,Saturday,11,Bread,Bakery,35,71,Card,23
+2025-05-20,Tuesday,5,Milk,Dairy,60,79,UPI,17
+2025-03-08,Saturday,3,Tea,Beverage,120,81,Cash,14
+2025-04-13,Sunday,4,Milk,Dairy,60,67,UPI,23
+2025-12-23,Tuesday,12,Toothpaste,Personal Care,95,48,UPI,7
+2025-08-06,Wednesday,8,Tea,Beverage,120,75,UPI,10
+2025-05-14,Wednesday,5,Juice,Beverage,55,66,UPI,15
+2025-08-19,Tuesday,8,Maggi,Grocery,15,78,Card,16
+2025-02-28,Friday,2,Cold Drink,Beverage,40,34,Cash,6
+2025-02-08,Saturday,2,Maggi,Grocery,15,46,UPI,22
+2025-02-14,Friday,2,Chips,Snacks,20,28,Cash,8
+2025-06-24,Tuesday,6,Biscuit,Snacks,25,37,UPI,13
+2025-08-24,Sunday,8,Shampoo,Personal Care,180,65,UPI,6
+2025-04-13,Sunday,4,Biscuit,Snacks,25,38,Cash,13
+2025-08-10,Sunday,8,Maggi,Grocery,15,44,Cash,21
+2025-11-17,Monday,11,Rice,Grocery,70,43,Cash,11
+2025-12-28,Sunday,12,Tea,Beverage,120,85,Cash,19
+2025-02-01,Saturday,2,Cold Drink,Beverage,40,65,UPI,13
+2025-04-12,Saturday,4,Bread,Bakery,35,73,Cash,19
+2025-03-05,Wednesday,3,Bread,Bakery,35,45,UPI,13
+2025-04-27,Sunday,4,Milk,Dairy,60,81,Cash,21
+2025-07-31,Thursday,7,Milk,Dairy,60,78,UPI,18
+2025-06-26,Thursday,6,Rice,Grocery,70,59,UPI,6
+2025-12-16,Tuesday,12,Cold Drink,Beverage,40,46,Cash,8
+2025-02-02,Sunday,2,Maggi,Grocery,15,90,UPI,24
+2025-08-09,Saturday,8,Biscuit,Snacks,25,35,Card,15
+2025-06-13,Friday,6,Toothpaste,Personal Care,95,77,Card,8
+2025-12-15,Monday,12,Milk,Dairy,60,81,Card,18
+2025-06-13,Friday,6,Coffee,Beverage,180,48,Cash,6
+2025-09-13,Saturday,9,Sugar,Grocery,45,54,UPI,14
+2025-04-27,Sunday,4,Biscuit,Snacks,25,39,Cash,17
+2025-08-25,Monday,8,Rice,Grocery,70,77,Cash,7
+2025-08-26,Tuesday,8,Butter,Dairy,55,55,UPI,7
+2025-07-17,Thursday,7,Biscuit,Snacks,25,33,Card,12
+2025-07-15,Tuesday,7,Chips,Snacks,20,54,UPI,9
+2025-12-05,Friday,12,Sugar,Grocery,45,36,Cash,7
+2025-02-18,Tuesday,2,Bread,Bakery,35,58,UPI,13
+2025-04-12,Saturday,4,Milk,Dairy,60,65,UPI,20
+2025-10-09,Thursday,10,Chips,Snacks,20,45,UPI,13
+2025-08-10,Sunday,8,Biscuit,Snacks,25,67,Card,16
+2025-02-24,Monday,2,Maggi,Grocery,15,56,Cash,16
+2025-03-14,Friday,3,Soap,Personal Care,40,56,Card,3
+2025-08-02,Saturday,8,Chips,Snacks,20,53,Cash,14
+2025-06-09,Monday,6,Milk,Dairy,60,65,Cash,18
+2025-09-29,Monday,9,Soap,Personal Care,40,45,Cash,4
+2025-03-07,Friday,3,Chips,Snacks,20,66,Card,10
+2025-08-17,Sunday,8,Maggi,Grocery,15,59,UPI,24
+2025-04-30,Wednesday,4,Milk,Dairy,60,76,Card,16
+2025-05-24,Saturday,5,Butter,Dairy,55,69,Cash,13
+2025-03-07,Friday,3,Biscuit,Snacks,25,81,Cash,11
+2025-04-28,Monday,4,Butter,Dairy,55,67,UPI,8
+2025-09-08,Monday,9,Chips,Snacks,20,62,Card,12
+2025-02-18,Tuesday,2,Milk,Dairy,60,85,UPI,17
+2025-09-28,Sunday,9,Milk,Dairy,60,81,Card,23
+2025-05-17,Saturday,5,Juice,Beverage,55,88,UPI,19
+2025-12-31,Wednesday,12,Biscuit,Snacks,25,53,Cash,10
+2025-05-07,Wednesday,5,Maggi,Grocery,15,77,UPI,17
+2025-11-14,Friday,11,Milk,Dairy,60,52,Cash,23
+2025-09-06,Saturday,9,Juice,Beverage,55,68,UPI,14
+2025-04-07,Monday,4,Chips,Snacks,20,70,UPI,12
+2025-04-10,Thursday,4,Biscuit,Snacks,25,65,UPI,13
+2025-08-05,Tuesday,8,Chips,Snacks,20,47,UPI,8
+2025-01-13,Monday,1,Bread,Bakery,35,74,Cash,13
+2025-07-08,Tuesday,7,Rice,Grocery,70,77,Card,8
+2025-11-17,Monday,11,Bread,Bakery,35,52,Cash,22
+2025-02-25,Tuesday,2,Biscuit,Snacks,25,60,UPI,11
+2025-08-21,Thursday,8,Biscuit,Snacks,25,41,Cash,11
+2025-01-09,Thursday,1,Milk,Dairy,60,37,Card,14
+2025-07-08,Tuesday,7,Tea,Beverage,120,48,Cash,8
+2025-01-14,Tuesday,1,Rice,Grocery,70,69,UPI,8
+2025-11-10,Monday,11,Bread,Bakery,35,57,Cash,17
+2025-09-19,Friday,9,Coffee,Beverage,180,69,Cash,3
+2025-02-02,Sunday,2,Maggi,Grocery,15,49,UPI,20
+2025-05-01,Thursday,5,Bread,Bakery,35,81,UPI,13
+2025-02-11,Tuesday,2,Milk,Dairy,60,58,Cash,17
+2025-10-07,Tuesday,10,Tea,Beverage,120,59,Cash,13
+2025-03-21,Friday,3,Rice,Grocery,70,34,Cash,9
+2025-03-01,Saturday,3,Sugar,Grocery,45,47,UPI,12
+2025-01-13,Monday,1,Toothpaste,Personal Care,95,65,Cash,4
+2025-01-22,Wednesday,1,Bread,Bakery,35,47,Cash,13
+2025-03-12,Wednesday,3,Juice,Beverage,55,49,UPI,9
+2025-12-10,Wednesday,12,Biscuit,Snacks,25,33,UPI,12
+2025-01-13,Monday,1,Milk,Dairy,60,72,UPI,17
+2025-01-19,Sunday,1,Bread,Bakery,35,75,UPI,18
+2025-02-11,Tuesday,2,Milk,Dairy,60,61,UPI,18
+2025-07-23,Wednesday,7,Chips,Snacks,20,38,UPI,9
+2025-11-15,Saturday,11,Juice,Beverage,55,61,UPI,18
+2025-04-14,Monday,4,Bread,Bakery,35,53,UPI,17
+2025-05-14,Wednesday,5,Milk,Dairy,60,44,Cash,17
+2025-08-17,Sunday,8,Sugar,Grocery,45,86,UPI,17
+2025-01-22,Wednesday,1,Bread,Bakery,35,42,Cash,16
+2025-04-13,Sunday,4,Cold Drink,Beverage,40,89,Cash,25
+2025-06-05,Thursday,6,Cold Drink,Beverage,40,39,Cash,16
+2025-05-10,Saturday,5,Bread,Bakery,35,42,UPI,21
+2025-04-03,Thursday,4,Bread,Bakery,35,48,UPI,15
+2025-06-17,Tuesday,6,Biscuit,Snacks,25,57,Cash,12
+2025-09-09,Tuesday,9,Bread,Bakery,35,71,Cash,16
+2025-12-08,Monday,12,Chips,Snacks,20,33,Cash,9
+2025-01-16,Thursday,1,Cold Drink,Beverage,40,33,Card,10
+2025-01-01,Wednesday,1,Juice,Beverage,55,55,UPI,7
+2025-03-23,Sunday,3,Coffee,Beverage,180,49,UPI,6
+2025-08-05,Tuesday,8,Bread,Bakery,35,39,UPI,15
+2025-06-02,Monday,6,Toothpaste,Personal Care,95,31,UPI,4
+2025-04-15,Tuesday,4,Milk,Dairy,60,74,Cash,14
+2025-01-16,Thursday,1,Toothpaste,Personal Care,95,38,UPI,7
+2025-05-01,Thursday,5,Maggi,Grocery,15,76,Cash,19
+2025-01-12,Sunday,1,Milk,Dairy,60,48,Cash,24
+2025-02-03,Monday,2,Bread,Bakery,35,79,UPI,16
+2025-08-10,Sunday,8,Maggi,Grocery,15,56,Card,25
+2025-01-23,Thursday,1,Coffee,Beverage,180,73,UPI,8
+2025-05-17,Saturday,5,Sugar,Grocery,45,43,UPI,11
+2025-01-01,Wednesday,1,Sugar,Grocery,45,62,Cash,6
+2025-12-26,Friday,12,Sugar,Grocery,45,79,UPI,9
+2025-01-25,Saturday,1,Chips,Snacks,20,40,Cash,15
+2025-08-30,Saturday,8,Sugar,Grocery,45,57,Cash,14
+2025-10-10,Friday,10,Rice,Grocery,70,77,Cash,10
+2025-10-25,Saturday,10,Rice,Grocery,70,60,Cash,18
+2025-12-11,Thursday,12,Bread,Bakery,35,79,UPI,16
+2025-08-10,Sunday,8,Milk,Dairy,60,57,Card,21
+2025-07-03,Thursday,7,Milk,Dairy,60,65,Cash,17
+2025-03-26,Wednesday,3,Cold Drink,Beverage,40,47,UPI,6
+2025-11-17,Monday,11,Cold Drink,Beverage,40,54,UPI,13
+2025-03-23,Sunday,3,Chips,Snacks,20,86,UPI,16
+2025-02-11,Tuesday,2,Biscuit,Snacks,25,39,Card,12
+2025-09-24,Wednesday,9,Tea,Beverage,120,63,UPI,7
+2025-12-07,Sunday,12,Juice,Beverage,55,73,Cash,10
+2025-03-01,Saturday,3,Milk,Dairy,60,76,Card,21
+2025-07-21,Monday,7,Tea,Beverage,120,64,UPI,8
+2025-02-24,Monday,2,Rice,Grocery,70,66,Cash,6
+2025-12-22,Monday,12,Bread,Bakery,35,79,UPI,14
+2025-09-16,Tuesday,9,Chips,Snacks,20,59,UPI,8
+2025-06-06,Friday,6,Maggi,Grocery,15,85,UPI,17
+2025-10-05,Sunday,10,Chips,Snacks,20,35,UPI,14
+2025-04-06,Sunday,4,Maggi,Grocery,15,55,UPI,19
+2025-07-03,Thursday,7,Maggi,Grocery,15,39,Cash,19
+2025-07-18,Friday,7,Milk,Dairy,60,49,UPI,16
+2025-09-02,Tuesday,9,Soap,Personal Care,40,63,UPI,6
+2025-01-17,Friday,1,Tea,Beverage,120,57,UPI,15
+2025-07-16,Wednesday,7,Biscuit,Snacks,25,82,UPI,13
+2025-11-14,Friday,11,Toothpaste,Personal Care,95,32,UPI,11
+2025-02-14,Friday,2,Butter,Dairy,55,43,UPI,7
+2025-11-20,Thursday,11,Maggi,Grocery,15,65,Cash,21
+2025-08-29,Friday,8,Bread,Bakery,35,53,UPI,13
+2025-08-20,Wednesday,8,Chips,Snacks,20,68,UPI,9
+2025-03-07,Friday,3,Maggi,Grocery,15,83,Cash,20
+2025-08-16,Saturday,8,Juice,Beverage,55,43,UPI,12
+2025-07-18,Friday,7,Biscuit,Snacks,25,74,Cash,13
+2025-03-02,Sunday,3,Milk,Dairy,60,55,Card,24
+2025-03-25,Tuesday,3,Milk,Dairy,60,52,Cash,14
+2025-12-18,Thursday,12,Rice,Grocery,70,30,UPI,6
+2025-01-03,Friday,1,Tea,Beverage,120,83,UPI,14
+2025-04-25,Friday,4,Milk,Dairy,60,79,Cash,16
+2025-08-16,Saturday,8,Tea,Beverage,120,40,UPI,10
+2025-11-06,Thursday,11,Biscuit,Snacks,25,65,UPI,14
+2025-01-11,Saturday,1,Biscuit,Snacks,25,78,UPI,18
+2025-01-18,Saturday,1,Rice,Grocery,70,68,Cash,13
+2025-02-14,Friday,2,Maggi,Grocery,15,80,UPI,18
+2025-05-05,Monday,5,Rice,Grocery,70,33,UPI,6
+2025-04-06,Sunday,4,Maggi,Grocery,15,85,Card,23
+2025-05-15,Thursday,5,Rice,Grocery,70,32,Card,8
+2025-10-26,Sunday,10,Toothpaste,Personal Care,95,38,UPI,16
+2025-03-10,Monday,3,Bread,Bakery,35,36,UPI,16
+2025-01-07,Tuesday,1,Tea,Beverage,120,76,UPI,14
+2025-06-05,Thursday,6,Tea,Beverage,120,48,Card,8
+2025-04-20,Sunday,4,Cold Drink,Beverage,40,73,UPI,23
+2025-07-18,Friday,7,Maggi,Grocery,15,80,Cash,20
+2025-02-06,Thursday,2,Cold Drink,Beverage,40,69,UPI,7
+2025-02-04,Tuesday,2,Tea,Beverage,120,62,Card,10
+2025-03-26,Wednesday,3,Maggi,Grocery,15,77,Cash,17
+2025-07-05,Saturday,7,Chips,Snacks,20,60,UPI,14
+2025-06-14,Saturday,6,Sugar,Grocery,45,44,Cash,12
+2025-07-20,Sunday,7,Juice,Beverage,55,49,Cash,15
+2025-11-11,Tuesday,11,Maggi,Grocery,15,57,Cash,22
+2025-02-08,Saturday,2,Milk,Dairy,60,45,UPI,24
+2025-12-27,Saturday,12,Coffee,Beverage,180,49,UPI,12
+2025-06-24,Tuesday,6,Sugar,Grocery,45,62,Cash,8
+2025-08-29,Friday,8,Juice,Beverage,55,60,UPI,9
+2025-12-19,Friday,12,Cold Drink,Beverage,40,74,Cash,10
+2025-11-03,Monday,11,Toothpaste,Personal Care,95,51,UPI,10
+2025-06-25,Wednesday,6,Tea,Beverage,120,64,Cash,11
+2025-11-19,Wednesday,11,Maggi,Grocery,15,60,Cash,22
+2025-06-15,Sunday,6,Bread,Bakery,35,53,UPI,21
+2025-06-21,Saturday,6,Milk,Dairy,60,61,UPI,24
+2025-12-04,Thursday,12,Rice,Grocery,70,75,Cash,6
+2025-12-19,Friday,12,Chips,Snacks,20,42,Cash,10
+2025-10-05,Sunday,10,Milk,Dairy,60,75,Cash,26
+2025-05-30,Friday,5,Bread,Bakery,35,47,Cash,14
+2025-06-22,Sunday,6,Shampoo,Personal Care,180,51,UPI,8
+2025-05-19,Monday,5,Sugar,Grocery,45,59,UPI,10
+2025-11-07,Friday,11,Bread,Bakery,35,44,Card,17
+2025-07-21,Monday,7,Chips,Snacks,20,32,UPI,8
+2025-09-11,Thursday,9,Juice,Beverage,55,63,Cash,8
+2025-10-18,Saturday,10,Milk,Dairy,60,48,Card,25
+2025-09-08,Monday,9,Shampoo,Personal Care,180,31,UPI,5
+2025-03-03,Monday,3,Rice,Grocery,70,37,UPI,6
+2025-01-28,Tuesday,1,Biscuit,Snacks,25,33,UPI,9
+2025-05-18,Sunday,5,Tea,Beverage,120,78,Cash,11
+2025-12-05,Friday,12,Bread,Bakery,35,40,UPI,17
+2025-11-16,Sunday,11,Milk,Dairy,60,61,UPI,26
+2025-10-20,Monday,10,Soap,Personal Care,40,52,Cash,10
+2025-10-11,Saturday,10,Bread,Bakery,35,55,Cash,25
+2025-04-15,Tuesday,4,Chips,Snacks,20,71,UPI,12
+2025-10-20,Monday,10,Bread,Bakery,35,47,UPI,20
+2025-04-24,Thursday,4,Chips,Snacks,20,58,Cash,9
+2025-04-23,Wednesday,4,Cold Drink,Beverage,40,33,UPI,13
+2025-10-24,Friday,10,Milk,Dairy,60,55,UPI,22
+2025-07-29,Tuesday,7,Chips,Snacks,20,59,UPI,11
+2025-11-11,Tuesday,11,Cold Drink,Beverage,40,65,Cash,11
+2025-12-11,Thursday,12,Bread,Bakery,35,63,Cash,16
+2025-06-14,Saturday,6,Tea,Beverage,120,65,Cash,13

@@ -6,6 +6,7 @@
 
 .dashboard h1 {
   margin-bottom: 25px;
+  color: #1f2937;
 }
 
 .cards {
@@ -19,28 +20,73 @@
 }
 
 .section h2 {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  color: #1f2937;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 table th {
   background: #2563eb;
   color: white;
+  font-weight: 600;
 }
 
 table th,
 table td {
   padding: 12px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
+}
+
+table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+table tr:hover {
+  background: #eef4ff;
 }
 
 .low-stock {
-  color: red;
+  color: #dc2626;
   font-weight: bold;
+}
+
+/* AI Section */
+
+.ai-section {
+  margin-top: 35px;
+}
+
+.ai-status-active {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.ai-status-warning {
+  color: #ea580c;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
