@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from database import engine, get_db
 from models import Base, Sale
 from routers.predict import router as predict_router
+from routers.analytics import router as analytics_router
 
 from schemas import (
     ProductCreate,
@@ -40,6 +41,7 @@ app.add_middleware(
 
 Base.metadata.create_all(bind=engine)
 app.include_router(predict_router)
+app.include_router(analytics_router)
 
 # =========================
 # BASIC

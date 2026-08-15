@@ -3,10 +3,35 @@ import api from "../api/api";
 import DashboardCard from "../components/DashboardCard";
 import "../styles/Dashboard.css";
 
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  PieChart,
+  Pie,
+  Cell,
+  BarChart,
+  Bar,
+  Legend,
+} from "recharts";
+
+const COLORS = [
+  "#2563eb",
+  "#16a34a",
+  "#ea580c",
+  "#7c3aed",
+  "#dc2626",
+];
+
 function Dashboard() {
   const [products, setProducts] = useState([]);
   const [sales, setSales] = useState([]);
   const [insights, setInsights] = useState(null);
+  const [analytics, setAnalytics] = useState(null);
 
   useEffect(() => {
     fetchDashboardData();
@@ -17,10 +42,12 @@ function Dashboard() {
       const productRes = await api.get("/products");
       const salesRes = await api.get("/sales");
       const insightsRes = await api.get("/predict/insights");
+      const analyticsRes = await api.get("/analytics");
 
       setProducts(productRes.data);
       setSales(salesRes.data);
       setInsights(insightsRes.data);
+      setAnalytics(analyticsRes.data);
     } catch (error) {
       console.error(error);
       alert("Failed to load dashboard data");
@@ -41,6 +68,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
+
       <h1>📊 Dashboard</h1>
 
       <div className="cards">
@@ -73,14 +101,14 @@ function Dashboard() {
         />
       </div>
 
-      <div className="section">
-        <h2>🤖 AI Insights</h2>
+      {insights && (
+        <div className="section">
+          <h2>🤖 AI Insights</h2>
 
-        {insights ? (
           <div className="cards">
 
             <DashboardCard
-              title="Top Selling Product"
+              title="Top Product"
               value={insights.top_product}
               color="#7c3aed"
               icon="🔥"
@@ -88,7 +116,7 @@ function Dashboard() {
 
             <DashboardCard
               title="Tomorrow Sales"
-              value={`${Number(insights.predicted_sales).toFixed(2)} Units`}
+              value={`${insights.predicted_sales} Units`}
               color="#0891b2"
               icon="📈"
             />
@@ -108,24 +136,116 @@ function Dashboard() {
             />
 
             <DashboardCard
-              title="Model Accuracy"
-              value={`${insights.model_accuracy * 100}%`}
+              title="Accuracy"
+              value={`${(insights.model_accuracy * 100).toFixed(0)}%`}
               color="#2563eb"
               icon="🎯"
             />
 
             <DashboardCard
-              title="AI Status"
-              value="Active"
+              title="Status"
+              value={insights.status}
               color="#059669"
               icon="🤖"
             />
 
           </div>
-        ) : (
-          <p>Loading AI Insights...</p>
-        )}
-      </div>
+        </div>
+      )}
+
+      {analytics && (
+        <div className="section">
+
+          <h2>📈 Analytics Dashboard</h2>
+
+          <div className="charts-grid">
+
+            <div className="chart-card">
+              <h3>Revenue Trend</h3>
+
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={analytics.daily_sales}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="date" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+
+                  <Bar
+                    dataKey="revenue"
+                    fill="#2563eb"
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+
+            <div className="chart-card">
+              <h3>Sales Trend</h3>
+
+              <ResponsiveContainer width="100%" height={300}>
+                <LineChart data={analytics.daily_sales}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="date" />
+                  <YAxis />
+                  <Tooltip />
+
+                  <Line
+                    type="monotone"
+                    dataKey="revenue"
+                    stroke="#16a34a"
+                    strokeWidth={3}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+                        <div className="chart-card">
+              <h3>Category Wise Sales</h3>
+
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={analytics.category_sales}
+                    dataKey="quantity"
+                    nameKey="category"
+                    outerRadius={100}
+                    label
+                  >
+                    {analytics.category_sales.map((entry, index) => (
+                      <Cell
+                        key={index}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+
+            <div className="chart-card">
+              <h3>Top Selling Products</h3>
+
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={analytics.top_products}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="product_name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+
+                  <Bar
+                    dataKey="quantity"
+                    fill="#ea580c"
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+
+          </div>
+        </div>
+      )}
 
       <div className="section">
         <h2>🧾 Recent Sales</h2>
@@ -191,6 +311,7 @@ function Dashboard() {
           </tbody>
         </table>
       </div>
+
     </div>
   );
 }
