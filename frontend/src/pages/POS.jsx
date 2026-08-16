@@ -1,56 +1,90 @@
 import { useState } from "react";
 import api from "../api/api";
+import { toast } from "react-toastify";
+import "../styles/POS.css";
 
 function POS() {
   const [barcode, setBarcode] = useState("");
   const [product, setProduct] = useState(null);
-  const [error, setError] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useState([]);
   const [paymentMethod, setPaymentMethod] = useState("cash");
 
   const searchProduct = async () => {
     if (!barcode.trim()) {
-      setError("Please enter a barcode");
+      toast.warning("Please enter a barcode");
       return;
     }
 
     try {
-      const response = await api.get(`/products/barcode/${barcode}`);
-      setProduct(response.data);
-      setError("");
+      const res = await api.get(`/products/barcode/${barcode}`);
+      setProduct(res.data);
     } catch (err) {
       setProduct(null);
-      setError("Product not found!");
+      toast.error("Product not found");
     }
   };
 
   const addToCart = () => {
     if (!product) return;
 
-    const item = {
-      product_id: product.product_id,
-      product_name: product.product_name,
-      barcode: product.barcode,
-      price: product.selling_price,
-      quantity: Number(quantity),
-      total: product.selling_price * Number(quantity),
-    };
+    if (quantity > product.stock) {
+      toast.warning(`Only ${product.stock} item(s) available`);
+      return;
+    }
 
-    setCart([...cart, item]);
+    const existing = cart.find(
+      (item) => item.product_id === product.product_id
+    );
 
-    setProduct(null);
+    if (existing) {
+      setCart(
+        cart.map((item) =>
+          item.product_id === product.product_id
+            ? {
+                ...item,
+                quantity: item.quantity + Number(quantity),
+                total:
+                  (item.quantity + Number(quantity)) * item.price,
+              }
+            : item
+        )
+      );
+    } else {
+      setCart([
+        ...cart,
+        {
+          product_id: product.product_id,
+          product_name: product.product_name,
+          barcode: product.barcode,
+          price: product.selling_price,
+          quantity: Number(quantity),
+          total:
+            product.selling_price * Number(quantity),
+        },
+      ]);
+    }
+
+    toast.success("Product added to cart");
+
     setBarcode("");
+    setProduct(null);
     setQuantity(1);
   };
 
   const removeItem = (index) => {
     setCart(cart.filter((_, i) => i !== index));
+    toast.info("Item removed");
   };
+
+  const grandTotal = cart.reduce(
+    (sum, item) => sum + item.total,
+    0
+  );
 
   const completeSale = async () => {
     if (cart.length === 0) {
-      alert("Cart is empty!");
+      toast.warning("Cart is empty");
       return;
     }
 
@@ -65,7 +99,7 @@ function POS() {
     try {
       await api.post("/sales", saleData);
 
-      alert("✅ Sale Completed Successfully!");
+      toast.success("Sale completed successfully");
 
       setCart([]);
       setBarcode("");
@@ -73,85 +107,66 @@ function POS() {
       setQuantity(1);
     } catch (err) {
       console.error(err);
-      alert("❌ Failed to complete sale.");
+
+      toast.error(
+        err.response?.data?.detail ||
+          "Failed to complete sale"
+      );
     }
   };
 
-  const grandTotal = cart.reduce((sum, item) => sum + item.total, 0);
-
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="pos-container">
       <h1>🛒 POS Billing</h1>
 
-      <input
-        type="text"
-        placeholder="Enter Barcode"
-        value={barcode}
-        onChange={(e) => setBarcode(e.target.value)}
-        style={{ padding: "10px", width: "250px" }}
-      />
+      <div className="search-section">
+        <input
+          type="text"
+          placeholder="Scan / Enter Barcode"
+          value={barcode}
+          onChange={(e) => setBarcode(e.target.value)}
+        />
 
-      <button
-        onClick={searchProduct}
-        style={{ marginLeft: "10px", padding: "10px" }}
-      >
-        Search
-      </button>
-
-      <br />
-      <br />
-
-      {error && <p style={{ color: "red" }}>{error}</p>}
+        <button onClick={searchProduct}>
+          Search
+        </button>
+      </div>
 
       {product && (
-        <div
-          style={{
-            border: "1px solid #ccc",
-            padding: "20px",
-            width: "350px",
-            borderRadius: "8px",
-          }}
-        >
-          <h3>{product.product_name}</h3>
+        <div className="product-card">
+          <h2>{product.product_name}</h2>
 
-          <p>Barcode: {product.barcode}</p>
-          <p>Category: {product.category}</p>
-          <p>Price: ₹{product.selling_price}</p>
-          <p>Stock: {product.stock}</p>
+          <p><strong>Barcode:</strong> {product.barcode}</p>
+          <p><strong>Category:</strong> {product.category}</p>
+          <p><strong>Price:</strong> ₹{product.selling_price}</p>
+          <p><strong>Stock:</strong> {product.stock}</p>
 
-          <label>Quantity: </label>
+          <div className="qty-row">
+            <label>Quantity</label>
 
-          <input
-            type="number"
-            min="1"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
-            style={{ width: "60px", marginLeft: "10px" }}
-          />
+            <input
+              type="number"
+              min="1"
+              max={product.stock}
+              value={quantity}
+              onChange={(e) =>
+                setQuantity(Number(e.target.value))
+              }
+            />
 
-          <br />
-          <br />
-
-          <button onClick={addToCart}>
-            Add to Cart
-          </button>
+            <button onClick={addToCart}>
+              Add to Cart
+            </button>
+          </div>
         </div>
       )}
-
-      <h2 style={{ marginTop: "30px" }}>🛍 Cart</h2>
+            <h2 style={{ marginTop: "30px" }}>🛍 Cart</h2>
 
       {cart.length === 0 ? (
-        <p>Cart is empty.</p>
+        <p>Your cart is empty.</p>
       ) : (
         <>
-          <table
-            border="1"
-            cellPadding="8"
-            style={{
-              width: "100%",
-              borderCollapse: "collapse",
-            }}
-          >
+          <table className="cart-table">
             <thead>
               <tr>
                 <th>Product</th>
@@ -169,14 +184,10 @@ function POS() {
                   <td>{item.quantity}</td>
                   <td>₹{item.price}</td>
                   <td>₹{item.total}</td>
-
                   <td>
                     <button
+                      className="remove-btn"
                       onClick={() => removeItem(index)}
-                      style={{
-                        background: "red",
-                        color: "white",
-                      }}
                     >
                       Remove
                     </button>
@@ -186,34 +197,35 @@ function POS() {
             </tbody>
           </table>
 
-          <h2>Grand Total: ₹{grandTotal}</h2>
+          <div className="summary-card">
+            <h2>Grand Total: ₹{grandTotal.toFixed(2)}</h2>
 
-          <label>Payment Method: </label>
+            <p>
+              <strong>Items:</strong> {cart.length}
+            </p>
 
-          <select
-            value={paymentMethod}
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          >
-            <option value="cash">Cash</option>
-            <option value="upi">UPI</option>
-            <option value="card">Card</option>
-          </select>
+            <div className="payment-row">
+              <label>Payment Method</label>
 
-          <br />
-          <br />
+              <select
+                value={paymentMethod}
+                onChange={(e) =>
+                  setPaymentMethod(e.target.value)
+                }
+              >
+                <option value="cash">Cash</option>
+                <option value="upi">UPI</option>
+                <option value="card">Card</option>
+              </select>
+            </div>
 
-          <button
-            onClick={completeSale}
-            style={{
-              background: "green",
-              color: "white",
-              padding: "10px 20px",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Complete Sale
-          </button>
+            <button
+              className="checkout-btn"
+              onClick={completeSale}
+            >
+              Complete Sale
+            </button>
+          </div>
         </>
       )}
     </div>

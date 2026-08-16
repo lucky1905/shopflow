@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../api/api";
 import DashboardCard from "../components/DashboardCard";
 import "../styles/Dashboard.css";
+import { toast } from "react-toastify";
 
 import {
   ResponsiveContainer,
@@ -49,9 +50,9 @@ function Dashboard() {
       setInsights(insightsRes.data);
       setAnalytics(analyticsRes.data);
     } catch (error) {
-      console.error(error);
-      alert("Failed to load dashboard data");
-    }
+  console.error(error);
+  toast.error("Failed to load dashboard data");
+}
   };
 
   const totalProducts = products.length;
@@ -69,7 +70,12 @@ function Dashboard() {
   return (
     <div className="dashboard">
 
-      <h1>📊 Dashboard</h1>
+      <div className="dashboard-header">
+  <div>
+    <h1>📊 ShopFlow AI Dashboard</h1>
+    <p>Real-time inventory and sales analytics</p>
+  </div>
+</div>
 
       <div className="cards">
         <DashboardCard
@@ -103,7 +109,9 @@ function Dashboard() {
 
       {insights && (
         <div className="section">
-          <h2>🤖 AI Insights</h2>
+          <h2 className="section-title">
+  🤖 AI Insights & Recommendations
+</h2>
 
           <div className="cards">
 
@@ -156,7 +164,9 @@ function Dashboard() {
       {analytics && (
         <div className="section">
 
-          <h2>📈 Analytics Dashboard</h2>
+         <h2 className="section-title">
+  📈 Business Analytics
+</h2>
 
           <div className="charts-grid">
 
@@ -248,7 +258,7 @@ function Dashboard() {
       )}
 
       <div className="section">
-        <h2>🧾 Recent Sales</h2>
+        <h2 className="section-title">🧾 Recent Sales</h2>
 
         <table>
           <thead>
@@ -283,7 +293,7 @@ function Dashboard() {
       </div>
 
       <div className="section">
-        <h2>⚠️ Low Stock Products</h2>
+        <h2 className="section-title">⚠️ Low Stock Products</h2>
 
         <table>
           <thead>

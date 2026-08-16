@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import api from "../api/api";
 import ProductForm from "../components/ProductForm";
 import "../styles/Inventory.css";
+import { toast } from "react-toastify";
+import LoadingSpinner from "../components/LoadingSpinner";
+import "../styles/LoadingSpinner.css";
 
 function Inventory() {
   const [products, setProducts] = useState([]);
@@ -17,7 +20,7 @@ function Inventory() {
       setProducts(res.data);
     } catch (err) {
       console.error(err);
-      alert("Failed to load products");
+      toast.error("Failed to load products");
     } finally {
       setLoading(false);
     }
@@ -36,11 +39,11 @@ function Inventory() {
 
     try {
       await api.delete(`/products/${id}`);
-      alert("Product deleted successfully");
+      toast.success("Product deleted successfully");
       fetchProducts();
     } catch (err) {
       console.error(err);
-      alert("Delete failed");
+      toast.error("Delete failed");
     }
   };
 
@@ -74,7 +77,8 @@ function Inventory() {
       />
 
       {loading ? (
-        <h3>Loading Products...</h3>
+        <LoadingSpinner />
+
       ) : (
         <table className="inventory-table">
           <thead>

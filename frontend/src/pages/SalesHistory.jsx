@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import api from "../api/api";
+import { toast } from "react-toastify";
+import "../styles/SalesHistory.css";
+import LoadingSpinner from "../components/LoadingSpinner";
+import "../styles/LoadingSpinner.css";
 
 function SalesHistory() {
   const [sales, setSales] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedSale, setSelectedSale] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchSales();
@@ -12,102 +17,86 @@ function SalesHistory() {
 
   const fetchSales = async () => {
     try {
+      setLoading(true);
       const response = await api.get("/sales");
       setSales(response.data);
     } catch (error) {
       console.error(error);
-      alert("Failed to load sales history");
+      toast.error("Failed to load sales history");
+    } finally {
+      setLoading(false);
     }
   };
 
   const filteredSales = sales.filter(
     (sale) =>
       sale.sale_id.toString().includes(search) ||
-      sale.payment_method.toLowerCase().includes(search.toLowerCase())
+      sale.payment_method
+        .toLowerCase()
+        .includes(search.toLowerCase())
   );
 
   return (
-    <div style={{ padding: "25px" }}>
-      <h1>📜 Sales History</h1>
+    <div className="sales-container">
+      <div className="sales-header">
+        <div>
+          <h1>📜 Sales History</h1>
+          <p>Track all completed sales transactions</p>
+        </div>
+      </div>
 
       <input
+        className="search-box"
         type="text"
         placeholder="Search by Sale ID or Payment..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        style={{
-          width: "300px",
-          padding: "10px",
-          marginBottom: "20px",
-        }}
       />
 
-      <table
-        border="1"
-        cellPadding="10"
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-        }}
-      >
-        <thead
-          style={{
-            background: "#2563eb",
-            color: "white",
-          }}
-        >
-          <tr>
-            <th>Sale ID</th>
-            <th>Date</th>
-            <th>Payment</th>
-            <th>Total</th>
-            <th>Items</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {filteredSales.length === 0 ? (
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <table className="sales-table">
+          <thead>
             <tr>
-              <td colSpan="5">No Sales Found</td>
+              <th>Sale ID</th>
+              <th>Date</th>
+              <th>Payment</th>
+              <th>Total</th>
+              <th>Items</th>
             </tr>
-          ) : (
-            filteredSales.map((sale) => (
-              <tr key={sale.sale_id}>
-                <td>{sale.sale_id}</td>
-                <td>{new Date(sale.sale_date).toLocaleString()}</td>
-                <td>{sale.payment_method}</td>
-                <td>₹{Number(sale.total_amount).toFixed(2)}</td>
+          </thead>
 
-                <td>
-                  <button
-                    onClick={() => setSelectedSale(sale)}
-                    style={{
-                      background: "#2563eb",
-                      color: "white",
-                      border: "none",
-                      padding: "6px 12px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    View
-                  </button>
-                </td>
+          <tbody>
+            {filteredSales.length === 0 ? (
+              <tr>
+                <td colSpan="5">No Sales Found</td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              filteredSales.map((sale) => (
+                <tr key={sale.sale_id}>
+                  <td>{sale.sale_id}</td>
+                  <td>{new Date(sale.sale_date).toLocaleString()}</td>
+                  <td>{sale.payment_method.toUpperCase()}</td>
+                  <td>₹{Number(sale.total_amount).toFixed(2)}</td>
+
+                  <td>
+                    <button
+                      className="view-btn"
+                      onClick={() => setSelectedSale(sale)}
+                    >
+                      View
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      )}
 
       {selectedSale && (
-        <div
-          style={{
-            marginTop: "30px",
-            border: "1px solid #ccc",
-            padding: "20px",
-            borderRadius: "10px",
-            background: "#f9f9f9",
-          }}
-        >
+        <div className="sale-details">
           <h2>Sale #{selectedSale.sale_id}</h2>
 
           <p>
@@ -116,7 +105,8 @@ function SalesHistory() {
           </p>
 
           <p>
-            <strong>Payment:</strong> {selectedSale.payment_method}
+            <strong>Payment:</strong>{" "}
+            {selectedSale.payment_method.toUpperCase()}
           </p>
 
           <p>
@@ -124,16 +114,9 @@ function SalesHistory() {
             {Number(selectedSale.total_amount).toFixed(2)}
           </p>
 
-          <h3>Items</h3>
+          <h3>Purchased Items</h3>
 
-          <table
-            border="1"
-            cellPadding="8"
-            style={{
-              width: "100%",
-              borderCollapse: "collapse",
-            }}
-          >
+          <table className="sales-table">
             <thead>
               <tr>
                 <th>Product ID</th>
@@ -155,17 +138,9 @@ function SalesHistory() {
             </tbody>
           </table>
 
-          <br />
-
           <button
+            className="close-btn"
             onClick={() => setSelectedSale(null)}
-            style={{
-              background: "crimson",
-              color: "white",
-              border: "none",
-              padding: "10px 18px",
-              cursor: "pointer",
-            }}
           >
             Close
           </button>

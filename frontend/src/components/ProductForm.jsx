@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/api";
+import { toast } from "react-toastify";
 
 function ProductForm({ product, onClose, refreshProducts }) {
   const [formData, setFormData] = useState({
@@ -49,18 +50,21 @@ function ProductForm({ product, onClose, refreshProducts }) {
     try {
       if (product) {
         await api.put(`/products/${product.product_id}`, payload);
-        alert("✅ Product Updated Successfully");
+        toast.success(" Product updated successfully");
       } else {
         await api.post("/products", payload);
-        alert("✅ Product Added Successfully");
+        toast.success(" Product added successfully");
       }
 
-      refreshProducts();
-      onClose();
-    } catch (err) {
-      console.error(err);
-      alert("❌ Operation Failed");
-    }
+      await refreshProducts();
+onClose();
+   } catch (err) {
+  console.error(err);
+
+  toast.error(
+    err.response?.data?.detail || "Operation failed"
+  );
+}
   };
 
   return (

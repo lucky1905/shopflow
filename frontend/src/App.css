@@ -1,26 +1,58 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f5f5;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-  background: #2563eb;
-  padding: 15px;
-  display: flex;
-  gap: 20px;
+body {
+  background: #f5f7fb;
+  font-family: "Segoe UI", sans-serif;
 }
 
-nav a {
+.navbar {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
   color: white;
-  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 24px;
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links {
+  display: flex;
+  gap: 15px;
 }
 
-h1 {
+.nav-links a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.page-container {
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-container {
+    padding: 12px;
+  }
 }

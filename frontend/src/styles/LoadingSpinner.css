@@ -1,0 +1,31 @@
+.loading-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.spinner{
+    width:55px;
+    height:55px;
+    border:6px solid #dbeafe;
+    border-top:6px solid #2563eb;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+.loading-container p{
+    margin-top:15px;
+    color:#64748b;
+    font-weight:600;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
