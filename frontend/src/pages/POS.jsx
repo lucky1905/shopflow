@@ -160,7 +160,7 @@ function POS() {
           </div>
         </div>
       )}
-            <h2 style={{ marginTop: "30px" }}>🛍 Cart</h2>
+            <h2 className="section-title">🛍 Shopping Cart</h2>
 
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>

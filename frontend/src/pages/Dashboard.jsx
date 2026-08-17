@@ -68,7 +68,7 @@ function Dashboard() {
   );
 
   return (
-    <div className="dashboard">
+    <div className="dashboard page">
 
       <div className="dashboard-header">
   <div>
@@ -77,7 +77,7 @@ function Dashboard() {
   </div>
 </div>
 
-      <div className="cards">
+      <div className="dashboard-cards">
         <DashboardCard
           title="Total Products"
           value={totalProducts}
@@ -113,7 +113,7 @@ function Dashboard() {
   🤖 AI Insights & Recommendations
 </h2>
 
-          <div className="cards">
+          <div className="dashboard-cards">
 
             <DashboardCard
               title="Top Product"
@@ -168,7 +168,7 @@ function Dashboard() {
   📈 Business Analytics
 </h2>
 
-          <div className="charts-grid">
+          <div className="charts-grid section">
 
             <div className="chart-card">
               <h3>Revenue Trend</h3>

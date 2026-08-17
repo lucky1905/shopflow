@@ -1,27 +1,23 @@
 function DashboardCard({ title, value, color, icon }) {
   return (
-    <div
-      style={{
-        background: color,
-        color: "white",
-        padding: "20px",
-        borderRadius: "12px",
-        minWidth: "220px",
-        boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
-      }}
-    >
-      <h2 style={{ margin: 0, fontSize: "18px" }}>
-        {icon} {title}
-      </h2>
-
-      <h1
+    <div className="stat-card">
+      <div
+        className="stat-icon"
         style={{
-          marginTop: "15px",
-          fontSize: "32px",
+          background: `${color}15`,
+          color: color,
         }}
       >
-        {value}
-      </h1>
+        {icon}
+      </div>
+
+      <div className="stat-title">{title}</div>
+
+      <div className="stat-value">{value}</div>
+
+      <div className="stat-subtitle">
+        Updated just now
+      </div>
     </div>
   );
 }

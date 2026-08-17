@@ -68,14 +68,15 @@ function Inventory() {
         </button>
       </div>
 
-      <input
-        className="search-box"
-        type="text"
-        placeholder="Search Product..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
+     <div className="inventory-toolbar">
+  <input
+    className="search-box"
+    type="text"
+    placeholder="🔍 Search products..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</div>
       {loading ? (
         <LoadingSpinner />
 
