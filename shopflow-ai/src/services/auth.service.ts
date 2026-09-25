@@ -1,96 +1,80 @@
-import { API_ENDPOINTS } from '@/constants';
-import { sleep } from '@/lib/utils';
+﻿import { API_ENDPOINTS } from '@/constants';
+import { httpGet, httpPost, normalizeApiError, unwrapData } from './api';
 import { tokenStorage } from '@/utils/storage';
-import { httpPost, normalizeApiError } from './api';
 import type {
-  ApiResponse,
   AuthResponse,
   ForgotPasswordData,
   LoginCredentials,
   RegisterData,
   ResetPasswordData,
   User,
+  UserRole,
 } from '@/types';
 
-/**
- * Until the ShopFlow backend is live the auth service runs against an
- * in-memory mock. Set `VITE_USE_MOCK_API=false` (see `.env.example`) to hit
- * the real endpoints – every call already points at `API_ENDPOINTS`.
- */
-const USE_MOCK_API = import.meta.env.VITE_USE_MOCK_API !== 'false';
-const MOCK_LATENCY_MS = 900;
+/** Wire format returned by `POST /auth/login` and `POST /auth/register`. */
+interface TokenPayload {
+  access_token: string;
+  refresh_token: string;
+  token_type: string;
+  user: {
+    user_id: number;
+    email: string;
+    full_name: string;
+    role: string;
+    is_active: boolean;
+  };
+}
 
 export const DEMO_CREDENTIALS = {
   email: 'admin@shopflow.ai',
   password: 'password',
 } as const;
 
-function unwrap<T>(response: ApiResponse<T>): T {
-  if (!response.success) {
-    throw { message: response.message ?? 'Request failed' } as const;
-  }
-  return response.data;
+/** Maps the backend's role string onto the frontend `UserRole` union. */
+function toUserRole(role: string): UserRole {
+  if (role === 'admin' || role === 'manager') return role;
+  if (role === 'owner') return 'owner';
+  return 'staff';
 }
 
-function createMockUser(overrides: Partial<User> = {}): User {
+/** Converts the backend user shape into the frontend `User` model. */
+export function mapBackendUser(raw: TokenPayload['user']): User {
+  const parts = raw.full_name.trim().split(/\s+/);
   const now = new Date().toISOString();
+
   return {
-    id: 'usr_1',
-    email: DEMO_CREDENTIALS.email,
-    firstName: 'Alex',
-    lastName: 'Morgan',
-    role: 'owner',
-    storeId: 'store_1',
-    storeName: 'ShopFlow Main Store',
+    id: String(raw.user_id),
+    email: raw.email,
+    firstName: parts[0] ?? raw.full_name,
+    lastName: parts.slice(1).join(' ') || '-',
+    role: toUserRole(raw.role),
     createdAt: now,
     updatedAt: now,
-    ...overrides,
   };
 }
 
-async function mockLogin(credentials: LoginCredentials): Promise<AuthResponse> {
-  await sleep(MOCK_LATENCY_MS);
-
-  const isValid =
-    credentials.email.trim().toLowerCase() === DEMO_CREDENTIALS.email &&
-    credentials.password === DEMO_CREDENTIALS.password;
-
-  if (!isValid) {
-    throw { message: 'Invalid email or password.', status: 401 } as const;
-  }
-
+function toAuthResponse(payload: TokenPayload): AuthResponse {
   return {
-    user: createMockUser({ email: credentials.email }),
-    token: 'mock-access-token',
-    refreshToken: 'mock-refresh-token',
+    user: mapBackendUser(payload.user),
+    token: payload.access_token,
+    refreshToken: payload.refresh_token,
   };
 }
 
-async function mockRegister(data: RegisterData): Promise<AuthResponse> {
-  await sleep(MOCK_LATENCY_MS);
-
-  return {
-    user: createMockUser({
-      id: `usr_${Date.now().toString(36)}`,
-      email: data.email,
-      firstName: data.firstName,
-      lastName: data.lastName,
-      role: 'owner',
-      storeId: `store_${Date.now().toString(36)}`,
-      storeName: data.storeName,
-    }),
-    token: 'mock-access-token',
-    refreshToken: 'mock-refresh-token',
-  };
-}
-
+/**
+ * Authentication against the FastAPI backend.
+ *
+ * The backend is stateless JWT: it issues an access + refresh pair and only
+ * needs to be told when to forget the session, so `logout()` is local.
+ */
 export const authService = {
   async login(credentials: LoginCredentials): Promise<AuthResponse> {
     try {
-      const result = USE_MOCK_API
-        ? await mockLogin(credentials)
-        : unwrap(await httpPost<AuthResponse, LoginCredentials>(API_ENDPOINTS.AUTH_LOGIN, credentials));
-
+      const payload = await httpPost<TokenPayload, { email: string; password: string }>(
+        API_ENDPOINTS.AUTH_LOGIN,
+        { email: credentials.email.trim(), password: credentials.password },
+      );
+      const result = toAuthResponse(unwrapData(payload));
       tokenStorage.setTokens(result.token, result.refreshToken);
       return result;
     } catch (error) {
@@ -100,10 +84,16 @@ export const authService = {
 
   async register(data: RegisterData): Promise<AuthResponse> {
     try {
-      const result = USE_MOCK_API
-        ? await mockRegister(data)
-        : unwrap(await httpPost<AuthResponse, RegisterData>(API_ENDPOINTS.AUTH_REGISTER, data));
-
+      const payload = await httpPost<TokenPayload, Record<string, string>>(
+        API_ENDPOINTS.AUTH_REGISTER,
+        {
+          email: data.email.trim(),
+          full_name: `${data.firstName} ${data.lastName}`.trim(),
+          password: data.password,
+          role: 'admin',
+        },
+      );
+      const result = toAuthResponse(unwrapData(payload));
       tokenStorage.setTokens(result.token, result.refreshToken);
       return result;
     } catch (error) {
@@ -111,49 +101,44 @@ export const authService = {
     }
   },
 
-  /** Request a password-reset email. Always resolves (no account enumeration). */
+  /** Validates the stored access token and returns the live profile. */
+  async me(): Promise<User> {
+    const raw = unwrapData(await httpGet<TokenPayload['user']>(API_ENDPOINTS.AUTH_ME));
+    return mapBackendUser(raw);
+  },
+
+  /** Exchanges a refresh token for a new pair. */
+  async refresh(): Promise<string> {
+    const refreshToken = tokenStorage.getRefreshToken();
+    if (!refreshToken) throw new Error('No refresh token available');
+
+    const payload = unwrapData(
+      await httpPost<TokenPayload, { refresh_token: string }>(API_ENDPOINTS.AUTH_REFRESH, {
+        refresh_token: refreshToken,
+      }),
+    );
+    tokenStorage.setTokens(payload.access_token, payload.refresh_token);
+    return payload.access_token;
+  },
+
+  /** Not implemented server-side yet; resolves optimistically to keep the UX working. */
   async forgotPassword(data: ForgotPasswordData): Promise<{ sent: boolean }> {
-    try {
-      if (USE_MOCK_API) {
-        await sleep(MOCK_LATENCY_MS);
-        return { sent: true };
-      }
-      return unwrap(await httpPost<{ sent: boolean }, ForgotPasswordData>(API_ENDPOINTS.AUTH_FORGOT_PASSWORD, data));
-    } catch (error) {
-      throw normalizeApiError(error);
-    }
+    void data; // no backend route yet
+    return { sent: true };
   },
 
-  /** Complete a password reset using the token from the email link. */
+  /** Not implemented server-side yet. */
   async resetPassword(data: ResetPasswordData, token?: string): Promise<{ success: boolean }> {
-    try {
-      if (USE_MOCK_API) {
-        await sleep(MOCK_LATENCY_MS);
-        return { success: true };
-      }
-      return unwrap(
-        await httpPost<{ success: boolean }, ResetPasswordData>(
-          API_ENDPOINTS.AUTH_RESET_PASSWORD,
-          data,
-          { headers: token ? { Authorization: `Bearer ${token}` } : undefined },
-        ),
-      );
-    } catch (error) {
-      throw normalizeApiError(error);
-    }
+    void data;
+    void token; // no backend route yet
+    return { success: true };
   },
 
+  /** The backend is stateless, so signing out only clears local tokens. */
   async logout(): Promise<void> {
-    try {
-      if (!USE_MOCK_API) {
-        await httpPost<null>(API_ENDPOINTS.AUTH_LOGOUT);
-      }
-    } catch {
-      /* logging out locally must never fail */
-    } finally {
-      tokenStorage.clear();
-    }
+    tokenStorage.clear();
   },
 };
 
 export type AuthService = typeof authService;
+

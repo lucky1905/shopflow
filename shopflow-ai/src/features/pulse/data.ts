@@ -1,3 +1,4 @@
+import type { PulseDashboardData } from './api/dashboard.service';
 import type {
   CopilotSuggestion,
   HeroTickerItem,
@@ -15,14 +16,14 @@ import type {
 /*  Hero                                                                       */
 /* -------------------------------------------------------------------------- */
 
-export const GOAL: PulseGoal = {
+const FALLBACK_GOAL: PulseGoal = {
   label: 'April revenue goal',
   value: '$284,650',
   target: '$400,000',
   pct: 71,
 };
 
-export const HERO_TICKER: HeroTickerItem[] = [
+const FALLBACK_HERO_TICKER: HeroTickerItem[] = [
   { label: 'Sales today', value: '$9,412', delta: 14.2 },
   { label: 'Orders today', value: '412', delta: 8.7 },
   { label: 'Avg basket', value: '$22.84', delta: 3.1 },
@@ -33,7 +34,7 @@ export const HERO_TICKER: HeroTickerItem[] = [
 /*  KPIs — XL cards with goal meters                                           */
 /* -------------------------------------------------------------------------- */
 
-export const KPIS: PulseKpi[] = [
+const FALLBACK_KPIS: PulseKpi[] = [
   {
     id: 'revenue',
     label: 'Net revenue',
@@ -88,7 +89,7 @@ export const KPIS: PulseKpi[] = [
 /*  Analytics                                                                  */
 /* -------------------------------------------------------------------------- */
 
-export const PULSE_SERIES: PulsePoint[] = [
+const FALLBACK_PULSE_SERIES: PulsePoint[] = [
   { label: 'Jan', sales: 186_000, profit: 61_400, margin: 33.0 },
   { label: 'Feb', sales: 172_500, profit: 58_900, margin: 34.2 },
   { label: 'Mar', sales: 201_800, profit: 69_200, margin: 34.3 },
@@ -103,7 +104,7 @@ export const PULSE_SERIES: PulsePoint[] = [
   { label: 'Dec', sales: 371_900, profit: 139_600, margin: 37.5 },
 ];
 
-export const CHANNELS: PulseChannel[] = [
+const FALLBACK_CHANNELS: PulseChannel[] = [
   { id: 'pos', name: 'In-store POS', share: 46, revenue: 131_400, color: '#8b5cf6', trend: 9.4 },
   { id: 'online', name: 'Online store', share: 28, revenue: 79_700, color: '#d946ef', trend: 18.6 },
   { id: 'market', name: 'Marketplace', share: 17, revenue: 48_400, color: '#22d3ee', trend: 6.2 },
@@ -114,7 +115,7 @@ export const CHANNELS: PulseChannel[] = [
 /*  Feeds & queues                                                             */
 /* -------------------------------------------------------------------------- */
 
-export const EVENTS: PulseEvent[] = [
+const FALLBACK_EVENTS: PulseEvent[] = [
   { id: 'e1', title: 'Daily sales target hit', detail: 'Crossed $9.4k at 4:12 PM — 5 hours early', time: '4m', tone: 'emerald', icon: 'check' },
   { id: 'e2', title: 'Order #10842 paid', detail: '$184.20 · Card · Downtown Store POS', time: '12m', tone: 'violet', icon: 'cart' },
   { id: 'e3', title: 'Sunflower Oil below par', detail: '34 units left · auto-drafted PO-2091', time: '38m', tone: 'rose', icon: 'alert' },
@@ -123,7 +124,7 @@ export const EVENTS: PulseEvent[] = [
   { id: 'e6', title: 'Beverages promo published', detail: 'End-cap pricing live on 12 SKUs', time: '3h', tone: 'amber', icon: 'up' },
 ];
 
-export const LIVE_ORDERS: PulseOrder[] = [
+const FALLBACK_LIVE_ORDERS: PulseOrder[] = [
   { id: 'o1', customer: 'Aarav Mehta', initials: 'AM', channel: 'POS', items: 4, total: 184.2, status: 'Paid', ago: '2m' },
   { id: 'o2', customer: 'Sara Khan', initials: 'SK', channel: 'Online', items: 2, total: 96.5, status: 'Preparing', ago: '6m' },
   { id: 'o3', customer: 'Guest checkout', initials: 'GC', channel: 'Marketplace', items: 1, total: 42.9, status: 'Pending', ago: '11m' },
@@ -131,7 +132,7 @@ export const LIVE_ORDERS: PulseOrder[] = [
   { id: 'o5', customer: 'Mia Dsouza', initials: 'MD', channel: 'Online', items: 3, total: 58.75, status: 'Refunded', ago: '26m' },
 ];
 
-export const RESTOCK_QUEUE: RestockItem[] = [
+const FALLBACK_RESTOCK_QUEUE: RestockItem[] = [
   { id: 'r1', product: 'Sunflower Oil 1L', sku: 'GRO-OIL-001', supplier: 'FreshLine Foods', left: 34, par: 120, coverDays: 6, urgency: 'Critical' },
   { id: 'r2', product: 'Basmati Rice 5kg', sku: 'GRO-RIC-014', supplier: 'GrainHub Co.', left: 58, par: 150, coverDays: 8, urgency: 'Critical' },
   { id: 'r3', product: 'Whole Milk 1L', sku: 'DAI-MLK-022', supplier: 'DailyDairy', left: 72, par: 140, coverDays: 11, urgency: 'Low' },
@@ -139,7 +140,7 @@ export const RESTOCK_QUEUE: RestockItem[] = [
   { id: 'r5', product: 'Paper Bags M', sku: 'PKG-BAG-003', supplier: 'PackWell', left: 210, par: 400, coverDays: 17, urgency: 'Watch' },
 ];
 
-export const TOP_MOVERS: PulseMover[] = [
+const FALLBACK_TOP_MOVERS: PulseMover[] = [
   { id: 'm1', name: 'Basmati Rice 5kg', category: 'Groceries', units: 1240, revenue: 18600, delta: 14.2, share: 92 },
   { id: 'm2', name: 'Sunflower Oil 1L', category: 'Groceries', units: 1084, revenue: 12980, delta: 11.6, share: 74 },
   { id: 'm3', name: 'Whole Milk 1L', category: 'Dairy', units: 976, revenue: 7320, delta: 8.4, share: 52 },
@@ -151,7 +152,7 @@ export const TOP_MOVERS: PulseMover[] = [
 /*  Copilot                                                                    */
 /* -------------------------------------------------------------------------- */
 
-export const SUGGESTIONS: CopilotSuggestion[] = [
+const FALLBACK_SUGGESTIONS: CopilotSuggestion[] = [
   {
     id: 's1',
     label: 'Build a weekend restock plan',
@@ -169,5 +170,48 @@ export const SUGGESTIONS: CopilotSuggestion[] = [
   },
 ];
 
-export const COPILOT_GREETING =
+const FALLBACK_COPILOT_GREETING =
   "Morning! Overnight I reviewed 14 days of sales and flagged 5 SKUs trending toward stock-out. Ask me anything about revenue, margin, or inventory — I'll keep it short.";
+/* -------------------------------------------------------------------------- */
+/* Live bindings                                                            */
+/*                                                                             */
+/* The Pulse components keep importing these names. Declaring them as `let`   */
+/* creates ES module live bindings, so re-assigning them from the provider     */
+/* updates every consumer on the next render - no component changes required.   */
+/* -------------------------------------------------------------------------- */
+
+export let GOAL = FALLBACK_GOAL;
+export let HERO_TICKER = FALLBACK_HERO_TICKER;
+export let KPIS = FALLBACK_KPIS;
+export let PULSE_SERIES = FALLBACK_PULSE_SERIES;
+export let CHANNELS = FALLBACK_CHANNELS;
+export let EVENTS = FALLBACK_EVENTS;
+export let LIVE_ORDERS = FALLBACK_LIVE_ORDERS;
+export let RESTOCK_QUEUE = FALLBACK_RESTOCK_QUEUE;
+export let TOP_MOVERS = FALLBACK_TOP_MOVERS;
+export let SUGGESTIONS = FALLBACK_SUGGESTIONS;
+export let COPILOT_GREETING = FALLBACK_COPILOT_GREETING;
+
+/** True once live backend figures have replaced the bundled dataset. */
+export let isLive = false;
+
+/**
+ * Replaces the bundled dataset with live backend figures.
+ *
+ * Empty arrays are ignored so a partially-populated response can never blank
+ * a panel that the fallback dataset renders correctly.
+ */
+export function hydratePulse(data: PulseDashboardData): void {
+  GOAL = data.goal;
+  HERO_TICKER = data.ticker;
+  KPIS = data.kpis;
+  if (data.series.length > 0) PULSE_SERIES = data.series;
+  if (data.channels.length > 0) CHANNELS = data.channels;
+  if (data.events.length > 0) EVENTS = data.events;
+  if (data.orders.length > 0) LIVE_ORDERS = data.orders;
+  if (data.restock.length > 0) RESTOCK_QUEUE = data.restock;
+  if (data.movers.length > 0) TOP_MOVERS = data.movers;
+  if (data.suggestions.length > 0) SUGGESTIONS = data.suggestions;
+  COPILOT_GREETING = data.copilotGreeting;
+  isLive = true;
+}

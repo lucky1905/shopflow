@@ -1,7 +1,8 @@
-import { Suspense, lazy, type ComponentType, type ReactNode } from 'react';
+﻿import { Suspense, lazy, type ComponentType, type ReactNode } from 'react';
 import { Navigate, Outlet, createBrowserRouter, useLocation } from 'react-router-dom';
 import { AUTH_ONLY_PATHS, ROUTES } from '@/constants';
 import { useAuthStore } from '@/store';
+import type { UserRole } from '@/types';
 import { LoadingPage } from '@/pages/LoadingPage';
 
 const LandingPage = lazy(() => import('@/pages/LandingPage'));
@@ -10,17 +11,42 @@ const RegisterPage = lazy(() => import('@/pages/RegisterPage'));
 const ForgotPasswordPage = lazy(() => import('@/pages/ForgotPasswordPage'));
 const ResetPasswordPage = lazy(() => import('@/pages/ResetPasswordPage'));
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
-const InventoryPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.InventoryPage })));
-const POSPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.POSPage })));
+const InventoryPage = lazy(() => import('@/pages/InventoryPage'));
+const POSPage = lazy(() => import('@/pages/POSPage'));
 const CustomersPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.CustomersPage })));
-const SuppliersPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.SuppliersPage })));
-const SalesPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.SalesPage })));
-const ProductsPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.ProductsPage })));
-const CategoriesPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.CategoriesPage })));
-const PurchasesPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.PurchasesPage })));
-const ReportsPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.ReportsPage })));
-const AnalyticsPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.AnalyticsPage })));
-const AIInsightsPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.AIInsightsPage })));
+const SuppliersPage = lazy(() => import('@/pages/SuppliersPage'));
+// Sales module (Phase 4)
+const SalesDashboardPage = lazy(() => import('@/pages/SalesPages').then((module) => ({ default: module.SalesDashboardPage })));
+const SalesHistoryPage = lazy(() => import('@/pages/SalesPages').then((module) => ({ default: module.SalesHistoryPage })));
+const SalesReturnsPage = lazy(() => import('@/pages/SalesPages').then((module) => ({ default: module.SalesReturnsPage })));
+const SalesAnalyticsPage = lazy(() => import('@/pages/SalesPages').then((module) => ({ default: module.SalesAnalyticsPage })));
+const InvoiceDetailsPage = lazy(() => import('@/pages/SalesPages').then((module) => ({ default: module.InvoiceDetailsPage })));
+// Purchases module (Phase 4)
+const PurchasesDashboardPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.PurchasesDashboardPage })));
+const PurchaseOrdersPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.PurchaseOrdersPage })));
+const SupplierOrdersPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.SupplierOrdersPage })));
+const GoodsReceivedNotesPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.GoodsReceivedNotesPage })));
+const PurchaseHistoryPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.PurchaseHistoryPage })));
+const PendingDeliveriesPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.PendingDeliveriesPage })));
+const SupplierPaymentsPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.SupplierPaymentsPage })));
+const PurchaseOrderDetailsPage = lazy(() => import('@/pages/PurchasesPages').then((module) => ({ default: module.PurchaseOrderDetailsPage })));
+// Reports & Analytics module (Phase 5)
+const ReportsDashboardPage = lazy(() => import('@/features/reports/pages/ReportsDashboardPage'));
+const RevenueAnalyticsPage = lazy(() => import('@/features/reports/pages/RevenueAnalyticsPage'));
+const SalesReportsPage = lazy(() => import('@/features/reports/pages/SalesReportsPage'));
+const PurchasesReportPage = lazy(() => import('@/features/reports/pages/PurchasesReportPage'));
+const InventoryReportPage = lazy(() => import('@/features/reports/pages/InventoryReportPage'));
+const CustomerReportPage = lazy(() => import('@/features/reports/pages/CustomerReportPage'));
+const SupplierReportPage = lazy(() => import('@/features/reports/pages/SupplierReportPage'));
+const ProfitLossReportPage = lazy(() => import('@/features/reports/pages/ProfitLossReportPage'));
+const TaxReportPage = lazy(() => import('@/features/reports/pages/TaxReportPage'));
+
+const ProductsPage = lazy(() => import('@/pages/ProductsPage'));
+const CategoriesPage = lazy(() => import('@/pages/CategoriesPage'));
+// Analytics module (Phase 5)
+const AnalyticsPage = lazy(() => import('@/features/analytics/pages/AnalyticsDashboardPage'));
+// AI Insights & Forecasting module (Phase 6)
+const AIInsightsPage = lazy(() => import('@/features/ai/pages/AIDashboardPage'));
 const SettingsPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.SettingsPage })));
 const HelpPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.HelpPage })));
 const ProfilePage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.ProfilePage })));
@@ -63,6 +89,27 @@ function RequireAuth() {
   }
   return <Outlet />;
 }
+
+/**
+ * Role gate for admin-only areas.
+ *
+ * `admin` and `owner` can reach everything; `manager` and `cashier` are
+ * redirected to the dashboard with an explanation rather than shown a blank
+ * screen. Must be rendered inside `RequireAuth`.
+ */
+function RequireRole({ allow, children }: { allow: UserRole[]; children: ReactNode }) {
+  const user = useAuthStore((state) => state.user);
+  // `staff` is the app's cashier role (the backend calls it "cashier").
+  const role: UserRole = user?.role ?? 'staff';
+
+  if (!allow.includes(role)) {
+    return <Navigate to={ROUTES.DASHBOARD} replace state={{ denied: true }} />;
+  }
+  return <>{children}</>;
+}
+
+/** Areas only admins and managers may open. Cashiers are redirected away. */
+const MANAGER_ROLES: UserRole[] = ['owner', 'admin', 'manager'];
 
 export const router = createBrowserRouter([
   { path: ROUTES.HOME, element: <LazyRoute component={LandingPage} /> },
@@ -113,15 +160,56 @@ export const router = createBrowserRouter([
           { path: ROUTES.INVENTORY, element: <LazyRoute component={InventoryPage} /> },
           { path: ROUTES.POS, element: <LazyRoute component={POSPage} /> },
           { path: ROUTES.CUSTOMERS, element: <LazyRoute component={CustomersPage} /> },
-          { path: ROUTES.SUPPLIERS, element: <LazyRoute component={SuppliersPage} /> },
-          { path: ROUTES.SALES, element: <LazyRoute component={SalesPage} /> },
+          {
+            path: ROUTES.SUPPLIERS,
+            element: (
+              <RequireRole allow={MANAGER_ROLES}>
+                <LazyRoute component={SuppliersPage} />
+              </RequireRole>
+            ),
+          },
+          { path: ROUTES.SALES, element: <LazyRoute component={SalesDashboardPage} /> },
+          { path: ROUTES.SALES_HISTORY, element: <LazyRoute component={SalesHistoryPage} /> },
+          { path: ROUTES.SALES_RETURNS, element: <LazyRoute component={SalesReturnsPage} /> },
+          { path: ROUTES.SALES_ANALYTICS, element: <LazyRoute component={SalesAnalyticsPage} /> },
+          { path: ROUTES.SALES_INVOICE, element: <LazyRoute component={InvoiceDetailsPage} /> },
           { path: ROUTES.PRODUCTS, element: <LazyRoute component={ProductsPage} /> },
-          { path: ROUTES.CATEGORIES, element: <LazyRoute component={CategoriesPage} /> },
-          { path: ROUTES.PURCHASES, element: <LazyRoute component={PurchasesPage} /> },
-          { path: ROUTES.REPORTS, element: <LazyRoute component={ReportsPage} /> },
+          {
+            path: ROUTES.CATEGORIES,
+            element: (
+              <RequireRole allow={MANAGER_ROLES}>
+                <LazyRoute component={CategoriesPage} />
+              </RequireRole>
+            ),
+          },
+          { path: ROUTES.PURCHASES, element: <LazyRoute component={PurchasesDashboardPage} /> },
+          { path: ROUTES.PURCHASE_ORDERS, element: <LazyRoute component={PurchaseOrdersPage} /> },
+          { path: ROUTES.PURCHASE_SUPPLIER_ORDERS, element: <LazyRoute component={SupplierOrdersPage} /> },
+          { path: ROUTES.PURCHASE_GRN, element: <LazyRoute component={GoodsReceivedNotesPage} /> },
+          { path: ROUTES.PURCHASE_HISTORY, element: <LazyRoute component={PurchaseHistoryPage} /> },
+          { path: ROUTES.PURCHASE_DELIVERIES, element: <LazyRoute component={PendingDeliveriesPage} /> },
+          { path: ROUTES.PURCHASE_PAYMENTS, element: <LazyRoute component={SupplierPaymentsPage} /> },
+          { path: ROUTES.PURCHASE_ORDER, element: <LazyRoute component={PurchaseOrderDetailsPage} /> },
+          // Reports Module (Phase 5)
+          { path: ROUTES.REPORTS, element: <LazyRoute component={ReportsDashboardPage} /> },
+          { path: ROUTES.REPORTS_REVENUE, element: <LazyRoute component={RevenueAnalyticsPage} /> },
+          { path: ROUTES.REPORTS_SALES, element: <LazyRoute component={SalesReportsPage} /> },
+          { path: ROUTES.REPORTS_PURCHASES, element: <LazyRoute component={PurchasesReportPage} /> },
+          { path: ROUTES.REPORTS_INVENTORY, element: <LazyRoute component={InventoryReportPage} /> },
+          { path: ROUTES.REPORTS_CUSTOMERS, element: <LazyRoute component={CustomerReportPage} /> },
+          { path: ROUTES.REPORTS_SUPPLIERS, element: <LazyRoute component={SupplierReportPage} /> },
+          { path: ROUTES.REPORTS_PROFIT_LOSS, element: <LazyRoute component={ProfitLossReportPage} /> },
+          { path: ROUTES.REPORTS_TAX, element: <LazyRoute component={TaxReportPage} /> },
           { path: ROUTES.ANALYTICS, element: <LazyRoute component={AnalyticsPage} /> },
           { path: ROUTES.AI_INSIGHTS, element: <LazyRoute component={AIInsightsPage} /> },
-          { path: ROUTES.SETTINGS, element: <LazyRoute component={SettingsPage} /> },
+          {
+            path: ROUTES.SETTINGS,
+            element: (
+              <RequireRole allow={MANAGER_ROLES}>
+                <LazyRoute component={SettingsPage} />
+              </RequireRole>
+            ),
+          },
           { path: ROUTES.HELP, element: <LazyRoute component={HelpPage} /> },
           { path: ROUTES.PROFILE, element: <LazyRoute component={ProfilePage} /> },
         ],
@@ -132,3 +220,4 @@ export const router = createBrowserRouter([
 ]);
 
 export default router;
+

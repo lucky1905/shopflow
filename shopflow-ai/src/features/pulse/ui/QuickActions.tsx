@@ -1,18 +1,73 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { PackagePlus, Plus, ScanLine, Sparkles, UserPlus, X } from 'lucide-react';
+import {
+  BookOpen,
+  FileBarChart,
+  Lightbulb,
+  PackagePlus,
+  Plus,
+  ScanLine,
+  Truck,
+  X,
+} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/constants';
 
+/**
+ * Dashboard shortcuts tuned for Indian retail floor staff.
+ *
+ * "New bill" leads because billing is the task a shop spends most of its
+ * hours on; everything else maps to a destination the shopkeeper visits
+ * daily. Receive stock and purchase orders are separated because a kirana
+ * owner restocks far more often than they raise formal POs.
+ */
 const ACTIONS = [
-  { label: 'New sale', sub: 'Open POS', icon: ScanLine, to: ROUTES.POS, gradient: 'from-violet-600 to-fuchsia-600' },
-  { label: 'Add product', sub: 'Catalog', icon: PackagePlus, to: ROUTES.PRODUCTS, gradient: 'from-cyan-500 to-sky-600' },
-  { label: 'Purchase order', sub: 'Restock', icon: Sparkles, to: ROUTES.PURCHASES, gradient: 'from-amber-400 to-orange-500' },
-  { label: 'Add customer', sub: 'CRM', icon: UserPlus, to: ROUTES.CUSTOMERS, gradient: 'from-emerald-400 to-teal-500' },
+  {
+    label: 'New Bill',
+    sub: 'Express billing',
+    icon: ScanLine,
+    to: ROUTES.POS,
+    gradient: 'from-violet-600 to-fuchsia-600',
+  },
+  {
+    label: 'Add Product',
+    sub: 'Catalog',
+    icon: PackagePlus,
+    to: ROUTES.PRODUCTS,
+    gradient: 'from-cyan-500 to-sky-600',
+  },
+  {
+    label: 'Receive Stock',
+    sub: 'GRN',
+    icon: Truck,
+    to: `${ROUTES.PURCHASES}${ROUTES.PURCHASE_GRN}`,
+    gradient: 'from-emerald-500 to-teal-600',
+  },
+  {
+    label: 'Purchase Order',
+    sub: 'Restock',
+    icon: BookOpen,
+    to: ROUTES.PURCHASE_ORDERS,
+    gradient: 'from-amber-400 to-orange-500',
+  },
+  {
+    label: "Today's Report",
+    sub: 'Sales',
+    icon: FileBarChart,
+    to: ROUTES.REPORTS_SALES,
+    gradient: 'from-rose-500 to-pink-600',
+  },
+  {
+    label: 'Business Tips',
+    sub: 'AI insights',
+    icon: Lightbulb,
+    to: ROUTES.AI_INSIGHTS,
+    gradient: 'from-indigo-500 to-blue-600',
+  },
 ] as const;
 
 /**
- * Floating quick actions — a FAB speed-dial anchored bottom-right.
+ * Floating quick actions â€” a FAB speed-dial anchored bottom-right.
  * Expands into labelled gradient pills; hides on scroll-free small screens
  * via bottom padding on the page container.
  */

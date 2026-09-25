@@ -1,62 +1,60 @@
-// API endpoints (consumed by the service layer)
+﻿/**
+ * Backend endpoint registry.
+ *
+ * Paths mirror the FastAPI app exactly (see `backend/main.py` +
+ * `backend/routers/`). Endpoints the backend does not implement yet are
+ * marked and still resolve through the feature mocks.
+ *
+ * The dev server proxies `/api` to `VITE_API_BASE_URL` (see vite.config.ts).
+ */
 export const API_ENDPOINTS = {
-  // Auth
+  // Health
+  HEALTH: '/',
+  HEALTH_TEST: '/test',
+
+  // Auth — implemented in Phase 7
   AUTH_LOGIN: '/auth/login',
   AUTH_REGISTER: '/auth/register',
-  AUTH_LOGOUT: '/auth/logout',
   AUTH_REFRESH: '/auth/refresh',
   AUTH_ME: '/auth/me',
-  AUTH_FORGOT_PASSWORD: '/auth/forgot-password',
-  AUTH_RESET_PASSWORD: '/auth/reset-password',
+  /** Logout is client-side only: the backend is stateless JWT. */
+  AUTH_LOGOUT: '/auth/logout',
 
-  // Users
-  USERS: '/users',
-  USERS_PROFILE: '/users/profile',
+  // Products (inventory) — implemented
+  PRODUCTS: '/products',
+  PRODUCT_BY_ID: (id: number | string) => `/products/${id}`,
+  PRODUCT_BY_BARCODE: (barcode: string) => `/products/barcode/${encodeURIComponent(barcode)}`,
 
-  // Stores
-  STORES: '/stores',
-  STORES_CURRENT: '/stores/current',
+  // Sales / POS — implemented
+  SALES: '/sales',
+  SALE_BY_ID: (id: number | string) => `/sales/${id}`,
 
-  // Inventory
-  INVENTORY: '/inventory',
-  INVENTORY_ITEMS: '/inventory/items',
-  INVENTORY_CATEGORIES: '/inventory/categories',
-  INVENTORY_SUPPLIERS: '/inventory/suppliers',
+  // Sales module screens - no backend route yet, kept on the feature mocks.
+  SALES_INVOICES: '/sales/invoices',
+  SALES_RETURNS: '/sales/returns',
+  SALES_ANALYTICS: '/sales/analytics',
 
-  // POS
+  // Analytics + ML predictions — implemented
+  ANALYTICS_DASHBOARD: '/analytics/',
+  AI_PREDICT: '/predict/insights',
+
+  // POS module screens - no backend route yet, kept on the feature mocks.
   POS: '/pos',
   POS_SALES: '/pos/sales',
-  POS_RECEIPTS: '/pos/receipts',
-  POS_CUSTOMERS: '/pos/customers',
-
-  // Reports
-  REPORTS: '/reports',
-  REPORTS_SALES: '/reports/sales',
-  REPORTS_INVENTORY: '/reports/inventory',
-  REPORTS_PROFIT: '/reports/profit',
-
-  // Analytics
-  ANALYTICS: '/analytics',
-  ANALYTICS_DASHBOARD: '/analytics/dashboard',
-
-  // AI Insights
-  AI_INSIGHTS: '/ai/insights',
-  AI_PREDICTIONS: '/ai/predictions',
   AI_RECOMMENDATIONS: '/ai/recommendations',
 
-  // Settings
+  // Not yet implemented by the backend; the feature services keep using mocks.
+  INVENTORY_CATEGORIES: '/inventory/categories',
+  INVENTORY_SUPPLIERS: '/inventory/suppliers',
+  CUSTOMERS: '/customers',
+  PURCHASES: '/purchases',
+  PURCHASE_ORDERS: '/purchases/orders',
+  PURCHASE_GRNS: '/purchases/grns',
+  PURCHASE_PAYMENTS: '/purchases/payments',
+  PURCHASE_SUPPLIERS: '/purchases/suppliers',
+  REPORTS: '/reports',
   SETTINGS: '/settings',
-  SETTINGS_GENERAL: '/settings/general',
-  SETTINGS_USERS: '/settings/users',
-  SETTINGS_ROLES: '/settings/roles',
-  SETTINGS_STORES: '/settings/stores',
-  SETTINGS_NOTIFICATIONS: '/settings/notifications',
-  SETTINGS_THEME: '/settings/theme',
-
-  // Help
-  HELP_DOCUMENTATION: '/help/documentation',
   HELP_SUPPORT: '/help/support',
-  HELP_ABOUT: '/help/about',
 } as const;
 
 // Default pagination
@@ -73,22 +71,20 @@ export const DATE_FORMATS = {
   FULL: 'MMMM DD, YYYY HH:mm:ss',
 } as const;
 
-// Currency
-export const DEFAULT_CURRENCY = 'USD';
+export const DEFAULT_CURRENCY = 'INR';
 export const CURRENCY_SYMBOLS: Record<string, string> = {
   USD: '$',
-  EUR: '€',
-  GBP: '£',
-  INR: '₹',
+  EUR: '\u20ac',
+  GBP: '\u00a3',
+  INR: '\u20b9',
 };
 export const SUPPORTED_CURRENCIES = [
   { code: 'USD', symbol: '$', name: 'US Dollar' },
-  { code: 'EUR', symbol: '€', name: 'Euro' },
-  { code: 'GBP', symbol: '£', name: 'British Pound' },
-  { code: 'INR', symbol: '₹', name: 'Indian Rupee' },
+  { code: 'EUR', symbol: '\u20ac', name: 'Euro' },
+  { code: 'GBP', symbol: '\u00a3', name: 'British Pound' },
+  { code: 'INR', symbol: '\u20b9', name: 'Indian Rupee' },
 ] as const;
 
-// Timezones
 export const POPULAR_TIMEZONES = [
   { value: 'America/New_York', label: 'Eastern Time (ET)' },
   { value: 'America/Chicago', label: 'Central Time (CT)' },
@@ -101,3 +97,4 @@ export const POPULAR_TIMEZONES = [
   { value: 'Asia/Kolkata', label: 'India (IST)' },
   { value: 'Australia/Sydney', label: 'Sydney (AEST)' },
 ] as const;
+

@@ -1,10 +1,11 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+﻿from fastapi import FastAPI, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, get_db
-from models import Base, Sale
+from models import Base, Sale, User
 from routers.predict import router as predict_router
 from routers.analytics import router as analytics_router
+from routers.auth import get_current_user_optional, router as auth_router
 
 
 from schemas import (
@@ -34,6 +35,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:4173",
+        "http://127.0.0.1:4173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -43,6 +46,7 @@ app.add_middleware(
 Base.metadata.create_all(bind=engine)
 app.include_router(predict_router)
 app.include_router(analytics_router)
+app.include_router(auth_router)
 
 
 # =========================
@@ -52,7 +56,7 @@ app.include_router(analytics_router)
 @app.get("/")
 def home():
     return {
-        "message": "Welcome to ShopFlow API 🚀"
+        "message": "Welcome to ShopFlow API ðŸš€"
     }
 
 
@@ -187,7 +191,8 @@ def remove_product(
 )
 def make_sale(
     sale: SaleCreate,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: User | None = Depends(get_current_user_optional)
 ):
     # Step 1: Validate every item before writing anything
     validated_items = []
@@ -217,7 +222,8 @@ def make_sale(
         db_sale = create_sale(
             db,
             sale.payment_method,
-            validated_items
+            validated_items,
+            current_user.user_id if current_user else None
         )
 
     except Exception:
@@ -290,3 +296,6 @@ def get_sale(
         )
 
     return _to_sale_response(sale)  
+
+
+

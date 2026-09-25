@@ -8,3 +8,4 @@ export * from './Modal';
 export * from './Select';
 export * from './StatCard';
 export * from './Switch';
+export * from './Textarea';

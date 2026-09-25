@@ -43,3 +43,15 @@ class SaleItem(Base):
 
     sale = relationship("Sale", back_populates="sale_items")
     product = relationship("Product", back_populates="sale_items")
+
+class User(Base):
+    __tablename__ = "users"
+
+    user_id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, index=True, nullable=False)
+    full_name = Column(String, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    # "admin" | "manager" | "cashier" - drives frontend role-based access.
+    role = Column(String, nullable=False, default="cashier")
+    is_active = Column(Integer, nullable=False, default=1)
+    created_at = Column(TIMESTAMP, nullable=False)

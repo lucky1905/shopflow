@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+﻿from sqlalchemy.orm import Session
 from models import Product
 from schemas import ProductCreate
 from datetime import datetime, timezone
@@ -70,14 +70,14 @@ from datetime import datetime, timezone
 from models import Sale, SaleItem
 
 
-def create_sale(db: Session, payment_method: str, validated_items: list[tuple[Product, int]]):
+def create_sale(db: Session, payment_method: str, validated_items: list[tuple[Product, int]], user_id: int | None = None):
     """
     validated_items is a list of (product, quantity) tuples that have
     ALREADY been checked for existence and sufficient stock by the caller.
-    Prices are read from `product.selling_price` here — never from client input.
+    Prices are read from `product.selling_price` here â€” never from client input.
     """
     db_sale = Sale(
-        user_id=None,  # no auth yet (Phase 7)
+        user_id=user_id,  # set from the authenticated caller when available
         total_amount=0,  # placeholder, corrected below once items are totalled
         payment_method=payment_method,
         sale_date=datetime.now(timezone.utc)

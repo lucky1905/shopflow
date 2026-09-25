@@ -85,7 +85,7 @@ interface SortState {
  * loading skeletons and empty/error states. Designed for the ShopFlow
  * feature modules (Inventory, POS, Customers, Suppliers, Sales, …).
  */
-export function DataTable<T extends Record<string, unknown>>({
+export function DataTable<T extends object>({
   columns,
   data,
   rowKey,

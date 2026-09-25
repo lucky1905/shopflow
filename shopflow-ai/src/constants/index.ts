@@ -13,6 +13,10 @@ export const STORAGE_KEYS = {
   THEME: 'shopflow-theme',
   SIDEBAR: 'shopflow-sidebar',
   STORE: 'shopflow-store',
+  POS_CART: 'shopflow-pos-cart',
+  SALES_FILTERS: 'shopflow-sales-filters',
+  PURCHASE_FILTERS: 'shopflow-purchase-filters',
+  REPORTS_FILTERS: 'shopflow-reports-filters',
 } as const;
 
 export * from './routes';

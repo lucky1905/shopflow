@@ -1,4 +1,4 @@
-import axios, {
+﻿import axios, {
   type AxiosError,
   type AxiosInstance,
   type AxiosRequestConfig,
@@ -7,7 +7,7 @@ import axios, {
 import { toast } from 'react-hot-toast';
 import { API_ENDPOINTS, STORAGE_KEYS } from '@/constants';
 import { tokenStorage } from '@/utils/storage';
-import type { ApiError, ApiResponse } from '@/types';
+import type { ApiError } from '@/types';
 
 /* -------------------------------------------------------------------------- */
 /*  Axios instance                                                            */
@@ -15,6 +15,8 @@ import type { ApiError, ApiResponse } from '@/types';
 
 export const api: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_URL ?? '/api',
+  // Surface 4xx/5xx instead of silently succeeding on empty bodies.
+  validateStatus: (status) => status >= 200 && status < 300,
   timeout: 20_000,
   headers: {
     'Content-Type': 'application/json',
@@ -23,7 +25,7 @@ export const api: AxiosInstance = axios.create({
 });
 
 /* -------------------------------------------------------------------------- */
-/*  Request interceptor – attach the bearer token                             */
+/*  Request interceptor â€“ attach the bearer token                             */
 /* -------------------------------------------------------------------------- */
 
 api.interceptors.request.use(
@@ -43,51 +45,41 @@ api.interceptors.request.use(
   (error: AxiosError) => Promise.reject(error),
 );
 
-/* -------------------------------------------------------------------------- */
-/*  Refresh-token plumbing (placeholder)                                      */
-/* -------------------------------------------------------------------------- */
-
 /**
  * Ensures concurrent 401s result in a single refresh request.
- * Replace `refreshAccessToken` with the real endpoint when the backend lands.
  */
 let refreshPromise: Promise<string> | null = null;
 
-/**
- * TODO(backend): implement the real refresh call here, e.g.
- *   const { data } = await axios.post<ApiResponse<{ token: string }>>(
- *     `${api.defaults.baseURL}${API_ENDPOINTS.AUTH_REFRESH}`,
- *     { refreshToken: tokenStorage.getRefreshToken() },
- *   );
- *   tokenStorage.setTokens(data.data.token, data.data.refreshToken);
- *   return data.data.token;
- *
- * Until then it rejects so the 401 handler clears the local session.
- */
+/** Calls `POST /auth/refresh` and stores the rotated token pair. */
 async function performRefresh(): Promise<string> {
-  throw new Error(`Refresh endpoint not implemented (${API_ENDPOINTS.AUTH_REFRESH})`);
-}
-
-async function refreshAccessToken(): Promise<string> {
   const refreshToken = tokenStorage.getRefreshToken();
   if (!refreshToken) {
     throw new Error('No refresh token available');
   }
 
+  // A bare axios call avoids re-entering this module's interceptors.
+  const { data } = await axios.post<{
+    access_token: string;
+    refresh_token: string;
+  }>(
+    `${api.defaults.baseURL}${API_ENDPOINTS.AUTH_REFRESH}`,
+    { refresh_token: refreshToken },
+  );
+
+  tokenStorage.setTokens(data.access_token, data.refresh_token);
+  return data.access_token;
+}
+
+async function refreshAccessToken(): Promise<string> {
   // Concurrent 401s share a single in-flight refresh request.
   refreshPromise ??= performRefresh();
 
   try {
-    const token = await refreshPromise;
-    tokenStorage.setTokens(token);
-    return token;
+    return await refreshPromise;
   } finally {
     refreshPromise = null;
   }
 }
-
-/* -------------------------------------------------------------------------- */
-/*  Auth side-effects (decoupled from the store to avoid circular imports)     */
 /* -------------------------------------------------------------------------- */
 
 /** Fired when the session can no longer be recovered. */
@@ -121,6 +113,8 @@ const FALLBACK_MESSAGES: Record<number, string> = {
 };
 
 interface ServerErrorBody {
+  /** FastAPI's standard error field, e.g. "No product found with id 9." */
+  detail?: string;
   message?: string;
   error?: string;
   code?: string;
@@ -149,6 +143,7 @@ export function normalizeApiError(error: unknown): ApiError {
       status,
       code: body?.code ?? axiosError.code,
       message:
+        body?.detail ??
         body?.message ??
         body?.error ??
         (status ? FALLBACK_MESSAGES[status] : undefined) ??
@@ -165,7 +160,7 @@ export function normalizeApiError(error: unknown): ApiError {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Response interceptor – refresh once, then surface a friendly error        */
+/*  Response interceptor â€“ refresh once, then surface a friendly error        */
 /* -------------------------------------------------------------------------- */
 
 type RetriableConfig = InternalAxiosRequestConfig & { _retry?: boolean };
@@ -199,23 +194,34 @@ api.interceptors.response.use(
 );
 
 /* -------------------------------------------------------------------------- */
-/*  Thin typed helpers – use these inside services / TanStack Query hooks      */
+/*  Thin typed helpers â€“ use these inside services / TanStack Query hooks      */
 /* -------------------------------------------------------------------------- */
 
+/**
+ * The FastAPI backend returns the resource directly (no `{ data }` envelope),
+ * so this is an identity helper kept for call-site readability and to give one
+ * place to unwrap an envelope if the API contract ever changes.
+ */
+export function unwrapData<T>(response: T): T {
+  return response;
+}
+
+/** Raw JSON body from the backend (no { data } envelope). */
 export async function httpGet<T>(
   url: string,
   config?: AxiosRequestConfig,
-): Promise<ApiResponse<T>> {
-  const { data } = await api.get<ApiResponse<T>>(url, config);
+): Promise<T> {
+  const { data } = await api.get<T>(url, config);
   return data;
 }
 
+/** Raw JSON body from the backend (no { data } envelope). */
 export async function httpPost<T, TBody = unknown>(
   url: string,
   body?: TBody,
   config?: AxiosRequestConfig,
-): Promise<ApiResponse<T>> {
-  const { data } = await api.post<ApiResponse<T>>(url, body, config);
+): Promise<T> {
+  const { data } = await api.post<T>(url, body, config);
   return data;
 }
 
@@ -223,8 +229,8 @@ export async function httpPut<T, TBody = unknown>(
   url: string,
   body?: TBody,
   config?: AxiosRequestConfig,
-): Promise<ApiResponse<T>> {
-  const { data } = await api.put<ApiResponse<T>>(url, body, config);
+): Promise<T> {
+  const { data } = await api.put<T>(url, body, config);
   return data;
 }
 
@@ -232,17 +238,21 @@ export async function httpPatch<T, TBody = unknown>(
   url: string,
   body?: TBody,
   config?: AxiosRequestConfig,
-): Promise<ApiResponse<T>> {
-  const { data } = await api.patch<ApiResponse<T>>(url, body, config);
+): Promise<T> {
+  const { data } = await api.patch<T>(url, body, config);
   return data;
 }
 
 export async function httpDelete<T>(
   url: string,
   config?: AxiosRequestConfig,
-): Promise<ApiResponse<T>> {
-  const { data } = await api.delete<ApiResponse<T>>(url, config);
+): Promise<T> {
+  const { data } = await api.delete<T>(url, config);
   return data;
 }
 
 export default api;
+
+
+
+

@@ -1,16 +1,19 @@
 /**
- * Feature-module registry (placeholder).
+ * Feature-module registry.
  *
- * Each business module (inventory, pos, customers, …) will own:
+ * Each business module (inventory, pos, customers, …) owns:
  *   features/<module>/
- *     ├── api.ts            # TanStack Query hooks + service calls
+ *     ├── api/              # service calls + TanStack Query hooks
  *     ├── components/       # module-specific UI
+ *     ├── hooks/            # module state helpers
  *     ├── pages/            # route-level screens (re-exported via src/pages)
  *     ├── schemas.ts        # zod schemas
- *     └── types.ts          # module types (re-exported via src/types)
- *
- * Domain logic does NOT live here yet by design – this foundation only
- * provides layouts, routing, reusable components, auth UI, stores, theme
- * and the API layer for modules to plug into.
+ *     └── types.ts          # module types
  */
-export {};
+export * from './inventory';
+export * from './pos';
+export * from './purchases';
+export * from './sales';
+export * from './reports';
+export * from './analytics';
+export * from './ai';

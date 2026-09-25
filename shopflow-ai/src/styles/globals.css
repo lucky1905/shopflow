@@ -229,3 +229,31 @@
     scrollbar-color: hsl(var(--border)) transparent;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*  Print — POS receipts render only the `.print-area` subtree                */
+/* -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #fff !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+  }
+
+  .print-area {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

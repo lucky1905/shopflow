@@ -58,3 +58,40 @@ class SaleResponse(BaseModel):
     items: list[SaleItemResponse]
 
     model_config = ConfigDict(from_attributes=True)
+
+# ==========================
+# AUTH SCHEMAS (Phase 7)
+# ==========================
+
+class UserResponse(BaseModel):
+    user_id: int
+    email: str
+    full_name: str
+    role: str
+    is_active: bool = True
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class RegisterRequest(BaseModel):
+    email: str = Field(..., min_length=3, max_length=200)
+    full_name: str = Field(..., min_length=1, max_length=100)
+    password: str = Field(..., min_length=6, max_length=128)
+    role: str = Field(default="admin", max_length=20)
+
+
+class LoginRequest(BaseModel):
+    # Accepts either an email or the login name used by the demo account.
+    email: str = Field(..., min_length=3, max_length=200)
+    password: str = Field(..., min_length=1, max_length=128)
+
+
+class RefreshRequest(BaseModel):
+    refresh_token: str = Field(...)
+
+
+class TokenResponse(BaseModel):
+    access_token: str
+    refresh_token: str
+    token_type: str = "bearer"
+    user: UserResponse

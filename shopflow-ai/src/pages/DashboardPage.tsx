@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   ActivityTimeline,
@@ -12,6 +12,8 @@ import {
   RestockQueue,
   TopMovers,
 } from '@/features/pulse';
+import { usePulseDashboard } from '@/features/pulse/api/queries';
+import { hydratePulse } from '@/features/pulse/data';
 
 /** Skeleton that mirrors the new Pulse layout while the page "boots". */
 function PulseSkeleton() {
@@ -36,7 +38,7 @@ function PulseSkeleton() {
 }
 
 /**
- * ShopFlow "Pulse" — the 2026 command-center dashboard.
+ * ShopFlow "Pulse" â€” the 2026 command-center dashboard.
  *
  * A ground-up replacement of the previous overview: gradient hero banner,
  * XL KPI cards with goal meters, composed bar+line analytics, radial channel
@@ -44,15 +46,32 @@ function PulseSkeleton() {
  * Copilot widget and floating quick actions.
  */
 export function DashboardPage() {
-  const [loading, setLoading] = useState(true);
+  const { data, isLoading, isError, error } = usePulseDashboard();
 
+  // Publish live figures into the Pulse data bindings so every panel below
+  // re-renders with backend values without any component changes.
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoading(false), 650);
-    return () => window.clearTimeout(timer);
-  }, []);
+    if (data) hydratePulse(data);
+  }, [data]);
+
+  // A failed request keeps the bundled dataset on screen rather than blanking.
+  const loading = isLoading && !data;
+  const showError = isError && !data;
 
   return (
     <div className="relative mx-auto w-full max-w-[1720px] px-4 pb-28 pt-6 sm:px-6 lg:px-8 lg:pt-7">
+      {showError && (
+        <div
+          role="alert"
+          className="mb-6 flex items-center justify-between gap-3 rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-700 dark:text-amber-300"
+        >
+          <span>
+            Live figures are unavailable
+            {error?.message ? `: ${error.message}` : ''}. Showing the last known dataset.
+          </span>
+        </div>
+      )}
+
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div key="boot" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -110,5 +129,7 @@ export function DashboardPage() {
 }
 
 export default DashboardPage;
+
+
 
 
