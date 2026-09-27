@@ -1,4 +1,4 @@
-﻿import { Calendar, RotateCcw } from 'lucide-react';
+import { Calendar, RotateCcw } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';

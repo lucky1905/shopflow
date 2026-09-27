@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Mapping between the FastAPI billing schemas and the POS `Sale` model.
  *
  * `POST /sales` accepts only `{ payment_method, items: [{ product_id,

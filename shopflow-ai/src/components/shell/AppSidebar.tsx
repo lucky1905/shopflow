@@ -1,7 +1,8 @@
+import { useMemo } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LogOut, PanelLeftClose, PanelLeftOpen, X, Zap } from 'lucide-react';
-import { APP_NAME, APP_TAGLINE, NAV_SECTIONS, ROUTES } from '@/constants';
+import { APP_NAME, APP_TAGLINE, NAV_SECTIONS, ROUTES, filterNavSections } from '@/constants';
 import { cn } from '@/lib/utils';
 import { useAuth, useIsMobile } from '@/hooks';
 import { useSidebarStore } from '@/store';
@@ -87,6 +88,11 @@ export function AppSidebar({ className }: AppSidebarProps) {
 
   const initials = user ? `${user.firstName[0] ?? ''}${user.lastName[0] ?? ''}`.toUpperCase() : 'A';
 
+  const visibleSections = useMemo(
+    () => filterNavSections(NAV_SECTIONS, user?.role),
+    [user?.role],
+  );
+
   const content = (
     <div className="flex h-full flex-col bg-slate-950 text-slate-100 dark:bg-slate-950">
       {/* Brand */}
@@ -114,7 +120,7 @@ export function AppSidebar({ className }: AppSidebarProps) {
 
       {/* Nav */}
       <nav className={cn('sidebar-scroll-area flex-1 overflow-y-auto px-3 py-4', collapsed && 'px-2')}>
-        {NAV_SECTIONS.map((section) => (
+        {visibleSections.map((section) => (
           <div key={section.id} className="mb-1">
             {section.title && !collapsed && (
               <p className="px-3 pb-1.5 pt-4 text-[10px] font-black uppercase tracking-[0.16em] text-slate-600">

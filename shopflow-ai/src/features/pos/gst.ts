@@ -1,4 +1,4 @@
-﻿/**
+/**
  * GST helpers for Indian retail billing.
  *
  * Intra-state sales split the tax evenly into CGST + SGST; inter-state sales
@@ -81,3 +81,85 @@ export const COMMON_HSN_CODES: ReadonlyArray<{ code: string; label: string }> = 
   { code: '8517', label: 'Mobile phones' },
   { code: '4820', label: 'Stationery' },
 ];
+
+/* -------------------------------------------------------------------------- */
+/*  Amount in words                                                           */
+/* -------------------------------------------------------------------------- */
+
+const ONES = [
+  '',
+  'One',
+  'Two',
+  'Three',
+  'Four',
+  'Five',
+  'Six',
+  'Seven',
+  'Eight',
+  'Nine',
+  'Ten',
+  'Eleven',
+  'Twelve',
+  'Thirteen',
+  'Fourteen',
+  'Fifteen',
+  'Sixteen',
+  'Seventeen',
+  'Eighteen',
+  'Nineteen',
+];
+
+const TENS = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+/** Converts 0-999 into words. */
+function underThousand(value: number): string {
+  if (value === 0) return '';
+  if (value < 20) return ONES[value];
+  if (value < 100) {
+    const tens = TENS[Math.floor(value / 10)];
+    const rest = value % 10;
+    return rest ? `${tens} ${ONES[rest]}` : tens;
+  }
+  const hundreds = `${ONES[Math.floor(value / 100)]} Hundred`;
+  const rest = value % 100;
+  return rest ? `${hundreds} ${underThousand(rest)}` : hundreds;
+}
+
+/**
+ * Spells a whole number using the Indian place-value system
+ * (crore / lakh / thousand), e.g. 2345678 -> "Twenty Three Lakh Forty Five
+ * Thousand Six Hundred Seventy Eight".
+ */
+export function numberToIndianWords(value: number): string {
+  const n = Math.floor(Math.abs(value));
+  if (n === 0) return 'Zero';
+
+  const crore = Math.floor(n / 10000000);
+  const lakh = Math.floor((n % 10000000) / 100000);
+  const thousand = Math.floor((n % 100000) / 1000);
+  const rest = n % 1000;
+
+  return [
+    crore ? `${underThousand(crore)} Crore` : '',
+    lakh ? `${underThousand(lakh)} Lakh` : '',
+    thousand ? `${underThousand(thousand)} Thousand` : '',
+    rest ? underThousand(rest) : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+}
+
+/**
+ * Invoice-style amount in words: "Rupees Thirty Two and Paise Forty Eight Only".
+ * GST invoices are required to carry this line.
+ */
+export function amountInWords(amount: number): string {
+  const safe = Number.isFinite(amount) ? Math.abs(amount) : 0;
+  const rupees = Math.floor(safe);
+  const paise = Math.round((safe - rupees) * 100);
+
+  const rupeePart = `Rupees ${numberToIndianWords(rupees)}`;
+  if (paise === 0) return `${rupeePart} Only`;
+
+  return `${rupeePart} and Paise ${numberToIndianWords(paise)} Only`;
+}

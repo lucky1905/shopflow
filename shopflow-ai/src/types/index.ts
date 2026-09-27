@@ -6,6 +6,12 @@ import type { ComponentType, ReactNode } from 'react';
 
 export type UserRole = 'owner' | 'admin' | 'manager' | 'staff';
 
+/**
+ * Which workspace a session belongs to (Phase 10).
+ * `owner` → command centre, `employee` → counter till.
+ */
+export type Workspace = 'owner' | 'employee';
+
 export interface User {
   id: string;
   email: string;
@@ -15,6 +21,10 @@ export interface User {
   avatar?: string;
   storeId?: string;
   storeName?: string;
+  /** Staff badge code — only set for employee-workspace sessions. */
+  employeeId?: string;
+  /** Workspace the credentials were submitted through. */
+  workspace?: Workspace;
   createdAt: string;
   updatedAt: string;
 }
@@ -30,6 +40,12 @@ export interface AuthState {
 
 export interface LoginCredentials {
   email: string;
+  password: string;
+  rememberMe?: boolean;
+}
+
+export interface EmployeeLoginCredentials {
+  employeeId: string;
   password: string;
   rememberMe?: boolean;
 }

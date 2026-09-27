@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Backend endpoint registry.
  *
  * Paths mirror the FastAPI app exactly (see `backend/main.py` +
@@ -12,8 +12,10 @@ export const API_ENDPOINTS = {
   HEALTH: '/',
   HEALTH_TEST: '/test',
 
-  // Auth — implemented in Phase 7
+  // Auth — implemented in Phase 7 & 10
   AUTH_LOGIN: '/auth/login',
+  AUTH_ADMIN_LOGIN: '/auth/admin/login',
+  AUTH_EMPLOYEE_LOGIN: '/auth/employee/login',
   AUTH_REGISTER: '/auth/register',
   AUTH_REFRESH: '/auth/refresh',
   AUTH_ME: '/auth/me',

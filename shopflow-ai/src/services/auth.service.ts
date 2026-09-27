@@ -1,8 +1,9 @@
-﻿import { API_ENDPOINTS } from '@/constants';
+import { API_ENDPOINTS } from '@/constants';
 import { httpGet, httpPost, normalizeApiError, unwrapData } from './api';
 import { tokenStorage } from '@/utils/storage';
 import type {
   AuthResponse,
+  EmployeeLoginCredentials,
   ForgotPasswordData,
   LoginCredentials,
   RegisterData,
@@ -22,11 +23,19 @@ interface TokenPayload {
     full_name: string;
     role: string;
     is_active: boolean;
+    /** Only present for employee-workspace sessions (Phase 10). */
+    employee_id?: string | null;
   };
 }
 
 export const DEMO_CREDENTIALS = {
   email: 'admin@shopflow.ai',
+  password: 'password',
+} as const;
+
+/** Demo staff badge for the employee workspace (Phase 10). */
+export const DEMO_EMPLOYEE_CREDENTIALS = {
+  employeeId: 'EMP001',
   password: 'password',
 } as const;
 
@@ -48,6 +57,12 @@ export function mapBackendUser(raw: TokenPayload['user']): User {
     firstName: parts[0] ?? raw.full_name,
     lastName: parts.slice(1).join(' ') || '-',
     role: toUserRole(raw.role),
+    employeeId: raw.employee_id ?? undefined,
+    /**
+     * The `emp:`-prefixed JWT (Phase 10) is the only way to reach an
+     * employee session, and the backend always echoes `employee_id` for it.
+     */
+    workspace: raw.employee_id ? 'employee' : 'owner',
     createdAt: now,
     updatedAt: now,
   };
@@ -67,38 +82,51 @@ function toAuthResponse(payload: TokenPayload): AuthResponse {
  * The backend is stateless JWT: it issues an access + refresh pair and only
  * needs to be told when to forget the session, so `logout()` is local.
  */
+/** Shared handler for every endpoint that returns an access/refresh pair. */
+async function postAuth<TBody>(endpoint: string, body: TBody): Promise<AuthResponse> {
+  try {
+    const payload = await httpPost<TokenPayload, TBody>(endpoint, body);
+    const result = toAuthResponse(unwrapData(payload));
+    tokenStorage.setTokens(result.token, result.refreshToken);
+    return result;
+  } catch (error) {
+    throw normalizeApiError(error);
+  }
+}
+
 export const authService = {
   async login(credentials: LoginCredentials): Promise<AuthResponse> {
-    try {
-      const payload = await httpPost<TokenPayload, { email: string; password: string }>(
-        API_ENDPOINTS.AUTH_LOGIN,
-        { email: credentials.email.trim(), password: credentials.password },
-      );
-      const result = toAuthResponse(unwrapData(payload));
-      tokenStorage.setTokens(result.token, result.refreshToken);
-      return result;
-    } catch (error) {
-      throw normalizeApiError(error);
-    }
+    return postAuth(API_ENDPOINTS.AUTH_LOGIN, {
+      email: credentials.email.trim(),
+      password: credentials.password,
+    });
+  },
+
+  /** Owner / admin sign-in — `POST /auth/admin/login` (Phase 10). */
+  async adminLogin(credentials: LoginCredentials): Promise<AuthResponse> {
+    const result = await postAuth(API_ENDPOINTS.AUTH_ADMIN_LOGIN, {
+      email: credentials.email.trim(),
+      password: credentials.password,
+    });
+    return { ...result, user: { ...result.user, workspace: 'owner' } };
+  },
+
+  /** Staff sign-in by badge code — `POST /auth/employee/login` (Phase 10). */
+  async employeeLogin(credentials: EmployeeLoginCredentials): Promise<AuthResponse> {
+    const result = await postAuth(API_ENDPOINTS.AUTH_EMPLOYEE_LOGIN, {
+      employee_id: credentials.employeeId.trim().toUpperCase(),
+      password: credentials.password,
+    });
+    return { ...result, user: { ...result.user, workspace: 'employee' } };
   },
 
   async register(data: RegisterData): Promise<AuthResponse> {
-    try {
-      const payload = await httpPost<TokenPayload, Record<string, string>>(
-        API_ENDPOINTS.AUTH_REGISTER,
-        {
-          email: data.email.trim(),
-          full_name: `${data.firstName} ${data.lastName}`.trim(),
-          password: data.password,
-          role: 'admin',
-        },
-      );
-      const result = toAuthResponse(unwrapData(payload));
-      tokenStorage.setTokens(result.token, result.refreshToken);
-      return result;
-    } catch (error) {
-      throw normalizeApiError(error);
-    }
+    return postAuth(API_ENDPOINTS.AUTH_REGISTER, {
+      email: data.email.trim(),
+      full_name: `${data.firstName} ${data.lastName}`.trim(),
+      password: data.password,
+      role: 'admin',
+    });
   },
 
   /** Validates the stored access token and returns the live profile. */

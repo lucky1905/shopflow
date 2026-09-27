@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Activity, HeartPulse, TrendingDown, TrendingUp } from 'lucide-react';
 import { SectionCard } from '@/components/common/SectionCard';
 import { Badge } from '@/components/common/Badge';

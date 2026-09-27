@@ -1,4 +1,4 @@
-﻿import { Timer, TrendingUp } from 'lucide-react';
+import { Timer, TrendingUp } from 'lucide-react';
 import { formatCurrency, formatNumber } from '@/utils/format';
 import { MiniStat, LoadingRows } from './InventoryPerformancePanel';
 import type { AnalyticsSupplierAnalytics } from '../types';

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Mapping between the FastAPI `Product` schema and the frontend `Product`
  * model.
  *

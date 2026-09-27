@@ -18,13 +18,18 @@ export interface PaymentModalProps {
   onClose: () => void;
   /** Fires with the completed sale so the page can show the receipt. */
   onComplete: (sale: Sale) => void;
+  /**
+   * Tender preselected when the pad opens. Express Billing passes the button
+   * the cashier pressed, so "UPI" lands straight on UPI instead of cash.
+   */
+  initialMethod?: PaymentMethod;
 }
 
 /**
- * Tender pad: cash / card / mobile with optional split payments, quick cash
- * bills and change due. Completing posts the checkout mutation.
+ * Tender pad: cash / card / UPI with credit (udhar) and split payments, quick
+ * cash bills and change due. Completing posts the checkout mutation.
  */
-export function PaymentModal({ open, onClose, onComplete }: PaymentModalProps) {
+export function PaymentModal({ open, onClose, onComplete, initialMethod }: PaymentModalProps) {
   const toast = useToast();
   const items = useCartStore((state) => state.items);
   const customerId = useCartStore((state) => state.customerId);
@@ -45,13 +50,14 @@ export function PaymentModal({ open, onClose, onComplete }: PaymentModalProps) {
   const change = changeDue(tenders, totals.total);
   const paidSoFar = roundMoney(totals.total - due);
 
-  // Fresh tender pad every time the dialog opens.
+  // Fresh tender pad every time the dialog opens, honouring the caller's
+  // chosen tender (Express Billing passes the payment button that was pressed).
   const [prevOpen, setPrevOpen] = useState(open);
   if (prevOpen !== open) {
     setPrevOpen(open);
     if (open) {
       setTenders([]);
-      setMethod('cash');
+      setMethod(initialMethod ?? 'cash');
       setTenderedInput('');
     }
   }
@@ -152,7 +158,7 @@ export function PaymentModal({ open, onClose, onComplete }: PaymentModalProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
           {PAYMENT_METHODS.map((value) => {
             const meta = PAYMENT_METHOD_META[value];
             const Icon = meta.icon;
@@ -207,7 +213,7 @@ export function PaymentModal({ open, onClose, onComplete }: PaymentModalProps) {
                       size="sm"
                       onClick={() => setTenderedInput(String(denomination))}
                     >
-                      ${denomination}
+                      {formatCurrency(denomination, undefined, { maximumFractionDigits: 0 })}
                     </Button>
                   ))}
                 </div>
@@ -222,7 +228,11 @@ export function PaymentModal({ open, onClose, onComplete }: PaymentModalProps) {
             >
               {method === 'cash'
                 ? 'Add cash payment'
-                : `Charge ${formatCurrency(due)} ${PAYMENT_METHOD_META[method].label.toLowerCase()}`}
+                : method === 'credit'
+                  ? `Add ${formatCurrency(due)} to udhar`
+                  : method === 'split'
+                    ? `Add ${formatCurrency(due)} as a split tender`
+                    : `Charge ${formatCurrency(due)} via ${PAYMENT_METHOD_META[method].label}`}
             </Button>
           </div>
         )}

@@ -3,10 +3,22 @@ import { persist } from 'zustand/middleware';
 import { STORAGE_KEYS } from '@/constants';
 import { tokenStorage, storage } from '@/utils/storage';
 import { authService } from '@/services/auth.service';
-import type { ApiError, AuthState, AuthResponse, LoginCredentials, RegisterData, User } from '@/types';
+import type {
+  ApiError,
+  AuthState,
+  AuthResponse,
+  EmployeeLoginCredentials,
+  LoginCredentials,
+  RegisterData,
+  User,
+} from '@/types';
 
 interface AuthStore extends AuthState {
   login: (credentials: LoginCredentials) => Promise<AuthResponse>;
+  /** Owner sign-in — `POST /auth/admin/login` (Phase 10). */
+  adminLogin: (credentials: LoginCredentials) => Promise<AuthResponse>;
+  /** Staff sign-in by badge code — `POST /auth/employee/login` (Phase 10). */
+  employeeLogin: (credentials: EmployeeLoginCredentials) => Promise<AuthResponse>;
   register: (data: RegisterData) => Promise<AuthResponse>;
   logout: () => Promise<void>;
   setUser: (user: User | null) => void;
@@ -27,6 +39,42 @@ export const useAuthStore = create<AuthStore>()(
         set({ isLoading: true });
         try {
           const response = await authService.login(credentials);
+          set({
+            user: response.user,
+            token: response.token,
+            refreshToken: response.refreshToken,
+            isAuthenticated: true,
+            isLoading: false,
+          });
+          return response;
+        } catch (error) {
+          set({ isLoading: false, isAuthenticated: false, user: null, token: null });
+          throw error as ApiError;
+        }
+      },
+
+      adminLogin: async (credentials) => {
+        set({ isLoading: true });
+        try {
+          const response = await authService.adminLogin(credentials);
+          set({
+            user: response.user,
+            token: response.token,
+            refreshToken: response.refreshToken,
+            isAuthenticated: true,
+            isLoading: false,
+          });
+          return response;
+        } catch (error) {
+          set({ isLoading: false, isAuthenticated: false, user: null, token: null });
+          throw error as ApiError;
+        }
+      },
+
+      employeeLogin: async (credentials) => {
+        set({ isLoading: true });
+        try {
+          const response = await authService.employeeLogin(credentials);
           set({
             user: response.user,
             token: response.token,

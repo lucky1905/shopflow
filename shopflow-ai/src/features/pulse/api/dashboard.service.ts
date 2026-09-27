@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Dashboard data source.
  *
  * Aggregates the three backend endpoints the Pulse dashboard needs
@@ -21,6 +21,7 @@ import type {
   PulseOrder,
   PulsePoint,
   RestockItem,
+  PulseOwnerMetrics,
 } from '../types';
 
 interface BackendAnalytics {
@@ -29,6 +30,11 @@ interface BackendAnalytics {
   top_products: Array<{ product_name: string; quantity: number }>;
   category_sales: Array<{ category: string; quantity: number }>;
   daily_sales: Array<{ date: string; revenue: number }>;
+  today_revenue?: number;
+  today_sales?: number;
+  payment_breakdown?: Array<{ method: string; revenue: number; sales: number }>;
+  low_stock?: Array<{ product_id: number; product_name: string; stock: number; min_stock: number }>;
+  outstanding_credit?: number;
 }
 
 interface BackendInsights {
@@ -54,6 +60,7 @@ export interface PulseDashboardData {
   movers: PulseMover[];
   suggestions: CopilotSuggestion[];
   copilotGreeting: string;
+  ownerMetrics?: PulseOwnerMetrics;
 }
 
 export async function getPulseDashboard(): Promise<PulseDashboardData> {
@@ -215,5 +222,21 @@ export async function getPulseDashboard(): Promise<PulseDashboardData> {
     movers: topMovers,
     suggestions: [],
     copilotGreeting: summary,
+    ownerMetrics: {
+      todayRevenue: Number(analytics.today_revenue) || 0,
+      todaySales: Number(analytics.today_sales) || 0,
+      outstandingCredit: Number(analytics.outstanding_credit) || 0,
+      paymentBreakdown: (analytics.payment_breakdown || []).map((p) => ({
+        method: p.method,
+        revenue: Number(p.revenue) || 0,
+        sales: Number(p.sales) || 0,
+      })),
+      lowStockItems: (analytics.low_stock || []).map((item) => ({
+        productId: item.product_id,
+        productName: item.product_name,
+        stock: Number(item.stock) || 0,
+        minStock: Number(item.min_stock) || 0,
+      })),
+    },
   };
 }

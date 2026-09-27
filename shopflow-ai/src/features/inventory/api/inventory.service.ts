@@ -1,4 +1,4 @@
-﻿import { API_ENDPOINTS, PAGE_SIZE_OPTIONS } from '@/constants';
+import { API_ENDPOINTS, PAGE_SIZE_OPTIONS } from '@/constants';
 import { createId, sleep } from '@/lib/utils';
 import {
   httpDelete,

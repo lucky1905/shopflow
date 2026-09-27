@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Check, Clock, PackagePlus, Sparkles, X } from 'lucide-react';
 import { SectionCard } from '@/components/common/SectionCard';
 import { Badge } from '@/components/common/Badge';

@@ -1,4 +1,5 @@
-﻿export { ExpressBilling } from './ExpressBilling';
+export { ExpressBilling } from './ExpressBilling';
+export { TillTerminal } from './TillTerminal';
 export * from './AiRecommendations';
 export * from './CartLineItem';
 export * from './CartPanel';

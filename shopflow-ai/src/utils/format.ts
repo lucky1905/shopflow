@@ -1,4 +1,4 @@
-﻿import { CURRENCY_SYMBOLS, DEFAULT_CURRENCY } from '@/constants';
+import { CURRENCY_SYMBOLS, DEFAULT_CURRENCY } from '@/constants';
 import { formatIndianNumber } from './inr';
 
 /**

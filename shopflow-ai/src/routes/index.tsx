@@ -1,18 +1,30 @@
-﻿import { Suspense, lazy, type ComponentType, type ReactNode } from 'react';
+import { Suspense, lazy, type ComponentType, type ReactNode } from 'react';
 import { Navigate, Outlet, createBrowserRouter, useLocation } from 'react-router-dom';
-import { AUTH_ONLY_PATHS, ROUTES } from '@/constants';
+import { AUTH_ONLY_PATHS, OWNER_ROLES, ROUTES, homePathForRole, isOwnerRole } from '@/constants';
 import { useAuthStore } from '@/store';
 import type { UserRole } from '@/types';
 import { LoadingPage } from '@/pages/LoadingPage';
 
 const LandingPage = lazy(() => import('@/pages/LandingPage'));
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
+const AdminLoginPage = lazy(() => import('@/pages/AdminLoginPage'));
+const EmployeeLoginPage = lazy(() => import('@/pages/EmployeeLoginPage'));
 const RegisterPage = lazy(() => import('@/pages/RegisterPage'));
 const ForgotPasswordPage = lazy(() => import('@/pages/ForgotPasswordPage'));
 const ResetPasswordPage = lazy(() => import('@/pages/ResetPasswordPage'));
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
 const InventoryPage = lazy(() => import('@/pages/InventoryPage'));
 const POSPage = lazy(() => import('@/pages/POSPage'));
+const CashierBillingPage = lazy(() =>
+  import('@/features/pos/pages/CashierBillingPage').then((module) => ({
+    default: module.CashierBillingPage,
+  })),
+);
+const EmployeeReturnsPage = lazy(() =>
+  import('@/features/pos/pages/EmployeeReturnsPage').then((module) => ({
+    default: module.EmployeeReturnsPage,
+  })),
+);
 const CustomersPage = lazy(() => import('@/pages/ModulePages').then((module) => ({ default: module.CustomersPage })));
 const SuppliersPage = lazy(() => import('@/pages/SuppliersPage'));
 // Sales module (Phase 4)
@@ -53,6 +65,7 @@ const ProfilePage = lazy(() => import('@/pages/ModulePages').then((module) => ({
 const NotFoundPage = lazy(() => import('@/pages/ErrorPages').then((module) => ({ default: module.NotFoundPage })));
 const UnauthorizedPage = lazy(() => import('@/pages/ErrorPages').then((module) => ({ default: module.UnauthorizedPage })));
 const DashboardLayout = lazy(() => import('@/layouts/DashboardLayout'));
+const EmployeeLayout = lazy(() => import('@/layouts/EmployeeLayout'));
 
 /** Suspense boundary shared by every lazy route so loading looks identical. */
 function LazyRoute({ component: Component }: { component: ComponentType }) {
@@ -67,12 +80,14 @@ function LazyRoute({ component: Component }: { component: ComponentType }) {
 function GuestRoute({ children }: { children: ReactNode }) {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
   const isLoading = useAuthStore((state) => state.isLoading);
+  const user = useAuthStore((state) => state.user);
   const location = useLocation();
 
   if (isLoading) return <LoadingPage />;
   if (isAuthenticated && AUTH_ONLY_PATHS.includes(location.pathname)) {
     const params = new URLSearchParams(location.search);
-    return <Navigate to={params.get('redirect') ?? ROUTES.DASHBOARD} replace />;
+    const destination = params.get('redirect') ?? homePathForRole(user?.role);
+    return <Navigate to={destination} replace />;
   }
   return <>{children}</>;
 }
@@ -91,25 +106,51 @@ function RequireAuth() {
 }
 
 /**
- * Role gate for admin-only areas.
- *
- * `admin` and `owner` can reach everything; `manager` and `cashier` are
- * redirected to the dashboard with an explanation rather than shown a blank
- * screen. Must be rendered inside `RequireAuth`.
+ * Owner workspace gate (Phase 10 dual workspace).
+ * Only owner/admin/manager sessions may open the command centre.
+ * Employees are bounced to their own till.
  */
-function RequireRole({ allow, children }: { allow: UserRole[]; children: ReactNode }) {
+function RequireOwnerWorkspace({ children }: { children?: ReactNode }) {
   const user = useAuthStore((state) => state.user);
-  // `staff` is the app's cashier role (the backend calls it "cashier").
+  if (!isOwnerRole(user?.role)) {
+    return <Navigate to={ROUTES.EMPLOYEE_BILLING} replace />;
+  }
+  return children ? <>{children}</> : <Outlet />;
+}
+
+/** Alias kept explicit for Phase 10 route declarations. */
+function RequireAdmin({ children }: { children?: ReactNode }) {
+  return <RequireOwnerWorkspace>{children}</RequireOwnerWorkspace>;
+}
+
+/**
+ * Employee workspace gate (Phase 10 dual workspace).
+ * Staff sessions stay inside the till; owners are bounced to the
+ * command centre (their own POS lives at `/pos`).
+ */
+function RequireEmployee({ children }: { children?: ReactNode }) {
+  const user = useAuthStore((state) => state.user);
+  if (isOwnerRole(user?.role)) {
+    return <Navigate to={ROUTES.DASHBOARD} replace />;
+  }
+  return children ? <>{children}</> : <Outlet />;
+}
+
+/**
+ * Role gate for admin-only areas.
+ */
+function RequireRole({ allow, children }: { allow: readonly UserRole[]; children: ReactNode }) {
+  const user = useAuthStore((state) => state.user);
   const role: UserRole = user?.role ?? 'staff';
 
   if (!allow.includes(role)) {
-    return <Navigate to={ROUTES.DASHBOARD} replace state={{ denied: true }} />;
+    return <Navigate to={homePathForRole(role)} replace state={{ denied: true }} />;
   }
   return <>{children}</>;
 }
 
-/** Areas only admins and managers may open. Cashiers are redirected away. */
-const MANAGER_ROLES: UserRole[] = ['owner', 'admin', 'manager'];
+/** Areas only admins and managers may open. */
+const MANAGER_ROLES = OWNER_ROLES;
 
 export const router = createBrowserRouter([
   { path: ROUTES.HOME, element: <LazyRoute component={LandingPage} /> },
@@ -118,6 +159,22 @@ export const router = createBrowserRouter([
     element: (
       <GuestRoute>
         <LazyRoute component={LoginPage} />
+      </GuestRoute>
+    ),
+  },
+  {
+    path: ROUTES.ADMIN_LOGIN,
+    element: (
+      <GuestRoute>
+        <LazyRoute component={AdminLoginPage} />
+      </GuestRoute>
+    ),
+  },
+  {
+    path: ROUTES.EMPLOYEE_LOGIN,
+    element: (
+      <GuestRoute>
+        <LazyRoute component={EmployeeLoginPage} />
       </GuestRoute>
     ),
   },
@@ -149,11 +206,46 @@ export const router = createBrowserRouter([
   {
     element: <RequireAuth />,
     children: [
+      /* ── Employee workspace: isolated counter till (Phase 10) ───── */
+      {
+        path: ROUTES.EMPLOYEE_ROOT,
+        element: (
+          <RequireEmployee>
+            <Suspense fallback={<LoadingPage />}>
+              <EmployeeLayout />
+            </Suspense>
+          </RequireEmployee>
+        ),
+        children: [
+          {
+            index: true,
+            element: <Navigate to="billing" replace />,
+          },
+          {
+            path: 'billing',
+            element: <LazyRoute component={CashierBillingPage} />,
+          },
+          {
+            path: 'returns',
+            element: <LazyRoute component={EmployeeReturnsPage} />,
+          },
+        ],
+      },
+
+      /* ── Legacy cashier route (Phase 9): now redirects to the employee till ── */
+      {
+        path: ROUTES.CASHIER_BILLING,
+        element: <Navigate to={ROUTES.EMPLOYEE_BILLING} replace />,
+      },
+
+      /* ── Owner / Command Centre workspace ────────────────────────────── */
       {
         element: (
-          <Suspense fallback={<LoadingPage />}>
-            <DashboardLayout />
-          </Suspense>
+          <RequireAdmin>
+            <Suspense fallback={<LoadingPage />}>
+              <DashboardLayout />
+            </Suspense>
+          </RequireAdmin>
         ),
         children: [
           { path: ROUTES.DASHBOARD, element: <LazyRoute component={DashboardPage} /> },

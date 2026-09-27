@@ -1,4 +1,4 @@
-﻿import { Banknote, BookUser, CreditCard, Smartphone, SplitSquareVertical } from 'lucide-react';
+import { Banknote, BookUser, CreditCard, Smartphone, SplitSquareVertical } from 'lucide-react';
 import type { BadgeVariant, LucideIconLike } from '@/types';
 import type {
   PaymentMethod,
@@ -11,7 +11,7 @@ import type {
 /*  Payment methods                                                           */
 /* -------------------------------------------------------------------------- */
 
-export const PAYMENT_METHODS = ['cash', 'card', 'mobile'] as const;
+export const PAYMENT_METHODS = ['cash', 'card', 'mobile', 'credit', 'split'] as const;
 
 export const PAYMENT_METHOD_META: Record<
   PaymentMethod,
@@ -72,7 +72,7 @@ export const TAX_RATE_OPTIONS: Array<{ value: string; label: string }> = [
 export const QUICK_DISCOUNT_PRESETS = [0, 5, 10, 15, 20, 25] as const;
 
 /** Quick cash buttons (bills the customer may hand over). */
-export const CASH_DENOMINATIONS = [5, 10, 20, 50, 100] as const;
+export const CASH_DENOMINATIONS = [10, 20, 50, 100, 200, 500, 2000] as const;
 
 /* -------------------------------------------------------------------------- */
 /*  Limits                                                                    */
@@ -148,4 +148,5 @@ export const POS_SHORTCUTS = [
 /* -------------------------------------------------------------------------- */
 
 export const RECEIPT_FOOTER = 'Thank you for shopping with us!';
+
 

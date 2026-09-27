@@ -1,4 +1,4 @@
-﻿import { API_ENDPOINTS } from '@/constants';
+import { API_ENDPOINTS } from '@/constants';
 import { httpGet } from '@/services/api';
 import { ANALYTICS_MOCK_LATENCY_MS } from '../constants';
 import { analyticsMockDb } from './analytics.mock';

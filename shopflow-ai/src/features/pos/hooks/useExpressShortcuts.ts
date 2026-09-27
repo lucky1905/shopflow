@@ -1,4 +1,4 @@
-﻿import { useKeyboardShortcut } from '@/hooks';
+import { useKeyboardShortcut } from '@/hooks';
 
 export interface UseExpressShortcutsOptions {
   /** Focus the search / barcode field. */

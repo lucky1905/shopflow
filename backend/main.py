@@ -2,6 +2,7 @@
 from sqlalchemy.orm import Session
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, get_db
+from migrations import run_migrations
 from models import Base, Sale, User
 from routers.predict import router as predict_router
 from routers.analytics import router as analytics_router
@@ -44,6 +45,7 @@ app.add_middleware(
 )
 
 Base.metadata.create_all(bind=engine)
+run_migrations()  # additive GST columns for databases that already exist
 app.include_router(predict_router)
 app.include_router(analytics_router)
 app.include_router(auth_router)
@@ -235,17 +237,7 @@ def make_sale(
         )
 
     # Step 3: Build response
-    return SaleResponse(
-        sale_id=db_sale.sale_id,
-        user_id=db_sale.user_id,
-        total_amount=db_sale.total_amount,
-        payment_method=db_sale.payment_method,
-        sale_date=db_sale.sale_date,
-        items=[
-            SaleItemResponse.model_validate(si)
-            for si in db_sale.sale_items
-        ]
-    )
+    return _to_sale_response(db_sale)
 
 
 # =========================
@@ -262,7 +254,14 @@ def _to_sale_response(db_sale: Sale) -> SaleResponse:
         items=[
             SaleItemResponse.model_validate(si)
             for si in db_sale.sale_items
-        ]
+        ],
+        # GST breakdown - NULL on sales recorded before Phase 8, which the
+        # frontend treats as "no tax data" rather than zero tax.
+        taxable_amount=db_sale.taxable_amount,
+        tax_amount=db_sale.tax_amount,
+        cgst=db_sale.cgst,
+        sgst=db_sale.sgst,
+        igst=db_sale.igst,
     )
 
 

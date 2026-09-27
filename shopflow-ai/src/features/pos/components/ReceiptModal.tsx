@@ -5,6 +5,7 @@ import { Modal } from '@/components/ui/Modal';
 import { Button } from '@/components/ui/Button';
 import { formatCurrency, formatDateTime } from '@/utils/format';
 import { PAYMENT_METHOD_META, RECEIPT_FOOTER } from '../constants';
+import { amountInWords } from '../gst';
 import { isSaleReturnable, saleStatusMeta } from '../utils';
 import type { Sale } from '../types';
 
@@ -12,9 +13,9 @@ export interface ReceiptModalProps {
   open: boolean;
   onClose: () => void;
   sale: Sale | null;
-  /** Checkout flow — starts the next basket (focus search). */
+  /** Checkout flow â€” starts the next basket (focus search). */
   onNewSale?: () => void;
-  /** History flow — opens the return dialog for this sale. */
+  /** History flow â€” opens the return dialog for this sale. */
   onStartReturn?: (sale: Sale) => void;
 }
 
@@ -101,8 +102,9 @@ export function ReceiptModal({
         <div className="print-area mx-auto w-full max-w-[22rem] rounded-lg border border-dashed border-border bg-background p-4 font-mono text-xs leading-relaxed text-foreground">
           <div className="space-y-0.5 text-center">
             <p className="text-sm font-bold uppercase tracking-widest">{APP_NAME}</p>
-            <p className="text-muted-foreground">Demo Store · 123 Market Street</p>
-            <p className="text-muted-foreground">+1 (555) 010-7788 · Tax ID 12-3456789</p>
+            <p className="text-muted-foreground">Sharma General Store Â· 12 MG Road, Pune 411001</p>
+            <p className="text-muted-foreground">+91 98200 12345 Â· GSTIN 27AABCU9603R1ZM</p>
+            <p className="text-muted-foreground">State: Maharashtra (27) Â· Intra-state supply</p>
           </div>
 
           <div className="my-3 border-t border-dashed border-border" />
@@ -123,8 +125,8 @@ export function ReceiptModal({
                 <p className="text-foreground">{item.name}</p>
                 <div className="flex justify-between gap-3 text-muted-foreground">
                   <span>
-                    {item.quantity} × {formatCurrency(item.unitPrice)}
-                    {item.discountPct > 0 ? ` −${item.discountPct}%` : ''}
+                    {item.quantity} Ã— {formatCurrency(item.unitPrice)}
+                    {item.discountPct > 0 ? ` âˆ’${item.discountPct}%` : ''}
                   </span>
                   <span className="text-foreground">{formatCurrency(item.lineTotal)}</span>
                 </div>
@@ -137,13 +139,18 @@ export function ReceiptModal({
           <div className="space-y-1">
             <MetaRow label="Subtotal" value={formatCurrency(sale.subtotal)} />
             {sale.discountTotal > 0 && (
-              <MetaRow label="Discount" value={`−${formatCurrency(sale.discountTotal)}`} />
+              <MetaRow label="Discount" value={`âˆ’${formatCurrency(sale.discountTotal)}`} />
             )}
-            <MetaRow label="Tax" value={formatCurrency(sale.taxTotal)} />
+            <MetaRow label="Taxable value" value={formatCurrency(sale.subtotal - sale.discountTotal)} />
+            <MetaRow label="CGST" value={formatCurrency(sale.taxTotal / 2)} />
+            <MetaRow label="SGST" value={formatCurrency(sale.taxTotal / 2)} />
             <div className="flex justify-between border-t border-border pt-1 text-sm font-bold">
               <span>TOTAL</span>
               <span>{formatCurrency(sale.total)}</span>
             </div>
+            <p className="pt-1 text-center text-[10px] text-muted-foreground">
+              Amount in words: {amountInWords(sale.total)}
+            </p>
           </div>
 
           <div className="my-3 border-t border-dashed border-border" />
@@ -160,7 +167,7 @@ export function ReceiptModal({
               <MetaRow label="Change" value={formatCurrency(sale.changeDue)} />
             )}
             {sale.refundedTotal > 0 && (
-              <MetaRow label="Refunded" value={`−${formatCurrency(sale.refundedTotal)}`} />
+              <MetaRow label="Refunded" value={`âˆ’${formatCurrency(sale.refundedTotal)}`} />
             )}
           </div>
 

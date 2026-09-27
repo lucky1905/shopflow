@@ -1,0 +1,311 @@
+INFO:     127.0.0.1:58422 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49728 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49731 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49732 - "PUT /products/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49733 - "PUT /products/7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49734 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49735 - "POST /sales HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49736 - "GET /sales?limit=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59691 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59692 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59695 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59693 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59697 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59694 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64818 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64429 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49253 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49254 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49255 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52403 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59757 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59758 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63745 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63746 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63749 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63748 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63750 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63747 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64682 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62762 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51161 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52253 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52254 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54777 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59580 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56329 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63765 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63766 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63769 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63768 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63770 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64191 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63767 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52754 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59100 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59101 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59102 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52286 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57559 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57560 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61692 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61693 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61695 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57410 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50927 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57411 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59194 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64521 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64522 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59630 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62019 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62020 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61635 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61636 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61639 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61638 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61637 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53422 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53993 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52495 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65035 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65036 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59841 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59842 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59843 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58779 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58780 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58783 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58782 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58784 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58781 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62792 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55229 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58358 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58359 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49673 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64574 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64575 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64576 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51335 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51336 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51339 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51338 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51337 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51340 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52917 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52393 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64774 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50022 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50023 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49818 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49819 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61487 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63278 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63279 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63282 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63281 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63280 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61232 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58800 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56033 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53791 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56378 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56379 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63487 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49671 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49673 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56470 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56471 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56474 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56473 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56475 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56472 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63500 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60224 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64849 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59724 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59725 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65409 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65410 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65411 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58903 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58904 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58907 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58906 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58905 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58908 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60968 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58479 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58594 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58595 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53506 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64195 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64196 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64197 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58802 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58803 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58806 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58805 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58807 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58804 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61293 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54949 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64917 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58022 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63580 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59819 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59820 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59821 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49671 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49673 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49676 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49675 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49678 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62133 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50940 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50941 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50943 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50942 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50944 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50939 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51020 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51021 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58702 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58703 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56775 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51705 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51706 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57193 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57194 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57197 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57196 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57198 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57195 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53160 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52755 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59199 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62776 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62777 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59505 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59506 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62725 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62653 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62654 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62657 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62656 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62658 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62655 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56741 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57713 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57715 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57717 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57716 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57718 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57714 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65433 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54843 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54924 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54925 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62419 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53439 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53440 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53441 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60789 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60790 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60791 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54678 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54679 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54682 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54681 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54683 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54680 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62501 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65280 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56802 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56849 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56850 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62217 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57365 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57366 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51025 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51028 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51027 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51029 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51026 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51030 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63076 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63077 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63080 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63079 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63081 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63078 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63044 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52327 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50235 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58299 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58300 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52804 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57507 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57508 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52813 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52814 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52817 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52816 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52815 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52818 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49671 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55993 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56514 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56515 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60898 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49690 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64182 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50788 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61842 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61843 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61846 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61845 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61844 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61847 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60000 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59999 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53352 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50146 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50147 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58394 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58395 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58937 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64717 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64718 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64721 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64720 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64722 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64719 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65234 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56219 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64698 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65380 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65381 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61977 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61978 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49673 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51663 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51664 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51667 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51666 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51668 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51665 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50468 - "GET /products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50469 - "GET /sales HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55954 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55955 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55956 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52998 - "GET /pos/summary HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52999 - "GET /pos/holds HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53000 - "GET /ai/recommendations?productIds=&limit=4 HTTP/1.1" 404 Not Found

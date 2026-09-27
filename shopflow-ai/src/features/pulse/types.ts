@@ -111,3 +111,25 @@ export interface PulseGoal {
   target: string;
   pct: number;
 }
+
+
+export interface PaymentBreakdownItem {
+  method: string;
+  revenue: number;
+  sales: number;
+}
+
+export interface LowStockSummaryItem {
+  productId: number;
+  productName: string;
+  stock: number;
+  minStock: number;
+}
+
+export interface PulseOwnerMetrics {
+  todayRevenue: number;
+  todaySales: number;
+  outstandingCredit: number;
+  paymentBreakdown: PaymentBreakdownItem[];
+  lowStockItems: LowStockSummaryItem[];
+}

@@ -20,5 +20,6 @@ export const STORAGE_KEYS = {
 } as const;
 
 export * from './routes';
+export * from './permissions';
 export * from './navigation';
 export * from './api';

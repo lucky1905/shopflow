@@ -8,4 +8,4 @@ export { RestockQueue } from './ui/RestockQueue';
 export { TopMovers } from './ui/TopMovers';
 export { AiCopilot } from './ui/AiCopilot';
 export { QuickActions } from './ui/QuickActions';
-export { GlassCard, SectionHead, LivePill, DeltaChip, Reveal } from './ui/primitives';
+export { GlassCard, SectionHead, LivePill, DeltaChip, Reveal } from './ui/primitives';export { OwnerMetricsOverview } from './ui/OwnerMetricsOverview';

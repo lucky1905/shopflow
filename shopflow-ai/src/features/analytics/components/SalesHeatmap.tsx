@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { CalendarRange, Info } from 'lucide-react';
 import { SectionCard } from '@/components/common/SectionCard';
 import { EmptyState } from '@/components/common/EmptyState';

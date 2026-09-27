@@ -1,4 +1,4 @@
-﻿import { AlertTriangle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 import { formatCurrency, formatNumber } from '@/utils/format';
 import { ANALYTICS_PALETTE } from '../constants';
 import { MiniStat, LoadingRows } from './InventoryPerformancePanel';

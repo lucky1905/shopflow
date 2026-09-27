@@ -1,4 +1,4 @@
-﻿import { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { ConfirmationDialog } from '@/components/common/ConfirmationDialog';
 import { useToast } from '@/hooks';
@@ -19,7 +19,7 @@ import {
 } from '../components';
 import { useCatalogSearch, usePosRecommendations } from '../api';
 import { useExpressShortcuts, usePosShortcuts, useCartStore } from '../hooks';
-import type { PosProduct, Sale } from '../types';
+import type { PaymentMethod, PosProduct, Sale } from '../types';
 
 /**
  * Smart POS â€” split-screen checkout: catalog + AI picks on the left,
@@ -33,6 +33,8 @@ export function POSPage() {
   const [expressMode, setExpressMode] = useState(true);
   const [search, setSearch] = useState('');
   const [paymentOpen, setPaymentOpen] = useState(false);
+  // Tender the cashier pressed on the Express payment bar, if any.
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod | undefined>(undefined);
   const [discountOpen, setDiscountOpen] = useState(false);
   const [customerOpen, setCustomerOpen] = useState(false);
   const [holdsOpen, setHoldsOpen] = useState(false);
@@ -97,14 +99,20 @@ export function POSPage() {
 
   usePosShortcuts({
     focusSearch,
-    onCharge: () => setPaymentOpen(true),
+    onCharge: () => {
+      setPaymentMethod(undefined);
+      setPaymentOpen(true);
+    },
     onHold: () => setHoldModalOpen(true),
     enabled: cartHasItems,
   });
 
   useExpressShortcuts({
     focusSearch,
-    onCharge: () => setPaymentOpen(true),
+    onCharge: () => {
+      setPaymentMethod(undefined);
+      setPaymentOpen(true);
+    },
     onHold: () => setHoldModalOpen(true),
     onCustomer: () => setCustomerOpen(true),
     onNewBill: startNewBill,
@@ -154,7 +162,10 @@ export function POSPage() {
           onIncrement={increment}
           onDecrement={decrement}
           onRemove={removeItem}
-          onCharge={() => setPaymentOpen(true)}
+          onCharge={(method) => {
+            setPaymentMethod(method);
+            setPaymentOpen(true);
+          }}
           onNewBill={startNewBill}
           onHold={() => setHoldModalOpen(true)}
           onCancel={() => setExpressMode(false)}
@@ -171,7 +182,11 @@ export function POSPage() {
           </div>
 
           <CartPanel
-            onCharge={() => setPaymentOpen(true)}
+            onCharge={() => {
+              // Standard mode has no tender picker; let the pad default to cash.
+              setPaymentMethod(undefined);
+              setPaymentOpen(true);
+            }}
             onHold={() => setHoldModalOpen(true)}
             onOpenDiscount={() => setDiscountOpen(true)}
             onOpenCustomer={() => setCustomerOpen(true)}
@@ -182,6 +197,7 @@ export function POSPage() {
 
       <PaymentModal
         open={paymentOpen}
+        initialMethod={paymentMethod}
         onClose={() => setPaymentOpen(false)}
         onComplete={(sale) => {
           setPaymentOpen(false);
@@ -229,5 +245,7 @@ export function POSPage() {
 }
 
 export default POSPage;
+
+
 
 

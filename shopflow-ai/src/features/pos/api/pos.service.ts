@@ -1,4 +1,4 @@
-﻿import { API_ENDPOINTS } from '@/constants';
+import { API_ENDPOINTS } from '@/constants';
 import { createId, sleep } from '@/lib/utils';
 import { httpDelete, httpGet, httpPost, normalizeApiError } from '@/services/api';
 import { mapBackendSale, paginateSales, type BackendSale } from './saleMapper';
@@ -32,7 +32,8 @@ import type {
   ReturnableLine,
   SaleFilters,
 } from '../types';
-import type { CartItem, CartTotals, Sale, SaleItem } from '../types';
+import type { CartItem, CartTotals, PaymentTender, Sale, SaleItem } from '../types';
+import { toBackendPaymentMethod } from '../expressConstants';
 import { POS_MOCK_LATENCY_MS, posMockDb } from './pos.mock';
 
 /* -------------------------------------------------------------------------- */
@@ -804,9 +805,8 @@ const realSalesApi = {
    */
   async checkout(input: CheckoutInput): Promise<Sale> {
     try {
-      const primary = input.payments[0];
       const body = {
-        payment_method: primary?.method ?? 'cash',
+        payment_method: resolveBackendPaymentMethod(input.payments),
         items: input.items.map((item) => ({
           product_id: Number(item.productId),
           quantity: item.quantity,
@@ -904,6 +904,25 @@ const realSummaryApi = {
 /*  Public service surface â€” the only import UI code should use.              */
 /* -------------------------------------------------------------------------- */
 
+/**
+ * Collapses the tender pad into the single `payment_method` value the backend
+ * stores.
+ *
+ * Two or more distinct tenders is recorded as `split` regardless of which
+ * button was pressed, because that is what the shop actually did. A lone
+ * tender is translated (`mobile` -> `upi`) so the database keeps Indian
+ * terminology rather than the UI's internal names.
+ */
+function resolveBackendPaymentMethod(payments: PaymentTender[]): string {
+  const usable = payments.filter((payment) => payment.amount > 0);
+  if (usable.length === 0) return 'cash';
+
+  const distinct = new Set(usable.map((payment) => payment.method));
+  if (distinct.size > 1 || usable.length > 1) return 'split';
+
+  return toBackendPaymentMethod(usable[0].method);
+}
+
 export const posService = {
   catalog: USE_MOCK_API ? mockCatalogApi : realCatalogApi,
   customers: USE_MOCK_API ? mockCustomersApi : realCustomersApi,
@@ -915,6 +934,7 @@ export const posService = {
 } as const;
 
 export type PosService = typeof posService;
+
 
 
 

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Indian numbering system helpers.
  *
  * `Intl.NumberFormat('en-IN')` already groups correctly in modern browsers,

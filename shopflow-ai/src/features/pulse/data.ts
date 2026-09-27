@@ -8,6 +8,7 @@ import type {
   PulseKpi,
   PulseMover,
   PulseOrder,
+  PulseOwnerMetrics,
   PulsePoint,
   RestockItem,
 } from './types';
@@ -191,6 +192,13 @@ export let RESTOCK_QUEUE = FALLBACK_RESTOCK_QUEUE;
 export let TOP_MOVERS = FALLBACK_TOP_MOVERS;
 export let SUGGESTIONS = FALLBACK_SUGGESTIONS;
 export let COPILOT_GREETING = FALLBACK_COPILOT_GREETING;
+export let OWNER_METRICS: PulseOwnerMetrics = {
+  todayRevenue: 0,
+  todaySales: 0,
+  outstandingCredit: 0,
+  paymentBreakdown: [],
+  lowStockItems: [],
+};
 
 /** True once live backend figures have replaced the bundled dataset. */
 export let isLive = false;
@@ -213,5 +221,6 @@ export function hydratePulse(data: PulseDashboardData): void {
   if (data.movers.length > 0) TOP_MOVERS = data.movers;
   if (data.suggestions.length > 0) SUGGESTIONS = data.suggestions;
   COPILOT_GREETING = data.copilotGreeting;
+  if (data.ownerMetrics) OWNER_METRICS = data.ownerMetrics;
   isLive = true;
 }

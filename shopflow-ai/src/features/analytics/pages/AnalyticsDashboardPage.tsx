@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { BarChart3, Coins, LineChart, PackageSearch, RefreshCw, ShoppingCart, Truck, Users, Wallet } from 'lucide-react';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { PageHeader } from '@/components/common/PageHeader';

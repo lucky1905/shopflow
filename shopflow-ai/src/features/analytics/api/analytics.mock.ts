@@ -1,4 +1,4 @@
-﻿import { ANALYTICS_PALETTE, DEFAULT_ANALYTICS_FILTERS } from '../constants';
+import { ANALYTICS_PALETTE, DEFAULT_ANALYTICS_FILTERS } from '../constants';
 import type {
   AnalyticsCategoryRow,
   AnalyticsCustomerAnalytics,

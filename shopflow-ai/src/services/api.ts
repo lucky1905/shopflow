@@ -1,4 +1,4 @@
-﻿import axios, {
+import axios, {
   type AxiosError,
   type AxiosInstance,
   type AxiosRequestConfig,

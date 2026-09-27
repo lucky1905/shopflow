@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useRef, type RefObject } from 'react';
+import { useEffect, useMemo, useRef, type RefObject } from 'react';
 import { motion } from 'framer-motion';
 import { Minus, Plus, ScanBarcode, Search, Sparkles, Trash2, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -28,6 +28,10 @@ export interface ExpressBillingProps {
   onCancel?: () => void;
   /** Non-blocking nudges shown in the side rail. */
   aiTips?: string[];
+  /** Optional category chips for quick till filtering. */
+  categories?: Array<{ id: string; name: string }>;
+  selectedCategory?: string | null;
+  onSelectCategory?: (id: string | null) => void;
   /**
    * Search input ref supplied by the page so global shortcuts (F1 / Ctrl+B)
    * can move focus here. Falls back to an internal ref when omitted.
@@ -90,6 +94,9 @@ export function ExpressBilling({
   onHold,
   onCancel,
   aiTips = [],
+  categories = [],
+  selectedCategory = null,
+  onSelectCategory,
   isLoading,
   orderDiscount,
   inputRef,
@@ -146,7 +153,7 @@ export function ExpressBilling({
       <div className="grid min-h-0 flex-1 grid-cols-1 lg:grid-cols-[1fr_400px_260px]">
         {/* Product picker */}
         <section className="flex min-h-0 flex-col border-r border-border">
-          <div className="shrink-0 p-4">
+          <div className="shrink-0 space-y-2.5 p-4 pb-3">
             <div className="relative">
               <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
               <input
@@ -169,6 +176,39 @@ export function ExpressBilling({
                 F1 · Ctrl+B
               </span>
             </div>
+
+            {/* Category chips for rapid one-touch filtering */}
+            {categories.length > 0 && onSelectCategory && (
+              <div className="no-scrollbar -mx-1 flex items-center gap-1.5 overflow-x-auto px-1 py-0.5">
+                <button
+                  type="button"
+                  onClick={() => onSelectCategory(null)}
+                  className={cn(
+                    'inline-flex shrink-0 items-center rounded-lg px-3 py-1 text-xs font-semibold transition-all active:scale-95',
+                    selectedCategory === null
+                      ? 'bg-primary text-primary-foreground shadow-xs'
+                      : 'border border-border bg-card text-muted-foreground hover:bg-accent hover:text-foreground',
+                  )}
+                >
+                  All
+                </button>
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => onSelectCategory(cat.id === selectedCategory ? null : cat.id)}
+                    className={cn(
+                      'inline-flex shrink-0 items-center rounded-lg px-3 py-1 text-xs font-semibold transition-all active:scale-95',
+                      selectedCategory === cat.id
+                        ? 'bg-primary text-primary-foreground shadow-xs'
+                        : 'border border-border bg-card text-muted-foreground hover:bg-accent hover:text-foreground',
+                    )}
+                  >
+                    {cat.name}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-4">

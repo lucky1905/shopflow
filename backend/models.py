@@ -16,6 +16,13 @@ class Product(Base):
     min_stock = Column(Integer)
     created_at = Column(TIMESTAMP)
 
+    # Indian GST fields (Phase 8).
+    # `gst_rate` is one of the statutory slabs: 0 / 5 / 12 / 18 / 28.
+    # `hsn_code` is the 4-, 6- or 8-digit HSN/SAC classification, required
+    # on every GST invoice line.
+    gst_rate = Column(Integer, nullable=False, default=5, server_default="5")
+    hsn_code = Column(String, nullable=True)
+
     sale_items = relationship("SaleItem", back_populates="product")
 
 
@@ -27,6 +34,15 @@ class Sale(Base):
     total_amount = Column(Numeric)
     payment_method = Column(String)
     sale_date = Column(TIMESTAMP)
+
+    # GST breakdown (Phase 8). `total_amount` is the GST-inclusive grand
+    # total, so `taxable_amount + tax_amount == total_amount`.
+    # Intra-state supply records cgst + sgst; inter-state records igst.
+    taxable_amount = Column(Numeric, nullable=True)
+    tax_amount = Column(Numeric, nullable=True)
+    cgst = Column(Numeric, nullable=True)
+    sgst = Column(Numeric, nullable=True)
+    igst = Column(Numeric, nullable=True)
 
     sale_items = relationship("SaleItem", back_populates="sale")
 
@@ -55,3 +71,16 @@ class User(Base):
     role = Column(String, nullable=False, default="cashier")
     is_active = Column(Integer, nullable=False, default=1)
     created_at = Column(TIMESTAMP, nullable=False)
+
+
+class Employee(Base):
+    __tablename__ = "employees"
+
+    id = Column(Integer, primary_key=True, index=True)
+    employee_id = Column(String, unique=True, index=True, nullable=False)  # e.g. "EMP001"
+    name = Column(String, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    role = Column(String, nullable=False, default="cashier")
+    is_active = Column(Integer, nullable=False, default=1)
+    created_at = Column(TIMESTAMP, nullable=False)
+

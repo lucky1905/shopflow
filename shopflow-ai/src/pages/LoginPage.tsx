@@ -1,140 +1,71 @@
-import { useState } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { LogIn } from 'lucide-react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { ArrowRight, BadgeCheck, Crown } from 'lucide-react';
 import { ROUTES } from '@/constants';
-import { DEMO_CREDENTIALS } from '@/services';
-import { useAuth } from '@/hooks';
 import { AuthLayout } from '@/layouts/AuthLayout';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Checkbox } from '@/components/ui/Checkbox';
-import { PasswordInput } from '@/components/forms/PasswordInput';
-import type { ApiError } from '@/types';
 
-const loginSchema = z.object({
-  email: z.string().min(1, 'Email is required').email('Enter a valid email address'),
-  password: z.string().min(1, 'Password is required'),
-  rememberMe: z.boolean().optional(),
-});
-
-type LoginFormValues = z.infer<typeof loginSchema>;
-
-/** Sign-in screen with RHF + Zod validation, demo hint and redirect support. */
+/**
+ * Workspace chooser (Phase 10).
+ *
+ * `/login` no longer signs anyone in directly — it routes owners to the
+ * command-centre sign-in and staff to the counter-till shift sign-in, so
+ * the two workspaces stay completely isolated.
+ */
 export function LoginPage() {
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { login } = useAuth();
-  const [serverError, setServerError] = useState<string | null>(null);
-
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    watch,
-    formState: { errors, isSubmitting },
-  } = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
-    defaultValues: { email: '', password: '', rememberMe: true },
-  });
-
-  const rememberMe = watch('rememberMe') ?? false;
-
-  const onSubmit = async (values: LoginFormValues) => {
-    setServerError(null);
-    try {
-      const redirectTo = searchParams.get('redirect') ?? ROUTES.DASHBOARD;
-      await login({ email: values.email, password: values.password, rememberMe: values.rememberMe }, redirectTo);
-    } catch (error) {
-      setServerError((error as ApiError)?.message ?? 'Unable to sign in. Please try again.');
-    }
-  };
-
-  const fillDemo = () => {
-    setValue('email', DEMO_CREDENTIALS.email, { shouldValidate: true });
-    setValue('password', DEMO_CREDENTIALS.password, { shouldValidate: true });
-  };
+  const redirect = searchParams.get('redirect');
+  const withRedirect = (path: string) =>
+    redirect ? `${path}?redirect=${encodeURIComponent(redirect)}` : path;
 
   return (
     <AuthLayout>
       <div className="space-y-6">
         <div className="space-y-2">
-          <h1 className="text-2xl font-semibold tracking-tight">Welcome back</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Choose your workspace</h1>
           <p className="text-sm text-muted-foreground">
-            Sign in to manage inventory, sales and insights.
+            Owners manage the store. Staff run the counter till.
           </p>
         </div>
 
-        <div className="rounded-xl border border-primary/20 bg-primary/5 p-3.5 text-sm">
-          <p className="font-medium text-foreground">Try the demo account</p>
-          <p className="mt-0.5 text-muted-foreground">
-            {DEMO_CREDENTIALS.email} · {DEMO_CREDENTIALS.password}
-          </p>
-          <button
-            type="button"
-            onClick={fillDemo}
-            className="mt-1.5 font-medium text-primary hover:underline"
+        <div className="space-y-3">
+          <Link
+            to={withRedirect(ROUTES.ADMIN_LOGIN)}
+            className="group flex items-center gap-4 rounded-2xl border border-amber-500/25 bg-amber-500/5 p-4 transition-all hover:border-amber-500/50 hover:bg-amber-500/10"
           >
-            Autofill credentials
-          </button>
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500/15 text-amber-600 dark:text-amber-400">
+              <Crown className="h-5 w-5" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block font-semibold text-foreground">I&apos;m the Owner</span>
+              <span className="block text-sm text-muted-foreground">
+                Command centre — inventory, staff, reports & AI
+              </span>
+            </span>
+            <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+          </Link>
+
+          <Link
+            to={withRedirect(ROUTES.EMPLOYEE_LOGIN)}
+            className="group flex items-center gap-4 rounded-2xl border border-emerald-500/25 bg-emerald-500/5 p-4 transition-all hover:border-emerald-500/50 hover:bg-emerald-500/10"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+              <BadgeCheck className="h-5 w-5" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block font-semibold text-foreground">I&apos;m Staff</span>
+              <span className="block text-sm text-muted-foreground">
+                Counter till — billing & returns with badge ID
+              </span>
+            </span>
+            <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+          </Link>
         </div>
-
-        <form onSubmit={(event) => void handleSubmit(onSubmit)(event)} className="space-y-4" noValidate>
-          <Input
-            label="Email"
-            type="email"
-            autoComplete="email"
-            placeholder="you@yourstore.com"
-            error={errors.email?.message}
-            {...register('email')}
-          />
-
-          <PasswordInput
-            label="Password"
-            autoComplete="current-password"
-            placeholder="Enter your password"
-            error={errors.password?.message}
-            {...register('password')}
-          />
-
-          {serverError && (
-            <p role="alert" className="rounded-lg bg-destructive/10 px-3 py-2.5 text-sm text-destructive">
-              {serverError}
-            </p>
-          )}
-
-          <div className="flex items-center justify-between">
-            <Checkbox
-              label="Remember me"
-              checked={rememberMe}
-              onChange={(event) => setValue('rememberMe', event.target.checked)}
-            />
-            <Link to={ROUTES.FORGOT_PASSWORD} className="text-sm font-medium text-primary hover:underline">
-              Forgot password?
-            </Link>
-          </div>
-
-          <Button type="submit" className="w-full" isLoading={isSubmitting} leftIcon={<LogIn className="h-4 w-4" />}>
-            Sign in
-          </Button>
-        </form>
 
         <p className="text-center text-sm text-muted-foreground">
-          New to ShopFlow AI?{' '}
+          New store?{' '}
           <Link to={ROUTES.REGISTER} className="font-medium text-primary hover:underline">
-            Create an account
+            Create an owner account
           </Link>
         </p>
-
-        <button
-          type="button"
-          onClick={() => navigate(ROUTES.DASHBOARD)}
-          className="w-full text-center text-xs text-muted-foreground hover:text-foreground"
-        >
-          Continue as guest →
-        </button>
       </div>
     </AuthLayout>
   );

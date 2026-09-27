@@ -1,4 +1,4 @@
-﻿import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { BellRing, Check, Sparkles } from 'lucide-react';
 import { SectionCard } from '@/components/common/SectionCard';
 import { Badge } from '@/components/common/Badge';

@@ -1,4 +1,4 @@
-﻿import { API_ENDPOINTS } from '@/constants';
+import { API_ENDPOINTS } from '@/constants';
 import { sleep } from '@/lib/utils';
 import { httpGet, httpPost, normalizeApiError } from '@/services/api';
 import type { PaginatedResponse } from '@/types';

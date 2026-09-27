@@ -3,17 +3,29 @@
  * Always reference paths through `ROUTES` so refactors stay safe.
  */
 export const ROUTES = {
-  // Public
+  // Public & Authentication
   HOME: '/',
   LOGIN: '/login',
+  ADMIN_LOGIN: '/admin/login',
+  EMPLOYEE_LOGIN: '/employee/login',
   REGISTER: '/register',
   FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',
 
-  // Dashboard shell
+  // Employee workspace (Phase 10)
+  EMPLOYEE_ROOT: '/employee',
+  EMPLOYEE_BILLING: '/employee/billing',
+  EMPLOYEE_RETURNS: '/employee/returns',
+
+  // Dashboard shell (Owner / Admin)
   DASHBOARD: '/dashboard',
   INVENTORY: '/inventory',
   POS: '/pos',
+  /**
+   * Cashier workspace — a full-screen Express Billing till with no admin
+   * chrome. This is the only screen a cashier can reach.
+   */
+  CASHIER_BILLING: '/billing',
   CUSTOMERS: '/customers',
   SUPPLIERS: '/suppliers',
   SALES: '/sales',
@@ -66,6 +78,8 @@ export const purchaseOrderPath = (id: string): string => `/purchases/orders/${id
 export const PUBLIC_PATHS: string[] = [
   ROUTES.HOME,
   ROUTES.LOGIN,
+  ROUTES.ADMIN_LOGIN,
+  ROUTES.EMPLOYEE_LOGIN,
   ROUTES.REGISTER,
   ROUTES.FORGOT_PASSWORD,
   ROUTES.RESET_PASSWORD,
@@ -74,6 +88,8 @@ export const PUBLIC_PATHS: string[] = [
 /** Paths that must never be reached while authenticated. */
 export const AUTH_ONLY_PATHS: string[] = [
   ROUTES.LOGIN,
+  ROUTES.ADMIN_LOGIN,
+  ROUTES.EMPLOYEE_LOGIN,
   ROUTES.REGISTER,
   ROUTES.FORGOT_PASSWORD,
   ROUTES.RESET_PASSWORD,

@@ -1,4 +1,4 @@
-﻿export { AnalyticsChartCard, MixDonutChart, RevenueAreaChart, TrendBarChart } from './AnalyticsCharts';
+export { AnalyticsChartCard, MixDonutChart, RevenueAreaChart, TrendBarChart } from './AnalyticsCharts';
 export { AnalyticsExportActions } from './AnalyticsExportActions';
 export { AnalyticsFilterBar } from './AnalyticsFilterBar';
 export { AnalyticsViewSwitcher } from './AnalyticsViewSwitcher';

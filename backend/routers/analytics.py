@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import func
@@ -106,10 +108,78 @@ def dashboard_analytics(db: Session = Depends(get_db)):
         for item in revenue_query
     ]
 
+    # -----------------------------
+    # Owner command-centre figures (Phase 9)
+    # -----------------------------
+    # Sales are stamped with a naive UTC timestamp, so "today" must be UTC too,
+    # otherwise the panel flips over at midnight IST while the ledger has not.
+    today = datetime.now(timezone.utc).date()
+
+    today_row = (
+        db.query(
+            func.coalesce(func.sum(Sale.total_amount), 0).label("revenue"),
+            func.count(Sale.sale_id).label("sales")
+        )
+        .filter(func.date(Sale.sale_date) == today)
+        .one()
+    )
+
+    payment_rows = (
+        db.query(
+            Sale.payment_method,
+            func.coalesce(func.sum(Sale.total_amount), 0).label("revenue"),
+            func.count(Sale.sale_id).label("sales")
+        )
+        .group_by(Sale.payment_method)
+        .order_by(func.coalesce(func.sum(Sale.total_amount), 0).desc())
+        .all()
+    )
+
+    payment_breakdown = [
+        {
+            "method": (row.payment_method or "unknown").lower(),
+            "revenue": float(row.revenue),
+            "sales": int(row.sales)
+        }
+        for row in payment_rows
+    ]
+
+    # Anything at or below its own reorder point is a low-stock alert.
+    low_stock_rows = (
+        db.query(Product)
+        .filter(Product.stock <= Product.min_stock)
+        .order_by(Product.stock.asc())
+        .limit(25)
+        .all()
+    )
+
+    low_stock = [
+        {
+            "product_id": item.product_id,
+            "product_name": item.product_name,
+            "stock": int(item.stock or 0),
+            "min_stock": int(item.min_stock or 0)
+        }
+        for item in low_stock_rows
+    ]
+
+    # Credit (udhar) sales are owed until they are collected; there is no
+    # collections ledger yet, so the whole credit tender total is outstanding.
+    outstanding_credit = (
+        db.query(func.coalesce(func.sum(Sale.total_amount), 0))
+        .filter(Sale.payment_method == "credit")
+        .scalar()
+    )
+
     return {
         "total_revenue": float(total_revenue),
         "total_sales": total_sales,
         "top_products": top_products,
         "category_sales": category_sales,
         "daily_sales": daily_sales,
+        "today_revenue": float(today_row.revenue),
+        "today_sales": int(today_row.sales),
+        "payment_breakdown": payment_breakdown,
+        "low_stock": low_stock,
+        "outstanding_credit": float(outstanding_credit)
     }
